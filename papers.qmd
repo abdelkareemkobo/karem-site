@@ -1,0 +1,10 @@
+---
+title: 📝 Papers
+image: "https://user-images.githubusercontent.com/1483922/208562675-3c69c87a-6688-44ea-8974-fae837f079df.png"
+description: A list of  papers that I've Contributed to.
+sidebar: false
+---
+
+These are a list of papers I've given:
+
+- [Explainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers](https://www.researchgate.net/publication/375102394_Explainable_Artificial_Intelligence_of_Multi-level_Stacking_Ensemble_for_Detection_of_Alzheimer's_Disease_based_on_Particle_Swarm_Optimization_and_the_Sub-scores_of_Cognitive_Biomarkers)

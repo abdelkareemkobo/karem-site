@@ -22,18 +22,23 @@ format:
 
 ::: {layout="[21,79]" .profile-header}
 
-![](hamel_transparent.png){.profile-pic}
+![](ai_hacker.png){.profile-pic}
 
-Hello, I'm Hamel Husain. I'm a machine learning engineer who loves building machine learning infrastructure and tools 👷🏼‍♂️.  I lead or contribute to many popular [open-source machine learning projects](oss/opensource.qmd). Furthermore, I have extensive experience (20+ years) as a machine learning engineer [across various industries](https://www.linkedin.com/in/hamelhusain/), including large tech companies like Airbnb and GitHub.
+Hello, I’m `Kareem Elkhateb`, I am an experientail learner who dreams, designs, and builds expectional, high-quality digitial produts and services. I also train machines to teach themeselves 🤖. 
+
+"فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف 
+يجاهدُ"
 :::
 
-I'm currently an independent consultant helping companies operationalize LLMs at [Parlance Labs](https://parlance-labs.com/). At GitHub, I lead [CodeSearchNet](https://github.com/github/CodeSearchNet), a large language model for semantic search that was a precursor to [CoPilot](https://github.com/features/copilot), a large language model used by millions of developers.
+This blog is where i struggle to learn about programming, deep learning and AGI.
+
+Currently I’m Learning `NLP`, `Generative AI` and `3D vision` to build charming language models that able to talk, hear and see, made me some coffee
 
 ## 💼 Get In Touch
 
-Do you need help operationalizing ML or large language models?  
+Do you need help operationalizing ML, Recommendition systems or large language models?  
 
-I'm open to consulting work and other forms of advisory. Email me at `hamel@parlance-labs.com` if you'd like to chat!
+I'm open to consulting work and other forms of advisory. Email me at `kareem01095134688@gmail.com` if you'd like to chat!
 
 ---
 

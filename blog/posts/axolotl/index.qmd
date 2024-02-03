@@ -1,5 +1,5 @@
 ---
-title: "How To Debug Axolotl"
+title: "axolotl start here"
 description: "Best practices for debugging axolotl with an example VSCode config."
 categories: [LLMs, fine-tuning, axolotl]
 author: Hamel Husain

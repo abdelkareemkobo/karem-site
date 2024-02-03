@@ -1,9 +1,0 @@
----
-title: Course
-description: "Notebooks from the [deeplearning.ai](https://learn.deeplearning.ai/) course"
-metadata-files: ["../../_listing_meta.yml"]
-listing:
-  contents:
-   - "/*.ipynb"
----
-

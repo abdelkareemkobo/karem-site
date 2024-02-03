@@ -1,6 +1,0 @@
----
-title: Multi-Container Pods
-order: 15
-description: Notes on multi-container pods
-metadata-files: ["../../_listing_meta.yml"]
----

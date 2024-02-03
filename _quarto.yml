@@ -8,26 +8,36 @@ exeucte:
   eval: false
 
 website:
-  title: "Hamel's Blog"
+  title: "kareem's Blog"
   image: quarto.png
   page-footer:
     center:
-      - icon: linkedin
-        href: https://www.linkedin.com/in/hamelhusain/
-      - icon: twitter
-        href: https://twitter.com/HamelHusain
       - icon: github
-        href: https://github.com/hamelsmu
+        href: https://github.com/abdelkareemkobo
+      - icon: linkedin
+        href: https://www.linkedin.com/in/abdelkareem-elkhateb-989a68294/
+      - icon: twitter
+        href: https://twitter.com/AbdelkareemElk1
+      - icon: telegram
+        href: https://t.me/+_Ja1NO7JXU5jZDk0
+      - icon: discord
+        href: https://discordapp.com/users/789087355440594954
+      - icon: cloud
+        href: https://soundcloud.com/abdelkareem-elkhateb
+      - icon: google
+        href: https://kareemai.com/kareem01095134688@gmail.com
+      - icon: bank
+        href: https://www.upwork.com/freelancers/~016a9fea792423bb9a
       - icon: rss
         href: index.xml
-  favicon: favicon.ico
+  favicon: 2.svg
   open-graph: true
   twitter-card:
-     creator: "@HamelHusain"
+     creator: "@AbdelkareemElk1"
      card-style: summary
-  site-url: "https://hamel.dev/"
-  description: "A collection of blogs and talks on machine learning and data science."
-  repo-url: https://github.com/hamelsmu/hamel-site
+  site-url: "https://kareemai.com/"
+  description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language."
+  repo-url: https://github.com/abdelkareemkobo/hamel
   repo-actions: [edit]
   repo-branch: master
   navbar:
@@ -36,21 +46,21 @@ website:
     pinned: false
     collapse: false
     left:
-    # 🏠 📮 👨🏽‍💻 🍎 🎤 📚
-    - text: "Blog"
+    # 🏠 📮  🍎 🎤 📚 💡🔥 💪 💵 ⏱️ 🐉 
+    - text: "👨🏽‍💻 Blog"
       href: index.qmd
-    # - text: 📮 Blog
-    #   href: index.qmd#blog-posts
+    - text: 📮 Blog
+      href: blog/feed.qmd
     # - text: 👨🏽‍💻 About
     #   file: about.qmd
-    - text: Projects
-      file: oss/opensource.qmd
-    # - text: 🍎 Teaching
-    #   file: about.qmd
-    - text: Talks 
-      file: talks.qmd
+    # - text: 🎨 Projects
+    #   file: oss/opensource.qmd
     - text: Notes
       file: notes/index.qmd
+    - text: Papers 
+      file: papers.qmd
+    - text: Books
+      file: publish.qmd
     right:
       - icon: rss
         href: index.xml

@@ -1,5 +1,0 @@
----
-title: Quarto
-description: Quarto tips
-metadata-files: ["../_listing_meta.yml"]
----

@@ -1,5 +1,0 @@
----
-title: Linux
-description: Notes on Linux
-metadata-files: ["../_listing_meta.yml"]
----
