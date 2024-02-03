@@ -7,7 +7,7 @@
 - Deployement live
 <!-- - Change the Talk page into Papers -->
 - My Github Projects
-- Fix the website SEO and locale 
+- Fix the website SEO and locale
 
 ## Level up
 
