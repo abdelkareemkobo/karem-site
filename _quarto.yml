@@ -37,7 +37,7 @@ website:
      card-style: summary
   site-url: "https://kareemai.com/"
   description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language."
-  repo-url: https://github.com/abdelkareemkobo/hamel
+  repo-url: https://github.com/abdelkareemkobo/karem-site
   repo-actions: [edit]
   repo-branch: master
   navbar:
