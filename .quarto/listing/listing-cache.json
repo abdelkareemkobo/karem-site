@@ -1,0 +1,70 @@
+{
+  "listingMap": {
+    "notes/quarto/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/jupyter/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/fastai/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/k8s/storage/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/k8s/multi_container_pods/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/k8s/scaling/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/k8s/index.qmd": [
+      "**index.qmd",
+      "/*.qmd"
+    ],
+    "notes/k8s/helm/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/k8s/security/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/prompt-eng/course/index.qmd": [
+      "/*.ipynb"
+    ],
+    "notes/prompt-eng/index.qmd": [
+      "**index.qmd",
+      "/*.qmd"
+    ],
+    "notes/linux/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/actions/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/llm/openai/index.qmd": [
+      "B3049D40"
+    ],
+    "notes/index.qmd": [
+      "/*.qmd",
+      "/*/index.qmd"
+    ],
+    "notes/web-scraping/index.qmd": [
+      "B3049D40"
+    ],
+    "index.qmd": [
+      "blog_data/blogs.yml",
+      "blog/posts"
+    ],
+    "blog/secret.qmd": [
+      "posts"
+    ],
+    "oss/opensource.qmd": [
+      "data/fastai.yml",
+      "data/kubeflow.yml",
+      "data/other.yml"
+    ],
+    "blog/feed.qmd": [
+      "posts"
+    ]
+  }
+}

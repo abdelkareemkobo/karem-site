@@ -1,0 +1,1 @@
+{"entries":[],"headings":["deployments","services","dns","testing-dns","labels","routing-internal-traffic-clusterip","routing-external-traffic-loadbalancer","routing-traffic-outside-k8s-externalnameservice","namespaces","configuring-applications","creating-a-configmap","method-1-from-env-file","method-2-from-configmap-spec"]}
