@@ -1,0 +1,437 @@
+[
+  {
+    "objectID": "oss/opensource.html",
+    "href": "oss/opensource.html",
+    "title": " Open Source",
+    "section": "",
+    "text": "My open source work has been focused on developer tools and infrastructure. I’ve contributed to projects such as fastai, Metaflow, Kubeflow, Jupyter, and Great Expectations, as well as many others. I list some of these below:"
+  },
+  {
+    "objectID": "oss/opensource.html#fastai",
+    "href": "oss/opensource.html#fastai",
+    "title": " Open Source",
+    "section": " fastai",
+    "text": "fastai\nI maintain and contribute to a variety of fastai projects. Below are the projects I’ve been very involved in:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nfastpages \n\n\nAn easy to use blogging platform for Jupyter Notebooks. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nnbdev \n\n\nWrite, test, document, and distribute software packages and technical articles all in one place, your notebook. \n\n\nCore Contributor\n\n\nBlog, Talk\n\n\n\n\nfastcore \n\n\nA Python language extension for exploratory and literate programming. \n\n\nCore Contributor\n\n\nBlog\n\n\n\n\nghapi \n\n\nA Python client for the GitHub API \n\n\nCore Contributor\n\n\n Blog\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#metaflow",
+    "href": "oss/opensource.html#metaflow",
+    "title": " Open Source",
+    "section": " Metaflow",
+    "text": "Metaflow\nI created notebook cards: A tool that allows you to use notebooks to generate reports, visualizations and diagnostics in Metaflow production workflows. Blog"
+  },
+  {
+    "objectID": "oss/opensource.html#kubeflow",
+    "href": "oss/opensource.html#kubeflow",
+    "title": " Open Source",
+    "section": " Kubeflow",
+    "text": "Kubeflow\nI’ve worked on several projects related to Kubeflow, mainly around examples and documentation:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGitHub Issue Summarization\n\n\nAn end-to-end example of using Kubeflow to summarize GitHub Issues. Became one of the most popular tutorials of Kubeflow. \n\n\nAuthor\n\n\nInterview with Jeremy Lewi\n\n\n\n\nkubeflow/codei-intelligence\n\n\nVarious tutorials and applied examples of Kubeflow. \n\n\nCore Contributor\n\n\nTalk\n\n\n\n\nThe Kubeflow Blog\n\n\nI used fastpages to create the official Kubeflow blog. \n\n\nCore Contributor\n\n\nSite\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#jupyter",
+    "href": "oss/opensource.html#jupyter",
+    "title": " Open Source",
+    "section": " Jupyter",
+    "text": "Jupyter\nI created the Repo2Docker GitHub Action, which allows you to trigger repo2docker to build a Jupyter enabled Docker images from your GitHub repository. This Action allows you to pre-cache images for your own BinderHub cluster or for mybinder.org.\nThis project was accepted into the official JupyterHub GitHub org."
+  },
+  {
+    "objectID": "oss/opensource.html#great-expectations",
+    "href": "oss/opensource.html#great-expectations",
+    "title": " Open Source",
+    "section": " Great Expectations",
+    "text": "Great Expectations\nI developed the Great Expectations GitHub Action that allows you to use Great Expectations in CI/CD Workflows. Blog."
+  },
+  {
+    "objectID": "oss/opensource.html#other",
+    "href": "oss/opensource.html#other",
+    "title": " Open Source",
+    "section": " Other",
+    "text": "Other\nI worked as a staff machine learning engineer at GitHub from 2017 - 2022. I led or created the following open source projects that explored the intersection of machine learning, data and the developer workflow:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nCode Search Net \n\n\nDatasets, tools, and benchmarks for representation learning of code. This was a big part of the inspiration for GitHub’s eventual work on CoPilot. \n\n\nLead\n\n\n Blog, Paper\n\n\n\n\nMachine Learning Ops\n\n\nA collection of resources on how to facilitate Machine Learning Ops with GitHub. This project explored integrations with a wide variety of data science tools with GitHub Actions. \n\n\nCreator\n\n\nBlog\n\n\n\n\nIssue Label Bot\n\n\nA GitHub App powered by machine learning that auto-labels issues. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nCovid19-dashboard \n\n\nA demonstration of how to use GitHub Actions, Jupyter Notebooks and fastpages to create interactive dashboards that update daily.\n\n\n\nCreator\n\n\nNews Article\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html",
+    "href": "blog/posts/nbdev/index.html",
+    "title": "On commercializing nbdev",
+    "section": "",
+    "text": "nbdev is a software development tool based on Jupyter that feels like its from the future.\nA few friends have asked me why I decided not to commercialize nbdev, especially after putting lots of work into the project, including leaving my full-time job to work on it. So I thought I would write a short post to explain my reasoning."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#background",
+    "href": "blog/posts/nbdev/index.html#background",
+    "title": "On commercializing nbdev",
+    "section": "Background",
+    "text": "Background\nnbdev is an innovative software development framework for Python that embraces literate and exploratory programming. I worked on nbdev from 2020-2023 with Jeremy Howard and, later, Wasim Lorgat. I had the privilege and excitement of exploring the boundaries of developer tools and exploratory programming while working with very talented software engineers. In addition to creating a tool many people enjoyed, I enjoyed using nbdev for personal and professional projects."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#opportunities",
+    "href": "blog/posts/nbdev/index.html#opportunities",
+    "title": "On commercializing nbdev",
+    "section": "Opportunities",
+    "text": "Opportunities\nWhile conducting product research, I interviewed many developers from different backgrounds to understand their pain points and needs. All developers I talked to struggled with one key challenge: it was difficult, if not impossible, to convince other engineers to use nbdev.\nThe following are the biggest reasons that prevented adoption:\n\nFriction in onboarding engineers. In many companies, there are often existing Python projects, and it can be detrimental to maintain different ways of doing things when a company has already settled upon one way that it has built processes and tools around.\nCollisions with the rest of the software development stack: it was (and still is) a pain to version control notebooks in a way that’s conducive to collaboration. For practical purposes, you cannot perform code reviews of notebooks on GitHub without purchasing a tool called ReviewNB. So instead of convincing people to use nbdev, you have to convince them to use nbdev and ReviewNB. This makes the barrier to initial adoption considerably high - as procuring software in many organizations is a non-trivial process involving security review, compliance, legal and other stakeholders.\n\nI viewed solving the above problems as potential opportunities for commercializing nbdev."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#shifting-focus",
+    "href": "blog/posts/nbdev/index.html#shifting-focus",
+    "title": "On commercializing nbdev",
+    "section": "Shifting Focus",
+    "text": "Shifting Focus\nJeremy, Wasim, and I eventually settled on the idea of “WordPress for developers,” a hosted site allowing people to create and share nbdev projects. We thought this would be an excellent way to get people to try nbdev without installing anything. The idea was to narrow the audience to people interested in hosting projects on a platform that promoted exploration and sharing, similar to Glitch that was as easy to use and pragmatic as Wordpress.\nAround the same time we began discussing hosted tools, the machine learning world experienced a tectonic shift due to the explosion of Generative AI, namely Stable Diffusion. fast.ai, the organization that created nbdev, was also changing its focus. fast.ai’s prime directive was to make deep learning accessible to as many people as possible, and generative AI was too important to ignore. Accordingly, Jeremy placed his full attention on a Stable Diffusion course.\nThis pivot caused some turbulence as we navigated the different priorities of nbdev, generative AI research, and making money. We eventually settled on offering consulting services for everything related to fast.ai in the form of fast.ai partners, which would allow us to bootstrap ourselves financially and embrace the larger mission of fast.ai (including generative AI and research). Eventually, I found the splintered focus across so many areas to be unproductive1 and decided to step away from everything except consulting to regain my footing.\nSoon after that, ChatGPT emerged onto the scene and caused further shifts in machine learning that were orders of magnitude larger than their text-to-image predecessors. Pretty soon, all of my clients were interested in language models, and I found myself working exclusively on operationalizing them (a skill that I have cultivated by working in machine learning for 20+ years). Additionally, LLMs profoundly changed the nature of software development, especially the kind of software development that nbdev was designed to support2. These factors and those discussed earlier suggested it was a good time to step away from nbdev and focus on other things."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#what-i-learned",
+    "href": "blog/posts/nbdev/index.html#what-i-learned",
+    "title": "On commercializing nbdev",
+    "section": "What I learned",
+    "text": "What I learned\nI learned some important lessons during this process:\n\nJust because you love a project and find it useful, that doesn’t necessarily imply that it’s ripe for commercialization. I always struggled to gain conviction that there was a good business model for nbdev.3 Instead, I pursued this path because I was drawn to the idea of starting a business with people I really liked. Ultimately, I learned that at least one person needs strong conviction in addition to being excited about the people you are working with - not just one or the other.4 I also learned that it’s important to be honest with yourself about your (and your team’s) level of conviction and not try to force something that isn’t there.\nListen to your instincts. I ignored my instincts on multiple occasions throughout this journey. As I’ve grown older, I’ve learned to make this mistake much less often, but I could have done better here.\nDon’t be afraid to pivot. I think we avoided unnecessary churn by steering clear of a situation that wasn’t promising. I’m much more excited about the work I’m doing now.5\nOwn your own brand. My professional brand became increasingly tied to fast.ai and my friend Jeremy Howard. I’m grateful for the growth I’ve experienced under this mentorship – but I believe it is important to build your own distinct brand and identity. I discovered it can be challenging to build your own brand when you are working on someone else’s project6, and is something I struggled with. I’m looking forward to working on this more."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#future-directions",
+    "href": "blog/posts/nbdev/index.html#future-directions",
+    "title": "On commercializing nbdev",
+    "section": "Future Directions",
+    "text": "Future Directions\nI suspect that I’m not completely finished with nbdev. I may revisit the project or related ideas when the time is right. I’m excited by the work Posit is doing in the areas of literate and exploratory programming, which include many of the ideas explored in nbdev. Wasim has even joined the team at Posit, so I’m excited to see what they come up with.7\nRegarding what I’m working on next – I’ll have to save my thoughts on that for another post 😊."
+  },
+  {
+    "objectID": "blog/posts/nbdev/index.html#footnotes",
+    "href": "blog/posts/nbdev/index.html#footnotes",
+    "title": "On commercializing nbdev",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI burned out several times during this process, but I didn’t realize why at the time. Not surprisingly, trying to focus on too many things at once was the root cause.↩︎\nSee this demo for ideas on how coding with LLMs might look like, especially with notebooks.↩︎\nThe problem with the hosted solution is that this is not something I would want to use. I can’t picture myself trying to host code on something other than GitHub/GitLab.↩︎\nWithout shared conviction, there is no glue holding everyone together and people can drift apart.↩︎\nI’ll share more about this in a future post.↩︎\nI don’t believe this is always the case, but it can be true depending on the dynamics of the group.↩︎\nWe previously partnered with Posit and JJ Allaire and built nbdev on top of Quarto. I’m currently advising Posit on their product and strategy. They have additional projects on their roadmap that I cannot disclose now.↩︎"
+  },
+  {
+    "objectID": "blog/feed.html",
+    "href": "blog/feed.html",
+    "title": "Kareem’s Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\naxolotl start here\n\n\n\n\n\n\nLLMs\n\n\nfine-tuning\n\n\naxolotl\n\n\n\nBest practices for debugging axolotl with an example VSCode config.\n\n\n\n\n\nJan 11, 2024\n\n\nHamel Husain\n\n\n\n\n\n\n\n\n\n\n\n\nDokku: my favorite personal serverless platform\n\n\n\n\n\n\ninfra\n\n\nseverless\n\n\n\nLike Heroku, but you own it.\n\n\n\n\n\nJan 9, 2024\n\n\nHamel Husain\n\n\n\n\n\n\n\n\n\n\n\n\nOn commercializing nbdev\n\n\n\n\n\n\nJupyter\n\n\nnbdev\n\n\n\nWhy I decided not to commercialize nbdev.\n\n\n\n\n\nMay 30, 2023\n\n\nHamel Husain\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "kareem's Blog",
+    "section": "",
+    "text": "This blog is where i struggle to learn about programming, deep learning and AGI.\nCurrently I’m Learning NLP, Generative AI and 3D vision to build charming language models that able to talk, hear and see, made me some coffee"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "kareem's Blog",
+    "section": "💼 Get In Touch",
+    "text": "💼 Get In Touch\nDo you need help operationalizing ML, Recommendition systems or large language models?\nI’m open to consulting work and other forms of advisory. Email me at kareem01095134688@gmail.com if you’d like to chat!"
+  },
+  {
+    "objectID": "index.html#feed",
+    "href": "index.html#feed",
+    "title": "kareem's Blog",
+    "section": "📮 Feed",
+    "text": "📮 Feed\nA curated collection of blog posts and shorter form notes.\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n1/11/24\n\n\naxolotl start here\n\n\n\n\n1/9/24\n\n\nDokku: my favorite personal serverless platform\n\n\n\n\n5/30/23\n\n\nOn commercializing nbdev\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#subscribe",
+    "href": "index.html#subscribe",
+    "title": "kareem's Blog",
+    "section": "📬 Subscribe",
+    "text": "📬 Subscribe\nSubscribe via  RSS."
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html",
+    "href": "notes/web-scraping/transcribe-diarize.html",
+    "title": "Transcribe & Diarize Videos",
+    "section": "",
+    "text": "I wanted to generate transcriptions of videos with speaker labels. Segmenting or labeling the speakers in audio like this is referred to as Diarization or Diarisation (wikipedia). Unfortunately, OpenAi’s Whisper doesn’t do diarization.",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
+    "href": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
+    "title": "Transcribe & Diarize Videos",
+    "section": "1. Download the audio file with yt-dlp.",
+    "text": "1. Download the audio file with yt-dlp.\nThe -o \"audio.%(ext)s\" argument is used to name the output as audo.mp3. The %(ext)s is a placeholder for the file extension. The --extract-audio and --audio-format mp3 arguments are used to extract the audio from the video and convert it to mp3 format.\nyt-dlp --extract-audio --audio-format mp3 \\\n    -o \"audio.%(ext)s\" https://youtu.be/g_6nQBsE4pU\nThe above command will generate audio.mp3 in the current directory.",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
+    "href": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
+    "title": "Transcribe & Diarize Videos",
+    "section": "2. Generate the transcript with diarization.",
+    "text": "2. Generate the transcript with diarization.\nThis is done with WhisperX. Make sure you carefully follow the instructions in the WhisperX repo corresponding to Speaker Diarization: you have to click on three Hugging Face repos and accept their terms & conditions.\nThe video I’m working with has 2 speakers, so that’s why I’m setting --min_speakers and --max_speakers equal to 2. The --hf_token argument is the Hugging Face token you get from following the instructions in the WhisperX repo.\nwhisperx audio.mp3 --model large-v2 --diarize \\\n    --min_speakers 2 --max_speakers 2 --hf_token &lt;your_hf_token&gt;\nThis will produce files with the following extensions audio.{srt, vtt, txt, tsv, json} in the current directory. You can limit the formats with --output_format and write these files to a different directory with --output_dir. The .json file contains the most detailed information about the diarization, with world-level predictions, whereas the .vtt and .srt files will contain a more human-readable transcript with speaker labels. I suggest looking at these files to see which one suits your needs.\nIf looking at the .json file, I recommend using jq with a command like this to see the first row of the segments array in that file:\njq '.segments[0]' audio.json",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html",
+    "href": "notes/web-scraping/browser-to-python.html",
+    "title": "Browser requests to code",
+    "section": "",
+    "text": "I learned this from Zachary Blackwood’s 2022 NormConf Talk.",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
+    "href": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
+    "title": "Browser requests to code",
+    "section": "Example: Get A List of Subway Restaurants With Python",
+    "text": "Example: Get A List of Subway Restaurants With Python\n\nGo to https://www.subway.com/en-US/locator in Google Chrome\n\n\n\nOpen developer tools using Option + CMD + I\nGo the the network tab, and hit the clear button\n\n\n\nType in a zipcode and search. Look for a network request that seems like it is getting data, in this case GetLocations.ashx... looks super promising.\n\n\n\nRight click on that particular event and select Copy -&gt; Copy as Curl\n\n\n\nGo to curlconverter.com and paste the curl command there.\n\n\nEnjoy your python code that uses this otherwise undocumented API :)",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
+    "href": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
+    "title": "Browser requests to code",
+    "section": "Bonus: Parse The Response",
+    "text": "Bonus: Parse The Response\nYou can parse the response data in a hacky way.\n\n# run the code from curlconverter.com, which will give you a `response` object.\n\n&gt;&gt;&gt; import json\n... response_string = response.text\n... json_string = response_string[response_string.index(\"(\") +1:response_string.index('\"AdditionalData\":')-1]+'}'\n... parsed_string = json.loads(json_string)\n... stores = parsed_string['ResultData']\n\n&gt;&gt;&gt; stores\n[{'LocationId': {'StoreNumber': 21809, 'SatelliteNumber': 0},\n  'Address': {'Address1': '4888 NW Bethany Blvd',\n   'Address2': 'Suite K-1',\n   'Address3': 'Bethany Village Centre',\n   'City': 'Portland',\n   'StateProvCode': 'OR',\n   'PostalCode': '97229',\n   'CountryCode': 'US',\n   'CountryCode3': 'USA'},\n  'Geo': {'Latitude': 45.5548,\n   'Longitude': -122.8358,\n   'TimeZoneId': 'America/Los_Angeles',\n   'CurrentUtcOffset': 0},\n  'ListingNumber': 1,\n  'OrderingUrl': 'http://order.subway.com/Stores/Redirect.aspx?s=21809&sa=0&f=r&scc=US&spc=OR',\n  'CateringUrl': 'https://www.ezcater.com/catering/pvt/subway-portland-nw-bethany-blvd',\n  'ExtendedProperties': None},\n...",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
+    "href": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
+    "title": "Browser requests to code",
+    "section": "When to use this approach",
+    "text": "When to use this approach\nThis is great for adhoc things, but you probably want to use a headless browser and actually scrape the HTML if you want to do this in a repeatable way. But many times you want to do a one-off scrape, this isn’t so bad!",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html",
+    "href": "notes/how-to-learn/index.html",
+    "title": "How to learn",
+    "section": "",
+    "text": "I read the book Mindshift and it was unituitively so good that I decided to take this class. As a parent, I learned a bunch of things that I think will be beneficial to my children’s education.\nNotes from class Learning how to learn. These notes are for me and may not make sense for others.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
+    "href": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
+    "title": "How to learn",
+    "section": "Focused vs Diffused Mode",
+    "text": "Focused vs Diffused Mode\nYou can not access focus and diffused mode simultaneously.\nPeople have tried to access diffuse mode of thinking by bringing themselves to the point of sleep and waking up just as they fall asleep. For example, Salvador Dali - holding keys in your hand, and let the sound of keys falling the ground wake you up.\nExercise, going for a walk good way to access diffuse thinking. You must take notes right away b/c diffuse thoughts may evaporate very fast.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
+    "href": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
+    "title": "How to learn",
+    "section": "Procrastination Memory and Sleep",
+    "text": "Procrastination Memory and Sleep\nThey advocate the Pomodoro technique to combating procrastination. Its like HITT.\nPeriodic relaxation (every ~ 30 minutes) is important for accessing your diffuse mode. “Its important for the mortar to dry”.\nSpaced repetition (like Anki) is important for building memory. i\nGo over what you want to learn about right before you go to sleep, this will substantially improve the chances you will dream about it and form new connections about the subject.\nExercise can help create new neurons in your hippocampus (new neurons can be created there in adulthood) and help them survive longer.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
+    "href": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
+    "title": "How to learn",
+    "section": "Writing Tips Diffuse Mode",
+    "text": "Writing Tips Diffuse Mode\nDiffuse mode is very important for writing. Editing is like focus mode and creating ideas is diffuse mode. Some rules of thumb: - Do not outline, make a mind map - Do not edit while you are writing (this is really hard to do -&gt; turn off monitor and just write).https://writeordie.com - app that forces you to stay in diffuse mode. You really cannot look at the screen. - Repeating again, do not look at screen while you are writing! Only when editing.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#chunking",
+    "href": "notes/how-to-learn/index.html#chunking",
+    "title": "How to learn",
+    "section": "Chunking",
+    "text": "Chunking\n“Tying your shoes”. Best chunks are subconscious. Spoken language is the best example of chunking. You have to practice to build chunks, you cannot just observe. You have to perform the task yourself.\nYou should scan a chapter before you read it: section headings, pictures, etc. This can help you build chunks.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#illusions-of-competence",
+    "href": "notes/how-to-learn/index.html#illusions-of-competence",
+    "title": "How to learn",
+    "section": "Illusions of competence",
+    "text": "Illusions of competence\nRight after you read something, look away and repeat to yourself what you recall. You can also draw a concept map. The recall process actually improves memory.\nRecall is better than re-reading. Re-reading is effective when you let time pass so you get spaced repetition. You need to test yourself to make sure you are competent. Recall is a form of testing.\nRecall outside your place of study to strengthen your memory. This is because you can get queues from where you are studying.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#deliberate-practice",
+    "href": "notes/how-to-learn/index.html#deliberate-practice",
+    "title": "How to learn",
+    "section": "Deliberate Practice",
+    "text": "Deliberate Practice\nFocus on the bits that you find difficult. Interleaving is important, meaning learning different subjects or even sections within one subject at once. Thomas S. Khun discovered that two types of people tend to make scientific breakthroughs: (1) young people (2) those who are trained in another discipline.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#procrastination-and-memory",
+    "href": "notes/how-to-learn/index.html#procrastination-and-memory",
+    "title": "How to learn",
+    "section": "Procrastination and Memory",
+    "text": "Procrastination and Memory\nYou have already learned about the Pomodoro technique. There are other techniques.\nFocus on the process, not the product. Don’t focus on completing the homework, focus on the process that leads you to complete the homework. Process is the small chunks of time to chip away at the task. This is the idea behind the Pomodoro. Your only goal is to finish the Pomodoro, for example.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#juggling-life-and-learning",
+    "href": "notes/how-to-learn/index.html#juggling-life-and-learning",
+    "title": "How to learn",
+    "section": "Juggling Life and Learning",
+    "text": "Juggling Life and Learning\nYou should make to-do list the night before for the next day and write it down. This will allow your subconscious to work on how it will conquer that task. Furthermore, writing it down will allow you to free it from working memory.\nPlan your quitting time is important.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html",
+    "href": "notes/video_editing.html",
+    "title": "Video Editing",
+    "section": "",
+    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html#davinci-resolve",
+    "href": "notes/video_editing.html#davinci-resolve",
+    "title": "Video Editing",
+    "section": "",
+    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html#other-tools-to-look-into",
+    "href": "notes/video_editing.html#other-tools-to-look-into",
+    "title": "Video Editing",
+    "section": "Other tools to look into",
+    "text": "Other tools to look into\n\nDescript\nRunwayML\ncapcut - from Rajeev\nAdobe Premiere\nFrame - Video collaboration that you use for Upwork etc\nEpidemic Sound - Sound by mood (Sanyam)\nCayla - Artlist\nCayla - Premium Beat\n\nCayla recommmends 1080p / 24 FPS for Youtube",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "publish.html",
+    "href": "publish.html",
+    "title": "📚 Books",
+    "section": "",
+    "text": "Still cooking …"
+  },
+  {
+    "objectID": "publish.html#still-under-review",
+    "href": "publish.html#still-under-review",
+    "title": "📚 Books",
+    "section": "",
+    "text": "Still cooking …"
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "📝 Papers",
+    "section": "",
+    "text": "These are a list of papers I’ve given:\n\nExplainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers"
+  },
+  {
+    "objectID": "blog/posts/axolotl/index.html#motivation",
+    "href": "blog/posts/axolotl/index.html#motivation",
+    "title": "axolotl start here",
+    "section": "Motivation",
+    "text": "Motivation\nAxolotl is a great project for fine-tuning LLMs. I started contributing to the project, and I found that it was difficult to debug. I wanted to share some tips and tricks I learned along the way, along with configuration files for debugging with VSCode. Moreover, I think being able to debug axolotl empowers developers who encounter bugs or want to understand how the code works. I hope this document helps you get started.\n\n\n\n\n\n\nThis content is now part of the Axolotl docs!\n\n\n\nI contributed this blog post’s contents as documentation for the axolotl project. You can find this content in the axolotl repo here."
+  },
+  {
+    "objectID": "blog/posts/axolotl/index.html#general-tips",
+    "href": "blog/posts/axolotl/index.html#general-tips",
+    "title": "axolotl start here",
+    "section": "General Tips",
+    "text": "General Tips\nWhile debugging, it’s helpful to simplify your test scenario as much as possible. Here are some tips for doing so:\n\n\n\n\n\n\nNote\n\n\n\nAll of these tips are incorporated into the example configuration for debugging with VSCode below.\n\n\n\nMake sure you are using the latest version of axolotl: This project changes often and bugs get fixed fast. Check your git branch and make sure you have pulled the latest changes from main.\nEliminate Concurrency: Restrict the number of processes to 1 for both training and data preprocessing:\n\nSet CUDA_VISIBLE_DEVICES to a single GPU, ex: export CUDA_VISIBLE_DEVICES=0.\nSet dataset_processes: 1 in your axolotl config or run the training command with --dataset_processes=1.\n\nUse a small dataset: Construct or use a small dataset from HF Hub. When using a small dataset, you will often have to make sure sample_packing: False and eval_sample_packing: False to avoid errors. If you are in a pinch and don’t have time to construct a small dataset but want to use from the HF Hub, you can shard the data (this will still tokenize the entire dataset but will only use a fraction of the data for training. For example, to shard the dataset into 20 pieces, add the following to your axolotl config):\ndataset:\n    ...\n    shards: 20\nUse a small model: A good example of a small model is TinyLlama/TinyLlama-1.1B-Chat-v1.0.\nMinimize iteration time: Make sure the training loop finishes as fast as possible, with these settings.\n\nmicro_batch_size: 1\nmax_steps: 1\nval_set_size: 0\n\nClear Caches: Axolotl caches certain steps and so does the underlying HuggingFace trainer. You may want to clear some of these caches when debugging.\n\nData preprocessing: When debugging data preprocessing, which includes prompt template formation, you may want to delete the directory set in dataset_prepared_path: in your axolotl config. If you didn’t set this value, the default is last_run_prepared.\nHF Hub: If you are debugging data preprocessing, you should clear the relevant HF cache HuggingFace cache, by deleting the appropriate ~/.cache/huggingface/datasets/... folder(s).\nThe recommended approach is to redirect all outputs and caches to a temporary folder and delete selected subfolders before each run. This is demonstrated in the example configuration below."
+  },
+  {
+    "objectID": "blog/posts/axolotl/index.html#debugging-with-vscode",
+    "href": "blog/posts/axolotl/index.html#debugging-with-vscode",
+    "title": "axolotl start here",
+    "section": "Debugging with VSCode",
+    "text": "Debugging with VSCode\n\nBackground\nThe below example shows how to configure VSCode to debug data preprocessing of the sharegpt format. This is the format used when you have the following in your axolotl config:\ndatasets:\n  - path: &lt;path to your sharegpt formatted dataset&gt; # example on HF Hub: philschmid/guanaco-sharegpt-style\n    type: sharegpt\n\n\n\n\n\n\nImportant\n\n\n\nIf you are already familiar with advanced VSCode debugging, you can skip the below explanation and look at the files .vscode/launch.json and .vscode/tasks.json for an example configuration.\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you prefer to watch a video, rather than read, you can skip to the video tutorial below (but doing both is recommended).\n\n\n\n\nSetup\nMake sure you have an editable install of Axolotl, which ensures that changes you make to the code are reflected at runtime. Run the following commands from the root of this project:\npip3 install packaging\npip3 install -e '.[flash-attn,deepspeed]'\n\nRemote Hosts\nIf you developing on a remote host, you can easily use VSCode to debug remotely. To do so, you will need to follow this remote - SSH guide. You can also see the video below on Docker and Remote SSH debugging.\n\n\n\nConfiguration\nThe easiest way to get started is to modify the .vscode/launch.json file in the axolotl GitHub repo. This is just an example configuration, so you may need to modify or copy it to suit your needs.\nFor example, to mimic the command cd devtools && CUDA_VISIBLE_DEVICES=0 accelerate launch -m axolotl.cli.train dev_sharegpt.yml, you would use the below configuration1. Note that we add additional flags that override the axolotl config and incorporate the tips above (see the comments). We also set the working directory to devtools and set the env variable HF_HOME to a temporary folder that is later partially deleted. This is because we want to delete the HF dataset cache before each run in order to ensure that the data preprocessing code is run from scratch.\n// https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/launch.json\n{\n    \"version\": \"0.2.0\",\n    \"configurations\": [\n        {\n            \"name\": \"Debug axolotl prompt - sharegpt\",\n            \"type\": \"python\",\n            \"module\": \"accelerate.commands.launch\",\n            \"request\": \"launch\",\n            \"args\": [\n                \"-m\", \"axolotl.cli.train\", \"dev_sharegpt.yml\",\n                // The flags below simplify debugging by overriding the axolotl config \n                // with the debugging tips above.  Modify as needed.\n                \"--dataset_processes=1\",      // limits data preprocessing to one process\n                \"--max_steps=1\",              // limits training to just one step\n                \"--batch_size=1\",             // minimizes batch size\n                \"--micro_batch_size=1\",       // minimizes batch size\n                \"--val_set_size=0\",           // disables validation\n                \"--sample_packing=False\",     // disables sample packing which is necessary for small datasets\n                \"--eval_sample_packing=False\",// disables sample packing on eval set\n                \"--dataset_prepared_path=temp_debug/axolotl_outputs/data\", // send data outputs to a temp folder\n                \"--output_dir=temp_debug/axolotl_outputs/model\" // send model outputs to a temp folder\n                ],\n            \"console\": \"integratedTerminal\",      // show output in the integrated terminal\n            \"cwd\": \"${workspaceFolder}/devtools\", // set working directory to devtools from the root of the project\n            \"justMyCode\": true,                   // step through only axolotl code\n            \"env\": {\"CUDA_VISIBLE_DEVICES\": \"0\",  // Since we aren't doing distributed training, we need to limit to one GPU\n                    \"HF_HOME\": \"${workspaceFolder}/devtools/temp_debug/.hf-cache\"}, // send HF cache to a temp folder\n            \"preLaunchTask\": \"cleanup-for-dataprep\", // delete temp folders (see below)\n        }\n    ]\n}\nAdditional notes about this configuration:\n\nThe argument justMyCode is set to true such that you step through only the axolotl code. If you want to step into dependencies, set this to false.\nThe preLaunchTask: cleanup-for-dataprep is defined in .vscode/tasks.json and is used to delete the following folders before debugging, which is essential to ensure that the data pre-processing code is run from scratch:\n\n./devtools/temp_debug/axolotl_outputs\n./devtools/temp_debug/.hf-cache/datasets\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou may not want to delete these folders. For example, if you are debugging model training instead of data pre-processing, you may NOT want to delete the cache or output folders. You may also need to add additional tasks to the tasks.json file depending on your use case.\n\n\nBelow is the ./vscode/tasks.json file that defines the cleanup-for-dataprep task. This task is run before each debugging session when you use the above configuration. Note how there are two tasks that delete the two folders mentioned above. The third task cleanup-for-dataprep is a composite task that combines the two tasks. A composite task is necessary because VSCode does not allow you to specify multiple tasks in the preLaunchTask argument of the launch.json file.\n// https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/tasks.json\n// this file is used by launch.json\n{\n    \"version\": \"2.0.0\",\n    \"tasks\": [\n      // this task changes into the devtools directory and deletes the temp_debug/axolotl_outputs folder\n      {\n        \"label\": \"delete-outputs\",\n        \"type\": \"shell\",\n        \"command\": \"rm -rf temp_debug/axolotl_outputs\",\n        \"options\":{ \"cwd\": \"${workspaceFolder}/devtools\"},\n        \"problemMatcher\": []\n      },\n      // this task changes into the devtools directory and deletes the `temp_debug/.hf-cache/datasets` folder\n      {\n        \"label\": \"delete-temp-hf-dataset-cache\",\n        \"type\": \"shell\",\n        \"command\": \"rm -rf temp_debug/.hf-cache/datasets\",\n        \"options\":{ \"cwd\": \"${workspaceFolder}/devtools\"},\n        \"problemMatcher\": []\n      },\n        // this task combines the two tasks above\n      {\n       \"label\": \"cleanup-for-dataprep\",\n       \"dependsOn\": [\"delete-outputs\", \"delete-temp-hf-dataset-cache\"],\n      }\n    ]\n}\n\n\nCustomizing your debugger\nYour debugging use case may differ from the example above. The easiest thing to do is to put your own axolotl config in the devtools folder and modify the launch.json file to use your config. You may also want to modify the preLaunchTask to delete different folders or not delete anything at all.\n\n\nVideo Tutorial\nThe following video tutorial walks through the above configuration and demonstrates how to debug with VSCode:"
+  },
+  {
+    "objectID": "blog/posts/axolotl/index.html#debugging-with-docker",
+    "href": "blog/posts/axolotl/index.html#debugging-with-docker",
+    "title": "axolotl start here",
+    "section": "Debugging With Docker",
+    "text": "Debugging With Docker\nUsing official Axolotl Docker images is a great way to debug your code, and is a very popular way to use Axolotl. Attaching VSCode to Docker takes a few more steps.\n\nSetup\nOn the host that is running axolotl (ex: if you are using a remote host), clone the axolotl repo and change your current directory to the root:\ngit clone https://github.com/OpenAccess-AI-Collective/axolotl\ncd axolotl\n\n\n\n\n\n\nTip\n\n\n\nIf you already have axolotl cloned on your host, make sure you have the latest changes and change into the root of the project.\n\n\nNext, run the desired docker image and mount the current directory. Below is a docker command you can run to do this:2\ndocker run --privileged --gpus '\"all\"' --shm-size 10g --rm -it --name axolotl --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --mount type=bind,src=\"${PWD}\",target=/workspace/axolotl -v ${HOME}/.cache/huggingface:/root/.cache/huggingface winglian/axolotl:main-py3.10-cu118-2.0.1\n\n\n\n\n\n\nTip\n\n\n\nTo understand which containers are available, see the Docker section of the README and the DockerHub repo. For details of how the Docker containers are built, see axolotl’s Docker CI builds.\n\n\nYou will now be in the container. Next, perform an editable install of Axolotl:\npip3 install packaging\npip3 install -e '.[flash-attn,deepspeed]'\n\n\nAttach To Container\nNext, if you are using a remote host, Remote into this host with VSCode. If you are using a local host, you can skip this step.\nNext, select Dev Containers: Attach to Running Container... using the command palette (CMD + SHIFT + P) in VSCode. You will be prompted to select a container to attach to. Select the container you just created. You will now be in the container with a working directory that is at the root of the project. Any changes you make to the code will be reflected both in the container and on the host.\nNow you are ready to debug as described above (see Debugging with VSCode).\n\n\nVideo - Attaching To Docker On Remote Host\nHere is a short video that demonstrates how to attach to a Docker container on a remote host:"
+  },
+  {
+    "objectID": "blog/posts/axolotl/index.html#footnotes",
+    "href": "blog/posts/axolotl/index.html#footnotes",
+    "title": "axolotl start here",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe config actually mimics the command CUDA_VISIBLE_DEVICES=0 python -m accelerate.commands.launch -m axolotl.cli.train devtools/sharegpt.yml, but this is the same thing.↩︎\nMany of the below flags are recommended best practices by Nvidia when using nvidia-container-toolkit. You can read more about these flags here.↩︎"
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html",
+    "href": "blog/posts/dokku/index.html",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "",
+    "text": "With Dokku, you can turn a VPS into a powerful serverless platform"
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#what-is-dokku",
+    "href": "blog/posts/dokku/index.html#what-is-dokku",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "What is Dokku?",
+    "text": "What is Dokku?\nDokku is an open-source Platform as a Service (PaaS) that runs on a single server of your choice. It’s like Heroku, but you own it. It is a great way to get the benefits of Heroku without the costs (Heroku can get quite expensive!). I need to deploy many applications for my LLM consulting work. Having a cost-effective, easy-to-use serverless platform is essential for me.\nI run a Dokku server on a $7/month VPS on OVHcloud for non-gpu workloads. These applications include things like nbsanity and data cleaning tools for LLMs.\nSome of the features I love about Dokku:\n\nEasy to use (like Heroku).\nAutomatic SSL certificate management via Let’s Encrypt.\nBasic Auth support so I can password-protect sites.\nScale up and down with a single command.\nFlexibility to handle any application (Node, Python, etc), including defining a Docker container.\nLots of official plugins that do almost anything I want.\nEasily deploy with git commands."
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#deploying-apps-as-a-docker-container",
+    "href": "blog/posts/dokku/index.html#deploying-apps-as-a-docker-container",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "Deploying Apps as A Docker Container",
+    "text": "Deploying Apps as A Docker Container\nAn easy way to deploy applications is with a Docker container.\nTo deploy a Docker container, I put a Dockerfile in the root of my git repo like this:\n\n\nDockerfile\n\nFROM python:3.10\n\nCOPY . /app\nWORKDIR /app\n\n# Install the local package\nRUN pip install .\n\n# This directory contains app.py, a FastApi app\nWORKDIR /app/\n\nENTRYPOINT [\"./entrypoint.sh\"]\n\n\n\n\n\n\n\nTip\n\n\n\nThe entrypoint.sh script allows me to easily run the app locally or in a Docker container. It looks like this:\n\n\nentrypoint.sh\n\n#!/bin/bash\nexec uvicorn main:app --port \"$PORT\" --host 0.0.0.0\n\n\n\nOn the Dokku host, create the app:\ndokku apps:create myapp\nLocally, set up access to the Dokku host and name it dokku in your ~/.ssh/config file. For example, here is mine:\nHost dokku\n  HostName &lt;The external IP address of your Dokku host&gt;\n  User ubuntu\n  IdentityFile /Users/hamel/.ssh/dokku\nLocally, add the Dokku host as a remote and push to it:\ngit remote add dokku dokku@dokku:myapp\ngit push dokku main\nThat’s it - your app should be running on the Dokku host! Your local logs will print the URL that your application is served on, which by default will be myapp.yourdomain.com. You can also scale it up/down with the following command:\n#scale to two workers\ndokku ps:scale myapp web=2\nWe are just scratching the surface. For more details, see the Dokku docs."
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#static-sites",
+    "href": "blog/posts/dokku/index.html#static-sites",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "Static Sites",
+    "text": "Static Sites\nGitHub Pages is annoying in that you can’t easily deploy private static sites without paying for an expensive Enterprise account. With Dokku, you can easily deploy a static site from a private GitHub Repo and password-protect it.\nWe will assume that you have a static site in a git repo in a folder named _site.\nOn the Dokku host, create an app named mysite and set the NGINX_ROOT environment variable to _site:\ndokku apps:create mystite\ndokku config:set static-site NGINX_ROOT=_site\nAlso on the Dokku host, install basic auth and set permissions so the plugin can work properly.\n# do setup for the auth plugin that we will use later\nsudo dokku plugin:install https://github.com/dokku/dokku-http-auth.git\nsudo chmod +x /home/dokku\nThen execute the following commands from the root of your git repo that contains the static site. :\n1touch .static\n2echo BUILDPACK_URL=https://github.com/dokku/buildpack-nginx &gt; .env\n3git remote add dokku dokku@dokku:mysite\n\n1\n\ntells dokku that this is a static site\n\n2\n\ntells dokku to use the nginx buildpack for static sites (it will usually automatically detect this, but if you have a project with code and a static site, you need to tell it to use the nginx buildpack so it doesn’t get confused).\n\n3\n\nadd the dokku host as a remote. For this to work, make sure dokku is a hostname in your ~/.ssh/config file as described in the previous section.\n\n\nFinally, deploy your application:\ngit push dokku main\nYou can now add auth by running the following command on the Dokku host:\ndokku http-auth:enable mystite &lt;username&gt; &lt;password&gt;\n\n\n\n\n\n\nNote\n\n\n\nYou can add multiple usernames/passwords and even filter specific IPs. See the docs.\n\n\n\n\n\n\n\n\nSSL / HTTPS\n\n\n\nIt’s often desirable to have HTTPS for your site. Dokku makes this easy with the Let’s Encrypt Plugin, which will even auto-renew for you. I don’t use this, because I’m letting Cloudflare handle this with its proxy.\nIf you are using Cloudflare this way, activating this plugin will mess things up (don’t worry its easy to disable). Honestly, I think it’s easier to let Cloudflare handle it if you are already doing so."
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#run-commands-remotely",
+    "href": "blog/posts/dokku/index.html#run-commands-remotely",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "Run commands remotely",
+    "text": "Run commands remotely\nYou don’t have to ssh into the Dokku host just to execute commands. You can execute them remotely via the dokku user like this:\n# https://dokku.com/docs/deployment/application-management/\nssh dokku@rechat.co apps:list"
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#docker-cache",
+    "href": "blog/posts/dokku/index.html#docker-cache",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "Docker cache",
+    "text": "Docker cache\nThis is how you can invalidate the docker cache for a fresh build:\nssh dokku@rechat.co repo:purge-cache llm-eval"
+  },
+  {
+    "objectID": "blog/posts/dokku/index.html#rebuild-without-pushing",
+    "href": "blog/posts/dokku/index.html#rebuild-without-pushing",
+    "title": "Dokku: my favorite personal serverless platform",
+    "section": "Rebuild without pushing",
+    "text": "Rebuild without pushing\nSometimes you want to rebuild without pushing. There are many ways to do this, but one way is like this:\nssh dokku@rehcat.co ps:rebuild llm-eval"
+  }
+]
