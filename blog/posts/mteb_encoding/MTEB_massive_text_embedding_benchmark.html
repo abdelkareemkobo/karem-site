@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Hamel Husain">
-<meta name="dcterms.date" content="2023-05-30">
-<meta name="description" content="Why I decided not to commercialize nbdev.">
+<meta name="dcterms.date" content="2023-10-28">
+<meta name="description" content="MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.">
 
-<title>kareem’s Blog - On commercializing nbdev</title>
+<title>kareem’s Blog - MTEB Massive Text Embedding Benchmark</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,19 +71,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="kareem’s Blog - On commercializing nbdev">
-<meta property="og:description" content="Why I decided not to commercialize nbdev.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/nbdev/nbdev.png">
+<meta property="og:title" content="kareem’s Blog - MTEB Massive Text Embedding Benchmark">
+<meta property="og:description" content="MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.">
+<meta property="og:image" content="https://kareemai.com/blog/posts/mteb_encoding/quarto.png">
 <meta property="og:site_name" content="kareem's Blog">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1536">
-<meta name="twitter:title" content="kareem’s Blog - On commercializing nbdev">
-<meta name="twitter:description" content="Why I decided not to commercialize nbdev.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/nbdev/nbdev.png">
+<meta name="twitter:title" content="kareem’s Blog - MTEB Massive Text Embedding Benchmark">
+<meta name="twitter:description" content="MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/mteb_encoding/quarto.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1536">
 </head>
 
 <body class="nav-fixed">
@@ -137,29 +132,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#opportunities" id="toc-opportunities" class="nav-link" data-scroll-target="#opportunities">Opportunities</a></li>
-  <li><a href="#shifting-focus" id="toc-shifting-focus" class="nav-link" data-scroll-target="#shifting-focus">Shifting Focus</a></li>
-  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">What I learned</a></li>
-  <li><a href="#future-directions" id="toc-future-directions" class="nav-link" data-scroll-target="#future-directions">Future Directions</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#embedding-models" id="toc-embedding-models" class="nav-link" data-scroll-target="#embedding-models">Embedding models</a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The problem</a></li>
+  <li><a href="#the-solution-with-this-benchmark" id="toc-the-solution-with-this-benchmark" class="nav-link" data-scroll-target="#the-solution-with-this-benchmark">The solution with this benchmark</a></li>
+  <li><a href="#the-mteb-desiderata" id="toc-the-mteb-desiderata" class="nav-link" data-scroll-target="#the-mteb-desiderata">The MTEB Desiderata</a></li>
+  <li><a href="#tasks-and-evaluation" id="toc-tasks-and-evaluation" class="nav-link" data-scroll-target="#tasks-and-evaluation">Tasks and Evaluation</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
+  <li><a href="#efficiency" id="toc-efficiency" class="nav-link" data-scroll-target="#efficiency">Efficiency</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/nbdev/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">On commercializing nbdev</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Jupyter</div>
-    <div class="quarto-category">nbdev</div>
-  </div>
-  </div>
+<h1 class="title">MTEB Massive Text Embedding Benchmark</h1>
+</div>
 
 <div>
   <div class="description">
-    Why I decided not to commercialize nbdev.
+    MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.
   </div>
 </div>
 
@@ -169,14 +166,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Hamel Husain </p>
+             <p>kareem </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 30, 2023</p>
+      <p class="date">October 28, 2023</p>
     </div>
   </div>
   
@@ -188,65 +185,193 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="nbdev.png" class="img-fluid figure-img"></p>
-<figcaption><a href="https://nbdev.fast.ai">nbdev</a> is a software development tool based on Jupyter that feels like its from the future.</figcaption>
-</figure>
-</div>
-<p>A few friends have asked me why I decided not to commercialize <a href="https://nbdev.fast.ai/">nbdev</a>, especially after putting lots of work into the project, including leaving my full-time job to work on it. So I thought I would write a short post to explain my reasoning.</p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p><a href="https://nbdev.fast.ai">nbdev</a> is an innovative software development framework for Python that embraces <a href="https://en.wikipedia.org/wiki/Literate_programming">literate</a> and <a href="https://en.wikipedia.org/wiki/Exploratory_programming">exploratory</a> programming. I worked on nbdev from 2020-2023 with <a href="https://github.com/jph00">Jeremy Howard</a> and, later, <a href="https://github.com/seem">Wasim Lorgat</a>. I had the privilege and excitement of exploring the boundaries of developer tools and exploratory programming while working with very talented software engineers. In addition to creating a tool many people enjoyed, I <a href="https://nbdev.fast.ai/blog/posts/2022-07-28-nbdev2/">enjoyed using nbdev</a> for personal and professional projects.</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
 </section>
-<section id="opportunities" class="level2">
-<h2 class="anchored" data-anchor-id="opportunities">Opportunities</h2>
-<p>While conducting product research, I interviewed many developers from different backgrounds to understand their pain points and needs. All developers I talked to struggled with one key challenge: it was difficult, if not impossible, to convince other engineers to use nbdev.</p>
-<p>The following are the biggest reasons that prevented adoption:</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>#defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB.</p>
+</section>
+<section id="embedding-models" class="level2">
+<h2 class="anchored" data-anchor-id="embedding-models">Embedding models</h2>
 <ul>
-<li><strong>Friction in onboarding engineers</strong>. In many companies, there are often existing Python projects, and it can be detrimental to maintain different ways of doing things when a company has already settled upon one way that it has built processes and tools around.</li>
-<li><strong>Collisions with the rest of the software development stack</strong>: it was (and still is) a pain to version control notebooks in a way that’s conducive to collaboration. For practical purposes, you cannot perform code reviews of notebooks on GitHub without purchasing a tool called <a href="https://www.reviewnb.com/">ReviewNB</a>. So instead of convincing people to use nbdev, you have to convince them to use nbdev and ReviewNB. This makes the barrier to initial adoption considerably high - as procuring software in many organizations is a non-trivial process involving security review, compliance, legal and other stakeholders.</li>
+<li>Text embedding models like GLove lack context awareness and ar=e thus commonly labeled as word embedding model. They consist of a layer mapping each input word to a vector often followed by an averaging layer to provide a final embedding invariant of input length.</li>
+<li>Transformers inject context awareness into language models via self-attention and form the foundation of most recent embedding models.
+<ul>
+<li>BERT uses the transformer architecture and performs large-scale self-supervised pre-training. The resulting model can directly be used to produce text embeddings via an averaging operation alike Glove.</li>
+<li>SBERT be beneficial to perform additional fine-tuning of the transformer for competitive embedding performance.</li>
+<li><em>Most recent fine-tuned embedding models use a contrastive loss objective to perform supervised fine-tuned on positive and negative text pairs</em></li>
+<li>#critique Due to the large variety of available pretrained transformers,there is an at least equally large variety of potential text embedding models to be explored.This leads to confusion about which model provides practitioners with the best performance for their embedding use case.</li>
+</ul></li>
 </ul>
-<p>I viewed solving the above problems as potential opportunities for commercializing nbdev.</p>
+<hr>
 </section>
-<section id="shifting-focus" class="level2">
-<h2 class="anchored" data-anchor-id="shifting-focus">Shifting Focus</h2>
-<p>Jeremy, Wasim, and I eventually settled on the idea of “WordPress for developers,” a hosted site allowing people to create and share nbdev projects. We thought this would be an excellent way to get people to try nbdev without installing anything. The idea was to narrow the audience to people interested in hosting projects on a platform that promoted exploration and sharing, similar to <a href="https://glitch.com/">Glitch</a> that was as easy to use and pragmatic as <a href="https://wordpress.com/">Wordpress</a>.</p>
-<p>Around the same time we began discussing hosted tools, the machine learning world experienced a tectonic shift due to the explosion of Generative AI, namely Stable Diffusion. <a href="https://fast.ai">fast.ai</a>, the organization that created nbdev, was also changing its focus. fast.ai’s prime directive was to make deep learning accessible to as many people as possible, and generative AI was too important to ignore. Accordingly, Jeremy placed his full attention on a <a href="https://course.fast.ai/Lessons/lesson9.html">Stable Diffusion course</a>.</p>
-<p>This pivot caused some turbulence as we navigated the different priorities of nbdev, generative AI research, and making money. We eventually settled on offering consulting services for everything related to fast.ai in the form of <a href="https://www.fast.ai/partners.html">fast.ai partners</a>, which would allow us to bootstrap ourselves financially and embrace the larger mission of fast.ai (including generative AI and research). Eventually, I found the splintered focus across so many areas to be unproductive<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and decided to step away from everything except consulting to regain my footing.</p>
-<p>Soon after that, ChatGPT emerged onto the scene and caused further shifts in machine learning that were orders of magnitude larger than their text-to-image predecessors. Pretty soon, all of my clients were interested in language models, and I found myself working exclusively on operationalizing them (a skill that I have cultivated by working in machine learning for 20+ years). Additionally, LLMs profoundly changed the nature of software development, especially the kind of software development that nbdev was designed to support<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. These factors and those discussed earlier suggested it was a good time to step away from nbdev and focus on other things.</p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
+<ul>
+<li>The problem with the current evaluation regime of current text embedding models rarely covers the breadth of their possible use cases.
+<ul>
+<li>#example SimCSE or SBERT solely evaluate on STS and classification tasks,leaving open questions about the transfer ability of the embedding models to search or clustering tasks.</li>
+</ul></li>
+<li>evaluating embedding methods on many tasks requires implementing multiple evaluation pipelines.</li>
+<li>implementation details like preprocessing or hyperparameters may influence the results making it unclear whether performance improvements simply come from a favorable evaluation pipeline. This leads to the “blind” application of these models to new use cases in industry or requires incremental work to reevaluate them on different tasks.</li>
+</ul>
+<hr>
 </section>
-<section id="what-i-learned" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-learned">What I learned</h2>
-<p>I learned some important lessons during this process:</p>
+<section id="the-solution-with-this-benchmark" class="level2">
+<h2 class="anchored" data-anchor-id="the-solution-with-this-benchmark">The solution with this benchmark</h2>
+<ul>
+<li><strong>MTEB</strong> consists of 58 datasets covering 112 languages from 8 embedding tasks:</li>
+</ul>
 <ol type="1">
-<li>Just because you love a project and find it useful, that doesn’t necessarily imply that it’s ripe for commercialization. I always struggled to gain conviction that there was a good business model for nbdev.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Instead, I pursued this path because I was drawn to the idea of starting a business with people I really liked. Ultimately, I learned that at least one person needs strong conviction <em>in addition</em> to being excited about the people you are working with - not just one or the other.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> I also learned that it’s important to be honest with yourself about your (and your team’s) level of conviction and not try to force something that isn’t there.</li>
-<li>Listen to your instincts. I ignored my instincts on multiple occasions throughout this journey. As I’ve grown older, I’ve learned to make this mistake much less often, but I could have done better here.</li>
-<li>Don’t be afraid to pivot. I think we avoided unnecessary churn by steering clear of a situation that wasn’t promising. I’m much more excited about the work I’m doing now.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
-<li>Own your own brand. My professional brand became increasingly tied to fast.ai and my friend Jeremy Howard. I’m grateful for the growth I’ve experienced under this mentorship – but I believe it is important to build your own distinct brand and identity. I discovered it can be challenging to build your own brand when you are working on someone else’s project<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, and is something I struggled with. I’m looking forward to working on this more.</li>
+<li>Bitext mining</li>
+<li>classification</li>
+<li>clustering</li>
+<li>pair classification</li>
+<li>reranking, retrieval</li>
+<li>STS</li>
+<li>summarization.</li>
+</ol>
+<ul>
+<li>MTEB software is available open-source1 enabling evaluation of any embedding model by adding less than 10 lines of code.</li>
+<li>Datasets and the MTEB leaderboard are available on the Hugging Face Hub2 .</li>
+<li>We evaluate over 30 models on MTEB with additional speed and memory benchmarking to provide a holistic view of the state of text embedding models. We cover both models available open-source as well as models accessible via APIs, such as the OpenAI Embeddings endpoint</li>
+<li>It aims to sheds light on the weaknesses and strenghts of individual models,such as SimCSE’s<a href="https://doi.org/10.48550/ARXIV.2004.07180">(Gao et al., 2021b)</a> low performance on clustering and retrieval despite its strong performance on STS.</li>
+</ul>
+</section>
+<section id="the-mteb-desiderata" class="level2">
+<h2 class="anchored" data-anchor-id="the-mteb-desiderata">The MTEB Desiderata</h2>
+<p>METB is build on a set of desiderat.</p>
+<ol type="1">
+<li><strong>Diversity</strong>:
+<ul>
+<li>it consists of 58 total datasets, 10 are multilingual, covering 112 different langauges.</li>
+<li>Sentence-level and paragraph level datasets are included to contrast performance on short and long texts.</li>
+</ul></li>
+<li><strong>Simplicity</strong>
+<ul>
+<li>It provides a simple API for plugging in any model that given a list of text can produce a vector for each list of texts can produce a vector for each list item with a consistent shape.</li>
+</ul></li>
+<li><strong>Extensibility</strong>
+<ul>
+<li>you can add new datasets for existing tasks via a single file that specifies the task and a Huggingface dataset name where the data has been uploaded.</li>
+<li>New tasks require implementing a task interface for loading the data and an evaluator for benchmarking</li>
+</ul></li>
+<li><strong>Reproduciblity</strong>
+<ul>
+<li>Through versioning at a dataset and software level,they make it easy to reproduce results in METP.</li>
+<li>JSON files corresponding to all results available in this paper have been made available together with the MTEB benchmark</li>
+</ul></li>
 </ol>
 </section>
-<section id="future-directions" class="level2">
-<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
-<p>I suspect that I’m not completely finished with nbdev. I may revisit the project or related ideas when the time is right. I’m excited by the work <a href="https://posit.co">Posit</a> is doing in the areas of literate and exploratory programming, which include many of the ideas explored in nbdev. Wasim has even joined the team at Posit, so I’m excited to see what they come up with.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
-<p>Regarding what I’m working on next – I’ll have to save my thoughts on that for another post 😊.</p>
+<section id="tasks-and-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-and-evaluation">Tasks and Evaluation</h2>
+<p>#definition <strong>Bitext Mining</strong><br>
+Inputs are two sets of sentences from two different languages. For each sentence in the first set, the best match in the second set needs to be found.</p>
+<ul>
+<li>The matches are commonly translations.</li>
+<li>The Provided model i used to embed each sentence and the closest pairs are found via cosine similarity</li>
+<li>F1 serves as the main metric for bitext mining.Accuracy, precision and recall are also computed. #definition <strong>Classification</strong></li>
+<li>A train and test set are embedded with the provided model.</li>
+<li>The train set embeddings are used to train a logistic regression classifier with 100 maximum iterations, which is scored on the test set.</li>
+<li>The main metric is accuracy with average precision and f1 additionally provided. #definition <strong>Clustering</strong> Given a set of sentences or paragraphs, the goal is to group them into meaningful clusters.</li>
+<li>A mini-batch k-means model with batch size 32 and k equal to the number of different labels is trained on the embedded texts.</li>
+<li>The model scored using V-measure - V-measure does not depend on the cluster label,thus the permutation of labels does not affect the score. #definition <strong>Classification</strong> A pair of text inputs is provided and a label needs to be assigned. Labels are typically binary variables denoting duplicate or paraphrase pairs.</li>
+<li>The two texts are embedded and their distance is computed with various metrics (cosine similarity, dot product, euclidean distance, manhattan distance).</li>
+<li>Using the best binary thresh- old accuracy, average precision, f1, precision and recall are computed.</li>
+<li>The average precision score based on cosine similarity is the main metric. #definition <strong>Reranking</strong> : Inputs are a query and a list of relevant and irrelevant reference texts. The aim is to rank the results according to their relevance to the query.</li>
+<li>The model is used to embed the references which are then compared to the query using cosine similarity.</li>
+<li>The resulting ranking is scored for each query and averaged across all queries.</li>
+<li>Metrics are mean MRR@k and MAP with the latter being the main metric. #definition <strong>Retrieval</strong> Each dataset consists of a corpus, queries and a mapping for each query to relevant documents from the corpus.</li>
+<li>The aim is to find these relevant documents.</li>
+<li>The provided model is used to embed all queries and all corpus documents and similarity scores are computed using cosine similarity. After ranking the corpus documents for each query based on the scores, nDCG@k, MRR@k, MAP@k, precision@k and recall@k are computed for several values of k. nDCG@10 serves as the main metric.</li>
+<li>MTEB reuses datasets and evaluation from BEIR (Thakur et al., 2021). #definition <strong>Semantic Textual Similarity (STS)</strong> Given a sentence pair the aim is to determine their similarity. Labels are continuous scores with higher numbers indicating more similar sentences.</li>
+<li>The provided model is used to embed the sentences and their similarity is computed using various distance metrics.</li>
+<li>Distances are benchmarked with ground truth similarities using Pearson and Spearman correlations.</li>
+<li>Spearman correlation based on cosine similarity serves as the main metric (Reimers et al.,2016). #definition <strong>Summarization</strong> A set of human-written and machine-generated summaries are provided. The aim is to score the machine summaries. The provided model is first used to embed all summaries. For each machine summary embedding, distances to all human summary embeddings are computed. The closest score (e.g.&nbsp;highest cosine similarity) is kept and used as the model’s score of a single machine-generated summary. Pearson and Spearman correlations with ground truth human assessments of the machine-generated summaries are computed. Like for STS, Spearman correlation based on cosine similarity serves as the main metric</li>
+</ul>
+<hr>
+<p>#sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications. ![[Pasted image 20231028124555.png]]</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<ul>
+<li>we observe that there is considerable variability between tasks. No model claims the state-of-the-art in all seven English tasks.</li>
+<li>There is even more variability in the results per dataset present in the appendix.</li>
+<li>Further, there remains a large gap between self-supervised and supervised methods.</li>
+<li>Self-supervised large language models have been able to close this gap in many natural language generation tasks (Chowd- hery et al., 2022).</li>
+<li>However, they appear to still require supervised fine-tuning for competitive em- bedding performance.</li>
+<li>We find that performance strongly coorelates with model size, A majority of MTEB tasks are domainted by multi-billion parameter models.However, these come at a significant cost</li>
+<li><strong>For classification</strong>
+<ul>
+<li>ST5 models dominate the classification task across most datasets</li>
+<li>ST5-XXL has the highest average performance, 3% ahead of the best non-ST5 model, OpenAI Ada Similarity</li>
+</ul></li>
+<li><strong>Clustering</strong>
+<ul>
+<li>Despite being almost 50x smaller, the MPNet embedding model is on par with the ST5- XXL state-of-the-art on Clustering. This may be due to the large variety of datasets MPNet (and MiniLM) has been fine-tuned on.</li>
+<li>Clustering requires coherent distances between a large number of embeddings.</li>
+<li>Models like SimCSE-sup or SGPTnli, which are only fine-tuned on a single dataset,NLI, may produce incoherent embeddings when encountering topics unseen during fine-tuning.</li>
+<li>Relatedly, we find that the query embeddings of SGPT-msmarco and the Ada Search endpoint are competitive with SGPT-nli and the Ada Similarity endpoint,respectively.</li>
+<li>We refer to the public leaderboard5 for Ada Search results. This could be due to the MSMARCO dataset being significantly larger than NLI.</li>
+<li>Thus, while the OpenAI docs recommend using the similarity embeddings for clustering use cases6 , the retrieval query embeddings may be the better choice in some cases.</li>
+</ul></li>
+<li><strong>Pair Classification</strong>
+<ul>
+<li>GTR-XL and GTR-XXL have the strongest performance. Pair classification is closest to STS in its framing, yet models rank significantly differently on the two tasks. This highlights the importance of benchmarking on a diverse set of tasks to avoid blindly reusing a model for a different task.</li>
+</ul></li>
+<li><strong>Reranking</strong>
+<ul>
+<li>MPNet and MiniLM models perform strongly on reranking tasks.</li>
+<li>On SciDocsRR (Co-han et al., 2020a) they perform far better than big- ger models, which is likely due to parts of SciDocsRR being included in their training data.</li>
+<li>Our scale of experiments and that of model pre-training make controlling for data contamination challenging.</li>
+<li>Thus, we ignore overlap of MTEB datasets with model training datasets in MTEB scores.</li>
+<li>As long as enough datasets are averaged, we believe these effects to be insignificant.</li>
+</ul></li>
+<li><strong>Retrieval</strong>
+<ul>
+<li>SGPT-5.8B-msmarco is the best em- bedding model on the BEIR subset in MTEB as well as on the full BEIR benchmark (Thakur et al., 2021; Muennighoff, 2022).</li>
+<li>The even larger 7.1B SGPT model making use of BLOOM (Scao et al., 2022) performs significantly weaker, which is likely due to the multilinguality of BLOOM.</li>
+<li>Models geared towards STS (SimCSE, ST5, SGPT- nli) perform badly on retrieval tasks.</li>
+<li>Retrieval tasks are unique in that there are two distinct types of texts: Queries and documents (“asymmetric”), while other tasks only have a single type of text (“symmetric”).</li>
+<li>On the QuoraRetrieval dataset, which has been shown to be largely symmetric (Muennighoff, 2022), the playing field is more even with SGPT-5.8B-nli outperforming SGPT- 5.8B-msmarco,</li>
+</ul></li>
+<li><strong>STS &amp; Summarization</strong>
+<ul>
+<li>Retrieval models (GTR, SGPT-msmarco) perform badly on STS, while ST5-XXL has the highest performance.</li>
+<li>This highlights the bifurcation of the field into separate embedding models for retrieval (asymmetric) and similarity (symmetric) use cases (Muennighoff, 2022).</li>
+</ul></li>
+</ul>
+</section>
+<section id="efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="efficiency">Efficiency</h2>
+<p><strong>Maximum speed</strong> -&gt; Word Embedding models offer maximum speed with Glove taking the lead on both performance and speed, thus making the choice simple in this case</p>
+<p><strong>Maximum performance</strong> -&gt; If latency is less important than performance Depending on the task at hand, GTR-XXL, ST5-XXL or SGPT-5.8B may be the right choice,</p>
+<p><strong>Speed and Peformance</strong> -&gt; The fine-tuned MPNet and MiniLM models lead the middle cluster making the choice easy.</p>
+<hr>
+<p>#todo you can check the gte architecture here it’s highly related to the MTEP [[tiny-gte_transformer_model]]</p>
+<hr>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>We found model performance on different tasks to vary strongly with no model claiming state-of-the-art on all tasks.</li>
+<li>Our studies on scaling behavior, model efficiency and multilinguality revealed various intricacies of models that should ease the decision-making process for future research or industry applications of text embeddings.</li>
+</ul>
+<hr>
+<p>Thanks for reading. If you have any questions, feel free to comment down below or reach out to me on twitter <a href="https://twitter.com/AbdelkareemElk1"><span class="citation" data-cites="AbdelkareemElk1">@AbdelkareemElk1</span></a>.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>https://huggingface.co/blog/mteb</li>
+<li>https://arxiv.org/abs/2210.07316</li>
+</ul>
 
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>I burned out several times during this process, but I didn’t realize why at the time. Not surprisingly, trying to focus on too many things at once was the root cause.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>See <a href="https://www.loom.com/share/5ab26344119440a5b70ce4094827d9e3">this demo</a> for ideas on how coding with LLMs might look like, especially with notebooks.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The problem with the hosted solution is that this is not something I would want to use. I can’t picture myself trying to host code on something other than GitHub/GitLab.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Without shared conviction, there is no glue holding everyone together and people can drift apart.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>I’ll share more about this in a future post.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>I don’t believe this is always the case, but it can be true depending on the dynamics of the group.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>We previously partnered with Posit and <a href="https://en.wikipedia.org/wiki/Joseph_J._Allaire">JJ Allaire</a> and built nbdev on top of <a href="https://quarto.org/">Quarto</a>. I’m currently advising Posit on their product and strategy. They have additional projects on their roadmap that I cannot disclose now.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -634,8 +759,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="hamelsmu/hamel" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -699,7 +822,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/nbdev/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

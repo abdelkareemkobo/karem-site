@@ -17,1232 +17,790 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Wed, 10 Jan 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 31 Dec 2023 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>axolotl start here</title>
-  <dc:creator>Hamel Husain</dc:creator>
-  <link>https://kareemai.com/blog/posts/axolotl/</link>
+  <title>My little Dragon “kobo”</title>
+  <link>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><img src="https://kareemai.com/blog/posts/axolotl/images/debug_axolotl.png" class="img-fluid"></p>
-<section id="motivation" class="level2">
-<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
-<p><a href="https://github.com/OpenAccess-AI-Collective/axolotl">Axolotl</a> is a great project for fine-tuning LLMs. I started contributing to the project, and I found that it was difficult to debug. I wanted to share some tips and tricks I learned along the way, along with configuration files for debugging with VSCode. Moreover, I think being able to debug axolotl empowers developers who encounter bugs or want to understand how the code works. I hope this document helps you get started.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-This content is now part of the Axolotl docs!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://github.com/OpenAccess-AI-Collective/axolotl/pull/1089">I contributed</a> this blog post’s contents as documentation for the axolotl project. <strong>You can find this content <a href="https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/docs/debugging.md">in the axolotl repo here</a></strong>.</p>
-</div>
-</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
 </section>
-<section id="general-tips" class="level2">
-<h2 class="anchored" data-anchor-id="general-tips">General Tips</h2>
-<p>While debugging, it’s helpful to simplify your test scenario as much as possible. Here are some tips for doing so:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>All of these tips are incorporated into the example configuration for debugging with VSCode below.</p>
-</div>
-</div>
-<ol type="1">
-<li><p><strong>Make sure you are using the latest version of axolotl</strong>: This project changes often and bugs get fixed fast. Check your git branch and make sure you have pulled the latest changes from <code>main</code>.</p></li>
-<li><p><strong>Eliminate Concurrency</strong>: Restrict the number of processes to 1 for both training and data preprocessing:</p>
-<ul>
-<li>Set <code>CUDA_VISIBLE_DEVICES</code> to a single GPU, ex: <code>export CUDA_VISIBLE_DEVICES=0</code>.</li>
-<li>Set <code>dataset_processes: 1</code> in your axolotl config or run the training command with <code>--dataset_processes=1</code>.</li>
-</ul></li>
-<li><p><strong>Use a small dataset</strong>: Construct or use a small dataset from HF Hub. When using a small dataset, you will often have to make sure <code>sample_packing: False</code> and <code>eval_sample_packing: False</code> to avoid errors. If you are in a pinch and don’t have time to construct a small dataset but want to use from the HF Hub, you can shard the data (this will still tokenize the entire dataset but will only use a fraction of the data for training. For example, to shard the dataset into 20 pieces, add the following to your axolotl config):</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dataset</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    ...</span></span>
-<span id="cb1-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">shards</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">20</span></span></code></pre></div></li>
-<li><p><strong>Use a small model</strong>: A good example of a small model is <a href="https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0">TinyLlama/TinyLlama-1.1B-Chat-v1.0</a>.</p></li>
-<li><p><strong>Minimize iteration time</strong>: Make sure the training loop finishes as fast as possible, with these settings.</p>
-<ul>
-<li><code>micro_batch_size: 1</code></li>
-<li><code>max_steps: 1</code></li>
-<li><code>val_set_size: 0</code></li>
-</ul></li>
-<li><p><strong>Clear Caches:</strong> Axolotl caches certain steps and so does the underlying HuggingFace trainer. You may want to clear some of these caches when debugging.</p>
-<ul>
-<li>Data preprocessing: When debugging data preprocessing, which includes prompt template formation, you may want to delete the directory set in <code>dataset_prepared_path:</code> in your axolotl config. If you didn’t set this value, the default is <code>last_run_prepared</code>.</li>
-<li>HF Hub: If you are debugging data preprocessing, you should clear the relevant HF cache <a href="https://huggingface.co/docs/datasets/cache">HuggingFace cache</a>, by deleting the appropriate <code>~/.cache/huggingface/datasets/...</code> folder(s).</li>
-<li><strong>The recommended approach is to redirect all outputs and caches to a temporary folder and delete selected subfolders before each run. This is demonstrated in the example configuration below.</strong></li>
-</ul></li>
-</ol>
+<section id="the-time-i-spend-with-kobo" class="level2">
+<h2 class="anchored" data-anchor-id="the-time-i-spend-with-kobo">The time I spend with kobo</h2>
+<p>I spend on average 8 hours on my laptop “kobo” doing a lot of programming, machine learning experiments and browsing many taps.</p>
+<p>I don’t use my phone a lot on average 1 or 2 hours, so i wake up and go to see my little friend and start journaling, wirte my ideas, perparing my todo list.</p>
+<p>I have been using it for 4 years now, and it was a nice period i love that it hasn’t broken till now, everything is working good even the battery can stand for the 2.5 hours in the battery life with a lot of memory and cpu usage</p>
+<p>You can easily say that my laptop is now a part of me i can’t live without it any more my dairy, movies, work and college is depending on it</p>
 </section>
-<section id="debugging-with-vscode" class="level2">
-<h2 class="anchored" data-anchor-id="debugging-with-vscode">Debugging with VSCode</h2>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>The below example shows how to configure VSCode to debug data preprocessing of the <code>sharegpt</code> format. This is the format used when you have the following in your axolotl config:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">datasets</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> &lt;path to your sharegpt formatted dataset&gt;</span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"> # example on HF Hub: philschmid/guanaco-sharegpt-style</span></span>
-<span id="cb2-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> sharegpt</span></span></code></pre></div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you are already familiar with advanced VSCode debugging, you can skip the below explanation and look at the files <a href="../.vscode/launch.json">.vscode/launch.json</a> and <a href="https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/tasks.json">.vscode/tasks.json</a> for an example configuration.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you prefer to watch a video, rather than read, you can skip to the video tutorial below (but doing both is recommended).</p>
-</div>
-</div>
-</section>
-<section id="setup" class="level3">
-<h3 class="anchored" data-anchor-id="setup">Setup</h3>
-<p>Make sure you have an <a href="https://setuptools.pypa.io/en/latest/userguide/development_mode.html">editable install</a> of Axolotl, which ensures that changes you make to the code are reflected at runtime. Run the following commands from the root of this project:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip3</span> install packaging</span>
-<span id="cb3-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip3</span> install <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-e</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'.[flash-attn,deepspeed]'</span></span></code></pre></div>
-<section id="remote-hosts" class="level4">
-<h4 class="anchored" data-anchor-id="remote-hosts">Remote Hosts</h4>
-<p>If you developing on a remote host, you can easily use VSCode to debug remotely. To do so, you will need to follow this <a href="https://code.visualstudio.com/docs/remote/ssh">remote - SSH guide</a>. You can also see the video below on Docker and Remote SSH debugging.</p>
-</section>
-</section>
-<section id="configuration" class="level3">
-<h3 class="anchored" data-anchor-id="configuration">Configuration</h3>
-<p>The easiest way to get started is to modify the <a href="https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/launch.json">.vscode/launch.json</a> file in the axolotl GitHub repo. This is just an example configuration, so you may need to modify or copy it to suit your needs.</p>
-<p>For example, to mimic the command <code>cd devtools &amp;&amp; CUDA_VISIBLE_DEVICES=0 accelerate launch -m axolotl.cli.train dev_sharegpt.yml</code>, you would use the below configuration<sup>1</sup>. Note that we add additional flags that override the axolotl config and incorporate the tips above (see the comments). We also set the working directory to <code>devtools</code> and set the <code>env</code> variable <code>HF_HOME</code> to a temporary folder that is later partially deleted. This is because we want to delete the HF dataset cache before each run in order to ensure that the data preprocessing code is run from scratch.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/launch.json</span></span>
-<span id="cb4-2">{</span>
-<span id="cb4-3">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"version"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"0.2.0"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-4">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"configurations"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> [</span>
-<span id="cb4-5">        {</span>
-<span id="cb4-6">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"name"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Debug axolotl prompt - sharegpt"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-7">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"type"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"python"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-8">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"module"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"accelerate.commands.launch"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-9">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"request"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"launch"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-10">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"args"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> [</span>
-<span id="cb4-11">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"-m"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"axolotl.cli.train"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dev_sharegpt.yml"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-12">                <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// The flags below simplify debugging by overriding the axolotl config </span></span>
-<span id="cb4-13">                <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// with the debugging tips above.  Modify as needed.</span></span>
-<span id="cb4-14">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--dataset_processes=1"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// limits data preprocessing to one process</span></span>
-<span id="cb4-15">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--max_steps=1"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>              <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// limits training to just one step</span></span>
-<span id="cb4-16">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--batch_size=1"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>             <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// minimizes batch size</span></span>
-<span id="cb4-17">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--micro_batch_size=1"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>       <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// minimizes batch size</span></span>
-<span id="cb4-18">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--val_set_size=0"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>           <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// disables validation</span></span>
-<span id="cb4-19">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--sample_packing=False"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>     <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// disables sample packing which is necessary for small datasets</span></span>
-<span id="cb4-20">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--eval_sample_packing=False"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// disables sample packing on eval set</span></span>
-<span id="cb4-21">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--dataset_prepared_path=temp_debug/axolotl_outputs/data"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// send data outputs to a temp folder</span></span>
-<span id="cb4-22">                <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--output_dir=temp_debug/axolotl_outputs/model"</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// send model outputs to a temp folder</span></span>
-<span id="cb4-23">                ]<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb4-24">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"console"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"integratedTerminal"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// show output in the integrated terminal</span></span>
-<span id="cb4-25">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"cwd"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"${workspaceFolder}/devtools"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// set working directory to devtools from the root of the project</span></span>
-<span id="cb4-26">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"justMyCode"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>                   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// step through only axolotl code</span></span>
-<span id="cb4-27">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"env"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> {<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"CUDA_VISIBLE_DEVICES"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"0"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span>  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// Since we aren't doing distributed training, we need to limit to one GPU</span></span>
-<span id="cb4-28">                    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"HF_HOME"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"${workspaceFolder}/devtools/temp_debug/.hf-cache"</span>}<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// send HF cache to a temp folder</span></span>
-<span id="cb4-29">            <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"preLaunchTask"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"cleanup-for-dataprep"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// delete temp folders (see below)</span></span>
-<span id="cb4-30">        }</span>
-<span id="cb4-31">    ]</span>
-<span id="cb4-32">}</span></code></pre></div>
-<p><strong>Additional notes about this configuration:</strong></p>
-<ul>
-<li>The argument <code>justMyCode</code> is set to <code>true</code> such that you step through only the axolotl code. If you want to step into dependencies, set this to <code>false</code>.</li>
-<li>The <code>preLaunchTask</code>: <code>cleanup-for-dataprep</code> is defined in <a href="https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/tasks.json">.vscode/tasks.json</a> and is used to delete the following folders before debugging, which is essential to ensure that the data pre-processing code is run from scratch:
-<ul>
-<li><code>./devtools/temp_debug/axolotl_outputs</code></li>
-<li><code>./devtools/temp_debug/.hf-cache/datasets</code></li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You may not want to delete these folders. For example, if you are debugging model training instead of data pre-processing, you may NOT want to delete the cache or output folders. You may also need to add additional tasks to the <code>tasks.json</code> file depending on your use case.</p>
-</div>
-</div>
-<p>Below is the <a href="https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/tasks.json">./vscode/tasks.json</a> file that defines the <code>cleanup-for-dataprep</code> task. This task is run before each debugging session when you use the above configuration. Note how there are two tasks that delete the two folders mentioned above. The third task <code>cleanup-for-dataprep</code> is a composite task that combines the two tasks. A composite task is necessary because VSCode does not allow you to specify multiple tasks in the <code>preLaunchTask</code> argument of the <code>launch.json</code> file.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/.vscode/tasks.json</span></span>
-<span id="cb5-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// this file is used by launch.json</span></span>
-<span id="cb5-3">{</span>
-<span id="cb5-4">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"version"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"2.0.0"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-5">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"tasks"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> [</span>
-<span id="cb5-6">      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// this task changes into the devtools directory and deletes the temp_debug/axolotl_outputs folder</span></span>
-<span id="cb5-7">      {</span>
-<span id="cb5-8">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"label"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"delete-outputs"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-9">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"type"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"shell"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-10">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"command"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rm -rf temp_debug/axolotl_outputs"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-11">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"options"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span>{ <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"cwd"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"${workspaceFolder}/devtools"</span>}<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-12">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"problemMatcher"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> []</span>
-<span id="cb5-13">      }<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-14">      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// this task changes into the devtools directory and deletes the `temp_debug/.hf-cache/datasets` folder</span></span>
-<span id="cb5-15">      {</span>
-<span id="cb5-16">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"label"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"delete-temp-hf-dataset-cache"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-17">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"type"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"shell"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-18">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"command"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rm -rf temp_debug/.hf-cache/datasets"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-19">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"options"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span>{ <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"cwd"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"${workspaceFolder}/devtools"</span>}<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-20">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"problemMatcher"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> []</span>
-<span id="cb5-21">      }<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-22">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">// this task combines the two tasks above</span></span>
-<span id="cb5-23">      {</span>
-<span id="cb5-24">       <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"label"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"cleanup-for-dataprep"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-25">       <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dependsOn"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"delete-outputs"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"delete-temp-hf-dataset-cache"</span>]<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span></span>
-<span id="cb5-26">      }</span>
-<span id="cb5-27">    ]</span>
-<span id="cb5-28">}</span></code></pre></div>
-</section>
-<section id="customizing-your-debugger" class="level3">
-<h3 class="anchored" data-anchor-id="customizing-your-debugger">Customizing your debugger</h3>
-<p>Your debugging use case may differ from the example above. The easiest thing to do is to put your own axolotl config in the <code>devtools</code> folder and modify the <code>launch.json</code> file to use your config. You may also want to modify the <code>preLaunchTask</code> to delete different folders or not delete anything at all.</p>
-</section>
-<section id="video-tutorial" class="level3">
-<h3 class="anchored" data-anchor-id="video-tutorial">Video Tutorial</h3>
-<p>The following video tutorial walks through the above configuration and demonstrates how to debug with VSCode:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/xUUB11yeMmc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-</section>
-<section id="debugging-with-docker" class="level2">
-<h2 class="anchored" data-anchor-id="debugging-with-docker">Debugging With Docker</h2>
-<p>Using <a href="https://hub.docker.com/r/winglian/axolotl/tags">official Axolotl Docker images</a> is a great way to debug your code, and is a very popular way to use Axolotl. Attaching VSCode to Docker takes a few more steps.</p>
-<section id="setup-1" class="level3">
-<h3 class="anchored" data-anchor-id="setup-1">Setup</h3>
-<p>On the host that is running axolotl (ex: if you are using a remote host), clone the axolotl repo and change your current directory to the root:</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> clone https://github.com/OpenAccess-AI-Collective/axolotl</span>
-<span id="cb6-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">cd</span> axolotl</span></code></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you already have axolotl cloned on your host, make sure you have the latest changes and change into the root of the project.</p>
-</div>
-</div>
-<p>Next, run the desired docker image and mount the current directory. Below is a docker command you can run to do this:<sup>2</sup></p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">docker</span> run <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--privileged</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--gpus</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'"all"'</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--shm-size</span> 10g <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--rm</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-it</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--name</span> axolotl <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--ipc</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>host <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--ulimit</span> memlock=-1 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--ulimit</span> stack=67108864 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--mount</span> type=bind,src=<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">${PWD}</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>,target=/workspace/axolotl <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-v</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">${HOME}</span>/.cache/huggingface:/root/.cache/huggingface winglian/axolotl:main-py3.10-cu118-2.0.1</span></code></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To understand which containers are available, see the <a href="../README.md#docker">Docker section of the README</a> and the <a href="https://hub.docker.com/r/winglian/axolotl/tags">DockerHub repo</a>. For details of how the Docker containers are built, see axolotl’s <a href="../.github/workflows/main.yml">Docker CI builds</a>.</p>
-</div>
-</div>
-<p>You will now be in the container. Next, perform an editable install of Axolotl:</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip3</span> install packaging</span>
-<span id="cb8-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip3</span> install <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-e</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'.[flash-attn,deepspeed]'</span></span></code></pre></div>
-</section>
-<section id="attach-to-container" class="level3">
-<h3 class="anchored" data-anchor-id="attach-to-container">Attach To Container</h3>
-<p>Next, if you are using a remote host, <a href="https://code.visualstudio.com/docs/remote/ssh">Remote into this host with VSCode</a>. If you are using a local host, you can skip this step.</p>
-<p>Next, select <code>Dev Containers: Attach to Running Container...</code> using the command palette (<code>CMD + SHIFT + P</code>) in VSCode. You will be prompted to select a container to attach to. Select the container you just created. You will now be in the container with a working directory that is at the root of the project. Any changes you make to the code will be reflected both in the container and on the host.</p>
-<p>Now you are ready to debug as described above (see Debugging with VSCode).</p>
-</section>
-<section id="video---attaching-to-docker-on-remote-host" class="level3">
-<h3 class="anchored" data-anchor-id="video---attaching-to-docker-on-remote-host">Video - Attaching To Docker On Remote Host</h3>
-<p>Here is a short video that demonstrates how to attach to a Docker container on a remote host:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/0AuoR7QnHR0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-
-
-</section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>The config actually mimics the command <code>CUDA_VISIBLE_DEVICES=0 python -m accelerate.commands.launch -m axolotl.cli.train devtools/sharegpt.yml</code>, but this is the same thing.↩︎</p></li>
-<li id="fn2"><p>Many of the below flags are recommended best practices by Nvidia when using nvidia-container-toolkit. You can read more about these flags <a href="https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html">here</a>.↩︎</p></li>
-</ol>
-</section></div> ]]></description>
-  <category>LLMs</category>
-  <category>fine-tuning</category>
-  <category>axolotl</category>
-  <guid>https://kareemai.com/blog/posts/axolotl/</guid>
-  <pubDate>Wed, 10 Jan 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/axolotl/images/debug_axolotl_small.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Dokku: my favorite personal serverless platform</title>
-  <dc:creator>Hamel Husain</dc:creator>
-  <link>https://kareemai.com/blog/posts/dokku/</link>
-  <description><![CDATA[ 
-
-
-
-
+<section id="who-is-kobo" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-kobo">Who is “Kobo”!</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/dokku/images/serverless.png" class="img-fluid figure-img"></p>
-<figcaption>With Dokku, you can turn a VPS into a powerful serverless platform</figcaption>
+<p><img src="https://kareemai.com/blog/posts/mteb_encoding/dragon_2.png" class="img-fluid figure-img"></p>
+<figcaption>Kobo</figcaption>
 </figure>
 </div>
-<section id="what-is-dokku" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-dokku">What is Dokku?</h2>
-<p><a href="https://dokku.com/">Dokku</a> is an open-source Platform as a Service (PaaS) that runs on a single server of your choice. <strong>It’s like <a href="https://www.heroku.com/">Heroku</a>, but you own it.</strong> It is a great way to get the benefits of Heroku without the costs (Heroku can get quite expensive!). I need to deploy many applications for my <a href="https://parlance-labs.com/">LLM consulting work</a>. Having a cost-effective, easy-to-use serverless platform is essential for me.</p>
-<p><strong>I run a Dokku server on a $7/month VPS on <a href="https://us.ovhcloud.com/">OVHcloud</a></strong> for non-gpu workloads. These applications include things like <a href="https://nbsanity.com/">nbsanity</a> and <a href="https://langfree.parlance-labs.com/tutorials/shiny.html#run-the-shiny-app-locally">data cleaning tools for LLMs</a>.</p>
-<p>Some of the features I love about Dokku:</p>
+<section id="system-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="system-specifications">System Specifications</h3>
+<p>My laptop is a Gfthin 95 core i7 9th gen, 16 GB RAM, 512GB SSD and GTX 1660 Ti, 120Hz screen</p>
+<hr>
+</section>
+</section>
+<section id="msi-vs-lenovo" class="level2">
+<h2 class="anchored" data-anchor-id="msi-vs-lenovo">MSI vs Lenovo</h2>
+<section id="msi-with-linux" class="level3">
+<h3 class="anchored" data-anchor-id="msi-with-linux">MSI with Linux</h3>
+<p>After buying it, it wasn’t configured with Windows, but was another DOS version so I had to install a Windows version on it. After 1 week I get a lot of errors on it with the external monitor and the WiFi stops working or is not configured. I tried every Hindi video about this problem and gave it to specialists to try it, but in vain, the problem happened again and again.</p>
+<p><strong>The solution:</strong> It was my first year at a computer science college, so the geeky thing was to use Linux. After some search, I installed Ubuntu and then tried a lot of distros like Void Linux, but the one that I picked and still use is the amazing PopOS! which is based on Ubuntu but better than it!<br>
+The WiFi problem doesn’t appear again! And for Nvidia graphics, it’s solved in PopOS! which has a command to install some drivers. And everything works smoothly</p>
+</section>
+<section id="the-cost-of-it" class="level3">
+<h3 class="anchored" data-anchor-id="the-cost-of-it">The Cost of It!</h3>
+<p>I bought it for the cost of 20,000 EGP, which at the time I bought it was $X, but now 20,000 EGP is worth $XX due to problems in my country.</p>
+<p>Its cost at that time is really high for my budget and family, but I insisted on buying it because I knew it would stay with me for years, so I wanted a good one.</p>
+</section>
+<section id="how-i-decided-to-buy-it" class="level3">
+<h3 class="anchored" data-anchor-id="how-i-decided-to-buy-it">How I Decided to Buy It!</h3>
+<p>The phrase “Machine learning needs an Nvidia GPU” was dancing in my mind, so my main focus was on a nice GPU card in a laptop with a low budget. After some search, I found that the best choices are MSI or Lenovo, but the Lenovo version cost about 4000 EGP more than the MSI.</p>
+<blockquote class="blockquote">
+<p>I tested the keyboard of the Lenovo, and every time I felt like I wanted to cut my fingers off</p>
+</blockquote>
+<p>It wasn’t available online, so I had to travel 3 hours to the store that sells it. It was a nice experience to buy something I wanted instead of a random gift from my father.</p>
+<hr>
+</section>
+</section>
+<section id="i-am-not-a-gamer" class="level2">
+<h2 class="anchored" data-anchor-id="i-am-not-a-gamer">I Am Not a Gamer!</h2>
+<p>I didn’t use it for gaming because I am not a gamer, but I used it heavily in programming and some machine learning and basic computer vision models, and it works so nicely!</p>
+</section>
+<section id="kobo-for-ml" class="level2">
+<h2 class="anchored" data-anchor-id="kobo-for-ml">Kobo for ML</h2>
+<p><img src="https://kareemai.com/blog/posts/mteb_encoding/dragon_3.png" class="img-fluid" alt="Kobo"> Machine learning is a wide area, and you can use the GPU for 3 things:</p>
+<ol type="1">
+<li>Train a model from scratch</li>
+<li>Fine-tune a model</li>
+<li>Evaluate a model (inference)</li>
+</ol>
 <ul>
-<li>Easy to use (like Heroku).</li>
-<li>Automatic SSL certificate management via <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</li>
-<li>Basic Auth support so I can password-protect sites.</li>
-<li>Scale up and down with a single command.</li>
-<li>Flexibility to handle any application (Node, Python, etc), including defining a Docker container.</li>
-<li>Lots of <a href="https://dokku.com/docs/community/plugins/?h=plugins#official-plugins">official plugins</a> that do almost anything I want.</li>
-<li>Easily deploy with git commands.</li>
+<li><strong>Train</strong> a model from scratch was an ideal task for such a GPU, but I was doing it for multiple computer vision classification tasks, learning new architectures, trying to build…etc. For ML you don’t always need a GPU but for deep learning, which is a subset of ML that uses more connected layers (which means more computing power and memory needs), you do.</li>
+<li><strong>Fine-tune</strong> a model is the case I used the most - I download a trained model and try to make it work better on my data. What you need here is enough GPU RAM - in my case it’s a 6GB card. This worked fine with computer vision algorithms and classic NLP models with less than 1 billion parameters. There’s no chance to try the LLAMAS models on such a card!</li>
+<li><strong>Evaluate</strong> a model means to just load the model and not fine-tune it.</li>
 </ul>
-</section>
-<section id="minimal-dokku-examples" class="level1">
-<h1>Minimal Dokku Examples</h1>
-<p>Make sure you <a href="https://dokku.com/docs/getting-started/installation/">install Dokku</a> on your VPS. As I mentioned, I use <a href="https://us.ovhcloud.com/">OVH</a>.</p>
-<section id="deploying-apps-as-a-docker-container" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-apps-as-a-docker-container">Deploying Apps as A Docker Container</h2>
-<p>An easy way to deploy applications is with a Docker container.</p>
-<p>To deploy a Docker container, I put a Dockerfile in the root of my git repo like this:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Dockerfile</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Dockerfile" style="background: #f1f3f5;"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">FROM</span> python:3.10</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">COPY</span> . /app</span>
-<span id="cb1-4"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">WORKDIR</span> /app</span>
-<span id="cb1-5"></span>
-<span id="cb1-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Install the local package</span></span>
-<span id="cb1-7"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">RUN</span> <span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip</span> install .</span>
-<span id="cb1-8"></span>
-<span id="cb1-9"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># This directory contains app.py, a FastApi app</span></span>
-<span id="cb1-10"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">WORKDIR</span> /app/</span>
-<span id="cb1-11"></span>
-<span id="cb1-12"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">ENTRYPOINT</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"./entrypoint.sh"</span>]</span></code></pre></div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The <code>entrypoint.sh</code> script allows me to easily run the app locally or in a Docker container. It looks like this:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>entrypoint.sh</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="entrypoint.sh" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#!/bin/bash</span></span>
-<span id="cb2-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">exec</span> uvicorn main:app <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--port</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">$PORT</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--host</span> 0.0.0.0</span></code></pre></div>
-</div>
-</div>
-</div>
-<p>On the Dokku host, create the app:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dokku</span> apps:create myapp</span></code></pre></div>
-<p><strong>Locally</strong>, set up access to the Dokku host and name it <code>dokku</code> in your <code>~/.ssh/config</code> file. For example, here is mine:</p>
-<pre><code>Host dokku
-  HostName &lt;The external IP address of your Dokku host&gt;
-  User ubuntu
-  IdentityFile /Users/hamel/.ssh/dokku</code></pre>
-<p>Locally, add the Dokku host as a remote and push to it:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> remote add dokku dokku@dokku:myapp</span>
-<span id="cb5-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> push dokku main</span></code></pre></div>
-<p>That’s it - your app should be running on the Dokku host! Your local logs will print the URL that your application is served on, which by default will be <code>myapp.yourdomain.com</code>. You can also scale it up/down with the following command:</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#scale to two workers</span></span>
-<span id="cb6-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dokku</span> ps:scale myapp web=2</span></code></pre></div>
-<p>We are just scratching the surface. For more details, see the <a href="https://dokku.com/docs/">Dokku docs</a>.</p>
-</section>
-<section id="static-sites" class="level2">
-<h2 class="anchored" data-anchor-id="static-sites">Static Sites</h2>
-<p>GitHub Pages is annoying in that you can’t easily deploy private static sites without paying for an expensive Enterprise account. With Dokku, you can easily deploy a static site from a private GitHub Repo and password-protect it.</p>
-<p>We will assume that you have a static site in a git repo in a folder named <code>_site</code>.</p>
-<p><strong>On the Dokku host</strong>, create an app named <code>mysite</code> and set the <code>NGINX_ROOT</code> environment variable to <code>_site</code>:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dokku</span> apps:create mystite</span>
-<span id="cb7-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dokku</span> config:set static-site NGINX_ROOT=_site</span></code></pre></div>
-<p>Also on the Dokku host, install <a href="https://github.com/dokku/dokku-http-auth">basic auth</a> and <a href="https://github.com/dokku/dokku-http-auth/issues/15#issuecomment-1637058437">set permissions</a> so the plugin can work properly.</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># do setup for the auth plugin that we will use later</span></span>
-<span id="cb8-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> dokku plugin:install https://github.com/dokku/dokku-http-auth.git</span>
-<span id="cb8-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> chmod +x /home/dokku</span></code></pre></div>
-<p>Then execute the following commands from the root of your git repo that contains the static site. :</p>
-<div class="sourceCode" id="annotated-cell-8" style="background: #f1f3f5;"><pre class="sourceCode bash code-annotation-code code-with-copy code-annotated"><code class="sourceCode bash"><a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-8-1" class="code-annotation-target"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">touch</span> .static</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-8-2" class="code-annotation-target"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">echo</span> BUILDPACK_URL=https://github.com/dokku/buildpack-nginx <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span> .env</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-8-3" class="code-annotation-target"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> remote add dokku dokku@dokku:mysite</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
-<dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-8" data-code-lines="1" data-code-annotation="1">tells <code>dokku</code> that this is a static site</span>
-</dd>
-<dt data-target-cell="annotated-cell-8" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="2">tells <code>dokku</code> to use the nginx buildpack for static sites (it will usually automatically detect this, but if you have a project with code and a static site, you need to tell it to use the nginx buildpack so it doesn’t get confused).</span>
-</dd>
-<dt data-target-cell="annotated-cell-8" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-8" data-code-lines="3" data-code-annotation="3">add the <code>dokku</code> host as a remote. For this to work, make sure <code>dokku</code> is a hostname in your <code>~/.ssh/config</code> file as described in the previous section.</span>
-</dd>
-</dl>
-<p>Finally, deploy your application:</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> push dokku main</span></code></pre></div>
-<p>You can now add auth by running the following command on the Dokku host:</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dokku</span> http-auth:enable mystite <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span>username<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span>password<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span></code></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can add multiple usernames/passwords and even filter specific IPs. See <a href="https://github.com/dokku/dokku-http-auth">the docs</a>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-SSL / HTTPS
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It’s often desirable to have HTTPS for your site. Dokku makes this easy with the <a href="https://github.com/dokku/dokku-letsencrypt">Let’s Encrypt Plugin</a>, which will even auto-renew for you. I don’t use this, because I’m letting <a href="https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records/">Cloudflare handle this with its proxy</a>.</p>
-<p>If you are using Cloudflare this way, activating this plugin will mess things up (don’t worry its easy to disable). Honestly, I think it’s easier to let Cloudflare handle it if you are already doing so.</p>
-</div>
-</div>
+<p>I was fine with all the ML tasks I tried to do, unless I opened the door to large language models like the GPT family (ChatGPT for example). These models require a lot of memory and need a good graphics card like an RTX 30 or 40 series to test, and there’s no chance to train these models on any RTX card!</p>
+<section id="why-not-just-use-the-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="why-not-just-use-the-cloud">Why Not Just Use the Cloud!</h3>
+<p>There are two main solutions:</p>
+<ol type="1">
+<li>Kaggle
+<ul>
+<li>Kaggle has two GPU options, and I used it a lot, especially if the data was already hosted on Kaggle and was more than 10GB. Other than that, I downloaded a sample of the data and did my work on my own environment with CLI commands and VS Code configurations. This helped me a lot compared to just using the Kaggle editor, and it’s faster too! Sometimes the Kaggle kernel panics or just stops responding entirely!</li>
+</ul></li>
+<li>Colab
+<ul>
+<li>Colab restarts after 4 hours and your work can get lost, and lots of annoying things like that happen a lot.</li>
+<li>You have to pay for the GPU version. You get a number of hours to try it out, and it’s faster than my GTX 1660 by a good margin.</li>
+</ul></li>
+</ol>
+<p>But I didn’t love these cloud solutions, and I found having my own local setup to be faster and more comfortable.</p>
 </section>
 </section>
-<section id="deploying-with-github-actions" class="level1">
-<h1>Deploying With GitHub Actions</h1>
-<p>You can automatically deploy Dokku apps with GitHub Actions, which is helpful if you don’t want to fiddle with pushing to the Dokku host. Here is an example GitHub Action workflow that does this:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>deploy-dokku.yml</strong></pre>
-</div>
-<div class="sourceCode" id="cb11" data-filename="deploy-dokku.yml" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> CI</span></span>
-<span id="cb11-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">on</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">workflow_dispatch</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">push</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-5"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">branches</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">[</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">main</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">]</span></span>
-<span id="cb11-6"></span>
-<span id="cb11-7"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">concurrency</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"> # Cancel previous jobs to avoid deploy locks on dokku</span></span>
-<span id="cb11-8"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ${{ github.ref }}</span></span>
-<span id="cb11-9"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cancel-in-progress</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">true</span></span>
-<span id="cb11-10"></span>
-<span id="cb11-11"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">jobs</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-12"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">deploy-dokku</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-13"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ubuntu-latest</span></span>
-<span id="cb11-14"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-15"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Checkout code</span></span>
-<span id="cb11-16"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/checkout@v2</span></span>
-<span id="cb11-17"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb11-18"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fetch-depth</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb11-19"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span></span>
-<span id="cb11-20"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Install SSH key</span></span>
-<span id="cb11-21"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">        run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb11-22">          echo "${{ secrets.DOKKU_SSH_PRIVATE_KEY }}" &gt; private_key.pem</span>
-<span id="cb11-23">          chmod 600 private_key.pem</span>
-<span id="cb11-24"></span>
-<span id="cb11-25"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Add remote and push</span></span>
-<span id="cb11-26"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">        run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb11-27">          git remote add dokku dokku@rechat.co:llm-eval</span>
-<span id="cb11-28">          GIT_SSH_COMMAND="ssh -i private_key.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push dokku main -f</span></code></pre></div>
-</div>
+<section id="kobo-for-web-development" class="level2">
+<h2 class="anchored" data-anchor-id="kobo-for-web-development">Kobo for Web Development</h2>
+<p>I sometimes work on web projects (Django and JavaScript frameworks, especially AstroJS). I never had any issues building and testing web projects - everything worked nicely and efficiently.</p>
 </section>
-<section id="miscellaneous-tips" class="level1">
-<h1>Miscellaneous Tips</h1>
-<p>These are things I often forget, so I’m writing them down here. For these examples, assume my app is named <code>llm-eval</code> and my host is <code>rechat.co</code>.</p>
-<section id="run-commands-remotely" class="level2">
-<h2 class="anchored" data-anchor-id="run-commands-remotely">Run commands remotely</h2>
-<p>You don’t have to ssh into the Dokku host just to execute commands. You can execute them remotely via the <code>dokku</code> user like this:</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># https://dokku.com/docs/deployment/application-management/</span></span>
-<span id="cb12-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ssh</span> dokku@rechat.co apps:list</span></code></pre></div>
+<section id="the-battery-life" class="level2">
+<h2 class="anchored" data-anchor-id="the-battery-life">The Battery Life</h2>
+<p>The battery life can keep it working for 2.5 hours when the power is out if you switch to battery saver mode. I don’t think it could last more than 1 hour in normal mode! This is the laptop’s biggest issue. Sometimes it powers off even when fully charged if you do a lot of computation without plugging it in.</p>
 </section>
-<section id="docker-cache" class="level2">
-<h2 class="anchored" data-anchor-id="docker-cache">Docker cache</h2>
-<p>This is how you can <a href="https://dokku.com/docs/advanced-usage/repository-management/">invalidate the docker cache</a> for a fresh build:</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ssh</span> dokku@rechat.co repo:purge-cache llm-eval</span></code></pre></div>
+<section id="the-heat" class="level2">
+<h2 class="anchored" data-anchor-id="the-heat">The Heat</h2>
+<p><img src="https://kareemai.com/blog/posts/mteb_encoding/dragon_4.png" class="img-fluid" alt="target"> I didn’t find heat to be a problem or even the fan noise in most of my work. But sometimes when running a deep learning model, the fan noise is a bit loud and it does get really hot. For normal coding and browsing though, there are no issues and the cooling system is fast. Overall I didn’t find heat to be a major problem.</p>
 </section>
-<section id="rebuild-without-pushing" class="level2">
-<h2 class="anchored" data-anchor-id="rebuild-without-pushing">Rebuild without pushing</h2>
-<p>Sometimes you want to rebuild without pushing. There are <a href="https://dokku.com/docs/processes/process-management/">many ways to do this</a>, but one way is like this:</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ssh</span> dokku@rehcat.co ps:rebuild llm-eval</span></code></pre></div>
+<section id="the-keyboard" class="level2">
+<h2 class="anchored" data-anchor-id="the-keyboard">The Keyboard</h2>
+<p>The keyboard is very responsive and well configured with smooth clicks - no issues or sticky keys even though I have fat fingers!</p>
+<p>I’ve been using this machine for 4 years and I write a lot. No broken keys have happened despite my clumsy fingers. I have a mechanical keyboard that I sometimes use, but I always miss the feel of the built-in keyboard. The red backlight is decent.</p>
 </section>
-</section>
-<section id="why-did-i-write-this" class="level1">
-<h1>Why Did I Write This?</h1>
-<p>I had to dig up these details whenever I wanted to deploy a new app, so I had to write it up anyway. I hope you find it useful, too!</p>
+<section id="finally" class="level2">
+<h2 class="anchored" data-anchor-id="finally">Finally!</h2>
+<p><img src="https://kareemai.com/blog/posts/mteb_encoding/draong_1.png" class="img-fluid" alt="Kobo_finally"> I just wanted to say that I love “Kobo” and I’ve spent nice times with it - some really difficult and others really happy. It’s been a loyal friend and something to rely on.</p>
 
 
 </section>
 
  ]]></description>
-  <category>infra</category>
-  <category>severless</category>
-  <guid>https://kareemai.com/blog/posts/dokku/</guid>
-  <pubDate>Mon, 08 Jan 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/dokku/images/serverless.png" medium="image" type="image/png" height="144" width="144"/>
+  <guid>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</guid>
+  <pubDate>Sun, 31 Dec 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>On commercializing nbdev</title>
-  <dc:creator>Hamel Husain</dc:creator>
-  <link>https://kareemai.com/blog/posts/nbdev/</link>
+  <title>After one year of using Huawei Mate 11 without google services</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</link>
   <description><![CDATA[ 
 
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nbdev/nbdev.png" class="img-fluid figure-img"></p>
-<figcaption><a href="https://nbdev.fast.ai">nbdev</a> is a software development tool based on Jupyter that feels like its from the future.</figcaption>
-</figure>
-</div>
-<p>A few friends have asked me why I decided not to commercialize <a href="https://nbdev.fast.ai/">nbdev</a>, especially after putting lots of work into the project, including leaving my full-time job to work on it. So I thought I would write a short post to explain my reasoning.</p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p><a href="https://nbdev.fast.ai">nbdev</a> is an innovative software development framework for Python that embraces <a href="https://en.wikipedia.org/wiki/Literate_programming">literate</a> and <a href="https://en.wikipedia.org/wiki/Exploratory_programming">exploratory</a> programming. I worked on nbdev from 2020-2023 with <a href="https://github.com/jph00">Jeremy Howard</a> and, later, <a href="https://github.com/seem">Wasim Lorgat</a>. I had the privilege and excitement of exploring the boundaries of developer tools and exploratory programming while working with very talented software engineers. In addition to creating a tool many people enjoyed, I <a href="https://nbdev.fast.ai/blog/posts/2022-07-28-nbdev2/">enjoyed using nbdev</a> for personal and professional projects.</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>Here is an expanded version of your blog post with some additional details:</p>
 </section>
-<section id="opportunities" class="level2">
-<h2 class="anchored" data-anchor-id="opportunities">Opportunities</h2>
-<p>While conducting product research, I interviewed many developers from different backgrounds to understand their pain points and needs. All developers I talked to struggled with one key challenge: it was difficult, if not impossible, to convince other engineers to use nbdev.</p>
-<p>The following are the biggest reasons that prevented adoption:</p>
-<ul>
-<li><strong>Friction in onboarding engineers</strong>. In many companies, there are often existing Python projects, and it can be detrimental to maintain different ways of doing things when a company has already settled upon one way that it has built processes and tools around.</li>
-<li><strong>Collisions with the rest of the software development stack</strong>: it was (and still is) a pain to version control notebooks in a way that’s conducive to collaboration. For practical purposes, you cannot perform code reviews of notebooks on GitHub without purchasing a tool called <a href="https://www.reviewnb.com/">ReviewNB</a>. So instead of convincing people to use nbdev, you have to convince them to use nbdev and ReviewNB. This makes the barrier to initial adoption considerably high - as procuring software in many organizations is a non-trivial process involving security review, compliance, legal and other stakeholders.</li>
-</ul>
-<p>I viewed solving the above problems as potential opportunities for commercializing nbdev.</p>
+<section id="why-i-bought-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-bought-it">Why I bought it</h2>
+<p>I purchased the Huawei tablet because I enjoy creative activities like drawing, taking notes, and reading books. I wished to have an iPad or premium tablet with a good stylus to fully explore my creative potential. My brother found an excellent deal on this Huawei tablet for around 60% off retail price and gifted it to me. I’m very thankful to him! <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-11-2023-new/images/kv/Huawei-matepad-11-inch-2023-kv@2x.webp" class="img-fluid"></p>
 </section>
-<section id="shifting-focus" class="level2">
-<h2 class="anchored" data-anchor-id="shifting-focus">Shifting Focus</h2>
-<p>Jeremy, Wasim, and I eventually settled on the idea of “WordPress for developers,” a hosted site allowing people to create and share nbdev projects. We thought this would be an excellent way to get people to try nbdev without installing anything. The idea was to narrow the audience to people interested in hosting projects on a platform that promoted exploration and sharing, similar to <a href="https://glitch.com/">Glitch</a> that was as easy to use and pragmatic as <a href="https://wordpress.com/">Wordpress</a>.</p>
-<p>Around the same time we began discussing hosted tools, the machine learning world experienced a tectonic shift due to the explosion of Generative AI, namely Stable Diffusion. <a href="https://fast.ai">fast.ai</a>, the organization that created nbdev, was also changing its focus. fast.ai’s prime directive was to make deep learning accessible to as many people as possible, and generative AI was too important to ignore. Accordingly, Jeremy placed his full attention on a <a href="https://course.fast.ai/Lessons/lesson9.html">Stable Diffusion course</a>.</p>
-<p>This pivot caused some turbulence as we navigated the different priorities of nbdev, generative AI research, and making money. We eventually settled on offering consulting services for everything related to fast.ai in the form of <a href="https://www.fast.ai/partners.html">fast.ai partners</a>, which would allow us to bootstrap ourselves financially and embrace the larger mission of fast.ai (including generative AI and research). Eventually, I found the splintered focus across so many areas to be unproductive<sup>1</sup> and decided to step away from everything except consulting to regain my footing.</p>
-<p>Soon after that, ChatGPT emerged onto the scene and caused further shifts in machine learning that were orders of magnitude larger than their text-to-image predecessors. Pretty soon, all of my clients were interested in language models, and I found myself working exclusively on operationalizing them (a skill that I have cultivated by working in machine learning for 20+ years). Additionally, LLMs profoundly changed the nature of software development, especially the kind of software development that nbdev was designed to support<sup>2</sup>. These factors and those discussed earlier suggested it was a good time to step away from nbdev and focus on other things.</p>
-</section>
-<section id="what-i-learned" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-learned">What I learned</h2>
-<p>I learned some important lessons during this process:</p>
+<section id="pros" class="level2">
+<h2 class="anchored" data-anchor-id="pros">Pros</h2>
 <ol type="1">
-<li>Just because you love a project and find it useful, that doesn’t necessarily imply that it’s ripe for commercialization. I always struggled to gain conviction that there was a good business model for nbdev.<sup>3</sup> Instead, I pursued this path because I was drawn to the idea of starting a business with people I really liked. Ultimately, I learned that at least one person needs strong conviction <em>in addition</em> to being excited about the people you are working with - not just one or the other.<sup>4</sup> I also learned that it’s important to be honest with yourself about your (and your team’s) level of conviction and not try to force something that isn’t there.</li>
-<li>Listen to your instincts. I ignored my instincts on multiple occasions throughout this journey. As I’ve grown older, I’ve learned to make this mistake much less often, but I could have done better here.</li>
-<li>Don’t be afraid to pivot. I think we avoided unnecessary churn by steering clear of a situation that wasn’t promising. I’m much more excited about the work I’m doing now.<sup>5</sup></li>
-<li>Own your own brand. My professional brand became increasingly tied to fast.ai and my friend Jeremy Howard. I’m grateful for the growth I’ve experienced under this mentorship – but I believe it is important to build your own distinct brand and identity. I discovered it can be challenging to build your own brand when you are working on someone else’s project<sup>6</sup>, and is something I struggled with. I’m looking forward to working on this more.</li>
+<li>Excellent audio quality with quad speakers</li>
+<li>Gorgeous 10.95-inch LCD display
+<ul>
+<li>2560x1600 resolution</li>
+<li>120Hz refresh rate for smooth visuals</li>
+</ul></li>
+<li>Fast charging capabilities
+<ul>
+<li>Large 7250 mAh battery</li>
+<li>Supports 22.5W fast wired charging</li>
+</ul></li>
+<li>Comfortable lightweight design, easy to use for long periods</li>
+<li>Seamless integration with other Huawei devices like watches and earbuds</li>
+<li>Responsive stylus with good palm rejection</li>
 </ol>
 </section>
-<section id="future-directions" class="level2">
-<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
-<p>I suspect that I’m not completely finished with nbdev. I may revisit the project or related ideas when the time is right. I’m excited by the work <a href="https://posit.co">Posit</a> is doing in the areas of literate and exploratory programming, which include many of the ideas explored in nbdev. Wasim has even joined the team at Posit, so I’m excited to see what they come up with.<sup>7</sup></p>
-<p>Regarding what I’m working on next – I’ll have to save my thoughts on that for another post 😊.</p>
+<section id="cons" class="level2">
+<h2 class="anchored" data-anchor-id="cons">Cons</h2>
+<ol type="1">
+<li>Tablet gets hot with prolonged intensive use like drawing or taking notes. Quite annoying.</li>
+<li>Battery life is decent but not enough to last a full day with heavy usage</li>
+<li>Frequent ads in App Gallery and default music app are frustrating
+<ul>
+<li>Should not see ads just trying to open App Gallery</li>
+<li>Default music app tries to push online streaming service with more ads</li>
+</ul></li>
+<li>Many apps spam notifications asking to reopen them. Very irritating.</li>
+</ol>
+</section>
+<section id="using-huawei-devices-with-linux" class="level2">
+<h2 class="anchored" data-anchor-id="using-huawei-devices-with-linux">Using Huawei Devices with Linux</h2>
+<ul>
+<li>File transfers require a cable, no wireless sharing</li>
+<li>Must use third party apps like KDE Connect for notifications</li>
+<li>Can’t develop custom themes or scripts due to lack of developer tools</li>
+<li>Syncing to Linux with Syncthing is slow and buggy</li>
+<li>Overall poor integration with Linux compared to Android/Windows</li>
+</ul>
+</section>
+<section id="issues-with-google-services-on-huawei" class="level2">
+<h2 class="anchored" data-anchor-id="issues-with-google-services-on-huawei">Issues with Google Services on Huawei</h2>
+<section id="stylus-apps" class="level3">
+<h3 class="anchored" data-anchor-id="stylus-apps">Stylus Apps</h3>
+<ul>
+<li><strong>Infinite Painter</strong> drawing app has broken stylus support and no pressure sensitivity</li>
+<li><strong>NoteShelf</strong> note taking app can’t sync properly with cloud drives</li>
+<li><strong>Nebo</strong> note taking app has subpar palm rejection and no Arabic language support</li>
+<li><strong>Flexcil</strong> best ebook reader/annotator but lacks Google Drive integration</li>
+</ul>
+</section>
+<section id="gbox-solution" class="level3">
+<h3 class="anchored" data-anchor-id="gbox-solution">Gbox Solution</h3>
+<ul>
+<li>Provides access to YouTube, Maps and other Google apps</li>
+<li>Available on App Gallery with native integration</li>
+<li>Minimal battery drain</li>
+<li>But lacks support for many Google services like Podcasts</li>
+<li>Buggy syncing with Google Keep</li>
+<li>Can’t leverage Google Drive within other apps</li>
+</ul>
+</section>
+<section id="apk-pure" class="level3">
+<h3 class="anchored" data-anchor-id="apk-pure">APK Pure</h3>
+<ul>
+<li>Apps sometimes fail to open, just black screen</li>
+<li>Too many ads</li>
+<li>Lacks reliability compared to Play Store</li>
+</ul>
+<p>Overall, while the Huawei tablet offers excellent hardware, the software experience is hampered by lack of Google services. This leads to janky third party solutions and poor integration with Linux systems. I still enjoy using the tablet but hope someday Huawei can properly resolve these issues.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">references</h2>
+<ul>
+<li>https://www.noteshelf.net/</li>
+<li>https://www.gboxlab.com/</li>
+<li>https://www.infinitestudio.art/painter.php</li>
+</ul>
 
 
 </section>
 
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</guid>
+  <pubDate>Wed, 06 Dec 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 5i.html</link>
+  <description><![CDATA[ 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-<ol>
-<li id="fn1"><p>I burned out several times during this process, but I didn’t realize why at the time. Not surprisingly, trying to focus on too many things at once was the root cause.↩︎</p></li>
-<li id="fn2"><p>See <a href="https://www.loom.com/share/5ab26344119440a5b70ce4094827d9e3">this demo</a> for ideas on how coding with LLMs might look like, especially with notebooks.↩︎</p></li>
-<li id="fn3"><p>The problem with the hosted solution is that this is not something I would want to use. I can’t picture myself trying to host code on something other than GitHub/GitLab.↩︎</p></li>
-<li id="fn4"><p>Without shared conviction, there is no glue holding everyone together and people can drift apart.↩︎</p></li>
-<li id="fn5"><p>I’ll share more about this in a future post.↩︎</p></li>
-<li id="fn6"><p>I don’t believe this is always the case, but it can be true depending on the dynamics of the group.↩︎</p></li>
-<li id="fn7"><p>We previously partnered with Posit and <a href="https://en.wikipedia.org/wiki/Joseph_J._Allaire">JJ Allaire</a> and built nbdev on top of <a href="https://quarto.org/">Quarto</a>. I’m currently advising Posit on their product and strategy. They have additional projects on their roadmap that I cannot disclose now.↩︎</p></li>
+
+
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+</section>
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>Hi, In this fast blog i will talk about my review with Huawei Freebuds 5i, which is the first noise-cancelling earbuds i have tried. This is not an ad or even affiliate product, it’s my own review for fun and just seeking of knowledge. <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/headphones/freebuds5i/imges/huawei-freebuds-5i-kv.jpg" class="img-fluid" alt="freebuds"></p>
+</section>
+<section id="who-am-i" class="level2">
+<h2 class="anchored" data-anchor-id="who-am-i">Who am i !</h2>
+<ul>
+<li>I am Kareem, a college student interested in machine learning and web technology.</li>
+<li>I enjoy working deeply and seeking out quiet places, but I live in an area with some noisy disturbances in the mornings - people walking down the street, kids playing around the house, street vendors - which often interrupt my focus and break my state of flow.</li>
+<li>I wish there was a solution to block out all these sounds so I could live in an isolated place free of annoying noises! Using noise-cancelling headphones or heading into outer space would be ideal environments with no bothersome sounds around.</li>
+</ul>
+</section>
+<section id="how-i-bought-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-i-bought-it">how i bought it</h2>
+<ul>
+<li>I bought it from amazon prime, and it cost me around 100$ or 3,200 pounds. It reached within two days.</li>
+</ul>
+</section>
+<section id="first-impressions" class="level2">
+<h2 class="anchored" data-anchor-id="first-impressions">First impressions</h2>
+<ul>
+<li>Upon unboxing and using it for the first time, I was genuinely pleased with the initial track I played.</li>
+<li>The sound quality was noticeably superior compared to my phone or any other earbuds I’ve previously used. I then tested the noise-cancelling feature and was amazed when I couldn’t hear my younger brother calling me.</li>
+<li>The street noises were effectively blocked out, with only a faint hum reaching my ears, which was quite tolerable. Initially, the earbud tips were a bit uncomfortable, but after switching to a smaller size, the discomfort was resolved. Everything seemed perfect, except for a slight pressure in my ears when using the noise-cancelling feature, particularly noticeable the following morning. Despite this, my ears seem to crave the earbuds and my skin seems to miss them when they’re not in use. This can be a bit of a downside, but it’s not always the case.</li>
+</ul>
+</section>
+<section id="is-noise-cancelling-actually-work" class="level2">
+<h2 class="anchored" data-anchor-id="is-noise-cancelling-actually-work">Is noise cancelling actually work ?</h2>
+<p>I’ve used these earbuds in various settings:</p>
+<ol type="1">
+<li><p>Subway: The noise-cancelling feature combined with my music created an immersive experience, effectively blocking out any other sounds and allowing me to enjoy my tunes in peace.</p></li>
+<li><p>College: Amidst the chatter and shouts of other students, I was able to retreat into my own world of sound.</p></li>
+<li><p>Bus: The noise of the bus engine was successfully blocked out, but I could still hear the conversations of those sitting next to me. It wasn’t overly bothersome, but it didn’t provide complete isolation.</p></li>
 </ol>
-</section></div> ]]></description>
-  <category>Jupyter</category>
-  <category>nbdev</category>
-  <guid>https://kareemai.com/blog/posts/nbdev/</guid>
-  <pubDate>Mon, 29 May 2023 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nbdev/nbdev.png" medium="image" type="image/png" height="96" width="144"/>
+<p>In summary, the noise-cancelling feature works well, but it doesn’t provide absolute silence. I can still hear some ambient sounds. One noticeable issue is that when I make calls using the earbuds, I can hear the other person clearly, but they often complain about the clarity of my voice. They say it sounds distant and unclear, sometimes even asking to call back later. This issue is particularly prevalent when I’m on the bus.</p>
+</section>
+<section id="the-modes-of-the-freebuds-and" class="level2">
+<h2 class="anchored" data-anchor-id="the-modes-of-the-freebuds-and">the modes of the Freebuds and</h2>
+<p>Here is a rephrased version of the key points about the Huawei Freebuds 5i’s features:</p>
+<p><strong>Noise Cancellation Modes:</strong></p>
+<ol type="1">
+<li><p><strong>Noise Cancelling Mode</strong>: Actively cancels out ambient noise. Uses more battery power.</p></li>
+<li><p><strong>Off Mode</strong>: No active noise cancellation, but still provides some passive noise isolation. Less battery usage.</p></li>
+<li><p><strong>Awareness Mode</strong>: Allows ambient sounds to be heard clearly. Useful for hearing announcements at the gym or people talking to you. However, my own voice sounds muted in this mode, so I have to remove the earbuds temporarily to hold conversations.</p></li>
+</ol>
+<p><strong>Sound Quality Presets:</strong></p>
+<ol type="1">
+<li><p><em>Default</em>: No sound enhancements applied.</p></li>
+<li><p><em>Treble Boost</em>: Boosts treble frequencies. I haven’t used this.</p></li>
+<li><p><em>Bass Boost</em>: Emphasizes bass when listening to music like hip-hop.</p></li>
+<li><p><em>Voices</em>: Optimizes sound for speech clarity. I use this for podcasts.</p></li>
+</ol>
+<p><strong>Connection Priority Modes:</strong></p>
+<ol type="1">
+<li><p><strong>Balance Mode</strong>: Balances audio quality and connection stability.</p></li>
+<li><p><strong>Sound Quality Priority</strong>: Prioritizes sound quality over connectivity. Uses more power which may cause occasional lag.</p></li>
+</ol>
+<p>I have not noticed any discernible difference between these two modes, so I just use the Balance mode.</p>
+</section>
+<section id="the-gestures" class="level2">
+<h2 class="anchored" data-anchor-id="the-gestures">The Gestures</h2>
+<p>The Huawei Freebuds 5i offer various gesture controls:</p>
+<ul>
+<li>Double-tap, Triple-tap, Press &amp; hold, Swipe</li>
+</ul>
+<p>I particularly enjoy the swipe gesture for volume control, as it works smoothly. The press and hold gesture is a bit slow, and the triple-tap gesture can be annoying since tapping your ear three times isn’t very comfortable.</p>
+<p>Occasionally, the Freebuds don’t recognize when I’ve inserted the left or right earbud, and I continue listening with just one earbud without realizing the other isn’t connected. This doesn’t happen often, though.</p>
+</section>
+<section id="the-compatibility-with-other-devices" class="level2">
+<h2 class="anchored" data-anchor-id="the-compatibility-with-other-devices">The compatibility with other devices</h2>
+<ul>
+<li>I love how it connect with both the phone and tablet without any problems or conflict</li>
+<li>I’ve been using the Freebuds with my Realme phone, MSI Linux laptop, and Huawei Mate Pad 11.</li>
+<li>The connection with the Realme phone is seamless, regardless of whether the AI Life application is used or not.</li>
+<li>When it comes to the Huawei Mate Pad 11, there’s a feature that allows you to adjust settings directly from the Bluetooth menu. This is a functionality that isn’t available on standard Android devices without the AI Life app.</li>
+</ul>
+<section id="linux-connection" class="level3">
+<h3 class="anchored" data-anchor-id="linux-connection">Linux connection</h3>
+<p>I’ve connected the Freebuds to my Linux laptop using the ‘<a href="https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/">bluetoothctl</a>’ command. However, I’ve encountered an issue where I need to restart Bluetooth each time I want to establish a connection for it to work properly</p>
+</section>
+</section>
+<section id="the-case-and-overall-design" class="level2">
+<h2 class="anchored" data-anchor-id="the-case-and-overall-design">The case and overall design</h2>
+<ul>
+<li>The design of the Freebuds is truly appealing. It has a unique aesthetic that sets it apart from other earbuds, giving it a premium feel.</li>
+<li>In terms of design, the FreeBuds 5i bear a resemblance to the 4i model, but they are 11% lighter and have shorter stems. They come with an IP54 rating, making them dust-tight and splash-resistant. The color options include a new “Isle Blue”, along with “Nebula Black” and “Ceramic White”. The package includes small, medium, and large silicone eartips, as well as a short USB-C cable for charging the case.</li>
+<li>I love the sound of closing it, it’s a loud sound but lovely :)</li>
+</ul>
+</section>
+<section id="the-battery" class="level2">
+<h2 class="anchored" data-anchor-id="the-battery">The battery</h2>
+<ul>
+<li>The battery is really nice; I haven’t felt that I am missing the need to recharge it or that it has gone off at any time.</li>
+</ul>
+<section id="battery-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="battery-capacity">Battery capacity</h3>
+<ul>
+<li>Per earbud: 55 mAh (min)*</li>
+<li>Charging case: 410 mAh (min)*</li>
+</ul>
+</section>
+<section id="playtime" class="level3">
+<h3 class="anchored" data-anchor-id="playtime">Playtime</h3>
+<ul>
+<li>Music playback on 1 charge: 6.0 hours (with ANC enabled)**</li>
+<li>Music playback on 1 charge: 7.5 hours (with ANC disabled)**</li>
+<li>Music playback with charging case: 18.5 hours (with ANC enabled)**</li>
+<li>Music playback with charging case: 28 hours (with ANC disabled)**</li>
+</ul>
+</section>
+<section id="charging-time" class="level3">
+<h3 class="anchored" data-anchor-id="charging-time">Charging Time</h3>
+<ul>
+<li>About 60 minutes for the earbuds (in the charging case)***</li>
+<li>About 110 for charging case without earbuds (wired)***</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/</li>
+<li>https://askubuntu.com/questions/1225896/huawei-freebuds-3-pairing-with-ubuntu-18-04</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 5i.html</guid>
+  <pubDate>Tue, 05 Dec 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>MTEB Massive Text Embedding Benchmark</title>
+  <link>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>#defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB.</p>
+</section>
+<section id="embedding-models" class="level2">
+<h2 class="anchored" data-anchor-id="embedding-models">Embedding models</h2>
+<ul>
+<li>Text embedding models like GLove lack context awareness and ar=e thus commonly labeled as word embedding model. They consist of a layer mapping each input word to a vector often followed by an averaging layer to provide a final embedding invariant of input length.</li>
+<li>Transformers inject context awareness into language models via self-attention and form the foundation of most recent embedding models.
+<ul>
+<li>BERT uses the transformer architecture and performs large-scale self-supervised pre-training. The resulting model can directly be used to produce text embeddings via an averaging operation alike Glove.</li>
+<li>SBERT be beneficial to perform additional fine-tuning of the transformer for competitive embedding performance.</li>
+<li><em>Most recent fine-tuned embedding models use a contrastive loss objective to perform supervised fine-tuned on positive and negative text pairs</em></li>
+<li>#critique Due to the large variety of available pretrained transformers,there is an at least equally large variety of potential text embedding models to be explored.This leads to confusion about which model provides practitioners with the best performance for their embedding use case.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
+<ul>
+<li>The problem with the current evaluation regime of current text embedding models rarely covers the breadth of their possible use cases.
+<ul>
+<li>#example SimCSE or SBERT solely evaluate on STS and classification tasks,leaving open questions about the transfer ability of the embedding models to search or clustering tasks.</li>
+</ul></li>
+<li>evaluating embedding methods on many tasks requires implementing multiple evaluation pipelines.</li>
+<li>implementation details like preprocessing or hyperparameters may influence the results making it unclear whether performance improvements simply come from a favorable evaluation pipeline. This leads to the “blind” application of these models to new use cases in industry or requires incremental work to reevaluate them on different tasks.</li>
+</ul>
+<hr>
+</section>
+<section id="the-solution-with-this-benchmark" class="level2">
+<h2 class="anchored" data-anchor-id="the-solution-with-this-benchmark">The solution with this benchmark</h2>
+<ul>
+<li><strong>MTEB</strong> consists of 58 datasets covering 112 languages from 8 embedding tasks:</li>
+</ul>
+<ol type="1">
+<li>Bitext mining</li>
+<li>classification</li>
+<li>clustering</li>
+<li>pair classification</li>
+<li>reranking, retrieval</li>
+<li>STS</li>
+<li>summarization.</li>
+</ol>
+<ul>
+<li>MTEB software is available open-source1 enabling evaluation of any embedding model by adding less than 10 lines of code.</li>
+<li>Datasets and the MTEB leaderboard are available on the Hugging Face Hub2 .</li>
+<li>We evaluate over 30 models on MTEB with additional speed and memory benchmarking to provide a holistic view of the state of text embedding models. We cover both models available open-source as well as models accessible via APIs, such as the OpenAI Embeddings endpoint</li>
+<li>It aims to sheds light on the weaknesses and strenghts of individual models,such as SimCSE’s<a href="https://doi.org/10.48550/ARXIV.2004.07180">(Gao et al., 2021b)</a> low performance on clustering and retrieval despite its strong performance on STS.</li>
+</ul>
+</section>
+<section id="the-mteb-desiderata" class="level2">
+<h2 class="anchored" data-anchor-id="the-mteb-desiderata">The MTEB Desiderata</h2>
+<p>METB is build on a set of desiderat.</p>
+<ol type="1">
+<li><strong>Diversity</strong>:
+<ul>
+<li>it consists of 58 total datasets, 10 are multilingual, covering 112 different langauges.</li>
+<li>Sentence-level and paragraph level datasets are included to contrast performance on short and long texts.</li>
+</ul></li>
+<li><strong>Simplicity</strong>
+<ul>
+<li>It provides a simple API for plugging in any model that given a list of text can produce a vector for each list of texts can produce a vector for each list item with a consistent shape.</li>
+</ul></li>
+<li><strong>Extensibility</strong>
+<ul>
+<li>you can add new datasets for existing tasks via a single file that specifies the task and a Huggingface dataset name where the data has been uploaded.</li>
+<li>New tasks require implementing a task interface for loading the data and an evaluator for benchmarking</li>
+</ul></li>
+<li><strong>Reproduciblity</strong>
+<ul>
+<li>Through versioning at a dataset and software level,they make it easy to reproduce results in METP.</li>
+<li>JSON files corresponding to all results available in this paper have been made available together with the MTEB benchmark</li>
+</ul></li>
+</ol>
+</section>
+<section id="tasks-and-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-and-evaluation">Tasks and Evaluation</h2>
+<p>#definition <strong>Bitext Mining</strong><br>
+Inputs are two sets of sentences from two different languages. For each sentence in the first set, the best match in the second set needs to be found.</p>
+<ul>
+<li>The matches are commonly translations.</li>
+<li>The Provided model i used to embed each sentence and the closest pairs are found via cosine similarity</li>
+<li>F1 serves as the main metric for bitext mining.Accuracy, precision and recall are also computed. #definition <strong>Classification</strong></li>
+<li>A train and test set are embedded with the provided model.</li>
+<li>The train set embeddings are used to train a logistic regression classifier with 100 maximum iterations, which is scored on the test set.</li>
+<li>The main metric is accuracy with average precision and f1 additionally provided. #definition <strong>Clustering</strong> Given a set of sentences or paragraphs, the goal is to group them into meaningful clusters.</li>
+<li>A mini-batch k-means model with batch size 32 and k equal to the number of different labels is trained on the embedded texts.</li>
+<li>The model scored using V-measure - V-measure does not depend on the cluster label,thus the permutation of labels does not affect the score. #definition <strong>Classification</strong> A pair of text inputs is provided and a label needs to be assigned. Labels are typically binary variables denoting duplicate or paraphrase pairs.</li>
+<li>The two texts are embedded and their distance is computed with various metrics (cosine similarity, dot product, euclidean distance, manhattan distance).</li>
+<li>Using the best binary thresh- old accuracy, average precision, f1, precision and recall are computed.</li>
+<li>The average precision score based on cosine similarity is the main metric. #definition <strong>Reranking</strong> : Inputs are a query and a list of relevant and irrelevant reference texts. The aim is to rank the results according to their relevance to the query.</li>
+<li>The model is used to embed the references which are then compared to the query using cosine similarity.</li>
+<li>The resulting ranking is scored for each query and averaged across all queries.</li>
+<li>Metrics are mean MRR@k and MAP with the latter being the main metric. #definition <strong>Retrieval</strong> Each dataset consists of a corpus, queries and a mapping for each query to relevant documents from the corpus.</li>
+<li>The aim is to find these relevant documents.</li>
+<li>The provided model is used to embed all queries and all corpus documents and similarity scores are computed using cosine similarity. After ranking the corpus documents for each query based on the scores, nDCG@k, MRR@k, MAP@k, precision@k and recall@k are computed for several values of k. nDCG@10 serves as the main metric.</li>
+<li>MTEB reuses datasets and evaluation from BEIR (Thakur et al., 2021). #definition <strong>Semantic Textual Similarity (STS)</strong> Given a sentence pair the aim is to determine their similarity. Labels are continuous scores with higher numbers indicating more similar sentences.</li>
+<li>The provided model is used to embed the sentences and their similarity is computed using various distance metrics.</li>
+<li>Distances are benchmarked with ground truth similarities using Pearson and Spearman correlations.</li>
+<li>Spearman correlation based on cosine similarity serves as the main metric (Reimers et al.,2016). #definition <strong>Summarization</strong> A set of human-written and machine-generated summaries are provided. The aim is to score the machine summaries. The provided model is first used to embed all summaries. For each machine summary embedding, distances to all human summary embeddings are computed. The closest score (e.g.&nbsp;highest cosine similarity) is kept and used as the model’s score of a single machine-generated summary. Pearson and Spearman correlations with ground truth human assessments of the machine-generated summaries are computed. Like for STS, Spearman correlation based on cosine similarity serves as the main metric</li>
+</ul>
+<hr>
+<p>#sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications. ![[Pasted image 20231028124555.png]]</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<ul>
+<li>we observe that there is considerable variability between tasks. No model claims the state-of-the-art in all seven English tasks.</li>
+<li>There is even more variability in the results per dataset present in the appendix.</li>
+<li>Further, there remains a large gap between self-supervised and supervised methods.</li>
+<li>Self-supervised large language models have been able to close this gap in many natural language generation tasks (Chowd- hery et al., 2022).</li>
+<li>However, they appear to still require supervised fine-tuning for competitive em- bedding performance.</li>
+<li>We find that performance strongly coorelates with model size, A majority of MTEB tasks are domainted by multi-billion parameter models.However, these come at a significant cost</li>
+<li><strong>For classification</strong>
+<ul>
+<li>ST5 models dominate the classification task across most datasets</li>
+<li>ST5-XXL has the highest average performance, 3% ahead of the best non-ST5 model, OpenAI Ada Similarity</li>
+</ul></li>
+<li><strong>Clustering</strong>
+<ul>
+<li>Despite being almost 50x smaller, the MPNet embedding model is on par with the ST5- XXL state-of-the-art on Clustering. This may be due to the large variety of datasets MPNet (and MiniLM) has been fine-tuned on.</li>
+<li>Clustering requires coherent distances between a large number of embeddings.</li>
+<li>Models like SimCSE-sup or SGPTnli, which are only fine-tuned on a single dataset,NLI, may produce incoherent embeddings when encountering topics unseen during fine-tuning.</li>
+<li>Relatedly, we find that the query embeddings of SGPT-msmarco and the Ada Search endpoint are competitive with SGPT-nli and the Ada Similarity endpoint,respectively.</li>
+<li>We refer to the public leaderboard5 for Ada Search results. This could be due to the MSMARCO dataset being significantly larger than NLI.</li>
+<li>Thus, while the OpenAI docs recommend using the similarity embeddings for clustering use cases6 , the retrieval query embeddings may be the better choice in some cases.</li>
+</ul></li>
+<li><strong>Pair Classification</strong>
+<ul>
+<li>GTR-XL and GTR-XXL have the strongest performance. Pair classification is closest to STS in its framing, yet models rank significantly differently on the two tasks. This highlights the importance of benchmarking on a diverse set of tasks to avoid blindly reusing a model for a different task.</li>
+</ul></li>
+<li><strong>Reranking</strong>
+<ul>
+<li>MPNet and MiniLM models perform strongly on reranking tasks.</li>
+<li>On SciDocsRR (Co-han et al., 2020a) they perform far better than big- ger models, which is likely due to parts of SciDocsRR being included in their training data.</li>
+<li>Our scale of experiments and that of model pre-training make controlling for data contamination challenging.</li>
+<li>Thus, we ignore overlap of MTEB datasets with model training datasets in MTEB scores.</li>
+<li>As long as enough datasets are averaged, we believe these effects to be insignificant.</li>
+</ul></li>
+<li><strong>Retrieval</strong>
+<ul>
+<li>SGPT-5.8B-msmarco is the best em- bedding model on the BEIR subset in MTEB as well as on the full BEIR benchmark (Thakur et al., 2021; Muennighoff, 2022).</li>
+<li>The even larger 7.1B SGPT model making use of BLOOM (Scao et al., 2022) performs significantly weaker, which is likely due to the multilinguality of BLOOM.</li>
+<li>Models geared towards STS (SimCSE, ST5, SGPT- nli) perform badly on retrieval tasks.</li>
+<li>Retrieval tasks are unique in that there are two distinct types of texts: Queries and documents (“asymmetric”), while other tasks only have a single type of text (“symmetric”).</li>
+<li>On the QuoraRetrieval dataset, which has been shown to be largely symmetric (Muennighoff, 2022), the playing field is more even with SGPT-5.8B-nli outperforming SGPT- 5.8B-msmarco,</li>
+</ul></li>
+<li><strong>STS &amp; Summarization</strong>
+<ul>
+<li>Retrieval models (GTR, SGPT-msmarco) perform badly on STS, while ST5-XXL has the highest performance.</li>
+<li>This highlights the bifurcation of the field into separate embedding models for retrieval (asymmetric) and similarity (symmetric) use cases (Muennighoff, 2022).</li>
+</ul></li>
+</ul>
+</section>
+<section id="efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="efficiency">Efficiency</h2>
+<p><strong>Maximum speed</strong> -&gt; Word Embedding models offer maximum speed with Glove taking the lead on both performance and speed, thus making the choice simple in this case</p>
+<p><strong>Maximum performance</strong> -&gt; If latency is less important than performance Depending on the task at hand, GTR-XXL, ST5-XXL or SGPT-5.8B may be the right choice,</p>
+<p><strong>Speed and Peformance</strong> -&gt; The fine-tuned MPNet and MiniLM models lead the middle cluster making the choice easy.</p>
+<hr>
+<p>#todo you can check the gte architecture here it’s highly related to the MTEP [[tiny-gte_transformer_model]]</p>
+<hr>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>We found model performance on different tasks to vary strongly with no model claiming state-of-the-art on all tasks.</li>
+<li>Our studies on scaling behavior, model efficiency and multilinguality revealed various intricacies of models that should ease the decision-making process for future research or industry applications of text embeddings.</li>
+</ul>
+<hr>
+<p>Thanks for reading. If you have any questions, feel free to comment down below or reach out to me on twitter <a href="https://twitter.com/AbdelkareemElk1"><span class="citation" data-cites="AbdelkareemElk1">@AbdelkareemElk1</span></a>.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>https://huggingface.co/blog/mteb</li>
+<li>https://arxiv.org/abs/2210.07316</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</guid>
+  <pubDate>Fri, 27 Oct 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</title>
+  <link>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>#definition : This is a&nbsp;<a href="https://www.sbert.net/">sentence-transformers</a>&nbsp;model: It maps sentences &amp; paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search. It is distilled from&nbsp;<code>thenlper/gte-small</code>, with comparable (slightly worse) performance at around half the size.</p>
+</section>
+<section id="details" class="level2">
+<h2 class="anchored" data-anchor-id="details">Details</h2>
+<ul>
+<li>It’s around ~45MB very small compared to other models like MiniLM-L6-V2 which is equal to ~80 MB</li>
+<li>Embedding vector size 384d</li>
+<li>BERT based</li>
+<li>Distilied from thenlper/gte-small,</li>
+</ul>
+</section>
+<section id="notice-about-using-small-size" class="level2">
+<h2 class="anchored" data-anchor-id="notice-about-using-small-size">Notice about using small size</h2>
+</section>
+<section id="use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
+</section>
+<section id="todo" class="level1">
+<h1>Todo</h1>
+<ol type="1">
+<li><label><input type="checkbox" checked="">Explain the MTEB</label>
+<ol type="1">
+<li>Add the link of it into the this blog</li>
+</ol></li>
+<li>Explain fastembed</li>
+<li>Make comparison between tiny-gte and small gte</li>
+<li>Add the small-gte-4096 comparison</li>
+</ol>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>https://huggingface.co/TaylorAI/gte-tiny</li>
+<li>https://www.linkedin.com/posts/prithivirajdamodaran_%3F%3F%3F%3F-%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F-activity-7120279840569597952-iwc-/?utm_source=share&amp;utm_medium=member_desktop</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</guid>
+  <pubDate>Fri, 20 Oct 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>why i am blogging</title>
+  <dc:creator>Kareem Elkhateb</dc:creator>
+  <link>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+</section>
+<section id="why-i-am-blogging" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-am-blogging">Why I am blogging</h2>
+<p>Here is the revised version of your blog with corrected grammar:</p>
+<ol type="1">
+<li>I am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).</li>
+<li>It serves as a resume and blueprint for my existence in this world.</li>
+<li>My goal is to help others by providing valuable content that makes their lives easier and better.</li>
+<li>Organizing my knowledge and recapping topics I’ve forgotten helps me experience “aha” moments! 💡
+<ol type="1">
+<li>It’s a test of whether I truly understand something or not.</li>
+</ol></li>
+<li>I don’t like social media posts, Facebook, Twitter, or LinkedIn articles. I believe these platforms are not the best places for technical blogs, and their disadvantages outweigh the advantages.</li>
+<li>I value the freedom of speech. Some topics or thoughts may be censored on social media, but I want to express my opinions without restrictions from others whose opinions I may not respect.</li>
+<li>I want to discuss topics while I’m learning them because they’re still fresh in my mind. This will help anyone in a similar position as me in the future.</li>
+<li>When studying a topic and knowing that I can write about it on my blog, I find my mind more focused on details that would fit well in the blog. This makes the learning process more enjoyable, focused, and valuable.</li>
+<li>I want my posts and knowledge to be more organized!
+<ol type="1">
+<li>Who will search for a post written six years ago on Facebook or see your first tweet?</li>
+<li>This problem is related to the feed of these social platforms.</li>
+</ol></li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>https://medium.com/<span class="citation" data-cites="racheltho/why-you-yes-you-should-blog-7d2544ac1045">@racheltho/why-you-yes-you-should-blog-7d2544ac1045</span></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>life</category>
+  <category>blogging</category>
+  <category>publish</category>
+  <guid>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</guid>
+  <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>havrard CS197 AI research experiences</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field.</label></li>
+</ul>
+</section>
+<section id="reviews" class="level2">
+<h2 class="anchored" data-anchor-id="reviews">Reviews</h2>
+<p>Lecture 1: Exciting Advances with AI Language Models <strong>Content</strong> : Interact with language models like GPT-3’s text completion and use Codex’s code generation abilities <strong>feedback</strong> : ⭐ (1/5)</p>
+<hr>
+<p>Lecture 2: The Zen of python <strong>Content</strong> : vscode,git,conad,linting and Debugging. <strong>feedback</strong>: <strong>feedback</strong> : ⭐ (1/5)</p>
+<hr>
+<p>Lecture 3: Reading AI Research papers <strong>Content</strong> :</p>
+<ol type="1">
+<li>Conduct a literature search to identify papers relevant to a topic of interest</li>
+<li>Difference between Reading Wide and Reading deep and how to balance between them</li>
+<li>How to use Google Scholar and paper with code <strong>feedback</strong> : ⭐⭐⭐⭐⭐ (5/5)</li>
+</ol>
+<hr>
+<p>Lecture 4: In-Tune with Jazz Hands <strong>Content</strong>:</p>
+<ol type="1">
+<li>quick intro into huggingface</li>
+<li>Tokenization</li>
+<li>Causal language modeling (CLM) <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
+</ol>
+<hr>
+<p>Lecture 5: Lightning McTorch <strong>Content</strong> :</p>
+<ol type="1">
+<li>Fine-tuning A vision Transformer</li>
+<li>Intro to pytorch lightning (Lightning)</li>
+<li>Data Loading</li>
+<li>How to Build a Neural net Module with lightning and how lightning modules work <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
+</ol>
+<hr>
+<p>Lecture 6 &amp; 7: Moonwalking with Pytorch <strong>Content</strong> :</p>
+<ol type="1">
+<li>Pytorch Exercises</li>
+<li>Tensors</li>
+<li>Autograd and neural networks <strong>feedback</strong> : ⭐ (1/5)</li>
+</ol>
+<hr>
+<p>Lecture 8 &amp; 9: Experiment Organization Spakrs Joy <strong>Content</strong> :</p>
+<ol type="1">
+<li>Weight and Biases</li>
+<li>Hyperparameter Search</li>
+<li>Hydra <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
+</ol>
+<hr>
+<p>Lecture 10 &amp; 11 : I Dreamed a Dream <strong>Content</strong></p>
+<ol type="1">
+<li>Identifying Gaps in A Research Paper
+<ol type="1">
+<li>CLIP and CheXzero</li>
+</ol></li>
+<li>Generating Ideas for Building a Research Paper</li>
+<li>Iterating on your research ideas <strong>feedback</strong> : ⭐⭐⭐⭐⭐ (5/5)</li>
+</ol>
+<hr>
+<p>Lecture 12 &amp; 13 : Today Was a Fairytale</p>
+<ol type="1">
+<li>how to deconstruct the elements of a research paper and their sequence</li>
+<li>Resulting template that you can use as a general example <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
+</ol>
+<hr>
+<p>Lecture 14 &amp; 15: Deep Learning on Cloud Nine <em>didn’t complete it</em> 🙃🙃🙃</p>
+<hr>
+<p>Lecture 16 &amp; 17:Make your dreams come tuned <strong>Content</strong></p>
+<ol type="1">
+<li>high level use of Stable Diffusion using a Dreambooth template</li>
+<li>Use AWS to accelerate the training of Stable Diffusion models with GPUs</li>
+<li>HF Accelerator <strong>feedback</strong> : ⭐⭐ (2/5)</li>
+</ol>
+<hr>
+<p>Lecture 18 : Research Productivity Power-Ups <strong>Content</strong></p>
+<ol type="1">
+<li>How update meetings and working sessions</li>
+<li>organizing your efforts on a project</li>
+<li>what is technical dept and examples on it <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
+</ol>
+<hr>
+<p>Lecture 19 :The AI Ninja <strong>Content</strong></p>
+<ol type="1">
+<li>How to make Steady Progress</li>
+<li>Some Research Skills</li>
+<li>Discussion Questions <strong>feedback</strong> : ⭐⭐ (2/5) I found that <a href="https://colah.github.io/notes/taste/">Colah’ blog</a> content about research is better in the context and offers a great details</li>
+</ol>
+<hr>
+<p>Lecture 20: Bejeweled ⭐⭐⭐⭐⭐(5/5)</p>
+<ol type="1">
+<li>how to make a slides to improve your research talk</li>
+<li>Assertion Evidence Approach <strong>feedback</strong> : ⭐⭐ (2/5) This is great related talk from MIT about this topic <a href="https://www.youtube.com/watch?v=Unzc731iCUY&amp;pp=ygUyaG93IHRvIG1ha2Ugc2xpZGVzaG93IGFuZCBwcmVzZW50YXRpb24gbWl0IGxlY3R1cmU%3D">How to speak</a> ⭐⭐⭐⭐⭐(5/5)</li>
+</ol>
+<hr>
+<p>Lecture 21 : Model Showdown <strong>Content</strong></p>
+<ol type="1">
+<li>Statistical Testing <strong>feedback</strong> : ⭐⭐ ⭐(3/5)</li>
+</ol>
+<hr>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</guid>
+  <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
