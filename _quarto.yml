@@ -31,7 +31,9 @@ website:
       - icon: rss
         href: index.xml
   favicon: 2.svg
-  open-graph: true
+  open-graph: 
+    locale: ar_AR
+  google-analytics: "G-XFPC3M9TMG"
   twitter-card:
      creator: "@AbdelkareemElk1"
      card-style: summary
