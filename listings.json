@@ -4,18 +4,15 @@
     "items": []
   },
   {
-    "listing": "/notes/web-scraping/index.html",
+    "listing": "/blog/feed.html",
     "items": [
-      "/notes/web-scraping/browser-to-python.html",
-      "/notes/web-scraping/transcribe-diarize.html"
-    ]
-  },
-  {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/how-to-learn/index.html",
-      "/notes/video_editing.html",
-      "/notes/web-scraping/index.html"
+      "/blog/posts/mteb_encoding/my_little_dargon.html",
+      "/blog/posts/products_reviews/Huawei_mate_pad_11.html",
+      "/blog/posts/products_reviews/Huawei freebuds 5i.html",
+      "/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html",
+      "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html",
+      "/blog/posts/life_style/why_I_am_blogging.html",
+      "/blog/posts/courses/havrard CS197 AI research experiences.html"
     ]
   },
   {
@@ -31,15 +28,18 @@
     ]
   },
   {
-    "listing": "/blog/feed.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/blog/posts/mteb_encoding/my_little_dargon.html",
-      "/blog/posts/products_reviews/Huawei_mate_pad_11.html",
-      "/blog/posts/products_reviews/Huawei freebuds 5i.html",
-      "/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html",
-      "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html",
-      "/blog/posts/life_style/why_I_am_blogging.html",
-      "/blog/posts/courses/havrard CS197 AI research experiences.html"
+      "/notes/how-to-learn/index.html",
+      "/notes/video_editing.html",
+      "/notes/web-scraping/index.html"
+    ]
+  },
+  {
+    "listing": "/notes/web-scraping/index.html",
+    "items": [
+      "/notes/web-scraping/browser-to-python.html",
+      "/notes/web-scraping/transcribe-diarize.html"
     ]
   }
 ]
