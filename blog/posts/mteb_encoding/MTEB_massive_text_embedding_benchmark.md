@@ -15,9 +15,6 @@ tags:
 authors:
   - kareem
 ---
-
-## Table of contents
-
 ## Introduction
 
 #defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB.
