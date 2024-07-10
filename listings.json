@@ -21,6 +21,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",
       "/blog/posts/products_reviews/Huawei_mate_pad_11.html",
       "/blog/posts/products_reviews/Huawei freebuds 5i.html",
@@ -34,6 +35,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",
       "/blog/posts/products_reviews/Huawei_mate_pad_11.html",
       "/blog/posts/products_reviews/Huawei freebuds 5i.html",
