@@ -11,7 +11,6 @@ order: 1
 
 ## Why I am blogging
 
-Here is the revised version of your blog with corrected grammar:
 
 1. I am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).
 2. It serves as a resume and blueprint for my existence in this world.

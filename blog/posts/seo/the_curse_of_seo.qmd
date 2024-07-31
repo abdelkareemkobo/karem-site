@@ -1,0 +1,120 @@
+---
+title: The curse of SEO
+description: Discover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine optimization.
+date: 2024-07-31
+categories:
+  - blogging
+  - seo
+image: images/labtop.jpeg
+order: 1
+draft: false
+featured: false
+author: kareem
+---
+- **Definition:** SEO is optimizing your website pages to appear in the top results of search engines like Google and Bing.
+	- Why is this important? It makes you visible to more people who are interested in what you provide—products, services, news, etc.
+	- Enough of the basics. I assume you already know what SEO is about. Now, let's explore a darker side of being involved in SEO.
+- **How to Track Your Changes**
+	- Since SEO revolves around ranking, how do you track your position?
+	- There are multiple tools I enjoy using, such as:
+		- **I love to manually search keywords and track their ranks myself! :)**
+			- I do this often when I need a break at the gym or during study breaks.
+		- [SEMrush](https://www.semrush.com/)
+			- I use it to check domain authority, organic keywords, and traffic increase.
+			- Seeing green in increased Ref. Domains and Authority Score brings joy.
+			- *I don't use it for anything else! :)*
+		- [Ranking Math](https://rankmath.com/)
+			- Say hi to the overrated WordPress SEO plugin "Ranking Math SEO"
+			- It claims to simplify content optimization with built-in suggestions based on widely-accepted practices.
+			- I use Rankmath Pro on a website I manage, showing impressions, total keywords, average position, and clicks. GSC offers all this for free!
+			- This post isn't about Rankmath; that's for another time. In short:
+				- AI tools
+				- AMP
+				- Analysis from Google Analytics
+				- Instant indexing
+				- Backlinks count
+				- Local SEO
+				- News sitemap
+				- Podcasts
+				- Schema
+				- SEO analysis
+				- Sitemap
+				- Video Sitemap
+				- WooCommerce
+				- Google Web Stories
+			- None of these significantly impact SEO and ranking; there are other effective methods.
+			- What matters most to me with Rankmath is:
+				- Top 5 performing posts
+				- Other keywords
+			- I mainly use Rankmath for its focus keyword section in each article.
+		- [Mangools](https://mangools.com/)
+			- My preferred tool! Its UI/UX is excellent, and it's fast and efficient unlike other tools.
+			- With the free account, I get:
+				- 5 keyword researches daily
+				- 8 SERP checks
+				- 1,000 backlink analyses
+				- Domain profile checks for 2 domains daily
+			- For Arabic, its keyword ideas aren't as good.
+		- [Google Search Console](https://search.google.com/search-console/about)
+			- A free tool by Google offering most SEO tools' functionalities for free and accurately.
+			- You get:
+				- Performance of your website for any keyword at any time in any region!
+				- Page indexing status
+				- Backlink analysis
+				- Page experience and more
+			- You might notice a recurring theme:
+				- Charts
+				- Changing numbers everywhere, numbers galore!
+		- [Neil Patel](https://app.neilpatel.com/)
+			- Rank tracking
+			- SEO opportunities
+			- Site audit
+			- Keyword research
+			- Traffic estimation
+			- Backlinks
+		- [Keyword Tool](https://keywordtool.io/)
+			- For Arabic, it provides the most related suggested keywords, though many aren't quite relevant.
+		- [GuinRank](https://www.guinrank.com/)
+			- New and more tailored for Arabic, gaining power.
+			- I use its content and keyword tools for Arabic, providing helpful recommendations and statistics for choosing useful keywords.
+		- [Moz](https://moz.com/)
+			- They even blocked my IP -__-
+- **Starting to Lose!**
+	- What's going wrong? I hate losing after investing time, money, and mental health into something. If you're like me, SEO can be crushing.
+	- "SEO is like gambling" ~ Kareem
+
+![How to recover form SEO addiction](images/labtop_seo_increasing.jpeg)
+
+- **Losing Backlinks**
+	- Spam backlinks (like Khamsat, Fiverr, and Upwork)—most are harmful.
+	- [PBN Network](https://khamsat.com/marketing/backlinks-building/2836532-%D8%AE%D8%B7%D8%A9-%D8%A8%D8%A7%D9%83-%D9%84%D9%8A%D9%86%D9%83-pbn-%D8%A7%D9%84%D8%A3%D9%81%D8%B6%D9%84-%D8%AD%D8%A7%D9%84%D9%8A%D8%A7)
+		- This service claims safe PBNs for backlinks from Web 2.0 blogs, profiles, social bookmarking, social likes/shares, etc. I tried it, and none appeared in GSC after 3 months; worse, my site's rank dropped.
+	- [Manually Added Backlinks](https://khamsat.com/marketing/backlinks-building/2191705-%D8%AD%D8%B2%D9%85%D8%A9-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%86%D9%83-%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%83-%D8%B9%D9%84%D9%89-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%B9%D8%A7%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AF%D9%88%D9%85%D9%8A%D9%86-%D8%A7%D8%AB%D9%88%D8%B1%D8%AA%D9%8A)
+		- This package offers 70 PR10 backlinks from foreign websites, 60 Arabic guest posts, and 10 EDU backlinks, etc.
+		- It worked to some extent, but the impact was minimal. Four backlinks from specific places helped more than these services.
+	- Other services are mostly spam backlinks; some guest posts might help, but aim for real backlinks spaced out from related sites.
+- **Losing Ranking**
+	- This month, a home services website I manage improved from 65th to 9th in rankings, then disappeared, and later ranked 40th, etc.
+	- This cycle repeats—a page gains rank, then drops.
+	- It's stressful; don't check daily. Weekly (or every 2-3 weeks) is less stressful and gives fairer results, focusing on what's important.
+- **What's Going Wrong?**
+	- Watching page changes from these tools is like social media's new "like" button!
+	- My mind loves the green and red numbers.
+	- Ultimately, most analyses aren't critical. Whether 23rd or 80th, if not in the top 5, what's the use? Daily checks yield nothing; reaching top 5 goes unnoticed until notifications and calls confirm it.
+	- If SEO is your sole income source, it's a tough job—even though it can make you a millionaire sometimes.
+- **How to Recover**
+	- Here's what helped me recover from this addiction:
+	- Create barriers for easy access:
+	  1. Separate Google accounts/tabs into another browser profile. Using Brave or Bing makes this easy.
+	  2. Remove bookmarked tabs for these tools and clear browsing history.
+	  3. Use extensions to block these sites; Chrome Store has many offering motivational quotes.
+	- Delete Chrome and YouTube from mobile using [ADB](https://askubuntu.com/questions/34702/how-do-i-set-up-android-adb).
+	- Move tool emails to spam except weekly updates from Mangools and GSC.
+
+![dark side of seo](images/laptop_google.jpeg)
+
+- **Final Thoughts!**
+	- As a programmer, I initially thought a fast website and quality content were key in SEO. I later learned that choosing keywords and acquiring backlinks are crucial.
+	- A nice Arabic book which will give you true information about SEO [دليلك إلي تحسين محركات البحث](https://academy.hsoub.com/files/28-%D8%AF%D9%84%D9%8A%D9%84%D9%83-%D8%A5%D9%84%D9%89-%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D9%85%D8%AD%D8%B1%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-seo/)
+	- Feel free to DM on [Linkedin](https://www.linkedin.com/in/abdelkareem-elkhateb-989a68294/)
+	- Ultimately, backlinks boil down to how many you buy and from whom.
