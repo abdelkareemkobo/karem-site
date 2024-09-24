@@ -97,6 +97,7 @@ author: kareem
 	- This month, a home services website I manage improved from 65th to 9th in rankings, then disappeared, and later ranked 40th, etc.
 	- This cycle repeats—a page gains rank, then drops.
 	- It's stressful; don't check daily. Weekly (or every 2-3 weeks) is less stressful and gives fairer results, focusing on what's important.
+
 - **What's Going Wrong?**
 	- Watching page changes from these tools is like social media's new "like" button!
 	- My mind loves the green and red numbers.
@@ -118,3 +119,4 @@ author: kareem
 	- A nice Arabic book which will give you true information about SEO [دليلك إلي تحسين محركات البحث](https://academy.hsoub.com/files/28-%D8%AF%D9%84%D9%8A%D9%84%D9%83-%D8%A5%D9%84%D9%89-%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D9%85%D8%AD%D8%B1%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-seo/)
 	- Feel free to DM on [Linkedin](https://www.linkedin.com/in/abdelkareem-elkhateb-989a68294/)
 	- Ultimately, backlinks boil down to how many you buy and from whom.
+	- [منصة صناعة المحتوي العربي](https://anwan.me/)
