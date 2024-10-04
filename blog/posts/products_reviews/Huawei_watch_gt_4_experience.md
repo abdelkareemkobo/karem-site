@@ -1,9 +1,9 @@
 ---
 title: Review of Huawei watch gt 4
-description: Huawei watch gt4 review after 2 months of use
+description: Huawei watch gt4 review after 1 year of use
 author: kareem
-date: 2023-07-18
-draft: true
+date: 2024-10-4
+draft: false
 featured: false
 tags:
   - huawei
