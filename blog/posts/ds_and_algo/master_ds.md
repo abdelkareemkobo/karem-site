@@ -36,4 +36,4 @@ tags:
 
 ### Topics
 
-1. [Arrays]()
+1. [Arrays](https://kareemai.com/blog/posts/ds_and_algo/Static_array.html)
