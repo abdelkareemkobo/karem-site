@@ -6,6 +6,8 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/ds_and_algo/Static_array.html",
+      "/blog/posts/ds_and_algo/master_ds.html",
       "/blog/posts/seo/the_curse_of_seo.html",
       "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",
@@ -21,6 +23,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/posts/ds_and_algo/Static_array.html",
+      "/blog/posts/ds_and_algo/master_ds.html",
       "/blog/posts/seo/the_curse_of_seo.html",
       "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",

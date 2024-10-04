@@ -17,7 +17,48 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Tue, 30 Jul 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Oct 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Learning Data Structures and Algorithms as Machine Learning Engineer</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="why-revisit-ds-and-algorithms" class="level2">
+
+<ul>
+<li>I am a fresh graduate from AI college, i spent the last 4 years learning about both Computer science and AI.</li>
+<li>I was learning some math, machine learning , Deep learning and a lot of programming with python and C++, spent some a lot of time learning web also for freelance jobs.</li>
+<li>a lot of time i had multiple interviews while i was a student in the summer and all the time the questions was about linkedlist, and some medium leetcode question and a few of them was about frameworks like pytorch or pandas.</li>
+<li>I faced a strange fact when i started to work on life projects or some advanced books…etc they require a strong problem solving skills that i don’t have!!</li>
+<li>I am revisiting these topics and will try to get out from the juypter notebook and kaggle world in software engineer with python and focus more on open source projects.</li>
+<li>I want to reazlie the time/memeory order of the data structures i am using in my projects</li>
+<li>I have read the algorithm book v3 and spent 6 months on codeforces with c++ i remember these days where i could spent around 10 hours per day solving problems with myself before the AI assistants like GPT..etc i am missing the good feeling after every problem i manage to solve and i was able to write around 90 lines of code without research or AI help..etc.</li>
+<li>I will start learning again about this topics and make them a daily habit to solve a problem per day: - <a href="https://www.manning.com/books/grokking-data-structures">[grokking_ds]</a> - it’s a new book about data structure in python and explained with the grokking style - <a href="https://www.udemy.com/course/python-ds-skills/">[DS with python]</a> - it’s a mostafa saad ibrhaim udemy course with python version with a lot of problems to solve - <a href="https://neetcode.io/roadmap">[neetcode]</a> - a roadmap to focus on some problems selected from neetcode - <a href="https://codingchallenges.fyi/">[coding challenges]</a> - A SE problems to help you focus more on how to build projects not just problem solving which will help me to start doing some open source</li>
+</ul>
+<section id="times-i-needed-ds" class="level3">
+
+<pre><code>- multiple time when i was trying to building some solutions related to NLP or graph neural network i know that this problem must solved with Linkedlist and this needs a type of tree then i struggle to continue....
+- Learning about some NLP Algorithms or the new searching and matching techniques most of the time they are math equations with some optimizations you can't fully understand unless your skills in problem solving
+- research in DL needs a huge skills in problem solving and how to understand the following architectures then update or utilize them to your needs more in this in the future but i think the better you are in SE the better you are in ML.</code></pre>
+</section>
+<section id="topics" class="level3">
+
+<ol type="1">
+<li><a href="">Arrays</a></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</guid>
+  <pubDate>Thu, 03 Oct 2024 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>The curse of SEO</title>
   <dc:creator>kareem </dc:creator>
@@ -1264,6 +1305,2141 @@ Inputs are two sets of sentences from two different languages. For each sentence
  ]]></description>
   <guid>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</guid>
   <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>What is an Array ?</title>
+  <link>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li>Static array organize data by holding a collection of elements and making them accessible through an index</li>
+<li>We use them to store and iterate over, or manipulate a collection of values of the same type without knowing much about how the individual values are correlated.</li>
+<li>you can store integers, fractions, strings and other types of objects.</li>
+</ul>
+<section id="what-is-adt" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-adt">What is ADT ?</h2>
+<ol type="1">
+<li>ADTs are a theoretical concept. more like logical/mathematical view
+<ol type="1">
+<li>we specify the what part and also potentially the expected performance</li>
+<li>It’s independent of a programming language and how it wil be implemented</li>
+</ol></li>
+<li>E.g Providing a append functionality with capacity enchancement</li>
+<li>ADT are acting like an interface</li>
+</ol>
+<section id="adt-of-array" class="level3">
+<h3 class="anchored" data-anchor-id="adt-of-array">ADT of Array</h3>
+<ol type="1">
+<li>Stores a collection of data</li>
+<li>its elements can be accessed by index</li>
+<li>Elements don’t have to be accessed sequentailly; you can get the 10th element wihtout having to read all previous elements before it</li>
+</ol>
+</section>
+<section id="core-features-of-array" class="level3">
+<h3 class="anchored" data-anchor-id="core-features-of-array">Core features of Array</h3>
+<ol type="1">
+<li>Arrays are allocated in memoery as a single, uninterrupted block of memory with sequential locations, which is both memory and time efficient</li>
+<li>Arrays are restricted to storing data of the same type. This restrication also stems from the need for optimization because it allows the same memory to be allocated for each element in the array and the compiler/interpreter to quickly know the memory address of each element.</li>
+<li>The size of arrays, that is the number of elements contained in an array, must be decided when the array is created, and that size can’t be changed.</li>
+</ol>
+</section>
+</section>
+<section id="initialization-for-arrays-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="initialization-for-arrays-in-python">Initialization for Arrays in Python</h2>
+<p>…</p>
+</section>
+<section id="arrays-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="arrays-in-python">Arrays in python</h2>
+<ul>
+<li>python offers the <code>list</code> class as its native array-like solution but it’s a dynamic not static</li>
+<li>The closest to array in python is the Python’s array module, which enforces type consistency but is still a dynamic array.</li>
+<li>Numpy library is the most similar to static arrays and it’s efficient</li>
+</ul>
+</section>
+<section id="core-array-grokking-code" class="level2">
+<h2 class="anchored" data-anchor-id="core-array-grokking-code">Core Array grokking code</h2>
+<div id="cell-5" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> array</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Union</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> Array:</span>
+<span id="cb1-6">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, size: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, typecode: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>):</span>
+<span id="cb1-7">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb1-8">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Invalid array size (must be positive): </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>size<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb1-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> size</span>
+<span id="cb1-10">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> array.array(typecode, [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> size)</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-13">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size</span>
+<span id="cb1-14"></span>
+<span id="cb1-15">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]:</span>
+<span id="cb1-16">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size:</span>
+<span id="cb1-17">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">IndexError</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"array index out of range"</span>)</span>
+<span id="cb1-18">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index]</span>
+<span id="cb1-19"></span>
+<span id="cb1-20">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__setitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, val: Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-21">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size:</span>
+<span id="cb1-22">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">IndexError</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"array assignment index out of range"</span>)</span>
+<span id="cb1-23">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> val</span>
+<span id="cb1-24"></span>
+<span id="cb1-25">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-26">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">repr</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array)</span></code></pre></div>
+</div>
+</section>
+<section id="unsorted-array" class="level2">
+<h2 class="anchored" data-anchor-id="unsorted-array">Unsorted Array</h2>
+<div id="cell-7" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> UnsortedArray:</span>
+<span id="cb2-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, max_size: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, typecode: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>):</span>
+<span id="cb2-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(max_size, typecode)</span>
+<span id="cb2-4">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._max_size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> max_size</span>
+<span id="cb2-5">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># the actual number of elements stored in the array</span></span>
+<span id="cb2-6">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb2-7"></span>
+<span id="cb2-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb2-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size</span>
+<span id="cb2-10"></span>
+<span id="cb2-11">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]:</span>
+<span id="cb2-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size:</span>
+<span id="cb2-13">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">IndexError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Index out of bound : </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>index<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb2-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index]</span>
+<span id="cb2-15"></span>
+<span id="cb2-16">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>:</span>
+<span id="cb2-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"UnsortedArray </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">repr</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array._array[:<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size])<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb2-18"></span>
+<span id="cb2-19">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> max_size(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb2-20">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._max_size</span>
+<span id="cb2-21"></span>
+<span id="cb2-22">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> insert(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, new_entry) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb2-23">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array):</span>
+<span id="cb2-24">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The array is alread fu"</span>)</span>
+<span id="cb2-25">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb2-26">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> new_entry</span>
+<span id="cb2-27">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-28"></span>
+<span id="cb2-29">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> delete(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb2-30">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb2-31">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Delete from an empty array"</span>)</span>
+<span id="cb2-32">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">elif</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size:</span>
+<span id="cb2-33">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Index </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>index<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> out of range"</span>)</span>
+<span id="cb2-34">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb2-35">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb2-36">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-37"></span>
+<span id="cb2-38">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> find(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, target) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb2-39">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> index <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb2-40">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> target:</span>
+<span id="cb2-41">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> index</span>
+<span id="cb2-42">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># couldn't find the target</span></span>
+<span id="cb2-43">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb2-44"></span>
+<span id="cb2-45">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> traverse(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, callback):</span>
+<span id="cb2-46">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> index <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb2-47">            callback(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index])</span></code></pre></div>
+</div>
+</section>
+<section id="sorted-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="sorted-arrays">Sorted Arrays</h2>
+<p>for sorted arrays, encapsulation becomes even more important because we need to guarantee another invariant : that the elements in the array are always sorted.</p>
+<div id="cell-9" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> sortedArray:</span>
+<span id="cb3-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, max_size: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, typecode: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>):</span>
+<span id="cb3-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(max_size, typecode)</span>
+<span id="cb3-4">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._max_size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> max_size</span>
+<span id="cb3-5"></span>
+<span id="cb3-6">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb3-7"></span>
+<span id="cb3-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb3-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size</span>
+<span id="cb3-10"></span>
+<span id="cb3-11">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]:</span>
+<span id="cb3-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size:</span>
+<span id="cb3-13">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Index out of bound: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>index<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb3-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index]</span>
+<span id="cb3-15">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>:</span>
+<span id="cb3-16">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Sorted Array (</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">repr</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array._array[:<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size])<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb3-17">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__iter__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-18">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb3-19">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">yield</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i]</span>
+<span id="cb3-20">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> max_size(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb3-21">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._max_size</span>
+<span id="cb3-22">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> insert(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,value:Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>])<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb3-23">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._max_size:</span>
+<span id="cb3-24">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"The array is already full, maximum size:</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>_max_size<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb3-25">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb3-26">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span>value:</span>
+<span id="cb3-27">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> value</span>
+<span id="cb3-28">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> </span>
+<span id="cb3-29">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> </span>
+<span id="cb3-30">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb3-31">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb3-32">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> value</span>
+<span id="cb3-33">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-34">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> linear_search(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,target:Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>])<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span>Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]:</span>
+<span id="cb3-35">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb3-36">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span>target:</span>
+<span id="cb3-37">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> i</span>
+<span id="cb3-38">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">elif</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>target:</span>
+<span id="cb3-39">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb3-40">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb3-41">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> binary_search(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,target:Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>])<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span>Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]:</span>
+<span id="cb3-42">        left <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb3-43">        right <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-44">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">while</span> left <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span>right:</span>
+<span id="cb3-45">            mid_index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (left<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>right) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb3-46">            mid_val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[mid_index]</span>
+<span id="cb3-47">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> mid_val<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> target:</span>
+<span id="cb3-48">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> mid_index</span>
+<span id="cb3-49">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">elif</span> mid_val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> target:</span>
+<span id="cb3-50">                right <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> mid_index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-51">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb3-52">                left <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> mid_index  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-53">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb3-54">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> delete(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,target:Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>,<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>])<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb3-55">        index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.binary_search(target)</span>
+<span id="cb3-56">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb3-57">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Unable to delete element</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>target<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">: the entry is not in the array"</span>)</span>
+<span id="cb3-58">        </span>
+<span id="cb3-59">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(index,<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb3-60">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb3-61">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span></code></pre></div>
+</div>
+</section>
+<section id="profiling" class="level2">
+<h2 class="anchored" data-anchor-id="profiling">Profiling</h2>
+<p>…</p>
+</section>
+<section id="asymptotic-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="asymptotic-analysis">Asymptotic analysis</h2>
+<p>…</p>
+</section>
+<section id="big-o-notation" class="level2">
+<h2 class="anchored" data-anchor-id="big-o-notation">Big-O notation</h2>
+<p>…</p>
+<p>• To evaluate the performance of an algorithm, we can use asymptotic analysis, which means finding out a formula, expressed in big-O notation, that describes the behavior of the algorithm on the RAM model.</p>
+<p>• The RAM model is a simplified computational model of a generic computer that provides only a limited set of basic instructions, all of which take constant time.</p>
+<p>• Big-O notation is used to classify functions based on their asymptotic growth. We use these classes of functions to express how fast the running time or memory used by an algorithm grows as the input becomes larger.</p>
+<p>• Some of the most common classes of functions, the ones you will see more often are</p>
+<pre><code>– O(1)–constant—Whenever a resource grows independently of n (for example, a basic instruction).
+
+– O(log(n))–logarithmic—Slow growth, like binary search.
+
+– O(n)–linear—A function that grows at the same rate as the input, like the number of comparisons you need in a linear search.
+
+– O(n*log(n))–linearithmic—We’ll see this order of growth for priority queues.
+
+– O(n2)–quadratic—Functions in this class grow too fast for resources to be manageable beyond about a million elements. An example is the number of pairs in an array.
+
+– O(2n)–exponential—Functions with exponential growth have huge values for n &gt; 30 already. So if you want to compute all the subsets of an array, you should know that you can only do this on small arrays</code></pre>
+</section>
+<section id="dyanmic-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="dyanmic-arrays">Dyanmic Arrays</h2>
+<p>• Arrays are great containers when we need to access elements based on their position. They provide constant-time access to any element, and we can read or write any element without sequentially accessing the elements before it.</p>
+<p>• However, arrays are inherently static. That is, because of the way they are implemented in memory, their size cannot be changed once they are created.</p>
+<p>• Having a fixed-size container means that we can’t be flexible if we find that we need to store more elements. Furthermore, allocating a large array from the start to support the largest possible number of elements is often a waste of memory.</p>
+<p>• Dynamic arrays are a way to get the best of arrays and add some flexibility. They are not a different type of data structure. They use fixed-size arrays but add a strategy to grow and shrink them as needed, reallocating the underlying static array each time it needs to be resized.</p>
+<p>• The best strategy for dynamic arrays is to double the size of the underlying static array when we try to insert a new element into a full array and halve the size of the array when, after removing an element, three-quarters of the elements are empty</p>
+<p>• This flexibility comes at a cost: insert and delete can’t be constant time as they are for static unsorted arrays. But for the insert method (and, under some assumptions, for the delete method as well), we can guarantee that n operations take an O(n) amortized running time and additional memor</p>
+<div id="cell-12" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> DyanmicArray:</span>
+<span id="cb5-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, initial_capacity: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, typecode: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb5-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(initial_capacity, typecode)</span>
+<span id="cb5-4">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> initial_capacity</span>
+<span id="cb5-5">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb5-6">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._typecode <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> typecode</span>
+<span id="cb5-7"></span>
+<span id="cb5-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb5-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size</span>
+<span id="cb5-10"></span>
+<span id="cb5-11">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, index) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]:</span>
+<span id="cb5-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size:</span>
+<span id="cb5-13">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">IndexError</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Index out of bound: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>index<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb5-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[index]</span>
+<span id="cb5-15"></span>
+<span id="cb5-16">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>:</span>
+<span id="cb5-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">repr</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array._array[: <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size])</span>
+<span id="cb5-18"></span>
+<span id="cb5-19">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__iter__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb5-20">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb5-21">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">yield</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i]</span>
+<span id="cb5-22"></span>
+<span id="cb5-23">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> _is_full(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb5-24">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity</span>
+<span id="cb5-25"></span>
+<span id="cb5-26">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> _double_size(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb5-27">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">assert</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size</span>
+<span id="cb5-28">        old_array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array</span>
+<span id="cb5-29">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._typecode)</span>
+<span id="cb5-30">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb5-31">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb5-32">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> old_array[i]</span>
+<span id="cb5-33">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">assert</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity</span>
+<span id="cb5-34"></span>
+<span id="cb5-35">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> _halve_size(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb5-36">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">assert</span> (</span>
+<span id="cb5-37">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">and</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span>
+<span id="cb5-38">        )  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Invariant: this is called only when capacity &gt; 1 and size &lt;= capacity/4</span></span>
+<span id="cb5-39">        old_array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array</span>
+<span id="cb5-40">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> Array(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._typecode)</span>
+<span id="cb5-41">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb5-42">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb5-43">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> old_array[i]</span>
+<span id="cb5-44">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">assert</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity</span>
+<span id="cb5-45"></span>
+<span id="cb5-46">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> is_empty(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb5-47">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb5-48"></span>
+<span id="cb5-49">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> insert(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, value: Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb5-50">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._is_full():</span>
+<span id="cb5-51">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._double_size()</span>
+<span id="cb5-52">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> value</span>
+<span id="cb5-53"></span>
+<span id="cb5-54">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> find(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, target: Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]:</span>
+<span id="cb5-55">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size):</span>
+<span id="cb5-56">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> target:</span>
+<span id="cb5-57">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> i</span>
+<span id="cb5-58">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb5-59"></span>
+<span id="cb5-60">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> delete(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, target: Union[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb5-61">        index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.find(target)</span>
+<span id="cb5-62">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> index <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb5-63">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(</span>
+<span id="cb5-64">                <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Unable to delete element </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>target<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> the entry is not in the array"</span></span>
+<span id="cb5-65">            )</span>
+<span id="cb5-66">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(index, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb5-67">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._array[i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb5-68">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb5-69">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">and</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>:</span>
+<span id="cb5-70">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._halve_size()</span></code></pre></div>
+</div>
+</section>
+<section id="creating-actual-c-array-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="creating-actual-c-array-in-python">Creating actual C array in python</h2>
+<ul>
+<li>The ctype module allows us to create a C array of FIXED size</li>
+</ul>
+<div id="cell-14" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ctypes</span>
+<span id="cb6-2"></span>
+<span id="cb6-3"></span>
+<span id="cb6-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> Array:</span>
+<span id="cb6-5">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, size):</span>
+<span id="cb6-6">        array_data_type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ctypes.py_object <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> size</span>
+<span id="cb6-7">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> size</span>
+<span id="cb6-8">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> array_data_type()</span>
+<span id="cb6-9"></span>
+<span id="cb6-10">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(size):</span>
+<span id="cb6-11">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb6-12"></span>
+<span id="cb6-13">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb6-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size</span>
+<span id="cb6-15"></span>
+<span id="cb6-16">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, idx):</span>
+<span id="cb6-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[idx]  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Is valid idx?</span></span>
+<span id="cb6-18"></span>
+<span id="cb6-19">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__setitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, idx, value):</span>
+<span id="cb6-20">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[idx] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> value</span>
+<span id="cb6-21"></span>
+<span id="cb6-22">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb6-23">        result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb6-24">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size):</span>
+<span id="cb6-25">            result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[i]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span></span>
+<span id="cb6-26">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> result</span></code></pre></div>
+</div>
+<div id="cell-15" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#fixed array </span></span>
+<span id="cb7-2"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(array.size):</span>
+<span id="cb7-3">    array.memory[i]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb7-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(array.size):</span>
+<span id="cb7-5">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(array.memory[i])</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+3
+4
+5
+6</code></pre>
+</div>
+</div>
+<div id="cell-16" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Array(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>)</span>
+<span id="cb9-2"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(array)):</span>
+<span id="cb9-3">    array[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb9-4"></span>
+<span id="cb9-5"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(array)):</span>
+<span id="cb9-6">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(array[i],end<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">","</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1,2,3,4,5,6,</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">del</span> array.memory[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: Array does not support item deletion</code></pre>
+</div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">del</span> array.memory</span></code></pre></div>
+</div>
+</section>
+<section id="full-array-code" class="level2">
+<h2 class="anchored" data-anchor-id="full-array-code">Full Array code</h2>
+<ol type="1">
+<li>append</li>
+<li>expand</li>
+<li>insert ..etc</li>
+</ol>
+<div id="cell-20" class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ctypes</span>
+<span id="cb14-2"></span>
+<span id="cb14-3"></span>
+<span id="cb14-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> Array:</span>
+<span id="cb14-5">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, size):</span>
+<span id="cb14-6">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> size</span>
+<span id="cb14-7">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> size)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># actual memory size</span></span>
+<span id="cb14-8">        array_data_type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ctypes.py_object <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity</span>
+<span id="cb14-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> array_data_type()</span>
+<span id="cb14-10"></span>
+<span id="cb14-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity):</span>
+<span id="cb14-12">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb14-13"></span>
+<span id="cb14-14">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> expand_capacity(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb14-15">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb14-16">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Expand capacity to </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>_capacity<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb14-17"></span>
+<span id="cb14-18">        array_data_type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ctypes.py_object <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity</span>
+<span id="cb14-19">        new_memory <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> array_data_type()</span>
+<span id="cb14-20">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size):</span>
+<span id="cb14-21">            new_memory[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[i]</span>
+<span id="cb14-22"></span>
+<span id="cb14-23">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> append(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, item):</span>
+<span id="cb14-24">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity:</span>
+<span id="cb14-25">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.expand_capacity()</span>
+<span id="cb14-26">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> item</span>
+<span id="cb14-27">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb14-28"></span>
+<span id="cb14-29">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> insert(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, idx, item):</span>
+<span id="cb14-30">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">assert</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> idx <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size</span>
+<span id="cb14-31">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>._capacity:</span>
+<span id="cb14-32">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.expand_capacity()</span>
+<span id="cb14-33"></span>
+<span id="cb14-34">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> p <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, idx <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb14-35">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[p]</span>
+<span id="cb14-36">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[idx] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> item</span>
+<span id="cb14-37">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb14-38">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__len__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb14-39">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size</span>
+<span id="cb14-40">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__getitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,idx):</span>
+<span id="cb14-41">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[idx]</span>
+<span id="cb14-42">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__setitem__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>,idx,value):</span>
+<span id="cb14-43">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[idx]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> value</span>
+<span id="cb14-44">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__repr__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb14-45">        result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">''</span></span>
+<span id="cb14-46">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.size):</span>
+<span id="cb14-47">            result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.memory[i]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">', '</span></span>
+<span id="cb14-48">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> result</span></code></pre></div>
+</div>
+</section>
+<section id="array-problems" class="level2">
+<h2 class="anchored" data-anchor-id="array-problems">Array Problems</h2>
+<section id="ms-course-problems" class="level3">
+<h3 class="anchored" data-anchor-id="ms-course-problems"><a href="https://www.udemy.com/course/python-ds-skills/">MS course problems</a></h3>
+<ol type="1">
+<li>Negative indexing : allow negative indexing</li>
+<li>Right rotation: function that shifts every element 1 step toward the right and the rightmost element goes to the first index</li>
+<li>Left rotation : that same as right rotation but to the left</li>
+<li>right rotation with steps: how to implement big numbers like 1e5 right rotation in efficient way</li>
+<li>pop a position: take the idx of element and return the index of it and delete it from the array no new memory creation and code is very efficient if the removed element is the last one</li>
+<li>Improved search : each time you find the value in an array shift it one step to the left</li>
+<li>2D Array : creat a fixed grid of requested rows and columns</li>
+</ol>
+</section>
+<section id="neetcode-array-problems" class="level3">
+<h3 class="anchored" data-anchor-id="neetcode-array-problems"><a href="https://neetcode.io/roadmap">Neetcode Array problems</a></h3>
+<ul>
+<li>Contains Duplicate</li>
+<li>Valid Anagram</li>
+<li>Two Sum</li>
+<li>Group Anagrams</li>
+<li>Top K Frequent Elements</li>
+<li>Product of Array Except Self</li>
+<li>Valid Sudoku</li>
+<li>Longest Consecutive Sequence</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://www.manning.com/books/grokking-data-structures">Grokking Data Structures</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</guid>
+  <pubDate>Fri, 04 Oct 2024 19:55:42 GMT</pubDate>
 </item>
 </channel>
 </rss>
