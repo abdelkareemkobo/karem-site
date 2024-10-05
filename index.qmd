@@ -24,15 +24,19 @@ format:
 
 ![](ai_hacker.png){.profile-pic}
 
-Hello, I’m `Kareem Elkhateb`, I am an experientail learner who dreams, designs, and builds expectional, high-quality digitial produts and services. I also train machines to teach themeselves 🤖. 
+Hello, I’m `Abdelkareem Elkhateb`, I like to train deep neural nets on distinct domains, interested in improving current web developements with AI applications. 
 
 "فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف 
 يجاهدُ"
 :::
 
-This blog is where i struggle to learn about programming, deep learning and AGI.
+This blog is where I document my journey to learn about programming, deep learning, and AGI.
 
-Currently I’m Learning `NLP`, `Generative AI` and `3D vision` to build charming language models that able to talk, hear and see, made me some coffee
+Currently I’m Learning `NLP`, `Generative AI`, `Recs`, and `IR` to build charming language models that able to talk, hear and see, made me some coffee
+
+I love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.
+
+My research focuses on Arabic NLP, small model optimization, image denoising, and vector computing.
 
 ## 💼 Get In Touch
 
