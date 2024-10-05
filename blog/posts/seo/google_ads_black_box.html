@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A collection of technical blogs and talks on machine learning and data science.">
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2024-10-05">
+<meta name="description" content="Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy">
 
-<title>kareem’s Blog</title>
+<title>kareem’s Blog - Google Ads Black Box</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./2.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../2.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listings .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listings'] = new List('listing-blog-listings', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -108,51 +79,18 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="kareem's Blog" href="index.xml" data-external="1"><meta property="og:title" content="kareem’s Blog">
-<meta property="og:description" content="A collection of technical blogs and talks on machine learning and data science.">
-<meta property="og:image" content="https://kareemai.com/quarto.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="kareem’s Blog - Google Ads Black Box">
+<meta property="og:description" content="Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy">
+<meta property="og:image" content="https://kareemai.com/blog/posts/seo/quarto.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
-<meta property="og:image:height" content="576">
-<meta property="og:image:width" content="960">
-<meta name="twitter:title" content="kareem’s Blog">
-<meta name="twitter:description" content="A collection of technical blogs and talks on machine learning and data science.">
-<meta name="twitter:image" content="https://kareemai.com/quarto.png">
+<meta name="twitter:title" content="kareem’s Blog - Google Ads Black Box">
+<meta name="twitter:description" content="Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/seo/quarto.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image-height" content="576">
-<meta name="twitter:image-width" content="960">
 </head>
 
 <body class="nav-fixed">
@@ -163,29 +101,29 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">👨🏽‍💻 Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/feed.html"> 
+    <a class="nav-link" href="../../../blog/feed.html"> 
 <span class="menu-text">📮 Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes/index.html"> 
+    <a class="nav-link" href="../../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers.html"> 
+    <a class="nav-link" href="../../../papers.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publish.html"> 
+    <a class="nav-link" href="../../../publish.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
 </ul>
           <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -205,191 +143,82 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#get-in-touch" id="toc-get-in-touch" class="nav-link active" data-scroll-target="#get-in-touch">💼 Get In Touch</a></li>
-  <li><a href="#feed" id="toc-feed" class="nav-link" data-scroll-target="#feed">📮 Feed</a></li>
-  <li><a href="#subscribe" id="toc-subscribe" class="nav-link" data-scroll-target="#subscribe">📬 Subscribe</a></li>
+  <li><a href="#can-a-web-developer-creat-a-google-ad" id="toc-can-a-web-developer-creat-a-google-ad" class="nav-link active" data-scroll-target="#can-a-web-developer-creat-a-google-ad">Can a web developer creat a google ad</a></li>
+  <li><a href="#another-try" id="toc-another-try" class="nav-link" data-scroll-target="#another-try">Another try</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final thoughts</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/seo/google_ads_black_box.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Google Ads Black Box</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">publish</div>
+    <div class="quarto-category">google</div>
+    <div class="quarto-category">seo</div>
+    <div class="quarto-category">ads</div>
+  </div>
+  </div>
 
 <div>
+  <div class="description">
+    Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy
+  </div>
+</div>
 
-</div>
-<div class="profile-header quarto-layout-panel" data-layout="[21,79]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 21.0%;justify-content: center;">
-<p><img src="ai_hacker.png" class="profile-pic img-fluid"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 79.0%;justify-content: flex-start;">
-<p>Hello, I’m <code>Abdelkareem Elkhateb</code>, I like to train deep neural nets on distinct domains, interested in improving current web developements with AI applications.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 21.0%;justify-content: flex-start;">
-<p>“فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف يجاهدُ”</p>
-</div>
-</div>
-</div>
-<p>This blog is where I document my journey to learn about programming, deep learning, and AGI.</p>
-<p>Currently I’m Learning <code>NLP</code>, <code>Generative AI</code>, <code>Recs</code>, and <code>IR</code> to build charming language models that able to talk, hear and see, made me some coffee</p>
-<p>I love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.</p>
-<p>My research focuses on Arabic NLP, small model optimization, image denoising, and vector computing.</p>
-<section id="get-in-touch" class="level2">
-<h2 class="anchored" data-anchor-id="get-in-touch">💼 Get In Touch</h2>
-<p>Do you need help operationalizing ML, Recommendition systems or large language models?</p>
-<p>I’m open to consulting work and other forms of advisory. Email me at <code>kareem01095134688@gmail.com</code> if you’d like to chat!</p>
-<hr>
-</section>
-<section id="feed" class="level2">
-<h2 class="anchored" data-anchor-id="feed">📮 Feed</h2>
-<p>A curated collection of blog posts and shorter form notes.</p>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 5, 2024</p>
     </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1728070851686" data-listing-reading-time-sort="6" data-listing-word-count-sort="1028" data-listing-title-sort="What is an Array ?" data-listing-filename-sort="Static_array.ipynb">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./blog/posts/ds_and_algo/Static_array.html" class="title listing-title">What is an Array ?</a>
-</td>
-</tr>
-<tr data-index="1" data-categories="blogging,publish,google,seo,ads" data-listing-date-sort="1728075600000" data-listing-file-modified-sort="1728139859631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="336" data-listing-title-sort="Google Ads Black Box" data-listing-filename-sort="google_ads_black_box.md">
-<td>
-<span class="listing-date">10/5/24</span>
-</td>
-<td>
-<a href="./blog/posts/seo/google_ads_black_box.html" class="title listing-title">Google Ads Black Box</a>
-</td>
-</tr>
-<tr data-index="2" data-categories="huawei,watch,exp,blogging,publish" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1728090576846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278" data-listing-title-sort="Review of Huawei watch gt 4" data-listing-filename-sort="Huawei_watch_gt_4_experience.md">
-<td>
-<span class="listing-date">10/4/24</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="title listing-title">Review of Huawei watch gt 4</a>
-</td>
-</tr>
-<tr data-index="3" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1728072439828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473" data-listing-title-sort="Learning Data Structures and Algorithms as Machine Learning Engineer" data-listing-filename-sort="master_ds.md">
-<td>
-<span class="listing-date">10/4/24</span>
-</td>
-<td>
-<a href="./blog/posts/ds_and_algo/master_ds.html" class="title listing-title">Learning Data Structures and Algorithms as Machine Learning Engineer</a>
-</td>
-</tr>
-<tr data-index="4" data-categories="blogging,seo" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1727164754602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="863" data-listing-title-sort="The curse of SEO" data-listing-filename-sort="the_curse_of_seo.qmd">
-<td>
-<span class="listing-date">7/31/24</span>
-</td>
-<td>
-<a href="./blog/posts/seo/the_curse_of_seo.html" class="title listing-title">The curse of SEO</a>
-</td>
-</tr>
-<tr data-index="5" data-categories="blogging,idea_Forge,publish,rough_thoughts,life_style" data-listing-date-sort="1720558800000" data-listing-file-modified-sort="1722398121651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2155" data-listing-title-sort="جاذبية مزيفة و عالم مخادع" data-listing-filename-sort="fake_graviety.qmd">
-<td>
-<span class="listing-date">7/10/24</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/fake_graviety.html" class="title listing-title">جاذبية مزيفة و عالم مخادع</a>
-</td>
-</tr>
-<tr data-index="6" data-listing-date-sort="1704060000000" data-listing-file-modified-sort="1708367871428" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208" data-listing-title-sort="My little Dragon &quot;kobo&quot;" data-listing-filename-sort="my_little_dargon.md">
-<td>
-<span class="listing-date">1/1/24</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/my_little_dargon.html" class="title listing-title">My little Dragon “kobo”</a>
-</td>
-</tr>
-<tr data-index="7" data-listing-date-sort="1701900000000" data-listing-file-modified-sort="1708386894477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="439" data-listing-title-sort="After one year of using Huawei Mate 11 without google services" data-listing-filename-sort="Huawei_mate_pad_11.md">
-<td>
-<span class="listing-date">12/7/23</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei_mate_pad_11.html" class="title listing-title">After one year of using Huawei Mate 11 without google services</a>
-</td>
-</tr>
-<tr data-index="8" data-listing-date-sort="1701813600000" data-listing-file-modified-sort="1708386886826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092" data-listing-title-sort="Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!" data-listing-filename-sort="Huawei freebuds 5i.md">
-<td>
-<span class="listing-date">12/6/23</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei freebuds 5i.html" class="title listing-title">Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!</a>
-</td>
-</tr>
-<tr data-index="9" data-listing-date-sort="1698444000000" data-listing-file-modified-sort="1709852043962" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2025" data-listing-title-sort="MTEB Massive Text Embedding Benchmark" data-listing-filename-sort="MTEB_massive_text_embedding_benchmark.md">
-<td>
-<span class="listing-date">10/28/23</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="title listing-title">MTEB Massive Text Embedding Benchmark</a>
-</td>
-</tr>
-<tr data-index="10" data-listing-date-sort="1697835600000" data-listing-file-modified-sort="1708367722363" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="109" data-listing-title-sort="tiny-gte  &quot;Tiny, yet powerful, it is small in size but packs a lot of power.&quot;" data-listing-filename-sort="tiny-gte_transformer_model.md">
-<td>
-<span class="listing-date">10/21/23</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="title listing-title">tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</a>
-</td>
-</tr>
-<tr data-index="11" data-categories="life,blogging,publish,seo" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1727164707917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="597" data-listing-title-sort="How I am using NLP to improve my Websites SEO" data-listing-filename-sort="how_i_use_nlp_for_seo.qmd">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/seo/how_i_use_nlp_for_seo.html" class="title listing-title">How I am using NLP to improve my Websites SEO</a>
-</td>
-</tr>
-<tr data-index="12" data-categories="life,blogging,publish" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1721751671183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274" data-listing-title-sort="why i am blogging" data-listing-filename-sort="why_I_am_blogging.qmd">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/why_I_am_blogging.html" class="title listing-title">why i am blogging</a>
-</td>
-</tr>
-<tr data-index="13" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1708386935301" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509" data-listing-title-sort="havrard CS197 AI research experiences" data-listing-filename-sort="havrard CS197 AI research experiences.md">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/courses/havrard CS197 AI research experiences.html" class="title listing-title">havrard CS197 AI research experiences</a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="subscribe" class="level2">
-<h2 class="anchored" data-anchor-id="subscribe">📬 Subscribe</h2>
-<p>Subscribe via <a href="index.xml"><i class="bi bi-rss"></i> RSS</a>.</p>
+  </div>
+  
+    
+  </div>
+  
 
+
+</header>
+
+
+<section id="can-a-web-developer-creat-a-google-ad" class="level2">
+<h2 class="anchored" data-anchor-id="can-a-web-developer-creat-a-google-ad">Can a web developer creat a google ad</h2>
+<p>My cousin told me that he can’t create an ad for his work and he had a verified business profile, so i told him give you the website and i can do it in just few minutes. I opened google ads and created an account followed the instructions and added my visa then after one day the ad started to work.</p>
+<p>Then i noticed that i want to change the ad to make it more advanced for mobile calls. I paused it and created a new one, then my account get suspended and the reason is because circumvengint systems policy! Okey, then what is the wrong? Submit an appeal and add the needed documents to get verfified and after 15 days there is no response and the account is still suspended, what about the money i give to the add and neither me or google is using it! It had fly with wind.</p>
+</section>
+<section id="another-try" class="level2">
+<h2 class="anchored" data-anchor-id="another-try">Another try</h2>
+<p>I toke my friend account, which is used for around 5 years on google ads and has spent a lot of money i create the ad with a different domain for the website and didn’t add the business profile and my identifiy is verified…etc my account get suspened immeditialy ? WTF!</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final thoughts</h2>
+<ol type="1">
+<li>Dont’ add huge amount of money, add only 5$ with 5$ until everything is okey you can increase it abit for example 50$ per day.</li>
+<li>Google Ads is a black box! What, why, when, how are irrelevant.: Go ahead and create a new account and do the advertiser verification before creating any campaign. You can try creating a new google ad account with same email ID first and same payment method. Google allows multiple ad accounts with single email. Yes I know they say that you cannot create new account but trust me they do not follow this. I have multiple stable accounts running under same email IDs which also have suspended accounts. Just get those ads live whatever it takes🥂 <a href="https://www.reddit.com/r/googleads/comments/1fu5acv/suspended_account/">reddit answer</a></li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://kareemai.com/blog/posts/seo/how_i_use_nlp_for_seo.html">nlp for seo</a></li>
+<li><a href="https://kareemai.com/blog/posts/seo/the_curse_of_seo.html">seo if overated</a></li>
+<li><a href="https://support.google.com/adspolicy/answer/2375414?hl=en">google help</a></li>
+</ol>
 
 
 </section>
@@ -861,13 +690,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml">
+    <a class="nav-link" href="../../../index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/seo/google_ads_black_box.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
