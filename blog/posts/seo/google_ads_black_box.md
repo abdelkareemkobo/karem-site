@@ -42,4 +42,4 @@ my account get suspened immeditialy ? WTF!
 1. [nlp for seo](https://kareemai.com/blog/posts/seo/how_i_use_nlp_for_seo.html)
 2. [seo if overated](https://kareemai.com/blog/posts/seo/the_curse_of_seo.html)
 3. [google help](https://support.google.com/adspolicy/answer/2375414?hl=en)
-4. [حجز موعد فحص المركبات بالدمام](https://safecars.info/)
+4. [حجز موعد فحص المركبات بالدمام](https://oudhmotors.com/)
