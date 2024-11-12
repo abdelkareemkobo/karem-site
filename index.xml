@@ -26,72 +26,121 @@
 
 
 
-<p>You are on a mission to create the most pure ,sweet healthy honey on the world, as a mad scientist you want to improve your Beehive efficiency and make sure no one can steal your secret recipe of your magic honey. After some search on how to create your Beehive system, how should the bees communicate together, where to collect the Nectar in protected way from wasp who want to steal your honey and kill your Beehive, you figured out that Federated Beehive will do all what you want but with increase in complexity of your system and a new mindset you should have.</p>
+<p>You’re on a mission to create the purest, sweetest, and healthiest honey in the world. As a mad scientist, you want to improve your beehive’s efficiency and ensure no one can steal your secret recipe for magic honey.<br>
+After researching how to set up your beehive system—how the bees should communicate, and where to collect nectar in a protected way to guard against wasps that want to steal your honey and harm your beehive—you discover that a Federated Beehive could meet all your needs. However, it adds complexity to your system and requires a new mindset.</p>
 <section id="traditional-ml-systems-centralized" class="level2">
-<h2 class="anchored" data-anchor-id="traditional-ml-systems-centralized">Traditional ML Systems (centralized)</h2>
-<p>In centralized systems you collect the flowers into your Beehive and start processing them to create your honey which is not secure because people will now what type of flower this is in it’s way</p>
+<h2 class="anchored" data-anchor-id="traditional-ml-systems-centralized">Traditional ML Systems (Centralized)</h2>
+<p>In centralized systems, you collect flowers into your beehive and start processing them to create honey, which is not secure since people will know the type of flower on its way.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/fl/images/centralized_learning.png" class="img-fluid figure-img"></p>
 <figcaption>centralized Learning</figcaption>
 </figure>
 </div>
-<p>In centralized system, we aggregate the data from multiple source into a specific center where the training happens which takes a lot of bandwidth and move user data out of his device.</p>
+<p>In centralized systems, we aggregate data from multiple sources into a specific center where training occurs, consuming significant bandwidth and moving user data off their devices.</p>
 </section>
 <section id="federated-learning-decentralized" class="level2">
-<h2 class="anchored" data-anchor-id="federated-learning-decentralized">Federated Learning (decentralized)</h2>
-<p>In FL your bees will go to different types of flower and collect the Nectar you want and go back to the your Beehive in fast and efficient way and they will cover the Nectar in protected container to prevent the smell to go to the dark wasps and other world which is less work, fast, secure but need more overhead into how to communicate with the bees all over the world, how to combine different Nectar, and what if one of them is poisoned ? would this damage all your bee crop? and much more to learn and explore in Federated Learning <img src="https://kareemai.com/blog/posts/fl/images/federate_learning.png" class="img-fluid" alt="federated learning"></p>
+<h2 class="anchored" data-anchor-id="federated-learning-decentralized">Federated Learning (Decentralized)</h2>
+<p>In FL, your bees visit different types of flowers to collect nectar and bring it back to your beehive in a fast and efficient way. The nectar is covered in a protective container to prevent the scent from attracting dark wasps and others in the world. While this approach is secure and efficient, it requires more overhead in managing bee communication globally, combining diverse nectar, and handling potential issues like poisoned nectar that could harm your entire honey supply.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/fl/images/federate_learning.png" class="img-fluid figure-img"></p>
+<figcaption>federated learning</figcaption>
+</figure>
+</div>
 </section>
-<section id="fl-intro" class="level2">
-<h2 class="anchored" data-anchor-id="fl-intro">FL Intro</h2>
-<p>#defintion Federated Learning (FL) : Enables machine learning models on distributed data by moving the training to the data , instead of moving the data to the training.</p>
+<section id="introduction-to-federated-learning" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-federated-learning">Introduction to Federated Learning</h2>
+<p><strong>Definition:</strong> Federated Learning (FL) enables machine learning models on distributed data by moving the training to the data, instead of transferring data to the training center.</p>
+<p>FL was first developed by Google in 2016 for their Gboard application, which uses a user’s typing history to suggest corrections and predict upcoming words while preserving user data privacy.</p>
+<p>The idea is as follows: distribute our model across Android users’ applications, train their data locally on their phones, and then aggregate the knowledge each user has learned using aggregation algorithms like FedAvg to combine the updates into a single global model.</p>
+<p>This process must be repeated for multiple rounds to allow the model to learn from these small updates.</p>
+</section>
+<section id="honey-with-multiple-flavors" class="level2">
+<h2 class="anchored" data-anchor-id="honey-with-multiple-flavors">Honey with Multiple Flavors</h2>
+<p>We decided to offer honey jars with multiple flavors based on the flower types from which nectar was collected. We’ll create a base flavor that everyone recognizes, plus special flavors with unique ingredients—some containing vitamin C, others a dose of caffeine.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/fl/images/multiple_honey_flavors.png" class="img-fluid figure-img"></p>
+<figcaption>Personalization in Federated Learning</figcaption>
+</figure>
+</div>
+<p>In FL, this is called <strong>personalization</strong>. It can be seen as fine-tuning our global model (the base taste) with local data (special flowers) to meet specific needs.<br>
+Since these unique flavors are likely to appeal only to certain local customers, they won’t be as popular with all customers compared to the base taste.</p>
+<p>Our personalized model will excel on local data but may underperform on general data due to increased bias from fine-tuning.</p>
+<p>An FL system allows us to manage the trade-off between user-specific preferences and generalization.</p>
+</section>
+<section id="horizontal-and-vertical-fl" class="level2">
+<h2 class="anchored" data-anchor-id="horizontal-and-vertical-fl">Horizontal and Vertical FL</h2>
+<p>There are two types of FL: Horizontal (homogeneous) FL and Vertical (heterogeneous) FL.</p>
+<section id="horizontal-federated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal-federated-learning">Horizontal Federated Learning</h3>
+<p>Imagine our bees extracting nectar from the same type of flower in different places and in various quantities.</p>
+<p>An example of horizontal FL is the Gboard application, where local training on phones uses identical data formats with unique content reflecting the user’s typing history.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/fl/images/horizontal_fl.png" class="img-fluid figure-img"></p>
+<figcaption>Horizontal Federated Learning</figcaption>
+</figure>
+</div>
+</section>
+<section id="vertical-federated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-federated-learning">Vertical Federated Learning</h3>
+<p>For a new honey type, we instruct our bees to collect nectar from different plants with unique characteristics, creating a distinctive honey.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/fl/images/vertical_fl.png" class="img-fluid figure-img"></p>
+<figcaption>Vertical Federated Learning</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="why-fl-instead-of-centralized-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="why-fl-instead-of-centralized-machine-learning">why FL instead of centralized machine learning ?</h2>
+<h2 class="anchored" data-anchor-id="why-fl-instead-of-centralized-machine-learning">Why FL instead of Centralized Machine Learning?</h2>
 <ol type="1">
-<li><strong>Centralized Learning</strong> is not secure so a lot of bank systems and hospitals must use a secure training like FL</li>
-<li><strong>Private data</strong> is more than public data which means more knowledge and patterns to learn new capabilities!</li>
-<li><strong>User preference</strong> there are use cases where users just expect that no data leaves their device, ever. If you type your passwords and credit card info into the digital keyboard of your phone, you don’t expect those passwords to end up on the server of the company that developed that keyboard, do you? In fact, that use case was the reason federated learning was invented in the first place.</li>
-<li><strong>Regulations</strong> GDPR (Europe), CCPA (California), PIPEDA (Canada), LGPD (Brazil), PDPL (Argentina), KVKK (Turkey), POPI (South Africa), FSS (Russia), CDPR (China), PDPB (India), PIPA (Korea), APPI (Japan), PDP (Indonesia), PDPA (Singapore), APP (Australia), and other regulations protect sensitive data from being moved. In fact, those regulations sometimes even prevent single organizations from combining their own users’ data for machine learning training because those users live in different parts of the world, and their data is governed by different data protection regulations</li>
-<li><strong>Less Compute</strong> Training large ml models on big data stores is computationally expensive and traditional centralized training efficiency is limited by single-machine performance.</li>
-<li><strong>Fast Training</strong> Federated learning once the data is received the model start training immediately, this gives the user more robust and intelligent system that solves it’s needs</li>
+<li><strong>Centralized Learning</strong> lacks security, making FL essential for industries like banking and healthcare.</li>
+<li><strong>Private data</strong> availability surpasses public data, offering more insights and patterns to uncover new abilities.</li>
+<li><strong>User preference:</strong> Some users expect that no data will leave their device. For example, entering passwords or credit card information should not send those details to a keyboard app’s server. This use case led to FL’s development.</li>
+<li><strong>Regulations:</strong> Various data privacy laws (GDPR, CCPA, etc.) protect sensitive data from being transferred. Regulations may even prohibit organizations from merging their users’ data across different countries.</li>
+<li><strong>Reduced Compute Costs:</strong> Centralized ML with large datasets demands high computational resources, limited by individual machine performance.</li>
+<li><strong>Faster Training:</strong> With FL, models can train immediately after receiving data, providing users with faster, more responsive solutions.</li>
 </ol>
 </section>
 <section id="are-we-running-out-of-training-data-for-genai" class="level2">
-<h2 class="anchored" data-anchor-id="are-we-running-out-of-training-data-for-genai">Are we running out of Training data for GenAI?</h2>
-<p>Publicly available data scraped from the web forms the main source for LLM training and most of LLMs are trained on the publich data, but we still need to collect more data for modalities (text, image, audio, video) and we notice that the architecture of the LLms are similar the main player is the data your train or fine-tune your model on it. Here comes FL to rescue the situation, FL allow you to train on :</p>
+<h2 class="anchored" data-anchor-id="are-we-running-out-of-training-data-for-genai">Are We Running Out of Training Data for GenAI?</h2>
+<p>Most LLMs are trained on publicly available web data, but there’s a need for diverse data across modalities (text, images, audio, video). LLM architectures are similar, but the data they are trained or fine-tuned on is crucial. FL can help by enabling training on:</p>
 <ol type="1">
 <li>Private data
-<ol type="1">
+<ul>
 <li>Phones</li>
 <li>Emails</li>
-</ol></li>
-<li>Regulated
-<ol type="1">
+</ul></li>
+<li>Regulated data
+<ul>
 <li>Financial</li>
 <li>Legal</li>
-</ol></li>
-<li>Sensitive
-<ol type="1">
+</ul></li>
+<li>Sensitive data
+<ul>
 <li>Doorbell camera images</li>
 <li>Medical</li>
-</ol></li>
-<li>Isolated
-<ol type="1">
+</ul></li>
+<li>Isolated data
+<ul>
 <li>Manufacturing</li>
 <li>Automotive</li>
-</ol></li>
+</ul></li>
 </ol>
 </section>
-<section id="wasps-buzz-buzz-attacking-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="wasps-buzz-buzz-attacking-your-data">Wasps, buzz, buzz Attacking your data</h2>
-<p>Federated Learning is a data minimization solution, trying to prevents direct access to the data.. but there is still some gaps in Federated Systems that needs to be secured.</p>
+<section id="wasps-attacking-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="wasps-attacking-your-data">Wasps Attacking Your Data</h2>
+<p>Federated Learning minimizes data exposure, but gaps in federated systems still need secure solutions.</p>
 <section id="privacy-attacks-on-federated-systems" class="level3">
 <h3 class="anchored" data-anchor-id="privacy-attacks-on-federated-systems">Privacy Attacks on Federated Systems</h3>
 <ul>
-<li><strong>Membership inference Attack</strong> Infer Participation of Data Samples</li>
-<li><strong>Attribute Inference Attack</strong> Infer Unseen Attributes of Training Data</li>
-<li><strong>Reconstruction Attack</strong> Infer Specific Training Data Samples</li>
+<li><strong>Membership Inference Attack:</strong> Identifies whether specific data samples were used in training.</li>
+<li><strong>Attribute Inference Attack:</strong> Infers unseen attributes of training data.</li>
+<li><strong>Reconstruction Attack:</strong> Reconstructs specific training data samples.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -99,12 +148,12 @@
 <figcaption>Privacy Attacks on Federated Learning</figcaption>
 </figure>
 </div>
-<p>We will learn more about how different types of Attacks on FL and how to create your own defenses in another blog.</p>
+<p>We’ll explore different types of FL attacks and create defenses in a future blog post.</p>
 </section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>In the coming blogs i will explain components of Federated Learning but in more details, will try to add math, code and some bees</p>
+<p>In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.</p>
 <ol type="1">
 <li><a href="https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning">Flower Framework</a></li>
 </ol>
@@ -3889,7 +3938,7 @@ font-style: inherit;">return</span> result</span></code></pre></div>
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</guid>
-  <pubDate>Tue, 12 Nov 2024 04:43:39 GMT</pubDate>
+  <pubDate>Tue, 12 Nov 2024 06:52:38 GMT</pubDate>
 </item>
 </channel>
 </rss>
