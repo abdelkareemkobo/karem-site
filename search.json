@@ -424,7 +424,14 @@
     "href": "index.html#get-in-touch",
     "title": "kareem's Blog",
     "section": "💼 Get In Touch",
-    "text": "💼 Get In Touch\nDo you need help operationalizing ML, Recommendition systems or large language models?\nI’m open to consulting work and other forms of advisory. Email me at kareem01095134688@gmail.com if you’d like to chat! ## Production projects You can look at some of my projects on both opensource and production like: 1. كم كالوري : semantic search engine built for healthcare 2. [seo rat] : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more"
+    "text": "💼 Get In Touch\nDo you need help operationalizing ML, Recommendition systems or large language models?\nI’m open to consulting work and other forms of advisory. Email me at kareem01095134688@gmail.com if you’d like to chat!"
+  },
+  {
+    "objectID": "index.html#production-projects",
+    "href": "index.html#production-projects",
+    "title": "kareem's Blog",
+    "section": "Production projects",
+    "text": "Production projects\nYou can look at some of my projects on both opensource and production like: 1. كم كالوري : semantic search engine built for healthcare 2. [seo rat] : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more"
   },
   {
     "objectID": "index.html#feed",
