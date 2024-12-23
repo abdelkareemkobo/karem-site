@@ -131,3 +131,4 @@ I've connected the Freebuds to my Linux laptop using the '[bluetoothctl](https:/
 
 - https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/
 - https://askubuntu.com/questions/1225896/huawei-freebuds-3-pairing-with-ubuntu-18-04
+- [كم كالوري](https://kamcalorie.com)
