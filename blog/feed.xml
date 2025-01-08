@@ -17,7 +17,49 @@
 <width>144</width>
 </image>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Mon, 11 Nov 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 07 Jan 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>كم كالوري في الطعام ؟</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/life_style/kamcalorie.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="كم-كالوري" class="level2">
+<h2 class="anchored" data-anchor-id="كم-كالوري"><a href="https://www.kamcalorie.com/">كم كالوري</a></h2>
+<p>موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي</p>
+</section>
+<section id="مميزات-الموقع" class="level2">
+<h2 class="anchored" data-anchor-id="مميزات-الموقع">مميزات الموقع</h2>
+<p>الموقع مبني بهدف تطبيقات تقنيات معالجة اللغات الطبيعية والنماذج اللغوية لتوفير كافة المعلومات التي قد يحتاجها الفرد مثل: 1. البحث الذكي : البحث باستخدام المعني سواء باللغة العربية أو الإنجيليزية وحتي كافة اللغات و يمكنك البحث باي طريقة سواء لغة عربية فصحية او العامية او حتي أخطاء إملائية 2. سرعة في إستراجاع المعلومات وعرضها في شكل بياني مميز يسمح لك بمعرفة المهم في وقت فوري 3. يمكنك إدخال ما أكل بشكل كامل و الموقع يقوم بحساب التقديرات اللازمة لك</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/life_style/images/kcal.png" class="img-fluid figure-img"></p>
+<figcaption>كم كالوري</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="خاتمة" class="level2">
+<h2 class="anchored" data-anchor-id="خاتمة">خاتمة</h2>
+<p>يعتبر موقع كم كالوري بداية الي سلسلة ممن المنتجات التي تسهل علي الناطقين بالعربية ممارسة الرياضة و لعيش حياة أفضل و هناك الكثير قادم مثل : 1. كوب بروتين 2. عضلاتي</p>
+<p>قام بتطوير و إنشاء الموقع عبد الكريم الخطيب باحث في علوم الذكاء الإصطناعي و مهتم باثراء المحتوي العربي</p>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>idea_Forge</category>
+  <category>publish</category>
+  <category>rough_thoughts</category>
+  <category>life_style</category>
+  <guid>https://kareemai.com/blog/posts/life_style/kamcalorie.html</guid>
+  <pubDate>Tue, 07 Jan 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/life_style/images/kcal.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>What is Federated Learning</title>
   <link>https://kareemai.com/blog/posts/fl/what is federated learning.html</link>
@@ -150,15 +192,15 @@ Since these unique flavors are likely to appeal only to certain local customers,
 </div>
 <p>We’ll explore different types of FL attacks and create defenses in a future blog post.</p>
 </section>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
 <p>In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.</p>
 <ol type="1">
 <li><a href="https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning">Flower Framework</a></li>
 </ol>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -167,6 +209,7 @@ Since these unique flavors are likely to appeal only to certain local customers,
   <category>fl</category>
   <guid>https://kareemai.com/blog/posts/fl/what is federated learning.html</guid>
   <pubDate>Mon, 11 Nov 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/fl/images/federated_learning.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Google Ads Black Box</title>
@@ -4135,7 +4178,7 @@ font-style: inherit;">return</span> result</span></code></pre></div>
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</guid>
-  <pubDate>Mon, 23 Dec 2024 23:42:55 GMT</pubDate>
+  <pubDate>Wed, 08 Jan 2025 02:49:15 GMT</pubDate>
 </item>
 </channel>
 </rss>
