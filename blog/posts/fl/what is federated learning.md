@@ -4,6 +4,7 @@ description: "A quick introduction to Federated Learning Systems, comparing them
 authors: kareem
 date: 2024-11-12
 draft: false
+image: images/federated_learning.png
 featured: true
 categories:
   - blogging
@@ -110,7 +111,7 @@ Federated Learning minimizes data exposure, but gaps in federated systems still 
 
 We’ll explore different types of FL attacks and create defenses in a future blog post.
 
-## References
+### References
 
 In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.
 

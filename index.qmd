@@ -43,10 +43,13 @@ My research focuses on Arabic NLP, small model optimization, image denoising, an
 Do you need help operationalizing ML, Recommendition systems or large language models?  
 
 I'm open to consulting work and other forms of advisory. Email me at `kareem01095134688@gmail.com` if you'd like to chat!
+
 ## Production projects
+
 You can look at some of my projects on both opensource and production  like:
+
 1. [كم كالوري](https://kamcalorie.com) : semantic search engine built for healthcare 
-2. [seo rat] : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more 
+2. [seo rat](https://github.com/abdelkareemkobo/seo_rat) : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more 
 
 ---
 
