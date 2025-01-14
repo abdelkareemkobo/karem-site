@@ -86,7 +86,7 @@
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/protienai.html</guid>
   <pubDate>Tue, 07 Jan 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/life_style/images/protienai.png" medium="image" type="image/png"/>
+  <media:content url="https://kareemai.com/blog/posts/life_style/images/proteinai.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>كم كالوري في الطعام ؟</title>
@@ -4248,7 +4248,7 @@ font-style: inherit;">return</span> result</span></code></pre></div>
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</guid>
-  <pubDate>Tue, 14 Jan 2025 06:03:00 GMT</pubDate>
+  <pubDate>Tue, 14 Jan 2025 06:07:51 GMT</pubDate>
 </item>
 </channel>
 </rss>
