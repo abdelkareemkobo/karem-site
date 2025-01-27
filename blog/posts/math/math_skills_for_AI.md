@@ -3,13 +3,7 @@ title: Math Skills For AI
 description: Improving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible
 date: 2025-01-27
 categories:
-  - blogging
-  - ai
-  - math
-  - linear_algebra
-  - calculus
-  - statistics
-  - probability
+  [blogging, ai, math, linear_algebra, calculus, statistics, probability]
 image: images/Maslakiat.jpg
 order: 1
 draft: false
