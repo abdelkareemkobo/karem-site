@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/oss/opensource.html",
-    "items": []
-  },
-  {
     "listing": "/notes/web-scraping/index.html",
     "items": [
       "/notes/web-scraping/browser-to-python.html",
@@ -19,16 +15,21 @@
     ]
   },
   {
+    "listing": "/oss/opensource.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/blog/posts/ds_and_algo/Static_array.html",
+      "/blog/posts/life_style/digital_minimalisim_arabic.html",
       "/blog/posts/math/math_skills_for_AI.html",
-      "/blog/posts/life_style/protienai.html",
       "/blog/posts/life_style/kamcalorie.html",
+      "/blog/posts/life_style/protienai.html",
       "/blog/posts/fl/what_is_federated_learning.html",
       "/blog/posts/seo/google_ads_black_box.html",
-      "/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
       "/blog/posts/ds_and_algo/master_ds.html",
+      "/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
       "/blog/posts/seo/the_curse_of_seo.html",
       "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",
@@ -36,22 +37,23 @@
       "/blog/posts/products_reviews/Huawei freebuds 5i.html",
       "/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html",
       "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html",
-      "/blog/posts/seo/how_i_use_nlp_for_seo.html",
+      "/blog/posts/courses/havrard CS197 AI research experiences.html",
       "/blog/posts/life_style/why_I_am_blogging.html",
-      "/blog/posts/courses/havrard CS197 AI research experiences.html"
+      "/blog/posts/seo/how_i_use_nlp_for_seo.html"
     ]
   },
   {
     "listing": "/blog/feed.html",
     "items": [
       "/blog/posts/ds_and_algo/Static_array.html",
+      "/blog/posts/life_style/digital_minimalisim_arabic.html",
       "/blog/posts/math/math_skills_for_AI.html",
-      "/blog/posts/life_style/protienai.html",
       "/blog/posts/life_style/kamcalorie.html",
+      "/blog/posts/life_style/protienai.html",
       "/blog/posts/fl/what_is_federated_learning.html",
       "/blog/posts/seo/google_ads_black_box.html",
-      "/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
       "/blog/posts/ds_and_algo/master_ds.html",
+      "/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
       "/blog/posts/seo/the_curse_of_seo.html",
       "/blog/posts/life_style/fake_graviety.html",
       "/blog/posts/mteb_encoding/my_little_dargon.html",
@@ -59,9 +61,9 @@
       "/blog/posts/products_reviews/Huawei freebuds 5i.html",
       "/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html",
       "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html",
-      "/blog/posts/seo/how_i_use_nlp_for_seo.html",
+      "/blog/posts/courses/havrard CS197 AI research experiences.html",
       "/blog/posts/life_style/why_I_am_blogging.html",
-      "/blog/posts/courses/havrard CS197 AI research experiences.html"
+      "/blog/posts/seo/how_i_use_nlp_for_seo.html"
     ]
   }
 ]

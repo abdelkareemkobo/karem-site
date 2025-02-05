@@ -2,14 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-12">
-<meta name="description" content="A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.">
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2025-02-05">
+<meta name="description" content="فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية">
 
-<title>What is Federated Learning – kareem’s Blog</title>
+<title>فن تبسيط الحياة الرقمية – kareem’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-cd0db9da06e6bcf5831db6694ffbb685.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-fe0fe962e68aede4c922456b2bc84c78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,14 +81,14 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="What is Federated Learning – kareem’s Blog">
-<meta property="og:description" content="A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/fl/images/federated_learning.png">
+<meta property="og:title" content="فن تبسيط الحياة الرقمية – kareem’s Blog">
+<meta property="og:description" content="فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية">
+<meta property="og:image" content="https://kareemai.com/blog/posts/life_style/images/fake_graviety.jpg">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="What is Federated Learning – kareem’s Blog">
-<meta name="twitter:description" content="A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/fl/images/federated_learning.png">
+<meta name="twitter:title" content="فن تبسيط الحياة الرقمية – kareem’s Blog">
+<meta name="twitter:description" content="فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/life_style/images/fake_graviety.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
 </head>
@@ -137,46 +138,27 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#traditional-ml-systems-centralized" id="toc-traditional-ml-systems-centralized" class="nav-link active" data-scroll-target="#traditional-ml-systems-centralized">Traditional ML Systems (Centralized)</a></li>
-  <li><a href="#federated-learning-decentralized" id="toc-federated-learning-decentralized" class="nav-link" data-scroll-target="#federated-learning-decentralized">Federated Learning (Decentralized)</a></li>
-  <li><a href="#introduction-to-federated-learning" id="toc-introduction-to-federated-learning" class="nav-link" data-scroll-target="#introduction-to-federated-learning">Introduction to Federated Learning</a></li>
-  <li><a href="#honey-with-multiple-flavors" id="toc-honey-with-multiple-flavors" class="nav-link" data-scroll-target="#honey-with-multiple-flavors">Honey with Multiple Flavors</a></li>
-  <li><a href="#horizontal-and-vertical-fl" id="toc-horizontal-and-vertical-fl" class="nav-link" data-scroll-target="#horizontal-and-vertical-fl">Horizontal and Vertical FL</a>
-  <ul class="collapse">
-  <li><a href="#horizontal-federated-learning" id="toc-horizontal-federated-learning" class="nav-link" data-scroll-target="#horizontal-federated-learning">Horizontal Federated Learning</a></li>
-  <li><a href="#vertical-federated-learning" id="toc-vertical-federated-learning" class="nav-link" data-scroll-target="#vertical-federated-learning">Vertical Federated Learning</a></li>
-  </ul></li>
-  <li><a href="#why-fl-instead-of-centralized-machine-learning" id="toc-why-fl-instead-of-centralized-machine-learning" class="nav-link" data-scroll-target="#why-fl-instead-of-centralized-machine-learning">Why FL instead of Centralized Machine Learning?</a></li>
-  <li><a href="#are-we-running-out-of-training-data-for-genai" id="toc-are-we-running-out-of-training-data-for-genai" class="nav-link" data-scroll-target="#are-we-running-out-of-training-data-for-genai">Are We Running Out of Training Data for GenAI?</a></li>
-  <li><a href="#wasps-attacking-your-data" id="toc-wasps-attacking-your-data" class="nav-link" data-scroll-target="#wasps-attacking-your-data">Wasps Attacking Your Data</a>
-  <ul class="collapse">
-  <li><a href="#privacy-attacks-on-federated-systems" id="toc-privacy-attacks-on-federated-systems" class="nav-link" data-scroll-target="#privacy-attacks-on-federated-systems">Privacy Attacks on Federated Systems</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/fl/what is federated learning.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What is Federated Learning</h1>
+<h1 class="title">فن تبسيط الحياة الرقمية</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
+    <div class="quarto-category">idea_Forge</div>
     <div class="quarto-category">publish</div>
-    <div class="quarto-category">fl</div>
+    <div class="quarto-category">rough_thoughts</div>
+    <div class="quarto-category">life_style</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.
+    فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية
   </div>
 </div>
 
@@ -193,7 +175,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 12, 2024</p>
+      <p class="date">February 5, 2025</p>
     </div>
   </div>
   
@@ -205,140 +187,145 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </header>
 
 
-<p>You’re on a mission to create the purest, sweetest, and healthiest honey in the world. As a mad scientist, you want to improve your beehive’s efficiency and ensure no one can steal your secret recipe for magic honey.<br>
-After researching how to set up your beehive system—how the bees should communicate, and where to collect nectar in a protected way to guard against wasps that want to steal your honey and harm your beehive—you discover that a Federated Beehive could meet all your needs. However, it adds complexity to your system and requires a new mindset.</p>
-<section id="traditional-ml-systems-centralized" class="level2">
-<h2 class="anchored" data-anchor-id="traditional-ml-systems-centralized">Traditional ML Systems (Centralized)</h2>
-<p>In centralized systems, you collect flowers into your beehive and start processing them to create honey, which is not secure since people will know the type of flower on its way.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/centralized_learning.png" class="img-fluid figure-img"></p>
-<figcaption>centralized Learning</figcaption>
-</figure>
-</div>
-<p>In centralized systems, we aggregate data from multiple sources into a specific center where training occurs, consuming significant bandwidth and moving user data off their devices.</p>
-</section>
-<section id="federated-learning-decentralized" class="level2">
-<h2 class="anchored" data-anchor-id="federated-learning-decentralized">Federated Learning (Decentralized)</h2>
-<p>In FL, your bees visit different types of flowers to collect nectar and bring it back to your beehive in a fast and efficient way. The nectar is covered in a protective container to prevent the scent from attracting dark wasps and others in the world. While this approach is secure and efficient, it requires more overhead in managing bee communication globally, combining diverse nectar, and handling potential issues like poisoned nectar that could harm your entire honey supply.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/federate_learning.png" class="img-fluid figure-img"></p>
-<figcaption>federated learning</figcaption>
-</figure>
-</div>
-</section>
-<section id="introduction-to-federated-learning" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-federated-learning">Introduction to Federated Learning</h2>
-<p><strong>Definition:</strong> Federated Learning (FL) enables machine learning models on distributed data by moving the training to the data, instead of transferring data to the training center.</p>
-<p>FL was first developed by Google in 2016 for their Gboard application, which uses a user’s typing history to suggest corrections and predict upcoming words while preserving user data privacy.</p>
-<p>The idea is as follows: distribute our model across Android users’ applications, train their data locally on their phones, and then aggregate the knowledge each user has learned using aggregation algorithms like FedAvg to combine the updates into a single global model.</p>
-<p>This process must be repeated for multiple rounds to allow the model to learn from these small updates.</p>
-</section>
-<section id="honey-with-multiple-flavors" class="level2">
-<h2 class="anchored" data-anchor-id="honey-with-multiple-flavors">Honey with Multiple Flavors</h2>
-<p>We decided to offer honey jars with multiple flavors based on the flower types from which nectar was collected. We’ll create a base flavor that everyone recognizes, plus special flavors with unique ingredients—some containing vitamin C, others a dose of caffeine.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/multiple_honey_flavors.png" class="img-fluid figure-img"></p>
-<figcaption>Personalization in Federated Learning</figcaption>
-</figure>
-</div>
-<p>In FL, this is called <strong>personalization</strong>. It can be seen as fine-tuning our global model (the base taste) with local data (special flowers) to meet specific needs.<br>
-Since these unique flavors are likely to appeal only to certain local customers, they won’t be as popular with all customers compared to the base taste.</p>
-<p>Our personalized model will excel on local data but may underperform on general data due to increased bias from fine-tuning.</p>
-<p>An FL system allows us to manage the trade-off between user-specific preferences and generalization.</p>
-</section>
-<section id="horizontal-and-vertical-fl" class="level2">
-<h2 class="anchored" data-anchor-id="horizontal-and-vertical-fl">Horizontal and Vertical FL</h2>
-<p>There are two types of FL: Horizontal (homogeneous) FL and Vertical (heterogeneous) FL.</p>
-<section id="horizontal-federated-learning" class="level3">
-<h3 class="anchored" data-anchor-id="horizontal-federated-learning">Horizontal Federated Learning</h3>
-<p>Imagine our bees extracting nectar from the same type of flower in different places and in various quantities.</p>
-<p>An example of horizontal FL is the Gboard application, where local training on phones uses identical data formats with unique content reflecting the user’s typing history.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/horizontal_fl.png" class="img-fluid figure-img"></p>
-<figcaption>Horizontal Federated Learning</figcaption>
-</figure>
-</div>
-</section>
-<section id="vertical-federated-learning" class="level3">
-<h3 class="anchored" data-anchor-id="vertical-federated-learning">Vertical Federated Learning</h3>
-<p>For a new honey type, we instruct our bees to collect nectar from different plants with unique characteristics, creating a distinctive honey.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/vertical_fl.png" class="img-fluid figure-img"></p>
-<figcaption>Vertical Federated Learning</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="why-fl-instead-of-centralized-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="why-fl-instead-of-centralized-machine-learning">Why FL instead of Centralized Machine Learning?</h2>
-<ol type="1">
-<li><strong>Centralized Learning</strong> lacks security, making FL essential for industries like banking and healthcare.</li>
-<li><strong>Private data</strong> availability surpasses public data, offering more insights and patterns to uncover new abilities.</li>
-<li><strong>User preference:</strong> Some users expect that no data will leave their device. For example, entering passwords or credit card information should not send those details to a keyboard app’s server. This use case led to FL’s development.</li>
-<li><strong>Regulations:</strong> Various data privacy laws (GDPR, CCPA, etc.) protect sensitive data from being transferred. Regulations may even prohibit organizations from merging their users’ data across different countries.</li>
-<li><strong>Reduced Compute Costs:</strong> Centralized ML with large datasets demands high computational resources, limited by individual machine performance.</li>
-<li><strong>Faster Training:</strong> With FL, models can train immediately after receiving data, providing users with faster, more responsive solutions.</li>
-</ol>
-</section>
-<section id="are-we-running-out-of-training-data-for-genai" class="level2">
-<h2 class="anchored" data-anchor-id="are-we-running-out-of-training-data-for-genai">Are We Running Out of Training Data for GenAI?</h2>
-<p>Most LLMs are trained on publicly available web data, but there’s a need for diverse data across modalities (text, images, audio, video). LLM architectures are similar, but the data they are trained or fine-tuned on is crucial. FL can help by enabling training on:</p>
-<ol type="1">
-<li>Private data
 <ul>
-<li>Phones</li>
-<li>Emails</li>
+<li><h1 id="لماذا-نمد-أيدينا-بشكل-غريزي-إلى-هواتفنا-خلال-لحظات-الملل-أو-الفراغ">لماذا نمد أيدينا بشكل غريزي إلى هواتفنا خلال لحظات الملل أو الفراغ؟</h1>
+<p>ليس من قبيل الصدفة. تم تصميم التطبيقات لجذبنا مرة أخرى، والحفاظ على انتباهنا وتقديم دفعات من الدوبامين أثناء استخدامها.</p>
+<p>ومع ذلك، فإن مجرد معرفة ذلك لا يمنعنا من تشتيت انتباهنا.</p>
+<p>في هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان:</p></li>
+<li><h2 id="أوقف-تشغيل-الإشعارات" class="anchored">1. أوقف تشغيل الإشعارات</h2>
+<ul>
+<li>الإشعارات هي بوابة المشتتات.</li>
+<li>معظم الإشعارات غير مهمة ولكنها تخلق شعورًا زائفًا بالإلحاح.</li>
+<li>بدلاً من مراجعة إشعارات كل تطبيق على حدة، من الأسهل تبني عقلية أن جميع الإشعارات يجب أن تكون متوقفة بشكل افتراضي.</li>
+<li>أوقف تشغيل كل شيء أولاً، ثم قم بتمكين الإشعارات فقط للتطبيقات الأساسية مثل المراسلة والتقويم.</li>
 </ul></li>
-<li>Regulated data
+<li><h2 id="استخدم-أيقونات-سوداء-ومصغرة" class="anchored">2. استخدم أيقونات سوداء ومصغرة</h2>
 <ul>
-<li>Financial</li>
-<li>Legal</li>
+<li>تأتي كافة الواجهات بأيقونات كبيرة وملونة، يمكنك معرفة التطبيق بمجرد اللون فقط، فاللون الأصفر هو تطبيق سناب شات واللون البنفسجي هو الإنستجرام.</li>
+<li>يمكنك فتح متجر الثيمات الخاص بجهازك الشخصي وتغيير الأيقونات للون ثابت وموحد، يفضل أسود أو رمادي.</li>
 </ul></li>
-<li>Sensitive data
+<li><h2 id="أزل-التطبيقات-من-الشاشة-الرئيسية" class="anchored">3. أزل التطبيقات من الشاشة الرئيسية</h2>
 <ul>
-<li>Doorbell camera images</li>
-<li>Medical</li>
+<li>على غرار بيئتنا المادية، فإن ما هو موجود على شاشتنا الرئيسية يصبح إشارات تحفز عاداتنا.</li>
+<li>عندما تكون تطبيقات الوسائط الاجتماعية مرئية بشكل كبير على شاشتك الرئيسية، فمن المرجح أن تفتحها.</li>
+<li>نوصي بنقل التطبيقات المشتتة للانتباه إلى “الخلف”.</li>
+<li>يمكن لمستخدمي أيفون إزالة التطبيقات من الشاشة الرئيسية وتخزينها في مكتبة التطبيقات، بينما يمكن لمستخدمي أندرويد الاحتفاظ بالتطبيقات بالمثل في درج التطبيقات.</li>
 </ul></li>
-<li>Isolated data
+<li><h2 id="شغل-فلتر-التدرج-الرمادي" class="anchored">4. شغّل فلتر التدرج الرمادي</h2>
 <ul>
-<li>Manufacturing</li>
-<li>Automotive</li>
+<li>يمكن أن يؤدي تحويل هاتفك إلى التدرج الرمادي إلى جعل التمرير عبر الوسائط الاجتماعية أقل تشتيتًا على الفور.</li>
+<li>لكنك لست مضطرًا لإبقائه قيد التشغيل طوال الوقت.</li>
+<li>نحن نعلم مدى قوة هذه الأجهزة الصغيرة للعمل الإبداعي والترفيه.</li>
+<li>ما نوصي به هو وجود طريقة بسيطة لتشغيل وإيقاف فلتر التدرج الرمادي، مثل إضافته إلى مركز التحكم على أجهزة iPhone.</li>
 </ul></li>
-</ol>
-</section>
-<section id="wasps-attacking-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="wasps-attacking-your-data">Wasps Attacking Your Data</h2>
-<p>Federated Learning minimizes data exposure, but gaps in federated systems still need secure solutions.</p>
-<section id="privacy-attacks-on-federated-systems" class="level3">
-<h3 class="anchored" data-anchor-id="privacy-attacks-on-federated-systems">Privacy Attacks on Federated Systems</h3>
+<li><h2 id="خد-نفسك---أخر-فتح-التطبيقات" class="anchored">5. خد نفسك - أخّر فتح التطبيقات</h2>
 <ul>
-<li><strong>Membership Inference Attack:</strong> Identifies whether specific data samples were used in training.</li>
-<li><strong>Attribute Inference Attack:</strong> Infers unseen attributes of training data.</li>
-<li><strong>Reconstruction Attack:</strong> Reconstructs specific training data samples.</li>
+<li>لإضافة تأخير عند فتح التطبيقات، يمكنك استخدام تطبيق مثل: <a href="https://one-sec.app/">One Sec</a></li>
+<li>يقدم التطبيق وقفة قصيرة في كل مرة تحاول فيها فتح الوسائط الاجتماعية أو التطبيقات الأخرى المحددة.</li>
+<li>يعمل كحاجز شاشة مؤقت بينك وبين المشتتات، مما يساعدك على إمساك نفسك وتحديد ما إذا كنت مشتتًا أو متعمدًا.</li>
+<li>يمكنك استخدام التطبيق على الموبايل أو على الحاسوب.</li>
+</ul></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/privacy_attack.png" class="img-fluid figure-img"></p>
-<figcaption>Privacy Attacks on Federated Learning</figcaption>
+<p><img src="images/image_1738724671871_0.png" class="img-fluid figure-img"></p>
+<figcaption>One Sec</figcaption>
 </figure>
 </div>
-<p>We’ll explore different types of FL attacks and create defenses in a future blog post.</p>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<p>In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.</p>
-<ol type="1">
-<li><a href="https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning">Flower Framework</a></li>
-</ol>
+<ul>
+<li><h2 id="احذف-التطبيقات-غير-الضرورية" class="anchored">6. احذف التطبيقات غير الضرورية</h2>
+<ul>
+<li>إذا كان التطبيق المشتت للانتباه لا يضيف أي قيمة حقيقية، فإن الحل الأبسط غالبًا ما يكون الأفضل.</li>
+<li>احذفه من جهازك تمامًا.</li>
+<li>ثم، استخدم وقتك الذي تم تحريره حديثًا في أنشطة مفيدة.</li>
+<li>من التجارب المثيرة هي حذف تطبيق اليوتيوب من الموبايل واستخدامه من المتصفح، سيقلل هذا من الانغماس ويفضل حذف كلا من المتصفح واليوتيوب!!</li>
+<li>يمكنك التخلص من تطبيق اليوتيوب بالكامل على نظام أندرويد بدون عمل روت باستخدام Adb manager.</li>
+<li>وعندما تريد مشاهدة اليوتيوب أو باقي وسائل التواصل الاجتماعي، يمكنك استخدام الحاسوب فهو أقل عرضة للتشتت والاستخدام في أوقات مثل قبل النوم أو في أثناء المرحاض أو تناول الطعام في المطبخ مثلاً!</li>
+</ul></li>
+<li><h2 id="أعد-تشكيل-عالمك-كما-تريد" class="anchored">7. أعد تشكيل عالمك كما تريد</h2>
+<ul>
+<li><p>إذا ما زلت تريد استخدام بعض التطبيقات، يمكنك التحكم في كيفية العرض وماذا تريد أن ترى وما لا تريد، والتوقف عن التشتت مثلاً.</p></li>
+<li><p>بعض إضافات المتصفح التي تسمح لك بتعديل الموقع:</p>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp">Minimal theme for twitter</a>: تسمح لك بتغيير إعداد عرض تويتر الخاص بك.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images//image_1738724457971_0.png" class="img-fluid figure-img"></p>
+<figcaption>Minimal Theme for Twitter</figcaption>
+</figure>
+</div>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid">Unhook</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image_1738724551148_0.png" class="img-fluid figure-img"></p>
+<figcaption>Enhancer for Youtube - 1</figcaption>
+</figure>
+</div>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle?hl=en-US">Enhancer for youtube</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image_1738724511256_0.png" class="img-fluid figure-img"></p>
+<figcaption>Enhancer for Youtube - 2</figcaption>
+</figure>
+</div>
+<ul>
+<li><h2 id="مراقبة-الوقت" class="anchored">8. مراقبة الوقت</h2>
+<ul>
+<li>من التطبيقات المفيدة لمراقبة الوقت على الحاسوب والمفتوحة المصدر أيضًا هي: <a href="https://activitywatch.net/">ActivitWatch</a></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://activitywatch.net/img/screenshots/screenshot-v0.9.3-activity.png" class="img-fluid figure-img"></p>
+<figcaption>Activity Watch Example</figcaption>
+</figure>
+</div>
+<ul>
+<li><h2 id="هاتف-غبي" class="anchored">هاتف غبي</h2>
+<ul>
+<li><p>يمكنك استخدام تطبيق</p>
+<ul>
+<li><a href="https://dumbphone.so/">dumb phone</a></li>
+</ul></li>
+<li><p>يساعدك التطبيق علي اختيار التطبيقات التي تريد فتحها فقط ويقوم بتغيير الايقونة لتصبح اسم مجرد مما يجعلك اكثر وعيا عند محاولتك فتح التطبيق</p></li>
+<li><p>يمكنك تجربة&nbsp;تطبيق الهاتف الغبي&nbsp;باستخدام رابط التنزيل أدناه.</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image_1738731874874_0.png" class="img-fluid figure-img"></p>
+<figcaption>dumb phone</figcaption>
+</figure>
+</div></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image_1738731869245_0.png" class="img-fluid figure-img"></p>
+<figcaption>dumb phone example</figcaption>
+</figure>
+</div></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image_1738731860670_0.png" class="img-fluid figure-img"></p>
+<figcaption>review of dumb phone</figcaption>
+</figure>
+</div></li>
+<li></li>
+</ul></li>
+<li><h2 id="مراجع" class="anchored">مراجع</h2>
+<ul>
+<li>مسلكيات</li>
+<li>عمل عميق</li>
+<li>تبسيط الحياة الرقمية</li>
+<li>فن تبسيط الحياة</li>
+</ul></li>
+</ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -821,7 +808,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/fl/what is federated learning.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/blog/posts/life_style/digital_minimalisim_arabic.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
