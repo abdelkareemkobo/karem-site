@@ -4,7 +4,7 @@ description: "A quick introduction to Federated Learning Systems, comparing them
 authors: kareem
 date: 2024-11-12
 draft: false
-image: images/federated_learning.png
+image: images/federate_learning.png
 featured: true
 categories:
   - blogging
