@@ -17,7 +17,111 @@
 <width>144</width>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Tue, 04 Feb 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 17 Mar 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>my dream job at Tarteel</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="why-tarteel-not-fang" class="level2">
+<h2 class="anchored" data-anchor-id="why-tarteel-not-fang">Why Tarteel, Not FANG?</h2>
+<ul>
+<li>As a Muslim, my ultimate goal isn’t just to accumulate wealth or knowledge for their own sake. I’m guided by broader concepts like taqwa (God-consciousness), righteous deeds, and sincere intentions. With only one short life to live, I want to make the most of it in the best way possible.</li>
+<li>Working at big tech companies as a programmer offers good financial rewards and significant technical growth, along with practical experience—though it comes with its fair share of challenges. However, it also means operating under the umbrella of foreign companies with their own agendas and ideologies. Take the major players like Google, Facebook, X, and Amazon, for example.</li>
+<li>Their leaders, in one way or another, have supported the occupation of Gaza, contributed to the suffering of children, and restricted our freedom of expression.</li>
+<li>Our accounts get banned, our voices silenced, and these companies provide both material and moral support to oppressive entities with every means at their disposal.</li>
+<li>I’m not denying that working for such companies might be permissible under certain Islamic legal perspectives, but personally, I have no desire to be part of them. So, where do I want to go instead? Do I even have rules? After all, I haven’t worked at a “real” company yet—only freelance gigs and open-source projects.</li>
+<li>The truth is, I do have specific criteria for the kind of work environment I want to invest my time in. Here’s what I’m looking for:
+<ul>
+<li>A workplace that respects my faith, including what’s halal and haram, and honors religious practices.</li>
+<li>A team working on meaningful projects with real humanitarian impact—projects that benefit society without involving anything forbidden, even if they’re not explicitly religious.</li>
+<li>A place that fosters my growth beyond just financial gain. As someone passionate about data science, I want to join a team grounded in strong scientific principles, up-to-date with advancements, and focused on innovation—not blind imitation or merely using what’s available.</li>
+<li>A supportive, ambitious team led by kind and fair management.</li>
+</ul></li>
+<li>That’s when my eyes turned to Tarteel. I first came across it during high school, watching episodes featuring <a href="{{video <https://www.youtube.com/watch?app=desktop&amp;v=100Qq-mLDbMo}}>">Hazem Al-Siddiq and Abdul Latif</a> discussing the idea behind Tarteel and its early beginnings. Even now, after graduating, I’ve kept up with the company’s progress.</li>
+<li>From what I can see, it embodies everything I’m looking for—at least on the surface—and I assume the best of the people working there. My dream for the next two years is to join the Tarteel team.</li>
+</ul>
+</section>
+<section id="tarteels-vision" class="level2">
+<h2 class="anchored" data-anchor-id="tarteels-vision">Tarteel’s Vision</h2>
+<p>Tarteel AI is the world’s leading app for Quran memorization and recitation. It’s a tool that supports millions of Muslims globally by providing features to help them memorize and connect with the Quran. When you read their application page, it’s genuinely inspiring:</p>
+<ul>
+<li>Fully remote work—work anytime, anywhere.</li>
+<li>A balance of dunya and akhira—an Islamic workweek, Islamic holidays, and a culture rooted in faith.</li>
+<li>Unlimited time off (with manager approval).</li>
+<li>Yearly team retreats and off-sites.</li>
+<li>The freedom to work in your thobe, abaya, or traditional clothing from the comfort of home.</li>
+<li>A chance to be part of a company leading AI and technology innovation in the Muslim community.</li>
+<li>An opportunity to contribute to impactful projects that benefit Muslims worldwide.</li>
+</ul>
+</section>
+<section id="machine-learning-engineer-at-tarteel" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-engineer-at-tarteel">Machine Learning Engineer at Tarteel</h2>
+<p>Tarteel is always seeking talented individuals passionate about advancing the state of the Muslim ummah through their unique skills. They encourage applicants to share as much as possible about their interests and abilities.</p>
+<p>So, here’s my story: I’ve applied to Tarteel 4 times!</p>
+<ul>
+<li>The first time was during my second year of college, seeking an internship. My skills were basic—I had just started learning about deep learning—but the advice they gave me was encouraging and kind.</li>
+<li>After graduation, I applied again but was rejected without explanation. I assume it’s because I was a fresh graduate, and they likely needed someone with experience in large-scale projects. That’s fair.</li>
+<li>Seven months later, just before Ramadan 2026, Tarteel announced internship opportunities for the first time. I applied but wasn’t accepted. The competition was tough, and I don’t think I was the strongest candidate at the time—no hard feelings!</li>
+<li>What now? I’m determined to prove I have the knowledge and skills to contribute. Here’s what I’m currently working on:
+<ul>
+<li>Arabic NLP, LLMs, and speech recognition with the Namma community, where I’m contributing to open-source projects and research papers.</li>
+<li>A remote research lab in Russia, which is accelerating my technical growth.</li>
+<li>Plans to join a company to learn about cloud deployment, model optimization, and GPU workloads.</li>
+<li>Studying Quranic sciences and Tajweed to deepen my connection to the field.</li>
+<li>Building small projects inspired by Tarteel’s vision to test my abilities and see where they take me.</li>
+</ul></li>
+</ul>
+</section>
+<section id="skills-i-need-to-master" class="level2">
+<h2 class="anchored" data-anchor-id="skills-i-need-to-master">Skills I Need to Master</h2>
+<p>To succeed, I’m focusing on these key areas:</p>
+<ul>
+<li>Speech recognition and audio processing.</li>
+<li>Nvidia NeMo frameworks.</li>
+<li>SLURM (for managing computing resources).</li>
+<li>S5 (data storage and retrieval).</li>
+<li>Monitoring and analyzing model performance for data-driven improvements.</li>
+</ul>
+</section>
+<section id="my-current-plan" class="level2">
+<h2 class="anchored" data-anchor-id="my-current-plan">My Current Plan</h2>
+<p>I’ve started mastering these skills by taking courses and reading books on state-of-the-art (SOTA) speech recognition models. Soon, I’ll share my progress, publish my work, and apply what I’ve learned to Tarteel’s vision. And, of course, I’m making duaa for guidance and success ❤️.</p>
+</section>
+<section id="other-resources" class="level2">
+<h2 class="anchored" data-anchor-id="other-resources">Other Resources</h2>
+<section id="my-blogs-related-to-tarteel" class="level3">
+<h3 class="anchored" data-anchor-id="my-blogs-related-to-tarteel">My Blogs Related to Tarteel</h3>
+<p>(To be added)</p>
+</section>
+<section id="social-media" class="level3">
+<h3 class="anchored" data-anchor-id="social-media">Social Media</h3>
+<ul>
+<li><a href="https://huggingface.co/Abdelkareem">Hugging Face</a></li>
+<li><a href="https://www.linkedin.com/in/kareemkobo/">LinkedIn</a></li>
+<li><a href="https://x.com/AbdelkareemElk2">Twitter</a></li>
+<li><a href="https://github.com/abdelkareemkobo">GitHub</a></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>tarteel</category>
+  <category>speech_recognition</category>
+  <category>machine_learning</category>
+  <category>quran</category>
+  <category>job</category>
+  <guid>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</guid>
+  <pubDate>Mon, 17 Mar 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>فن تبسيط الحياة الرقمية</title>
   <dc:creator>kareem </dc:creator>
@@ -4593,7 +4697,7 @@ font-style: inherit;">return</span> result</span></code></pre></div>
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/ds_and_algo/Static_array.html</guid>
-  <pubDate>Wed, 05 Feb 2025 05:26:11 GMT</pubDate>
+  <pubDate>Tue, 18 Mar 2025 03:59:36 GMT</pubDate>
 </item>
 </channel>
 </rss>
