@@ -308,6 +308,441 @@
     "text": "NOT Just the Math\nThis approach isn’t limited to math. It extends to every skill, including CSS, Deep Learning implementation with pure PyTorch code, and so on.\n…to be continued.\nyou can read:\n\nWhat is federated learning\nkam calorie"
   },
   {
+    "objectID": "blog/posts/life_style/gpuvec.html",
+    "href": "blog/posts/life_style/gpuvec.html",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "",
+    "text": "In the fast-paced tech world of 2025, cloud GPUs drive AI breakthroughs, machine learning, and high-performance computing (HPC). Whether you’re training large language models (LLMs) or tackling vision tasks, finding the best cloud GPU providers at the right price is critical. With varied pricing from platforms like CoreWeave and Hyperstack, the landscape can feel overwhelming. That’s where GPUvec shines—your go-to hub for cloud GPU pricing comparison, GPU benchmarks, and tools like our model size calculator.\n\n\nCloud GPU pricing can define your project’s success. From startups to enterprises, demand for scalable, cost-effective GPUs is surging. Providers like Hyperstack offer NVIDIA H100s at $1.90/hr, while others compete with flexible rates for AI workloads. But it’s more than hourly costs—VRAM, CUDA cores, and hidden fees (storage, networking) shape true value. GPUvec cuts through the noise, spotlighting the cheapest cloud GPUs and high-performance options tailored to you.\n\n\n\nGPUvec Best Cloud GPU Providers"
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#cloud-gpu-pricing-in-2025",
+    "href": "blog/posts/life_style/gpuvec.html#cloud-gpu-pricing-in-2025",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "",
+    "text": "In the fast-paced tech world of 2025, cloud GPUs drive AI breakthroughs, machine learning, and high-performance computing (HPC). Whether you’re training large language models (LLMs) or tackling vision tasks, finding the best cloud GPU providers at the right price is critical. With varied pricing from platforms like CoreWeave and Hyperstack, the landscape can feel overwhelming. That’s where GPUvec shines—your go-to hub for cloud GPU pricing comparison, GPU benchmarks, and tools like our model size calculator.\n\n\nCloud GPU pricing can define your project’s success. From startups to enterprises, demand for scalable, cost-effective GPUs is surging. Providers like Hyperstack offer NVIDIA H100s at $1.90/hr, while others compete with flexible rates for AI workloads. But it’s more than hourly costs—VRAM, CUDA cores, and hidden fees (storage, networking) shape true value. GPUvec cuts through the noise, spotlighting the cheapest cloud GPUs and high-performance options tailored to you.\n\n\n\nGPUvec Best Cloud GPU Providers"
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#gpuvec-your-cloud-gpu-companion",
+    "href": "blog/posts/life_style/gpuvec.html#gpuvec-your-cloud-gpu-companion",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "GPUvec: Your Cloud GPU Companion",
+    "text": "GPUvec: Your Cloud GPU Companion\nGPUvec delivers real-time GPU pricing comparison from top GPU cloud providers. From the budget-friendly NVIDIA A4000 at $0.15/hr to the cutting-edge H200, we help you find the perfect fit. Explore these features:\n\nProviders\n\nVector Database\n\nComparison Tool\n\nModel Size Calculator\n\nCost Estimator\n\nGPUs for AI:\n\nNVIDIA H200\n\nNVIDIA A100\n\nNVIDIA A10\n\nNVIDIA H100\n\nNVIDIA A6000\n\nNVIDIA RTX 4090\n\nNVIDIA RTX 5090\n\nNVIDIA RTX 3090\n\n\nFilter by VRAM, CUDA cores, and more to optimize GPU costs effortlessly."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#best-cloud-providers",
+    "href": "blog/posts/life_style/gpuvec.html#best-cloud-providers",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Best Cloud Providers",
+    "text": "Best Cloud Providers\nDiscover top GPU cloud providers:\n\nCoreWeave: Cost-effective, AI-focused GPUs with unmatched scalability.\n\nHyperstack: NVIDIA GPUs like the A100 at $0.50/hr, eco-friendly and powerful.\n\nLambda Labs: Tailored for AI and deep learning with robust NVIDIA options.\n\nPaperspace: User-friendly cloud computing GPU solutions for all workloads.\n\nGoogle Cloud (GCP): Comprehensive GPU offerings for machine learning.\n\nAWS: Wide-ranging GPU instances for AI and HPC.\n\nAzure: Robust cloud platform with GPU capabilities.\n\nVast.ai: A marketplace for GPU rental pricing at competitive rates.\n\nRunPod: Affordable GPU instances for AI tasks.\n\nModal: Competitive pricing with a sleek interface for AI workloads.\n\nGPUvec ranks them by price, performance, and specs like vCPUs and storage."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#weekly-update---gpuvec-newsletter",
+    "href": "blog/posts/life_style/gpuvec.html#weekly-update---gpuvec-newsletter",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Weekly Update - GPUvec Newsletter",
+    "text": "Weekly Update - GPUvec Newsletter\nStay ahead with our weekly newsletter—updates on NVIDIA GPU pricing, new providers, and exclusive deals. Get insights to make smarter choices for your projects.\nSubscribe Now"
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#gpu-benchmarks",
+    "href": "blog/posts/life_style/gpuvec.html#gpu-benchmarks",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "GPU Benchmarks",
+    "text": "GPU Benchmarks\nOur GPU benchmarks target AI tasks—LLMs, vision models, and libraries like Flash-Attention. Compare NVIDIA, AMD, TPUs, and Huawei inference chips to find the best performer for your workload."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#gpuvec-tools",
+    "href": "blog/posts/life_style/gpuvec.html#gpuvec-tools",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "GPUvec Tools",
+    "text": "GPUvec Tools\n\nModel Size Calculator: Input your model (e.g., 7B, 9B) for compute recommendations.\n\nCost Estimator: Forecast costs based on VRAM, runtime, and provider.\n\nQuantization: Optimize models for cost and performance.\n\nGPU Comparison: Analyze GPUs by VRAM, CUDA cores, and more.\n\nSpot Instance Finder: Snag the cheapest cloud GPUs with spot pricing."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#cheapest-cloud-gpus",
+    "href": "blog/posts/life_style/gpuvec.html#cheapest-cloud-gpus",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Cheapest Cloud GPUs",
+    "text": "Cheapest Cloud GPUs\nNeed affordability? GPUvec tracks budget options like the A4000 at $0.15/hr and spot instances across providers, blending price with performance for AI GPU costs."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#compare-gpus-for-ai-tasks",
+    "href": "blog/posts/life_style/gpuvec.html#compare-gpus-for-ai-tasks",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Compare GPUs for AI Tasks",
+    "text": "Compare GPUs for AI Tasks\nGPUvec excels at comparing GPUs for AI. Dive into:\n\nLLMs: Benchmarks for large language models.\n\nVision Models: Performance for image tasks.\n\nFlash-Attention: GPUs optimized for advanced techniques.\n\nHugging Face: Compatibility with popular libraries.\n\nVLLM: Tailored benchmarks for VLLM tasks.\n\nBookmark favorites for later analysis."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#filter-based-on-vram-cuda-cores-and-more",
+    "href": "blog/posts/life_style/gpuvec.html#filter-based-on-vram-cuda-cores-and-more",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Filter Based on VRAM, CUDA Cores, and More",
+    "text": "Filter Based on VRAM, CUDA Cores, and More\nRefine your search with filters:\n\nVRAM (e.g., 16GB, 80GB)\n\nCUDA cores\n\nSystem RAM\n\nLocal storage\n\nFind the ideal GPU fast."
+  },
+  {
+    "objectID": "blog/posts/life_style/gpuvec.html#conclusion",
+    "href": "blog/posts/life_style/gpuvec.html#conclusion",
+    "title": "Cloud GPU Pricing Comparsion in 2025",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn 2025, cloud GPUs fuel AI and high-performance computing pricing. GPUvec simplifies your journey with real-time cloud GPU comparison, GPU benchmarks, and tools to optimize GPU costs. Whether you’re hunting the cheapest cloud GPUs or scaling for enterprise AI, GPUvec empowers you to save time and money. Visit GPUvec today and master the cloud GPU landscape!\nread also:\n\nwhat is federated Learning\nكم كالوري"
+  },
+  {
+    "objectID": "blog/posts/life_style/kamcalorie.html",
+    "href": "blog/posts/life_style/kamcalorie.html",
+    "title": "كم كالوري في الطعام ؟",
+    "section": "",
+    "text": "موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي"
+  },
+  {
+    "objectID": "blog/posts/life_style/kamcalorie.html#كم-كالوري",
+    "href": "blog/posts/life_style/kamcalorie.html#كم-كالوري",
+    "title": "كم كالوري في الطعام ؟",
+    "section": "",
+    "text": "موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي"
+  },
+  {
+    "objectID": "blog/posts/life_style/kamcalorie.html#مميزات-الموقع",
+    "href": "blog/posts/life_style/kamcalorie.html#مميزات-الموقع",
+    "title": "كم كالوري في الطعام ؟",
+    "section": "مميزات الموقع",
+    "text": "مميزات الموقع\nالموقع مبني بهدف تطبيقات تقنيات معالجة اللغات الطبيعية والنماذج اللغوية لتوفير كافة المعلومات التي قد يحتاجها الفرد مثل: 1. البحث الذكي : البحث باستخدام المعني سواء باللغة العربية أو الإنجيليزية وحتي كافة اللغات و يمكنك البحث باي طريقة سواء لغة عربية فصحية او العامية او حتي أخطاء إملائية 2. سرعة في إستراجاع المعلومات وعرضها في شكل بياني مميز يسمح لك بمعرفة المهم في وقت فوري 3. يمكنك إدخال ما أكل بشكل كامل و الموقع يقوم بحساب التقديرات اللازمة لك\n\n\n\nكم كالوري"
+  },
+  {
+    "objectID": "blog/posts/life_style/kamcalorie.html#خاتمة",
+    "href": "blog/posts/life_style/kamcalorie.html#خاتمة",
+    "title": "كم كالوري في الطعام ؟",
+    "section": "خاتمة",
+    "text": "خاتمة\nيعتبر موقع كم كالوري بداية الي سلسلة ممن المنتجات التي تسهل علي الناطقين بالعربية ممارسة الرياضة و لعيش حياة أفضل و هناك الكثير قادم مثل : 1. كوب بروتين 2. عضلاتي\nقام بتطوير و إنشاء الموقع عبد الكريم الخطيب باحث في علوم الذكاء الإصطناعي و مهتم باثراء المحتوي العربي"
+  },
+  {
+    "objectID": "blog/posts/life_style/why_I_am_blogging.html#why-i-am-blogging",
+    "href": "blog/posts/life_style/why_I_am_blogging.html#why-i-am-blogging",
+    "title": "why i am blogging",
+    "section": "Why I am blogging",
+    "text": "Why I am blogging\n\nI am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).\nIt serves as a resume and blueprint for my existence in this world.\nMy goal is to help others by providing valuable content that makes their lives easier and better.\nOrganizing my knowledge and recapping topics I’ve forgotten helps me experience “aha” moments! 💡\n\nIt’s a test of whether I truly understand something or not.\n\nI don’t like social media posts, Facebook, Twitter, or LinkedIn articles. I believe these platforms are not the best places for technical blogs, and their disadvantages outweigh the advantages.\nI value the freedom of speech. Some topics or thoughts may be censored on social media, but I want to express my opinions without restrictions from others whose opinions I may not respect.\nI want to discuss topics while I’m learning them because they’re still fresh in my mind. This will help anyone in a similar position as me in the future.\nWhen studying a topic and knowing that I can write about it on my blog, I find my mind more focused on details that would fit well in the blog. This makes the learning process more enjoyable, focused, and valuable.\nI want my posts and knowledge to be more organized!\n\nWho will search for a post written six years ago on Facebook or see your first tweet?\nThis problem is related to the feed of these social platforms."
+  },
+  {
+    "objectID": "blog/posts/life_style/why_I_am_blogging.html#references",
+    "href": "blog/posts/life_style/why_I_am_blogging.html#references",
+    "title": "why i am blogging",
+    "section": "References",
+    "text": "References\n\nhttps://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045"
+  },
+  {
+    "objectID": "blog/posts/life_style/digital_minimalisim_arabic.html",
+    "href": "blog/posts/life_style/digital_minimalisim_arabic.html",
+    "title": "فن تبسيط الحياة الرقمية",
+    "section": "",
+    "text": "لماذا نمد أيدينا بشكل غريزي إلى هواتفنا خلال لحظات الملل أو الفراغ؟\nليس من قبيل الصدفة. تم تصميم التطبيقات لجذبنا مرة أخرى، والحفاظ على انتباهنا وتقديم دفعات من الدوبامين أثناء استخدامها.\nومع ذلك، فإن مجرد معرفة ذلك لا يمنعنا من تشتيت انتباهنا.\nفي هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان:\n1. أوقف تشغيل الإشعارات\n\nالإشعارات هي بوابة المشتتات.\nمعظم الإشعارات غير مهمة ولكنها تخلق شعورًا زائفًا بالإلحاح.\nبدلاً من مراجعة إشعارات كل تطبيق على حدة، من الأسهل تبني عقلية أن جميع الإشعارات يجب أن تكون متوقفة بشكل افتراضي.\nأوقف تشغيل كل شيء أولاً، ثم قم بتمكين الإشعارات فقط للتطبيقات الأساسية مثل المراسلة والتقويم.\n\n2. استخدم أيقونات سوداء ومصغرة\n\nتأتي كافة الواجهات بأيقونات كبيرة وملونة، يمكنك معرفة التطبيق بمجرد اللون فقط، فاللون الأصفر هو تطبيق سناب شات واللون البنفسجي هو الإنستجرام.\nيمكنك فتح متجر الثيمات الخاص بجهازك الشخصي وتغيير الأيقونات للون ثابت وموحد، يفضل أسود أو رمادي.\n\n3. أزل التطبيقات من الشاشة الرئيسية\n\nعلى غرار بيئتنا المادية، فإن ما هو موجود على شاشتنا الرئيسية يصبح إشارات تحفز عاداتنا.\nعندما تكون تطبيقات الوسائط الاجتماعية مرئية بشكل كبير على شاشتك الرئيسية، فمن المرجح أن تفتحها.\nنوصي بنقل التطبيقات المشتتة للانتباه إلى “الخلف”.\nيمكن لمستخدمي أيفون إزالة التطبيقات من الشاشة الرئيسية وتخزينها في مكتبة التطبيقات، بينما يمكن لمستخدمي أندرويد الاحتفاظ بالتطبيقات بالمثل في درج التطبيقات.\n\n4. شغّل فلتر التدرج الرمادي\n\nيمكن أن يؤدي تحويل هاتفك إلى التدرج الرمادي إلى جعل التمرير عبر الوسائط الاجتماعية أقل تشتيتًا على الفور.\nلكنك لست مضطرًا لإبقائه قيد التشغيل طوال الوقت.\nنحن نعلم مدى قوة هذه الأجهزة الصغيرة للعمل الإبداعي والترفيه.\nما نوصي به هو وجود طريقة بسيطة لتشغيل وإيقاف فلتر التدرج الرمادي، مثل إضافته إلى مركز التحكم على أجهزة iPhone.\n\n5. خد نفسك - أخّر فتح التطبيقات\n\nلإضافة تأخير عند فتح التطبيقات، يمكنك استخدام تطبيق مثل: One Sec\nيقدم التطبيق وقفة قصيرة في كل مرة تحاول فيها فتح الوسائط الاجتماعية أو التطبيقات الأخرى المحددة.\nيعمل كحاجز شاشة مؤقت بينك وبين المشتتات، مما يساعدك على إمساك نفسك وتحديد ما إذا كنت مشتتًا أو متعمدًا.\nيمكنك استخدام التطبيق على الموبايل أو على الحاسوب.\n\n\n\n\n\nOne Sec\n\n\n\n6. احذف التطبيقات غير الضرورية\n\nإذا كان التطبيق المشتت للانتباه لا يضيف أي قيمة حقيقية، فإن الحل الأبسط غالبًا ما يكون الأفضل.\nاحذفه من جهازك تمامًا.\nثم، استخدم وقتك الذي تم تحريره حديثًا في أنشطة مفيدة.\nمن التجارب المثيرة هي حذف تطبيق اليوتيوب من الموبايل واستخدامه من المتصفح، سيقلل هذا من الانغماس ويفضل حذف كلا من المتصفح واليوتيوب!!\nيمكنك التخلص من تطبيق اليوتيوب بالكامل على نظام أندرويد بدون عمل روت باستخدام Adb manager.\nوعندما تريد مشاهدة اليوتيوب أو باقي وسائل التواصل الاجتماعي، يمكنك استخدام الحاسوب فهو أقل عرضة للتشتت والاستخدام في أوقات مثل قبل النوم أو في أثناء المرحاض أو تناول الطعام في المطبخ مثلاً!\n\n7. أعد تشكيل عالمك كما تريد\n\nإذا ما زلت تريد استخدام بعض التطبيقات، يمكنك التحكم في كيفية العرض وماذا تريد أن ترى وما لا تريد، والتوقف عن التشتت مثلاً.\nبعض إضافات المتصفح التي تسمح لك بتعديل الموقع:\n\nMinimal theme for twitter: تسمح لك بتغيير إعداد عرض تويتر الخاص بك.\n\n\n\n\n\n\nMinimal Theme for Twitter\n\n\n\nUnhook\n\n\n\n\nEnhancer for Youtube - 1\n\n\n\nEnhancer for youtube\n\n\n\n\nEnhancer for Youtube - 2\n\n\n\n8. مراقبة الوقت\n\nمن التطبيقات المفيدة لمراقبة الوقت على الحاسوب والمفتوحة المصدر أيضًا هي: ActivitWatch\n\n\n\n\n\nActivity Watch Example\n\n\n\nهاتف غبي\n\nيمكنك استخدام تطبيق\n\ndumb phone\n\nيساعدك التطبيق علي اختيار التطبيقات التي تريد فتحها فقط ويقوم بتغيير الايقونة لتصبح اسم مجرد مما يجعلك اكثر وعيا عند محاولتك فتح التطبيق\nيمكنك تجربة تطبيق الهاتف الغبي باستخدام رابط التنزيل أدناه.\n\n\n\ndumb phone\n\n\n\n\n\ndumb phone example\n\n\n\n\n\nreview of dumb phone\n\n\n\n\nمراجع\n\nمسلكيات\nعمل عميق\nتبسيط الحياة الرقمية\nفن تبسيط الحياة"
+  },
+  {
+    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html",
+    "href": "blog/posts/courses/havrard CS197 AI research experiences.html",
+    "title": "havrard CS197 AI research experiences",
+    "section": "",
+    "text": "This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field."
+  },
+  {
+    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html#table-of-contents",
+    "href": "blog/posts/courses/havrard CS197 AI research experiences.html#table-of-contents",
+    "title": "havrard CS197 AI research experiences",
+    "section": "",
+    "text": "This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field."
+  },
+  {
+    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html#reviews",
+    "href": "blog/posts/courses/havrard CS197 AI research experiences.html#reviews",
+    "title": "havrard CS197 AI research experiences",
+    "section": "Reviews",
+    "text": "Reviews\nLecture 1: Exciting Advances with AI Language Models Content : Interact with language models like GPT-3’s text completion and use Codex’s code generation abilities feedback : ⭐ (1/5)\n\nLecture 2: The Zen of python Content : vscode,git,conad,linting and Debugging. feedback: feedback : ⭐ (1/5)\n\nLecture 3: Reading AI Research papers Content :\n\nConduct a literature search to identify papers relevant to a topic of interest\nDifference between Reading Wide and Reading deep and how to balance between them\nHow to use Google Scholar and paper with code feedback : ⭐⭐⭐⭐⭐ (5/5)\n\n\nLecture 4: In-Tune with Jazz Hands Content:\n\nquick intro into huggingface\nTokenization\nCausal language modeling (CLM) feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 5: Lightning McTorch Content :\n\nFine-tuning A vision Transformer\nIntro to pytorch lightning (Lightning)\nData Loading\nHow to Build a Neural net Module with lightning and how lightning modules work feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 6 & 7: Moonwalking with Pytorch Content :\n\nPytorch Exercises\nTensors\nAutograd and neural networks feedback : ⭐ (1/5)\n\n\nLecture 8 & 9: Experiment Organization Spakrs Joy Content :\n\nWeight and Biases\nHyperparameter Search\nHydra feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 10 & 11 : I Dreamed a Dream Content\n\nIdentifying Gaps in A Research Paper\n\nCLIP and CheXzero\n\nGenerating Ideas for Building a Research Paper\nIterating on your research ideas feedback : ⭐⭐⭐⭐⭐ (5/5)\n\n\nLecture 12 & 13 : Today Was a Fairytale\n\nhow to deconstruct the elements of a research paper and their sequence\nResulting template that you can use as a general example feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 14 & 15: Deep Learning on Cloud Nine didn’t complete it 🙃🙃🙃\n\nLecture 16 & 17:Make your dreams come tuned Content\n\nhigh level use of Stable Diffusion using a Dreambooth template\nUse AWS to accelerate the training of Stable Diffusion models with GPUs\nHF Accelerator feedback : ⭐⭐ (2/5)\n\n\nLecture 18 : Research Productivity Power-Ups Content\n\nHow update meetings and working sessions\norganizing your efforts on a project\nwhat is technical dept and examples on it feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 19 :The AI Ninja Content\n\nHow to make Steady Progress\nSome Research Skills\nDiscussion Questions feedback : ⭐⭐ (2/5) I found that Colah’ blog content about research is better in the context and offers a great details\n\n\nLecture 20: Bejeweled ⭐⭐⭐⭐⭐(5/5)\n\nhow to make a slides to improve your research talk\nAssertion Evidence Approach feedback : ⭐⭐ (2/5) This is great related talk from MIT about this topic How to speak ⭐⭐⭐⭐⭐(5/5)\n\n\nLecture 21 : Model Showdown Content\n\nStatistical Testing feedback : ⭐⭐ ⭐(3/5)"
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "📝 Papers",
+    "section": "",
+    "text": "These are a list of papers I’ve given:\n\nExplainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers"
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html",
+    "href": "notes/how-to-learn/index.html",
+    "title": "How to learn",
+    "section": "",
+    "text": "I read the book Mindshift and it was unituitively so good that I decided to take this class. As a parent, I learned a bunch of things that I think will be beneficial to my children’s education.\nNotes from class Learning how to learn. These notes are for me and may not make sense for others.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
+    "href": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
+    "title": "How to learn",
+    "section": "Focused vs Diffused Mode",
+    "text": "Focused vs Diffused Mode\nYou can not access focus and diffused mode simultaneously.\nPeople have tried to access diffuse mode of thinking by bringing themselves to the point of sleep and waking up just as they fall asleep. For example, Salvador Dali - holding keys in your hand, and let the sound of keys falling the ground wake you up.\nExercise, going for a walk good way to access diffuse thinking. You must take notes right away b/c diffuse thoughts may evaporate very fast.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
+    "href": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
+    "title": "How to learn",
+    "section": "Procrastination Memory and Sleep",
+    "text": "Procrastination Memory and Sleep\nThey advocate the Pomodoro technique to combating procrastination. Its like HITT.\nPeriodic relaxation (every ~ 30 minutes) is important for accessing your diffuse mode. “Its important for the mortar to dry”.\nSpaced repetition (like Anki) is important for building memory. i\nGo over what you want to learn about right before you go to sleep, this will substantially improve the chances you will dream about it and form new connections about the subject.\nExercise can help create new neurons in your hippocampus (new neurons can be created there in adulthood) and help them survive longer.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
+    "href": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
+    "title": "How to learn",
+    "section": "Writing Tips Diffuse Mode",
+    "text": "Writing Tips Diffuse Mode\nDiffuse mode is very important for writing. Editing is like focus mode and creating ideas is diffuse mode. Some rules of thumb: - Do not outline, make a mind map - Do not edit while you are writing (this is really hard to do -&gt; turn off monitor and just write).https://writeordie.com - app that forces you to stay in diffuse mode. You really cannot look at the screen. - Repeating again, do not look at screen while you are writing! Only when editing.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#chunking",
+    "href": "notes/how-to-learn/index.html#chunking",
+    "title": "How to learn",
+    "section": "Chunking",
+    "text": "Chunking\n“Tying your shoes”. Best chunks are subconscious. Spoken language is the best example of chunking. You have to practice to build chunks, you cannot just observe. You have to perform the task yourself.\nYou should scan a chapter before you read it: section headings, pictures, etc. This can help you build chunks.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#illusions-of-competence",
+    "href": "notes/how-to-learn/index.html#illusions-of-competence",
+    "title": "How to learn",
+    "section": "Illusions of competence",
+    "text": "Illusions of competence\nRight after you read something, look away and repeat to yourself what you recall. You can also draw a concept map. The recall process actually improves memory.\nRecall is better than re-reading. Re-reading is effective when you let time pass so you get spaced repetition. You need to test yourself to make sure you are competent. Recall is a form of testing.\nRecall outside your place of study to strengthen your memory. This is because you can get queues from where you are studying.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#deliberate-practice",
+    "href": "notes/how-to-learn/index.html#deliberate-practice",
+    "title": "How to learn",
+    "section": "Deliberate Practice",
+    "text": "Deliberate Practice\nFocus on the bits that you find difficult. Interleaving is important, meaning learning different subjects or even sections within one subject at once. Thomas S. Khun discovered that two types of people tend to make scientific breakthroughs: (1) young people (2) those who are trained in another discipline.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#procrastination-and-memory",
+    "href": "notes/how-to-learn/index.html#procrastination-and-memory",
+    "title": "How to learn",
+    "section": "Procrastination and Memory",
+    "text": "Procrastination and Memory\nYou have already learned about the Pomodoro technique. There are other techniques.\nFocus on the process, not the product. Don’t focus on completing the homework, focus on the process that leads you to complete the homework. Process is the small chunks of time to chip away at the task. This is the idea behind the Pomodoro. Your only goal is to finish the Pomodoro, for example.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/how-to-learn/index.html#juggling-life-and-learning",
+    "href": "notes/how-to-learn/index.html#juggling-life-and-learning",
+    "title": "How to learn",
+    "section": "Juggling Life and Learning",
+    "text": "Juggling Life and Learning\nYou should make to-do list the night before for the next day and write it down. This will allow your subconscious to work on how it will conquer that task. Furthermore, writing it down will allow you to free it from working memory.\nPlan your quitting time is important.",
+    "crumbs": [
+      "How to learn"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html",
+    "href": "notes/video_editing.html",
+    "title": "Video Editing",
+    "section": "",
+    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html#davinci-resolve",
+    "href": "notes/video_editing.html#davinci-resolve",
+    "title": "Video Editing",
+    "section": "",
+    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "notes/video_editing.html#other-tools-to-look-into",
+    "href": "notes/video_editing.html#other-tools-to-look-into",
+    "title": "Video Editing",
+    "section": "Other tools to look into",
+    "text": "Other tools to look into\n\nDescript\nRunwayML\ncapcut - from Rajeev\nAdobe Premiere\nFrame - Video collaboration that you use for Upwork etc\nEpidemic Sound - Sound by mood (Sanyam)\nCayla - Artlist\nCayla - Premium Beat\n\nCayla recommmends 1080p / 24 FPS for Youtube",
+    "crumbs": [
+      "Video Editing"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html",
+    "href": "notes/web-scraping/transcribe-diarize.html",
+    "title": "Transcribe & Diarize Videos",
+    "section": "",
+    "text": "I wanted to generate transcriptions of videos with speaker labels. Segmenting or labeling the speakers in audio like this is referred to as Diarization or Diarisation (wikipedia). Unfortunately, OpenAi’s Whisper doesn’t do diarization.",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
+    "href": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
+    "title": "Transcribe & Diarize Videos",
+    "section": "1. Download the audio file with yt-dlp.",
+    "text": "1. Download the audio file with yt-dlp.\nThe -o \"audio.%(ext)s\" argument is used to name the output as audo.mp3. The %(ext)s is a placeholder for the file extension. The --extract-audio and --audio-format mp3 arguments are used to extract the audio from the video and convert it to mp3 format.\nyt-dlp --extract-audio --audio-format mp3 \\\n    -o \"audio.%(ext)s\" https://youtu.be/g_6nQBsE4pU\nThe above command will generate audio.mp3 in the current directory.",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
+    "href": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
+    "title": "Transcribe & Diarize Videos",
+    "section": "2. Generate the transcript with diarization.",
+    "text": "2. Generate the transcript with diarization.\nThis is done with WhisperX. Make sure you carefully follow the instructions in the WhisperX repo corresponding to Speaker Diarization: you have to click on three Hugging Face repos and accept their terms & conditions.\nThe video I’m working with has 2 speakers, so that’s why I’m setting --min_speakers and --max_speakers equal to 2. The --hf_token argument is the Hugging Face token you get from following the instructions in the WhisperX repo.\nwhisperx audio.mp3 --model large-v2 --diarize \\\n    --min_speakers 2 --max_speakers 2 --hf_token &lt;your_hf_token&gt;\nThis will produce files with the following extensions audio.{srt, vtt, txt, tsv, json} in the current directory. You can limit the formats with --output_format and write these files to a different directory with --output_dir. The .json file contains the most detailed information about the diarization, with world-level predictions, whereas the .vtt and .srt files will contain a more human-readable transcript with speaker labels. I suggest looking at these files to see which one suits your needs.\nIf looking at the .json file, I recommend using jq with a command like this to see the first row of the segments array in that file:\njq '.segments[0]' audio.json",
+    "crumbs": [
+      "Web Scraping",
+      "Transcribe & Diarize Videos"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html",
+    "href": "notes/web-scraping/browser-to-python.html",
+    "title": "Browser requests to code",
+    "section": "",
+    "text": "I learned this from Zachary Blackwood’s 2022 NormConf Talk.",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
+    "href": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
+    "title": "Browser requests to code",
+    "section": "Example: Get A List of Subway Restaurants With Python",
+    "text": "Example: Get A List of Subway Restaurants With Python\n\nGo to https://www.subway.com/en-US/locator in Google Chrome\n\n\n\nOpen developer tools using Option + CMD + I\nGo the the network tab, and hit the clear button\n\n\n\nType in a zipcode and search. Look for a network request that seems like it is getting data, in this case GetLocations.ashx... looks super promising.\n\n\n\nRight click on that particular event and select Copy -&gt; Copy as Curl\n\n\n\nGo to curlconverter.com and paste the curl command there.\n\n\nEnjoy your python code that uses this otherwise undocumented API :)",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
+    "href": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
+    "title": "Browser requests to code",
+    "section": "Bonus: Parse The Response",
+    "text": "Bonus: Parse The Response\nYou can parse the response data in a hacky way.\n\n# run the code from curlconverter.com, which will give you a `response` object.\n\n&gt;&gt;&gt; import json\n... response_string = response.text\n... json_string = response_string[response_string.index(\"(\") +1:response_string.index('\"AdditionalData\":')-1]+'}'\n... parsed_string = json.loads(json_string)\n... stores = parsed_string['ResultData']\n\n&gt;&gt;&gt; stores\n[{'LocationId': {'StoreNumber': 21809, 'SatelliteNumber': 0},\n  'Address': {'Address1': '4888 NW Bethany Blvd',\n   'Address2': 'Suite K-1',\n   'Address3': 'Bethany Village Centre',\n   'City': 'Portland',\n   'StateProvCode': 'OR',\n   'PostalCode': '97229',\n   'CountryCode': 'US',\n   'CountryCode3': 'USA'},\n  'Geo': {'Latitude': 45.5548,\n   'Longitude': -122.8358,\n   'TimeZoneId': 'America/Los_Angeles',\n   'CurrentUtcOffset': 0},\n  'ListingNumber': 1,\n  'OrderingUrl': 'http://order.subway.com/Stores/Redirect.aspx?s=21809&sa=0&f=r&scc=US&spc=OR',\n  'CateringUrl': 'https://www.ezcater.com/catering/pvt/subway-portland-nw-bethany-blvd',\n  'ExtendedProperties': None},\n...",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
+    "href": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
+    "title": "Browser requests to code",
+    "section": "When to use this approach",
+    "text": "When to use this approach\nThis is great for adhoc things, but you probably want to use a headless browser and actually scrape the HTML if you want to do this in a repeatable way. But many times you want to do a one-off scrape, this isn’t so bad!",
+    "crumbs": [
+      "Web Scraping",
+      "Browser requests to code"
+    ]
+  },
+  {
+    "objectID": "oss/opensource.html",
+    "href": "oss/opensource.html",
+    "title": " Open Source",
+    "section": "",
+    "text": "My open source work has been focused on developer tools and infrastructure. I’ve contributed to projects such as fastai, Metaflow, Kubeflow, Jupyter, and Great Expectations, as well as many others. I list some of these below:"
+  },
+  {
+    "objectID": "oss/opensource.html#fastai",
+    "href": "oss/opensource.html#fastai",
+    "title": " Open Source",
+    "section": " fastai",
+    "text": "fastai\nI maintain and contribute to a variety of fastai projects. Below are the projects I’ve been very involved in:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nfastpages \n\n\nAn easy to use blogging platform for Jupyter Notebooks. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nnbdev \n\n\nWrite, test, document, and distribute software packages and technical articles all in one place, your notebook. \n\n\nCore Contributor\n\n\nBlog, Talk\n\n\n\n\nfastcore \n\n\nA Python language extension for exploratory and literate programming. \n\n\nCore Contributor\n\n\nBlog\n\n\n\n\nghapi \n\n\nA Python client for the GitHub API \n\n\nCore Contributor\n\n\n Blog\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#metaflow",
+    "href": "oss/opensource.html#metaflow",
+    "title": " Open Source",
+    "section": " Metaflow",
+    "text": "Metaflow\nI created notebook cards: A tool that allows you to use notebooks to generate reports, visualizations and diagnostics in Metaflow production workflows. Blog"
+  },
+  {
+    "objectID": "oss/opensource.html#kubeflow",
+    "href": "oss/opensource.html#kubeflow",
+    "title": " Open Source",
+    "section": " Kubeflow",
+    "text": "Kubeflow\nI’ve worked on several projects related to Kubeflow, mainly around examples and documentation:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGitHub Issue Summarization\n\n\nAn end-to-end example of using Kubeflow to summarize GitHub Issues. Became one of the most popular tutorials of Kubeflow. \n\n\nAuthor\n\n\nInterview with Jeremy Lewi\n\n\n\n\nkubeflow/codei-intelligence\n\n\nVarious tutorials and applied examples of Kubeflow. \n\n\nCore Contributor\n\n\nTalk\n\n\n\n\nThe Kubeflow Blog\n\n\nI used fastpages to create the official Kubeflow blog. \n\n\nCore Contributor\n\n\nSite\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#jupyter",
+    "href": "oss/opensource.html#jupyter",
+    "title": " Open Source",
+    "section": " Jupyter",
+    "text": "Jupyter\nI created the Repo2Docker GitHub Action, which allows you to trigger repo2docker to build a Jupyter enabled Docker images from your GitHub repository. This Action allows you to pre-cache images for your own BinderHub cluster or for mybinder.org.\nThis project was accepted into the official JupyterHub GitHub org."
+  },
+  {
+    "objectID": "oss/opensource.html#great-expectations",
+    "href": "oss/opensource.html#great-expectations",
+    "title": " Open Source",
+    "section": " Great Expectations",
+    "text": "Great Expectations\nI developed the Great Expectations GitHub Action that allows you to use Great Expectations in CI/CD Workflows. Blog."
+  },
+  {
+    "objectID": "oss/opensource.html#other",
+    "href": "oss/opensource.html#other",
+    "title": " Open Source",
+    "section": " Other",
+    "text": "Other\nI worked as a staff machine learning engineer at GitHub from 2017 - 2022. I led or created the following open source projects that explored the intersection of machine learning, data and the developer workflow:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nCode Search Net \n\n\nDatasets, tools, and benchmarks for representation learning of code. This was a big part of the inspiration for GitHub’s eventual work on CoPilot. \n\n\nLead\n\n\n Blog, Paper\n\n\n\n\nMachine Learning Ops\n\n\nA collection of resources on how to facilitate Machine Learning Ops with GitHub. This project explored integrations with a wide variety of data science tools with GitHub Actions. \n\n\nCreator\n\n\nBlog\n\n\n\n\nIssue Label Bot\n\n\nA GitHub App powered by machine learning that auto-labels issues. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nCovid19-dashboard \n\n\nA demonstration of how to use GitHub Actions, Jupyter Notebooks and fastpages to create interactive dashboards that update daily.\n\n\n\nCreator\n\n\nNews Article\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "kareem's Blog",
+    "section": "",
+    "text": "This blog is where I document my journey to learn about programming, deep learning, and AGI.\nCurrently I’m Learning NLP, Generative AI, Recs, and IR to build charming language models that able to talk, hear and see, made me some coffee\nI love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.\nMy research focuses on Arabic NLP, small model optimization, image denoising, and vector computing."
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "kareem's Blog",
+    "section": "💼 Get In Touch",
+    "text": "💼 Get In Touch\nDo you need help operationalizing ML, Recommendition systems or large language models?\nI’m open to consulting work and other forms of advisory. Email me at kareem01095134688@gmail.com if you’d like to chat!"
+  },
+  {
+    "objectID": "index.html#production-projects",
+    "href": "index.html#production-projects",
+    "title": "kareem's Blog",
+    "section": "Production projects",
+    "text": "Production projects\nYou can look at some of my projects on both opensource and production like:\n\nكم كالوري : semantic search engine built for healthcare\nseo rat : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more"
+  },
+  {
+    "objectID": "index.html#feed",
+    "href": "index.html#feed",
+    "title": "kareem's Blog",
+    "section": "📮 Feed",
+    "text": "📮 Feed\nA curated collection of blog posts and shorter form notes.\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n \n\n\nWhat is an Array ?\n\n\n\n\n4/4/25\n\n\nCloud GPU Pricing Comparsion in 2025\n\n\n\n\n3/18/25\n\n\nmy dream job at Tarteel\n\n\n\n\n2/5/25\n\n\nفن تبسيط الحياة الرقمية\n\n\n\n\n1/27/25\n\n\nMath Skills For AI\n\n\n\n\n1/8/25\n\n\nكم كالوري في الطعام ؟\n\n\n\n\n1/8/25\n\n\nأفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم\n\n\n\n\n11/12/24\n\n\nWhat is Federated Learning\n\n\n\n\n10/5/24\n\n\nGoogle Ads Black Box\n\n\n\n\n10/4/24\n\n\nLearning Data Structures and Algorithms as Machine Learning Engineer\n\n\n\n\n10/4/24\n\n\nReview of Huawei watch gt 4\n\n\n\n\n7/31/24\n\n\nThe curse of SEO\n\n\n\n\n7/10/24\n\n\nجاذبية مزيفة و عالم مخادع\n\n\n\n\n1/1/24\n\n\nMy little Dragon “kobo”\n\n\n\n\n12/7/23\n\n\nAfter one year of using Huawei Mate 11 without google services\n\n\n\n\n12/6/23\n\n\nHuawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!\n\n\n\n\n10/28/23\n\n\nMTEB Massive Text Embedding Benchmark\n\n\n\n\n10/21/23\n\n\ntiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”\n\n\n\n\n7/18/23\n\n\nhavrard CS197 AI research experiences\n\n\n\n\n7/18/23\n\n\nwhy i am blogging\n\n\n\n\n7/18/23\n\n\nHow I am using NLP to improve my Websites SEO\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#subscribe",
+    "href": "index.html#subscribe",
+    "title": "kareem's Blog",
+    "section": "📬 Subscribe",
+    "text": "📬 Subscribe\nSubscribe via  RSS."
+  },
+  {
     "objectID": "blog/posts/life_style/fake_graviety.html",
     "href": "blog/posts/life_style/fake_graviety.html",
     "title": "جاذبية مزيفة و عالم مخادع",
@@ -404,364 +839,6 @@
     "title": "جاذبية مزيفة و عالم مخادع",
     "section": "النهاية",
     "text": "النهاية\nهذه هي مجرد خواطر سريعة غير منسقة وقد تبدو متفرقه لفتي تعصف به الأفكار والمشاعر في فترة شديدة التقلب فلتدعوا له ولوالديه وجزاك الله كل الخير إن أكملت القراءة 😚😚"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "kareem's Blog",
-    "section": "",
-    "text": "This blog is where I document my journey to learn about programming, deep learning, and AGI.\nCurrently I’m Learning NLP, Generative AI, Recs, and IR to build charming language models that able to talk, hear and see, made me some coffee\nI love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.\nMy research focuses on Arabic NLP, small model optimization, image denoising, and vector computing."
-  },
-  {
-    "objectID": "index.html#get-in-touch",
-    "href": "index.html#get-in-touch",
-    "title": "kareem's Blog",
-    "section": "💼 Get In Touch",
-    "text": "💼 Get In Touch\nDo you need help operationalizing ML, Recommendition systems or large language models?\nI’m open to consulting work and other forms of advisory. Email me at kareem01095134688@gmail.com if you’d like to chat!"
-  },
-  {
-    "objectID": "index.html#production-projects",
-    "href": "index.html#production-projects",
-    "title": "kareem's Blog",
-    "section": "Production projects",
-    "text": "Production projects\nYou can look at some of my projects on both opensource and production like:\n\nكم كالوري : semantic search engine built for healthcare\nseo rat : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more"
-  },
-  {
-    "objectID": "index.html#feed",
-    "href": "index.html#feed",
-    "title": "kareem's Blog",
-    "section": "📮 Feed",
-    "text": "📮 Feed\nA curated collection of blog posts and shorter form notes.\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n \n\n\nWhat is an Array ?\n\n\n\n\n3/18/25\n\n\nmy dream job at Tarteel\n\n\n\n\n2/5/25\n\n\nفن تبسيط الحياة الرقمية\n\n\n\n\n1/27/25\n\n\nMath Skills For AI\n\n\n\n\n1/8/25\n\n\nكم كالوري في الطعام ؟\n\n\n\n\n1/8/25\n\n\nأفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم\n\n\n\n\n11/12/24\n\n\nWhat is Federated Learning\n\n\n\n\n10/5/24\n\n\nGoogle Ads Black Box\n\n\n\n\n10/4/24\n\n\nLearning Data Structures and Algorithms as Machine Learning Engineer\n\n\n\n\n10/4/24\n\n\nReview of Huawei watch gt 4\n\n\n\n\n7/31/24\n\n\nThe curse of SEO\n\n\n\n\n7/10/24\n\n\nجاذبية مزيفة و عالم مخادع\n\n\n\n\n1/1/24\n\n\nMy little Dragon “kobo”\n\n\n\n\n12/7/23\n\n\nAfter one year of using Huawei Mate 11 without google services\n\n\n\n\n12/6/23\n\n\nHuawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!\n\n\n\n\n10/28/23\n\n\nMTEB Massive Text Embedding Benchmark\n\n\n\n\n10/21/23\n\n\ntiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”\n\n\n\n\n7/18/23\n\n\nhavrard CS197 AI research experiences\n\n\n\n\n7/18/23\n\n\nwhy i am blogging\n\n\n\n\n7/18/23\n\n\nHow I am using NLP to improve my Websites SEO\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#subscribe",
-    "href": "index.html#subscribe",
-    "title": "kareem's Blog",
-    "section": "📬 Subscribe",
-    "text": "📬 Subscribe\nSubscribe via  RSS."
-  },
-  {
-    "objectID": "oss/opensource.html",
-    "href": "oss/opensource.html",
-    "title": " Open Source",
-    "section": "",
-    "text": "My open source work has been focused on developer tools and infrastructure. I’ve contributed to projects such as fastai, Metaflow, Kubeflow, Jupyter, and Great Expectations, as well as many others. I list some of these below:"
-  },
-  {
-    "objectID": "oss/opensource.html#fastai",
-    "href": "oss/opensource.html#fastai",
-    "title": " Open Source",
-    "section": " fastai",
-    "text": "fastai\nI maintain and contribute to a variety of fastai projects. Below are the projects I’ve been very involved in:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nfastpages \n\n\nAn easy to use blogging platform for Jupyter Notebooks. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nnbdev \n\n\nWrite, test, document, and distribute software packages and technical articles all in one place, your notebook. \n\n\nCore Contributor\n\n\nBlog, Talk\n\n\n\n\nfastcore \n\n\nA Python language extension for exploratory and literate programming. \n\n\nCore Contributor\n\n\nBlog\n\n\n\n\nghapi \n\n\nA Python client for the GitHub API \n\n\nCore Contributor\n\n\n Blog\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "oss/opensource.html#metaflow",
-    "href": "oss/opensource.html#metaflow",
-    "title": " Open Source",
-    "section": " Metaflow",
-    "text": "Metaflow\nI created notebook cards: A tool that allows you to use notebooks to generate reports, visualizations and diagnostics in Metaflow production workflows. Blog"
-  },
-  {
-    "objectID": "oss/opensource.html#kubeflow",
-    "href": "oss/opensource.html#kubeflow",
-    "title": " Open Source",
-    "section": " Kubeflow",
-    "text": "Kubeflow\nI’ve worked on several projects related to Kubeflow, mainly around examples and documentation:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGitHub Issue Summarization\n\n\nAn end-to-end example of using Kubeflow to summarize GitHub Issues. Became one of the most popular tutorials of Kubeflow. \n\n\nAuthor\n\n\nInterview with Jeremy Lewi\n\n\n\n\nkubeflow/codei-intelligence\n\n\nVarious tutorials and applied examples of Kubeflow. \n\n\nCore Contributor\n\n\nTalk\n\n\n\n\nThe Kubeflow Blog\n\n\nI used fastpages to create the official Kubeflow blog. \n\n\nCore Contributor\n\n\nSite\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "oss/opensource.html#jupyter",
-    "href": "oss/opensource.html#jupyter",
-    "title": " Open Source",
-    "section": " Jupyter",
-    "text": "Jupyter\nI created the Repo2Docker GitHub Action, which allows you to trigger repo2docker to build a Jupyter enabled Docker images from your GitHub repository. This Action allows you to pre-cache images for your own BinderHub cluster or for mybinder.org.\nThis project was accepted into the official JupyterHub GitHub org."
-  },
-  {
-    "objectID": "oss/opensource.html#great-expectations",
-    "href": "oss/opensource.html#great-expectations",
-    "title": " Open Source",
-    "section": " Great Expectations",
-    "text": "Great Expectations\nI developed the Great Expectations GitHub Action that allows you to use Great Expectations in CI/CD Workflows. Blog."
-  },
-  {
-    "objectID": "oss/opensource.html#other",
-    "href": "oss/opensource.html#other",
-    "title": " Open Source",
-    "section": " Other",
-    "text": "Other\nI worked as a staff machine learning engineer at GitHub from 2017 - 2022. I led or created the following open source projects that explored the intersection of machine learning, data and the developer workflow:\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nCode Search Net \n\n\nDatasets, tools, and benchmarks for representation learning of code. This was a big part of the inspiration for GitHub’s eventual work on CoPilot. \n\n\nLead\n\n\n Blog, Paper\n\n\n\n\nMachine Learning Ops\n\n\nA collection of resources on how to facilitate Machine Learning Ops with GitHub. This project explored integrations with a wide variety of data science tools with GitHub Actions. \n\n\nCreator\n\n\nBlog\n\n\n\n\nIssue Label Bot\n\n\nA GitHub App powered by machine learning that auto-labels issues. \n\n\nCreator\n\n\nBlog, Talk\n\n\n\n\nCovid19-dashboard \n\n\nA demonstration of how to use GitHub Actions, Jupyter Notebooks and fastpages to create interactive dashboards that update daily.\n\n\n\nCreator\n\n\nNews Article\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/web-scraping/browser-to-python.html",
-    "href": "notes/web-scraping/browser-to-python.html",
-    "title": "Browser requests to code",
-    "section": "",
-    "text": "I learned this from Zachary Blackwood’s 2022 NormConf Talk.",
-    "crumbs": [
-      "Web Scraping",
-      "Browser requests to code"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
-    "href": "notes/web-scraping/browser-to-python.html#example-get-a-list-of-subway-restaurants-with-python",
-    "title": "Browser requests to code",
-    "section": "Example: Get A List of Subway Restaurants With Python",
-    "text": "Example: Get A List of Subway Restaurants With Python\n\nGo to https://www.subway.com/en-US/locator in Google Chrome\n\n\n\nOpen developer tools using Option + CMD + I\nGo the the network tab, and hit the clear button\n\n\n\nType in a zipcode and search. Look for a network request that seems like it is getting data, in this case GetLocations.ashx... looks super promising.\n\n\n\nRight click on that particular event and select Copy -&gt; Copy as Curl\n\n\n\nGo to curlconverter.com and paste the curl command there.\n\n\nEnjoy your python code that uses this otherwise undocumented API :)",
-    "crumbs": [
-      "Web Scraping",
-      "Browser requests to code"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
-    "href": "notes/web-scraping/browser-to-python.html#bonus-parse-the-response",
-    "title": "Browser requests to code",
-    "section": "Bonus: Parse The Response",
-    "text": "Bonus: Parse The Response\nYou can parse the response data in a hacky way.\n\n# run the code from curlconverter.com, which will give you a `response` object.\n\n&gt;&gt;&gt; import json\n... response_string = response.text\n... json_string = response_string[response_string.index(\"(\") +1:response_string.index('\"AdditionalData\":')-1]+'}'\n... parsed_string = json.loads(json_string)\n... stores = parsed_string['ResultData']\n\n&gt;&gt;&gt; stores\n[{'LocationId': {'StoreNumber': 21809, 'SatelliteNumber': 0},\n  'Address': {'Address1': '4888 NW Bethany Blvd',\n   'Address2': 'Suite K-1',\n   'Address3': 'Bethany Village Centre',\n   'City': 'Portland',\n   'StateProvCode': 'OR',\n   'PostalCode': '97229',\n   'CountryCode': 'US',\n   'CountryCode3': 'USA'},\n  'Geo': {'Latitude': 45.5548,\n   'Longitude': -122.8358,\n   'TimeZoneId': 'America/Los_Angeles',\n   'CurrentUtcOffset': 0},\n  'ListingNumber': 1,\n  'OrderingUrl': 'http://order.subway.com/Stores/Redirect.aspx?s=21809&sa=0&f=r&scc=US&spc=OR',\n  'CateringUrl': 'https://www.ezcater.com/catering/pvt/subway-portland-nw-bethany-blvd',\n  'ExtendedProperties': None},\n...",
-    "crumbs": [
-      "Web Scraping",
-      "Browser requests to code"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
-    "href": "notes/web-scraping/browser-to-python.html#when-to-use-this-approach",
-    "title": "Browser requests to code",
-    "section": "When to use this approach",
-    "text": "When to use this approach\nThis is great for adhoc things, but you probably want to use a headless browser and actually scrape the HTML if you want to do this in a repeatable way. But many times you want to do a one-off scrape, this isn’t so bad!",
-    "crumbs": [
-      "Web Scraping",
-      "Browser requests to code"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/transcribe-diarize.html",
-    "href": "notes/web-scraping/transcribe-diarize.html",
-    "title": "Transcribe & Diarize Videos",
-    "section": "",
-    "text": "I wanted to generate transcriptions of videos with speaker labels. Segmenting or labeling the speakers in audio like this is referred to as Diarization or Diarisation (wikipedia). Unfortunately, OpenAi’s Whisper doesn’t do diarization.",
-    "crumbs": [
-      "Web Scraping",
-      "Transcribe & Diarize Videos"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
-    "href": "notes/web-scraping/transcribe-diarize.html#download-the-audio-file-with-yt-dlp.",
-    "title": "Transcribe & Diarize Videos",
-    "section": "1. Download the audio file with yt-dlp.",
-    "text": "1. Download the audio file with yt-dlp.\nThe -o \"audio.%(ext)s\" argument is used to name the output as audo.mp3. The %(ext)s is a placeholder for the file extension. The --extract-audio and --audio-format mp3 arguments are used to extract the audio from the video and convert it to mp3 format.\nyt-dlp --extract-audio --audio-format mp3 \\\n    -o \"audio.%(ext)s\" https://youtu.be/g_6nQBsE4pU\nThe above command will generate audio.mp3 in the current directory.",
-    "crumbs": [
-      "Web Scraping",
-      "Transcribe & Diarize Videos"
-    ]
-  },
-  {
-    "objectID": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
-    "href": "notes/web-scraping/transcribe-diarize.html#generate-the-transcript-with-diarization.",
-    "title": "Transcribe & Diarize Videos",
-    "section": "2. Generate the transcript with diarization.",
-    "text": "2. Generate the transcript with diarization.\nThis is done with WhisperX. Make sure you carefully follow the instructions in the WhisperX repo corresponding to Speaker Diarization: you have to click on three Hugging Face repos and accept their terms & conditions.\nThe video I’m working with has 2 speakers, so that’s why I’m setting --min_speakers and --max_speakers equal to 2. The --hf_token argument is the Hugging Face token you get from following the instructions in the WhisperX repo.\nwhisperx audio.mp3 --model large-v2 --diarize \\\n    --min_speakers 2 --max_speakers 2 --hf_token &lt;your_hf_token&gt;\nThis will produce files with the following extensions audio.{srt, vtt, txt, tsv, json} in the current directory. You can limit the formats with --output_format and write these files to a different directory with --output_dir. The .json file contains the most detailed information about the diarization, with world-level predictions, whereas the .vtt and .srt files will contain a more human-readable transcript with speaker labels. I suggest looking at these files to see which one suits your needs.\nIf looking at the .json file, I recommend using jq with a command like this to see the first row of the segments array in that file:\njq '.segments[0]' audio.json",
-    "crumbs": [
-      "Web Scraping",
-      "Transcribe & Diarize Videos"
-    ]
-  },
-  {
-    "objectID": "notes/video_editing.html",
-    "href": "notes/video_editing.html",
-    "title": "Video Editing",
-    "section": "",
-    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
-    "crumbs": [
-      "Video Editing"
-    ]
-  },
-  {
-    "objectID": "notes/video_editing.html#davinci-resolve",
-    "href": "notes/video_editing.html#davinci-resolve",
-    "title": "Video Editing",
-    "section": "",
-    "text": "Youtube Tutorial: https://www.youtube.com/watch?v=yh77878QDVE His playlist: https://www.youtube.com/playlist?list=PLL6tMzF36ox2c–SNKiifuP8kEFh80wPu\nCMD + B -&gt; “Blade” CMD + SHIFT + [ or ] to cut to location\n\n\n\nHere is a circular camera filter with OBS, which might be easier than DVR.\nYou can crop like this\n\n\n\nYou can add pause recording as a hotkey in OBS",
-    "crumbs": [
-      "Video Editing"
-    ]
-  },
-  {
-    "objectID": "notes/video_editing.html#other-tools-to-look-into",
-    "href": "notes/video_editing.html#other-tools-to-look-into",
-    "title": "Video Editing",
-    "section": "Other tools to look into",
-    "text": "Other tools to look into\n\nDescript\nRunwayML\ncapcut - from Rajeev\nAdobe Premiere\nFrame - Video collaboration that you use for Upwork etc\nEpidemic Sound - Sound by mood (Sanyam)\nCayla - Artlist\nCayla - Premium Beat\n\nCayla recommmends 1080p / 24 FPS for Youtube",
-    "crumbs": [
-      "Video Editing"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html",
-    "href": "notes/how-to-learn/index.html",
-    "title": "How to learn",
-    "section": "",
-    "text": "I read the book Mindshift and it was unituitively so good that I decided to take this class. As a parent, I learned a bunch of things that I think will be beneficial to my children’s education.\nNotes from class Learning how to learn. These notes are for me and may not make sense for others.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
-    "href": "notes/how-to-learn/index.html#focused-vs-diffused-mode",
-    "title": "How to learn",
-    "section": "Focused vs Diffused Mode",
-    "text": "Focused vs Diffused Mode\nYou can not access focus and diffused mode simultaneously.\nPeople have tried to access diffuse mode of thinking by bringing themselves to the point of sleep and waking up just as they fall asleep. For example, Salvador Dali - holding keys in your hand, and let the sound of keys falling the ground wake you up.\nExercise, going for a walk good way to access diffuse thinking. You must take notes right away b/c diffuse thoughts may evaporate very fast.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
-    "href": "notes/how-to-learn/index.html#procrastination-memory-and-sleep",
-    "title": "How to learn",
-    "section": "Procrastination Memory and Sleep",
-    "text": "Procrastination Memory and Sleep\nThey advocate the Pomodoro technique to combating procrastination. Its like HITT.\nPeriodic relaxation (every ~ 30 minutes) is important for accessing your diffuse mode. “Its important for the mortar to dry”.\nSpaced repetition (like Anki) is important for building memory. i\nGo over what you want to learn about right before you go to sleep, this will substantially improve the chances you will dream about it and form new connections about the subject.\nExercise can help create new neurons in your hippocampus (new neurons can be created there in adulthood) and help them survive longer.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
-    "href": "notes/how-to-learn/index.html#writing-tips-diffuse-mode",
-    "title": "How to learn",
-    "section": "Writing Tips Diffuse Mode",
-    "text": "Writing Tips Diffuse Mode\nDiffuse mode is very important for writing. Editing is like focus mode and creating ideas is diffuse mode. Some rules of thumb: - Do not outline, make a mind map - Do not edit while you are writing (this is really hard to do -&gt; turn off monitor and just write).https://writeordie.com - app that forces you to stay in diffuse mode. You really cannot look at the screen. - Repeating again, do not look at screen while you are writing! Only when editing.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#chunking",
-    "href": "notes/how-to-learn/index.html#chunking",
-    "title": "How to learn",
-    "section": "Chunking",
-    "text": "Chunking\n“Tying your shoes”. Best chunks are subconscious. Spoken language is the best example of chunking. You have to practice to build chunks, you cannot just observe. You have to perform the task yourself.\nYou should scan a chapter before you read it: section headings, pictures, etc. This can help you build chunks.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#illusions-of-competence",
-    "href": "notes/how-to-learn/index.html#illusions-of-competence",
-    "title": "How to learn",
-    "section": "Illusions of competence",
-    "text": "Illusions of competence\nRight after you read something, look away and repeat to yourself what you recall. You can also draw a concept map. The recall process actually improves memory.\nRecall is better than re-reading. Re-reading is effective when you let time pass so you get spaced repetition. You need to test yourself to make sure you are competent. Recall is a form of testing.\nRecall outside your place of study to strengthen your memory. This is because you can get queues from where you are studying.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#deliberate-practice",
-    "href": "notes/how-to-learn/index.html#deliberate-practice",
-    "title": "How to learn",
-    "section": "Deliberate Practice",
-    "text": "Deliberate Practice\nFocus on the bits that you find difficult. Interleaving is important, meaning learning different subjects or even sections within one subject at once. Thomas S. Khun discovered that two types of people tend to make scientific breakthroughs: (1) young people (2) those who are trained in another discipline.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#procrastination-and-memory",
-    "href": "notes/how-to-learn/index.html#procrastination-and-memory",
-    "title": "How to learn",
-    "section": "Procrastination and Memory",
-    "text": "Procrastination and Memory\nYou have already learned about the Pomodoro technique. There are other techniques.\nFocus on the process, not the product. Don’t focus on completing the homework, focus on the process that leads you to complete the homework. Process is the small chunks of time to chip away at the task. This is the idea behind the Pomodoro. Your only goal is to finish the Pomodoro, for example.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "notes/how-to-learn/index.html#juggling-life-and-learning",
-    "href": "notes/how-to-learn/index.html#juggling-life-and-learning",
-    "title": "How to learn",
-    "section": "Juggling Life and Learning",
-    "text": "Juggling Life and Learning\nYou should make to-do list the night before for the next day and write it down. This will allow your subconscious to work on how it will conquer that task. Furthermore, writing it down will allow you to free it from working memory.\nPlan your quitting time is important.",
-    "crumbs": [
-      "How to learn"
-    ]
-  },
-  {
-    "objectID": "papers.html",
-    "href": "papers.html",
-    "title": "📝 Papers",
-    "section": "",
-    "text": "These are a list of papers I’ve given:\n\nExplainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers"
-  },
-  {
-    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html",
-    "href": "blog/posts/courses/havrard CS197 AI research experiences.html",
-    "title": "havrard CS197 AI research experiences",
-    "section": "",
-    "text": "This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field."
-  },
-  {
-    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html#table-of-contents",
-    "href": "blog/posts/courses/havrard CS197 AI research experiences.html#table-of-contents",
-    "title": "havrard CS197 AI research experiences",
-    "section": "",
-    "text": "This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field."
-  },
-  {
-    "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html#reviews",
-    "href": "blog/posts/courses/havrard CS197 AI research experiences.html#reviews",
-    "title": "havrard CS197 AI research experiences",
-    "section": "Reviews",
-    "text": "Reviews\nLecture 1: Exciting Advances with AI Language Models Content : Interact with language models like GPT-3’s text completion and use Codex’s code generation abilities feedback : ⭐ (1/5)\n\nLecture 2: The Zen of python Content : vscode,git,conad,linting and Debugging. feedback: feedback : ⭐ (1/5)\n\nLecture 3: Reading AI Research papers Content :\n\nConduct a literature search to identify papers relevant to a topic of interest\nDifference between Reading Wide and Reading deep and how to balance between them\nHow to use Google Scholar and paper with code feedback : ⭐⭐⭐⭐⭐ (5/5)\n\n\nLecture 4: In-Tune with Jazz Hands Content:\n\nquick intro into huggingface\nTokenization\nCausal language modeling (CLM) feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 5: Lightning McTorch Content :\n\nFine-tuning A vision Transformer\nIntro to pytorch lightning (Lightning)\nData Loading\nHow to Build a Neural net Module with lightning and how lightning modules work feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 6 & 7: Moonwalking with Pytorch Content :\n\nPytorch Exercises\nTensors\nAutograd and neural networks feedback : ⭐ (1/5)\n\n\nLecture 8 & 9: Experiment Organization Spakrs Joy Content :\n\nWeight and Biases\nHyperparameter Search\nHydra feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 10 & 11 : I Dreamed a Dream Content\n\nIdentifying Gaps in A Research Paper\n\nCLIP and CheXzero\n\nGenerating Ideas for Building a Research Paper\nIterating on your research ideas feedback : ⭐⭐⭐⭐⭐ (5/5)\n\n\nLecture 12 & 13 : Today Was a Fairytale\n\nhow to deconstruct the elements of a research paper and their sequence\nResulting template that you can use as a general example feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 14 & 15: Deep Learning on Cloud Nine didn’t complete it 🙃🙃🙃\n\nLecture 16 & 17:Make your dreams come tuned Content\n\nhigh level use of Stable Diffusion using a Dreambooth template\nUse AWS to accelerate the training of Stable Diffusion models with GPUs\nHF Accelerator feedback : ⭐⭐ (2/5)\n\n\nLecture 18 : Research Productivity Power-Ups Content\n\nHow update meetings and working sessions\norganizing your efforts on a project\nwhat is technical dept and examples on it feedback : ⭐⭐⭐⭐ (4/5)\n\n\nLecture 19 :The AI Ninja Content\n\nHow to make Steady Progress\nSome Research Skills\nDiscussion Questions feedback : ⭐⭐ (2/5) I found that Colah’ blog content about research is better in the context and offers a great details\n\n\nLecture 20: Bejeweled ⭐⭐⭐⭐⭐(5/5)\n\nhow to make a slides to improve your research talk\nAssertion Evidence Approach feedback : ⭐⭐ (2/5) This is great related talk from MIT about this topic How to speak ⭐⭐⭐⭐⭐(5/5)\n\n\nLecture 21 : Model Showdown Content\n\nStatistical Testing feedback : ⭐⭐ ⭐(3/5)"
-  },
-  {
-    "objectID": "blog/posts/life_style/digital_minimalisim_arabic.html",
-    "href": "blog/posts/life_style/digital_minimalisim_arabic.html",
-    "title": "فن تبسيط الحياة الرقمية",
-    "section": "",
-    "text": "لماذا نمد أيدينا بشكل غريزي إلى هواتفنا خلال لحظات الملل أو الفراغ؟\nليس من قبيل الصدفة. تم تصميم التطبيقات لجذبنا مرة أخرى، والحفاظ على انتباهنا وتقديم دفعات من الدوبامين أثناء استخدامها.\nومع ذلك، فإن مجرد معرفة ذلك لا يمنعنا من تشتيت انتباهنا.\nفي هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان:\n1. أوقف تشغيل الإشعارات\n\nالإشعارات هي بوابة المشتتات.\nمعظم الإشعارات غير مهمة ولكنها تخلق شعورًا زائفًا بالإلحاح.\nبدلاً من مراجعة إشعارات كل تطبيق على حدة، من الأسهل تبني عقلية أن جميع الإشعارات يجب أن تكون متوقفة بشكل افتراضي.\nأوقف تشغيل كل شيء أولاً، ثم قم بتمكين الإشعارات فقط للتطبيقات الأساسية مثل المراسلة والتقويم.\n\n2. استخدم أيقونات سوداء ومصغرة\n\nتأتي كافة الواجهات بأيقونات كبيرة وملونة، يمكنك معرفة التطبيق بمجرد اللون فقط، فاللون الأصفر هو تطبيق سناب شات واللون البنفسجي هو الإنستجرام.\nيمكنك فتح متجر الثيمات الخاص بجهازك الشخصي وتغيير الأيقونات للون ثابت وموحد، يفضل أسود أو رمادي.\n\n3. أزل التطبيقات من الشاشة الرئيسية\n\nعلى غرار بيئتنا المادية، فإن ما هو موجود على شاشتنا الرئيسية يصبح إشارات تحفز عاداتنا.\nعندما تكون تطبيقات الوسائط الاجتماعية مرئية بشكل كبير على شاشتك الرئيسية، فمن المرجح أن تفتحها.\nنوصي بنقل التطبيقات المشتتة للانتباه إلى “الخلف”.\nيمكن لمستخدمي أيفون إزالة التطبيقات من الشاشة الرئيسية وتخزينها في مكتبة التطبيقات، بينما يمكن لمستخدمي أندرويد الاحتفاظ بالتطبيقات بالمثل في درج التطبيقات.\n\n4. شغّل فلتر التدرج الرمادي\n\nيمكن أن يؤدي تحويل هاتفك إلى التدرج الرمادي إلى جعل التمرير عبر الوسائط الاجتماعية أقل تشتيتًا على الفور.\nلكنك لست مضطرًا لإبقائه قيد التشغيل طوال الوقت.\nنحن نعلم مدى قوة هذه الأجهزة الصغيرة للعمل الإبداعي والترفيه.\nما نوصي به هو وجود طريقة بسيطة لتشغيل وإيقاف فلتر التدرج الرمادي، مثل إضافته إلى مركز التحكم على أجهزة iPhone.\n\n5. خد نفسك - أخّر فتح التطبيقات\n\nلإضافة تأخير عند فتح التطبيقات، يمكنك استخدام تطبيق مثل: One Sec\nيقدم التطبيق وقفة قصيرة في كل مرة تحاول فيها فتح الوسائط الاجتماعية أو التطبيقات الأخرى المحددة.\nيعمل كحاجز شاشة مؤقت بينك وبين المشتتات، مما يساعدك على إمساك نفسك وتحديد ما إذا كنت مشتتًا أو متعمدًا.\nيمكنك استخدام التطبيق على الموبايل أو على الحاسوب.\n\n\n\n\n\nOne Sec\n\n\n\n6. احذف التطبيقات غير الضرورية\n\nإذا كان التطبيق المشتت للانتباه لا يضيف أي قيمة حقيقية، فإن الحل الأبسط غالبًا ما يكون الأفضل.\nاحذفه من جهازك تمامًا.\nثم، استخدم وقتك الذي تم تحريره حديثًا في أنشطة مفيدة.\nمن التجارب المثيرة هي حذف تطبيق اليوتيوب من الموبايل واستخدامه من المتصفح، سيقلل هذا من الانغماس ويفضل حذف كلا من المتصفح واليوتيوب!!\nيمكنك التخلص من تطبيق اليوتيوب بالكامل على نظام أندرويد بدون عمل روت باستخدام Adb manager.\nوعندما تريد مشاهدة اليوتيوب أو باقي وسائل التواصل الاجتماعي، يمكنك استخدام الحاسوب فهو أقل عرضة للتشتت والاستخدام في أوقات مثل قبل النوم أو في أثناء المرحاض أو تناول الطعام في المطبخ مثلاً!\n\n7. أعد تشكيل عالمك كما تريد\n\nإذا ما زلت تريد استخدام بعض التطبيقات، يمكنك التحكم في كيفية العرض وماذا تريد أن ترى وما لا تريد، والتوقف عن التشتت مثلاً.\nبعض إضافات المتصفح التي تسمح لك بتعديل الموقع:\n\nMinimal theme for twitter: تسمح لك بتغيير إعداد عرض تويتر الخاص بك.\n\n\n\n\n\n\nMinimal Theme for Twitter\n\n\n\nUnhook\n\n\n\n\nEnhancer for Youtube - 1\n\n\n\nEnhancer for youtube\n\n\n\n\nEnhancer for Youtube - 2\n\n\n\n8. مراقبة الوقت\n\nمن التطبيقات المفيدة لمراقبة الوقت على الحاسوب والمفتوحة المصدر أيضًا هي: ActivitWatch\n\n\n\n\n\nActivity Watch Example\n\n\n\nهاتف غبي\n\nيمكنك استخدام تطبيق\n\ndumb phone\n\nيساعدك التطبيق علي اختيار التطبيقات التي تريد فتحها فقط ويقوم بتغيير الايقونة لتصبح اسم مجرد مما يجعلك اكثر وعيا عند محاولتك فتح التطبيق\nيمكنك تجربة تطبيق الهاتف الغبي باستخدام رابط التنزيل أدناه.\n\n\n\ndumb phone\n\n\n\n\n\ndumb phone example\n\n\n\n\n\nreview of dumb phone\n\n\n\n\nمراجع\n\nمسلكيات\nعمل عميق\nتبسيط الحياة الرقمية\nفن تبسيط الحياة"
-  },
-  {
-    "objectID": "blog/posts/life_style/why_I_am_blogging.html#why-i-am-blogging",
-    "href": "blog/posts/life_style/why_I_am_blogging.html#why-i-am-blogging",
-    "title": "why i am blogging",
-    "section": "Why I am blogging",
-    "text": "Why I am blogging\n\nI am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).\nIt serves as a resume and blueprint for my existence in this world.\nMy goal is to help others by providing valuable content that makes their lives easier and better.\nOrganizing my knowledge and recapping topics I’ve forgotten helps me experience “aha” moments! 💡\n\nIt’s a test of whether I truly understand something or not.\n\nI don’t like social media posts, Facebook, Twitter, or LinkedIn articles. I believe these platforms are not the best places for technical blogs, and their disadvantages outweigh the advantages.\nI value the freedom of speech. Some topics or thoughts may be censored on social media, but I want to express my opinions without restrictions from others whose opinions I may not respect.\nI want to discuss topics while I’m learning them because they’re still fresh in my mind. This will help anyone in a similar position as me in the future.\nWhen studying a topic and knowing that I can write about it on my blog, I find my mind more focused on details that would fit well in the blog. This makes the learning process more enjoyable, focused, and valuable.\nI want my posts and knowledge to be more organized!\n\nWho will search for a post written six years ago on Facebook or see your first tweet?\nThis problem is related to the feed of these social platforms."
-  },
-  {
-    "objectID": "blog/posts/life_style/why_I_am_blogging.html#references",
-    "href": "blog/posts/life_style/why_I_am_blogging.html#references",
-    "title": "why i am blogging",
-    "section": "References",
-    "text": "References\n\nhttps://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045"
-  },
-  {
-    "objectID": "blog/posts/life_style/kamcalorie.html",
-    "href": "blog/posts/life_style/kamcalorie.html",
-    "title": "كم كالوري في الطعام ؟",
-    "section": "",
-    "text": "موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي"
-  },
-  {
-    "objectID": "blog/posts/life_style/kamcalorie.html#كم-كالوري",
-    "href": "blog/posts/life_style/kamcalorie.html#كم-كالوري",
-    "title": "كم كالوري في الطعام ؟",
-    "section": "",
-    "text": "موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي"
-  },
-  {
-    "objectID": "blog/posts/life_style/kamcalorie.html#مميزات-الموقع",
-    "href": "blog/posts/life_style/kamcalorie.html#مميزات-الموقع",
-    "title": "كم كالوري في الطعام ؟",
-    "section": "مميزات الموقع",
-    "text": "مميزات الموقع\nالموقع مبني بهدف تطبيقات تقنيات معالجة اللغات الطبيعية والنماذج اللغوية لتوفير كافة المعلومات التي قد يحتاجها الفرد مثل: 1. البحث الذكي : البحث باستخدام المعني سواء باللغة العربية أو الإنجيليزية وحتي كافة اللغات و يمكنك البحث باي طريقة سواء لغة عربية فصحية او العامية او حتي أخطاء إملائية 2. سرعة في إستراجاع المعلومات وعرضها في شكل بياني مميز يسمح لك بمعرفة المهم في وقت فوري 3. يمكنك إدخال ما أكل بشكل كامل و الموقع يقوم بحساب التقديرات اللازمة لك\n\n\n\nكم كالوري"
-  },
-  {
-    "objectID": "blog/posts/life_style/kamcalorie.html#خاتمة",
-    "href": "blog/posts/life_style/kamcalorie.html#خاتمة",
-    "title": "كم كالوري في الطعام ؟",
-    "section": "خاتمة",
-    "text": "خاتمة\nيعتبر موقع كم كالوري بداية الي سلسلة ممن المنتجات التي تسهل علي الناطقين بالعربية ممارسة الرياضة و لعيش حياة أفضل و هناك الكثير قادم مثل : 1. كوب بروتين 2. عضلاتي\nقام بتطوير و إنشاء الموقع عبد الكريم الخطيب باحث في علوم الذكاء الإصطناعي و مهتم باثراء المحتوي العربي"
   },
   {
     "objectID": "blog/posts/life_style/protienai.html",
@@ -1258,6 +1335,6 @@
     "href": "blog/feed.html",
     "title": "Kareem’s Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWhat is an Array ?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmy dream job at Tarteel\n\n\n\n\n\n\nblogging\n\n\ntarteel\n\n\nspeech_recognition\n\n\nmachine_learning\n\n\nquran\n\n\njob\n\n\n\nSharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer\n\n\n\n\n\nMar 18, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nفن تبسيط الحياة الرقمية\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nفن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية\n\n\n\n\n\nFeb 5, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMath Skills For AI\n\n\n\n\n\n\nblogging\n\n\nai\n\n\nmath\n\n\nlinear_algebra\n\n\ncalculus\n\n\nstatistics\n\n\nprobability\n\n\n\nImproving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible\n\n\n\n\n\nJan 27, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nكم كالوري في الطعام ؟\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nأول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية\n\n\n\n\n\nJan 8, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nأفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nبروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج رامي لابس\n\n\n\n\n\nJan 8, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is Federated Learning\n\n\n\n\n\n\nblogging\n\n\npublish\n\n\nfl\n\n\n\nA quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.\n\n\n\n\n\nNov 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Ads Black Box\n\n\n\n\n\n\nblogging\n\n\npublish\n\n\ngoogle\n\n\nseo\n\n\nads\n\n\n\nSuspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy\n\n\n\n\n\nOct 5, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nLearning Data Structures and Algorithms as Machine Learning Engineer\n\n\n\n\n\nTrying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.\n\n\n\n\n\nOct 4, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nReview of Huawei watch gt 4\n\n\n\n\n\n\nhuawei\n\n\nwatch\n\n\nexp\n\n\nblogging\n\n\npublish\n\n\n\nHuawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media\n\n\n\n\n\nOct 4, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nThe curse of SEO\n\n\n\n\n\n\nblogging\n\n\nseo\n\n\n\nDiscover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine optimization.\n\n\n\n\n\nJul 31, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nجاذبية مزيفة و عالم مخادع\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nمخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.\n\n\n\n\n\nJul 10, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMy little Dragon “kobo”\n\n\n\n\n\nA review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.\n\n\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAfter one year of using Huawei Mate 11 without google services\n\n\n\n\n\nSharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience with, noteshelf,concepts, infinte painter, Flexcil and Gbox\n\n\n\n\n\nDec 7, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nHuawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!\n\n\n\n\n\nReview of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the FreeBuds pro 2\n\n\n\n\n\nDec 6, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMTEB Massive Text Embedding Benchmark\n\n\n\n\n\nMTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.\n\n\n\n\n\nOct 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\ntiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”\n\n\n\n\n\nlet’s explore this applications with txtai and other workflow with some notes and future directions\n\n\n\n\n\nOct 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nhavrard CS197 AI research experiences\n\n\n\n\n\nEmbark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of experiences and crucial insights delivered through quick, digestible lectures, designed for enthusiasts and beginners alike. Complete the course in just one or two days, exploring topics ranging from AI language models to advanced techniques in research paper analysis.\n\n\n\n\n\nJul 18, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nwhy i am blogging\n\n\n\n\n\n\nlife\n\n\nblogging\n\n\npublish\n\n\n\nwhy i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer\n\n\n\n\n\nJul 18, 2023\n\n\nKareem Elkhateb\n\n\n\n\n\n\n\n\n\n\n\n\nHow I am using NLP to improve my Websites SEO\n\n\n\n\n\n\nlife\n\n\nblogging\n\n\npublish\n\n\nseo\n\n\n\nHow i use python scripts and natural language processing to improve my landing page SEO\n\n\n\n\n\nJul 18, 2023\n\n\nKareem Elkhateb\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWhat is an Array ?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCloud GPU Pricing Comparsion in 2025\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nExplore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like our model size calculator to find the cheapest cloud GPUs for AI and HPC tasks.\n\n\n\n\n\nApr 4, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nmy dream job at Tarteel\n\n\n\n\n\n\nblogging\n\n\ntarteel\n\n\nspeech_recognition\n\n\nmachine_learning\n\n\nquran\n\n\njob\n\n\n\nSharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer\n\n\n\n\n\nMar 18, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nفن تبسيط الحياة الرقمية\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nفن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية\n\n\n\n\n\nFeb 5, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMath Skills For AI\n\n\n\n\n\n\nblogging\n\n\nai\n\n\nmath\n\n\nlinear_algebra\n\n\ncalculus\n\n\nstatistics\n\n\nprobability\n\n\n\nImproving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible\n\n\n\n\n\nJan 27, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nكم كالوري في الطعام ؟\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nأول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية\n\n\n\n\n\nJan 8, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nأفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nبروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج رامي لابس\n\n\n\n\n\nJan 8, 2025\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is Federated Learning\n\n\n\n\n\n\nblogging\n\n\npublish\n\n\nfl\n\n\n\nA quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.\n\n\n\n\n\nNov 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Ads Black Box\n\n\n\n\n\n\nblogging\n\n\npublish\n\n\ngoogle\n\n\nseo\n\n\nads\n\n\n\nSuspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy\n\n\n\n\n\nOct 5, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nLearning Data Structures and Algorithms as Machine Learning Engineer\n\n\n\n\n\nTrying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.\n\n\n\n\n\nOct 4, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nReview of Huawei watch gt 4\n\n\n\n\n\n\nhuawei\n\n\nwatch\n\n\nexp\n\n\nblogging\n\n\npublish\n\n\n\nHuawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media\n\n\n\n\n\nOct 4, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nThe curse of SEO\n\n\n\n\n\n\nblogging\n\n\nseo\n\n\n\nDiscover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine optimization.\n\n\n\n\n\nJul 31, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nجاذبية مزيفة و عالم مخادع\n\n\n\n\n\n\nblogging\n\n\nidea_Forge\n\n\npublish\n\n\nrough_thoughts\n\n\nlife_style\n\n\n\nمخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.\n\n\n\n\n\nJul 10, 2024\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMy little Dragon “kobo”\n\n\n\n\n\nA review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.\n\n\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAfter one year of using Huawei Mate 11 without google services\n\n\n\n\n\nSharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience with, noteshelf,concepts, infinte painter, Flexcil and Gbox\n\n\n\n\n\nDec 7, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nHuawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!\n\n\n\n\n\nReview of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the FreeBuds pro 2\n\n\n\n\n\nDec 6, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nMTEB Massive Text Embedding Benchmark\n\n\n\n\n\nMTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable to a variety of tasks.\n\n\n\n\n\nOct 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\ntiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”\n\n\n\n\n\nlet’s explore this applications with txtai and other workflow with some notes and future directions\n\n\n\n\n\nOct 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nhavrard CS197 AI research experiences\n\n\n\n\n\nEmbark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of experiences and crucial insights delivered through quick, digestible lectures, designed for enthusiasts and beginners alike. Complete the course in just one or two days, exploring topics ranging from AI language models to advanced techniques in research paper analysis.\n\n\n\n\n\nJul 18, 2023\n\n\nkareem\n\n\n\n\n\n\n\n\n\n\n\n\nwhy i am blogging\n\n\n\n\n\n\nlife\n\n\nblogging\n\n\npublish\n\n\n\nwhy i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer\n\n\n\n\n\nJul 18, 2023\n\n\nKareem Elkhateb\n\n\n\n\n\n\n\n\n\n\n\n\nHow I am using NLP to improve my Websites SEO\n\n\n\n\n\n\nlife\n\n\nblogging\n\n\npublish\n\n\nseo\n\n\n\nHow i use python scripts and natural language processing to improve my landing page SEO\n\n\n\n\n\nJul 18, 2023\n\n\nKareem Elkhateb\n\n\n\n\n\n\nNo matching items"
   }
 ]
