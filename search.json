@@ -726,7 +726,7 @@
     "href": "index.html#production-projects",
     "title": "kareem's Blog",
     "section": "Production projects",
-    "text": "Production projects\nYou can look at some of my projects on both opensource and production like:\n\nكم كالوري : semantic search engine built for healthcare\nseo rat : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more"
+    "text": "Production projects\nYou can look at some of my projects on both opensource and production like:\n\nكم كالوري : semantic search engine built for healthcare\nseo rat : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more\nGpuVec: Rent GPUs pricing : Find the best GPU to rent from best Cloud Providers based on Mulitple factors like Vram, price, cuda core..etc"
   },
   {
     "objectID": "index.html#feed",
