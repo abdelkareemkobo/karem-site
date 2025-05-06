@@ -49,8 +49,10 @@ I'm open to consulting work and other forms of advisory. Email me at `kareem0109
 You can look at some of my projects on both opensource and production  like:
 
 1. [كم كالوري](https://kamcalorie.com) : semantic search engine built for healthcare 
+
 2. [seo rat](https://github.com/abdelkareemkobo/seo_rat) : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more 
 
+3. [GpuVec: Rent GPUs pricing](https://gpuvec.com) : Find the best GPU to rent from best Cloud Providers based on Mulitple factors like Vram, price, cuda core..etc
 ---
 
 ## 📮 Feed
