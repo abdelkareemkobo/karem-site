@@ -17,72 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Fri, 16 May 2025 21:00:00 GMT</lastBuildDate>
-<item>
-  <title>TIL ? Tody I lernt to create TIL</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/til/2025-05-17-til.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="why-til" class="level2">
-<h2 class="anchored" data-anchor-id="why-til">Why TIL ?</h2>
-<p>It helps you overcome the perfacationsim in writting. you don’t need to create great article in depth about things you want to share or learn about..etc, all what you want it to write a thing you were trying to learn or solve today and how you solve it</p>
-<p>which will help me more focused and make the process of learning more easier and useful for me and others</p>
-</section>
-<section id="create-your-own-gravitey" class="level2">
-<h2 class="anchored" data-anchor-id="create-your-own-gravitey">create your own gravitey</h2>
-<p>sometimes you want to reach and communicate with people in the same space of problems you are solving, search engines are very bad in provide the information you want..this is related to how these engines work and other SEO stuff. but for me, i can’t reach people and help them or get benefit from them because they simple don’t know about me!!</p>
-<p>TIL will decreases this spaces and daily TIl about the things i am learning which are alot will start to give me nice SEO and unique because i am talking about things i don’t know and i am interested in and there will be much people in the same boat this will increase my X account and linkedin and this is very useful in the current time.</p>
-</section>
-<section id="tils-level-up" class="level2">
-<h2 class="anchored" data-anchor-id="tils-level-up">TILs level up</h2>
-<p>I also want to think in way to extract more crafted blogs from my TILs. but just start making it habbit and will see who will it comes in the end.</p>
-<p>initial thoughts: 1. weekly recap from my TILs and SEO optimization for the keywords that is increasing and i am interested in 2. ML to extract related stuff, for example i will want to take about the folloinwg topics: - Late interaciton (Pylate, Colbertv2, ColPali) - Searching - Model2vec - Visino Language models..etc collecting them and start writing about them and adding internal links for them will be very useful to improve my blog system</p>
-</section>
-<section id="things-i-learned-the-last-2-days" class="level2">
-<h2 class="anchored" data-anchor-id="things-i-learned-the-last-2-days">Things i learned the last 2 days</h2>
-<section id="the-best-way-to-increase-traffic-is-comment-with-valuble-knowledge." class="level3">
-<h3 class="anchored" data-anchor-id="the-best-way-to-increase-traffic-is-comment-with-valuble-knowledge.">The best way to increase traffic is comment with valuble knowledge.</h3>
-<p>I was scorlling on X and found some popular account tweets about Harvard CS197 AI Research and i had create a review year ago about it I add the link in the comment and just slept. Boom i found reply analytics links opened wihtout annoying anyone!! - 501 Impressions - 77 Engagements - 2 profile visits - 74 clicks</p>
-</section>
-</section>
-<section id="what-is-palid-index" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-palid-index">What is PALID index?</h2>
-<p>PLAID index is for indexing very large datasets with Later interaction models like (Colbertv2 &amp; ColPali) IT Solves the storage footprint and allow you to scale to infinity</p>
-<p>They swapped the faiss from facebook what is nice thing because i have multiple bad time to install it especially the GPU version.</p>
-<p>and used fastkeamns from the amazing <span class="citation" data-cites="bclaive">@bclaive</span> which i really like his work on embeddings</p>
-<p>It’s replacement for Voyager-based HNSW index which was very bad for scaling Late-Interaction retrieval models</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ol type="1">
-<li><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://x.com/antoine_chaffin/status/1923378986219958526.png" class="img-fluid figure-img"></p>
-<figcaption>Antoine tweet</figcaption>
-</figure>
-</div></li>
-<li><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://betatim.github.io/posts/til-explained/.png" class="img-fluid figure-img"></p>
-<figcaption>betatim TIL</figcaption>
-</figure>
-</div></li>
-</ol>
-
-
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>til</category>
-  <guid>https://kareemai.com/blog/posts/til/2025-05-17-til.html</guid>
-  <pubDate>Fri, 16 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/til" medium="image"/>
-</item>
+<lastBuildDate>Wed, 14 May 2025 21:00:00 GMT</lastBuildDate>
 <item>
   <title>Zaraah model2vec for Arabic NLP with magical power</title>
   <dc:creator>kareem </dc:creator>
@@ -2533,6 +2468,55 @@ Inputs are two sets of sentences from two different languages. For each sentence
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</guid>
+  <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>why i am blogging</title>
+  <dc:creator>Kareem Elkhateb</dc:creator>
+  <link>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="table-of-contents" class="level2">
+
+</section>
+<section id="why-i-am-blogging" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-am-blogging">Why I am blogging</h2>
+<ol type="1">
+<li>I am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).</li>
+<li>It serves as a resume and blueprint for my existence in this world.</li>
+<li>My goal is to help others by providing valuable content that makes their lives easier and better.</li>
+<li>Organizing my knowledge and recapping topics I’ve forgotten helps me experience “aha” moments! 💡
+<ol type="1">
+<li>It’s a test of whether I truly understand something or not.</li>
+</ol></li>
+<li>I don’t like social media posts, Facebook, Twitter, or LinkedIn articles. I believe these platforms are not the best places for technical blogs, and their disadvantages outweigh the advantages.</li>
+<li>I value the freedom of speech. Some topics or thoughts may be censored on social media, but I want to express my opinions without restrictions from others whose opinions I may not respect.</li>
+<li>I want to discuss topics while I’m learning them because they’re still fresh in my mind. This will help anyone in a similar position as me in the future.</li>
+<li>When studying a topic and knowing that I can write about it on my blog, I find my mind more focused on details that would fit well in the blog. This makes the learning process more enjoyable, focused, and valuable.</li>
+<li>I want my posts and knowledge to be more organized!
+<ol type="1">
+<li>Who will search for a post written six years ago on Facebook or see your first tweet?</li>
+<li>This problem is related to the feed of these social platforms.</li>
+</ol></li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>https://medium.com/<span class="citation" data-cites="racheltho/why-you-yes-you-should-blog-7d2544ac1045">@racheltho/why-you-yes-you-should-blog-7d2544ac1045</span></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>life</category>
+  <category>blogging</category>
+  <category>publish</category>
+  <guid>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</guid>
   <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>

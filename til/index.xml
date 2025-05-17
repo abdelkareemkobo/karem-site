@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>kareem&#39;s Blog</title>
+<link>https://kareemai.com/til/</link>
+<atom:link href="https://kareemai.com/til/index.xml" rel="self" type="application/rss+xml"/>
+<description>Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language.</description>
+<image>
+<url>https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png</url>
+<title>kareem&#39;s Blog</title>
+<link>https://kareemai.com/til/</link>
+</image>
+<generator>quarto-1.6.40</generator>
+<lastBuildDate>Fri, 16 May 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>TIL ? Tody I lernt to create TIL</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-05-17-til.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="why-til" class="level2">
+<h2 class="anchored" data-anchor-id="why-til">Why TIL ?</h2>
+<p>It helps you overcome the perfacationsim in writting. you don’t need to create great article in depth about things you want to share or learn about..etc, all what you want it to write a thing you were trying to learn or solve today and how you solve it</p>
+<p>which will help me more focused and make the process of learning more easier and useful for me and others</p>
+</section>
+<section id="create-your-own-gravitey" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-own-gravitey">create your own gravitey</h2>
+<p>sometimes you want to reach and communicate with people in the same space of problems you are solving, search engines are very bad in provide the information you want..this is related to how these engines work and other SEO stuff. but for me, i can’t reach people and help them or get benefit from them because they simple don’t know about me!!</p>
+<p>TIL will decreases this spaces and daily TIl about the things i am learning which are alot will start to give me nice SEO and unique because i am talking about things i don’t know and i am interested in and there will be much people in the same boat this will increase my X account and linkedin and this is very useful in the current time.</p>
+</section>
+<section id="tils-level-up" class="level2">
+<h2 class="anchored" data-anchor-id="tils-level-up">TILs level up</h2>
+<p>I also want to think in way to extract more crafted blogs from my TILs. but just start making it habbit and will see who will it comes in the end.</p>
+<p>initial thoughts: 1. weekly recap from my TILs and SEO optimization for the keywords that is increasing and i am interested in 2. ML to extract related stuff, for example i will want to take about the folloinwg topics: - Late interaciton (Pylate, Colbertv2, ColPali) - Searching - Model2vec - Visino Language models..etc collecting them and start writing about them and adding internal links for them will be very useful to improve my blog system</p>
+</section>
+<section id="things-i-learned-the-last-2-days" class="level2">
+<h2 class="anchored" data-anchor-id="things-i-learned-the-last-2-days">Things i learned the last 2 days</h2>
+<section id="the-best-way-to-increase-traffic-is-comment-with-valuble-knowledge." class="level3">
+<h3 class="anchored" data-anchor-id="the-best-way-to-increase-traffic-is-comment-with-valuble-knowledge.">The best way to increase traffic is comment with valuble knowledge.</h3>
+<p>I was scorlling on X and found some popular account tweets about Harvard CS197 AI Research and i had create a review year ago about it I add the link in the comment and just slept. Boom i found reply analytics links opened wihtout annoying anyone!! - 501 Impressions - 77 Engagements - 2 profile visits - 74 clicks</p>
+</section>
+</section>
+<section id="what-is-palid-index" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-palid-index">What is PALID index?</h2>
+<p>PLAID index is for indexing very large datasets with Later interaction models like (Colbertv2 &amp; ColPali) IT Solves the storage footprint and allow you to scale to infinity</p>
+<p>They swapped the faiss from facebook what is nice thing because i have multiple bad time to install it especially the GPU version.</p>
+<p>and used fastkeamns from the amazing <span class="citation" data-cites="bclaive">@bclaive</span> which i really like his work on embeddings</p>
+<p>It’s replacement for Voyager-based HNSW index which was very bad for scaling Late-Interaction retrieval models</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://x.com/antoine_chaffin/status/1923378986219958526">Antoine tweet</a></li>
+<li><a href="https://betatim.github.io/posts/til-explained/">betatim TIL</a></li>
+<li><a href="https://kareemai.com/til/">other TILs</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <guid>https://kareemai.com/til/tils/2025-05-17-til.html</guid>
+  <pubDate>Fri, 16 May 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>
