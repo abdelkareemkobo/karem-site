@@ -54,6 +54,17 @@
 <p>and used fastkeamns from the amazing <span class="citation" data-cites="bclaive">@bclaive</span> which i really like his work on embeddings</p>
 <p>It’s replacement for Voyager-based HNSW index which was very bad for scaling Late-Interaction retrieval models</p>
 </section>
+<section id="prime-intellect-vs-gpuvec" class="level2">
+<h2 class="anchored" data-anchor-id="prime-intellect-vs-gpuvec">Prime Intellect VS Gpuvec</h2>
+<p>I was creating a website to find and compare the cloud compute instances from all cloud providers in easy and interactive way.</p>
+<p>I started to work on it the last month, but stoped for other work.</p>
+<p>suddenly i found this website which is called Prime intellect.</p>
+<p>And i just want to say,woooooow. it’s a piece of art. The design and information on it and how fast, accurate is very embrassing for my poor gpuvec.com</p>
+<p>should i continue improve my website?</p>
+<p>Actually yes, we share similar goals but there is multiple chances to compete or even collaborite!! who knows!</p>
+<p>They are more than just listing and compare prices, then enable you to use these GPUs from their website.</p>
+<p>Also they create decentralized models and have a mutliple expirened engineers.</p>
+</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ol type="1">
