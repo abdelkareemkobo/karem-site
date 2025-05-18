@@ -15,7 +15,95 @@
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Fri, 16 May 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 17 May 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Explore the Qdrant Blog core concepts | Part 1</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-05-18-til.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="overview-of-qdrant-features-and-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-qdrant-features-and-concepts">Overview of Qdrant features and Concepts</h2>
+<p>I will divide the blogs into 3 types:</p>
+<ol type="1">
+<li><p>Startups using Qdrant: why and comparision you get read nice usecases with some numbers of comparision and how qdrant is amazing</p></li>
+<li><p>Startup using Qdrant++: The same but with code snippets and System Design discussion..very useful for me as a developer</p></li>
+<li><p>Qdrant releases: New features in Qdrant and how to use them.</p></li>
+</ol>
+<p><strong>Remember this when i will build Agentic RAG in the new job</strong></p>
+<p>users tend to ask more structured, analytical questions when they know a database is involved—queries better suited to SQL than vector search. This prompted the team to pair Qdrant with a text-to-SQL system, blending unstructured and structured query capabilities for a more versatile agent.</p>
+<section id="hotel-search-with-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="hotel-search-with-vectors">Hotel Search with Vectors</h3>
+<p>Superlinked enhances search by embedding each attribute (text, numbers, categories) into specialized spaces, enabling nuanced, multi-attribute queries.</p>
+<p>An LLM interprets user intent, assigning weights to preferences (e.g., price, rating), allowing flexible, business-driven ranking without system redesign.</p>
+<p>Hard filters narrow results, while weighted nearest neighbor search ranks them by user preferences.</p>
+<p>This unified approach supports multimodal search—combining semantic text, scaled numerical, and categorical data—preserving relationships and preference strengths.</p>
+<p>Unlike traditional systems that separate or flatten data, Superlinked enables simultaneous, weighted consideration of all attributes, solving challenges like reconciling</p>
+<p>results across types and capturing nuanced user intent.</p>
+</section>
+<section id="reciprocal-rank-rusion-rrf" class="level3">
+<h3 class="anchored" data-anchor-id="reciprocal-rank-rusion-rrf">Reciprocal Rank Rusion (RRF)</h3>
+<p>Qdrant’s native support for Reciprocal Rank Fusion (RRF) streamlined their retriever implementations, reducing hybrid search code by 80%. The multi-vector capabilities also enabled more sophisticated retrieval methods that better captured semantic relationships.</p>
+</section>
+<section id="qdrant-1.13-gpu-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="qdrant-1.13-gpu-indexing">Qdrant 1.13 GPU Indexing</h3>
+<p>Here is summary of these new features</p>
+<section id="gpu-accelerated-indexing-with-qdrant" class="level4">
+<h4 class="anchored" data-anchor-id="gpu-accelerated-indexing-with-qdrant">GPU Accelerated Indexing with Qdrant</h4>
+<p><strong>You can Index over all majro GPU vendors including NVIDIA,AMD and Intel that support Vulkan API to get speeds up to 10x faster than CPU-based methods</strong>*</p>
+<p>As of right now this solution supports only on-premises deployments, but they will introduce support for Qdrant Cloud shortly.</p>
+<p>Additional benefits:</p>
+<ol type="1">
+<li><p>Multi-GPU support</p></li>
+<li><p>GPU indexing supports all quantization options and datatypes in Qdrant</p></li>
+</ol>
+</section>
+<section id="strict-mode-for-opertional-control" class="level4">
+<h4 class="anchored" data-anchor-id="strict-mode-for-opertional-control">Strict mode for Opertional Control</h4>
+<p>Strict Mode enforces operational controls in distributed Qdrant deployments. It limits resource-intensive operations (like unindexed filtering and large batch sizes), sets boundaries on search parameters, and adds safeguards for payload sizes and timeouts. This prevents system overload, solves the “noisy neighbor” problem, and ensures reliable performance—especially in multi-tenant or serverless environments.</p>
+</section>
+<section id="hnsw-graph-compression" class="level4">
+<h4 class="anchored" data-anchor-id="hnsw-graph-compression">HNSW Graph Compression</h4>
+<p>Make search lighter on memory wihtout sacrificing speed with Delta Encoding.</p>
+<p>Delta Encoding is a clever way to compress data by storing only the differences (or “deltas”) between values. It’s commonly used in search engines (for the classical inverted index) to save space and improve performance. <em>I think i have read this with Colbertv2 using similar techniques to reduce the siz </em> it’s called <strong>residual compression mechanism</strong> needs more searching</p>
+<p>It’s now used for HNSW graph structure that powers Qdrant’s search.</p>
+</section>
+</section>
+</section>
+<section id="static-embedding-with-qdrant-and-model2vec" class="level2">
+<h2 class="anchored" data-anchor-id="static-embedding-with-qdrant-and-model2vec">Static Embedding with Qdrant and Model2vec</h2>
+<p>Static embedding from minishLab reduce the model size with 15x reduction and up to 500x speed increase while the maintain more than 85% of the performance levels. it’s like our <a href="https://kareemai.com/blog/posts/minishlab/zaraah.html">zaraah model</a> for arabic.</p>
+<p>Static embedding are dense embedding so you can also use with qdrant collections. The retrieval is not going to be any faster becuase static embeddings. but the speedup is in creating the vectors from your data and encoding the queries.</p>
+<p>If you want to make the retrieval faster use the following: 1. Matryoshka Embeddings 2. Quantization methods like (Scalar and Binary Quantization) ### When to use Static Embeddings ?</p>
+<ol type="1">
+<li><p><strong>Mobile applications</strong> - although many smartphones have powerful CPUs or even GPUs, the battery life is still a concern, and the static embeddings might be a good compromise between the quality and the power consumption. Moreover, the static embeddings can be used in the applications that require offline mode.</p></li>
+<li><p><strong>Web browser extensions</strong> - running a transformer-based model in a web browser is usually not quite an option, but static embeddings might be a good choice, as they have fewer parameters and are faster to encode.</p></li>
+<li><p><strong>Embedded systems</strong> - the static embeddings might be a good choice for the devices with limited computational power, such as IoT devices or microcontrollers.</p></li>
+</ol>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References:</h3>
+<p>There is more text in here from Qdrant not me..you can continue reading here</p>
+<ol type="1">
+<li><p><a href="https://qdrant.tech/blog/superlinked-multimodal-search/">Hotel Search</a></p></li>
+<li><p><a href="https://qdrant.tech/blog/">Qdrant Blog</a></p></li>
+<li><p><a href="https://qdrant.tech/blog/static-embeddings/">Static Embedding</a></p></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>qdrant</category>
+  <guid>https://kareemai.com/til/tils/2025-05-18-til.html</guid>
+  <pubDate>Sat, 17 May 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>TIL ? Tody I lernt to create TIL</title>
   <dc:creator>kareem </dc:creator>
