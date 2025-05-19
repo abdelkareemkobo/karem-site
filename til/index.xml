@@ -8,14 +8,153 @@
 <title>kareem&#39;s Blog</title>
 <link>https://kareemai.com/til/</link>
 <atom:link href="https://kareemai.com/til/index.xml" rel="self" type="application/rss+xml"/>
-<description>Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language.</description>
+<description>Latest TILs by Kareem</description>
 <image>
 <url>https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png</url>
 <title>kareem&#39;s Blog</title>
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Sat, 17 May 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 18 May 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Starting Substack as a AI Researcher</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-05-19-til.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-is-substack" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-substack">What is Substack?</h2>
+<p>From their about page: “On Substack, writers and creators can publish their work and make money from paid subscriptions while supporters can directly sustain the work they deeply value.”</p>
+<p>It’s a platform where you can publish what you want in an organized way, with great analytics tools and a powerful recommendation and search system.</p>
+<p>I like to think of it as a nicer version of Medium, with more than just SEO dumped from Google.</p>
+<p>I really love the network from a design perspective. It’s an organized recommendation system based on multiple aspects.</p>
+</section>
+<section id="why-use-substack-as-an-ai-researcher" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-substack-as-an-ai-researcher">Why use Substack as an AI Researcher?</h2>
+<p>I used LinkedIn and Medium, and I don’t find them very useful for engagement or building a real network.</p>
+<p>My gravity is very tiny in these networks and I can’t get bigger for multiple reasons I will discuss later.</p>
+<p>The same is true for X, but it’s a very good place for the ML community.</p>
+<p>My reasons:</p>
+<ol type="1">
+<li><p>Improve my writing style. I am not good at writing or English, but I am trying to do my best. Communication is a very important skill for my work as a researcher.</p></li>
+<li><p>I build products I want people to learn more about…more later.</p></li>
+<li><p>I have services I want to market…more later.</p></li>
+</ol>
+<p>Did you forget something?</p>
+<p>^_^</p>
+<p>Die, empty, and publish your knowledge!</p>
+<p>Actually, the main reason for me to write is that I feel lonely in my journey of learning about DL and software engineering.</p>
+<p>And I feel bored most of the time.</p>
+<p>I love the feeling that I am writing and archiving my life. This reminds me that I am doing hard work, learning new things, and my life will not end without doing great things from my point of view.</p>
+<p>Recapping what I learned when I write about it makes the concepts stick in your mind, and you get more insights from people’s comments. This is very helpful for me.</p>
+<p>For readers, you can see what I do, and you may be interested in it, be inspired, and learn from my mistakes.</p>
+<section id="following-the-giants" class="level3">
+<h3 class="anchored" data-anchor-id="following-the-giants">Following the Giants?</h3>
+<p>When I started learning about DL, I searched for a great book about DL and PyTorch that is well explained in both code and theory.</p>
+<p>I found the amazing <a href="https://sebastianraschka.com/">Sebastian Raschka book</a>, then I wanted more content like this.</p>
+<p>I found his Substack where he publishes what he learns. At the same time, I found similar people like</p>
+<ul>
+<li><p><a href="https://substack.com/@jayalammar">Jay Alammar</a></p></li>
+<li><p><a href="https://newsletter.maartengrootendorst.com/">Maarten Grootendorst</a></p></li>
+<li><p><a href="https://decodingml.substack.com/p/llm-engineers-handbook-is-finally">Paul Iusztin</a></p></li>
+</ul>
+<p>These people I follow and appreciate what they provide!</p>
+<p>So I started to ask, why do they use Substack?</p>
+<p>The answer is very clear if you know them ^_^</p>
+</section>
+<section id="quick-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="quick-analysis">Quick analysis</h3>
+<p>The UI/UX, speed of the website, and animations are very cool.</p>
+<p>Let’s look at the level I want to reach :)</p>
+<section id="ahead-of-ai" class="level4">
+<h4 class="anchored" data-anchor-id="ahead-of-ai">Ahead of AI</h4>
+<p>On 28/04/2023</p>
+<p>It reached 15,028 free subscribers and only 69 paid ones!</p>
+<p>This is very disappointing for me.</p>
+<p>You don’t know if these are monthly or yearly paid and how much they give.</p>
+<p>Of course, I don’t know how much he earns or others. I want to motivate myself and not create high expectations. He is doing great stuff, really great. His content is in the top 5 for me for AI and real content.</p>
+<p>No scams, no “read this paper,” “look at this book,” “here are the top 1000 chatbots that are better than 10 who are better than GPT!!”</p>
+<p>Oh my god, QwenClaudeMixtral just released a model that will convert space into water in the year 1021932103120931920.</p>
+<p>This is very silly if you respect your readers’ minds!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/til/tils/images/old_ahead_of_ai.jpg" class="img-fluid figure-img"></p>
+<figcaption>Ahead of AI subscribers in 2024</figcaption>
+</figure>
+</div>
+<p>What about now?</p>
+<p>He has more than 105k+ and is #71 Rising in Technology. I don’t know why 71!! He must be top 5.</p>
+<p><strong>Jay Alammar</strong> =&gt; 23k+ subscribers</p>
+<p><strong>Maarten Grootendorst</strong> =&gt; 20k+ subscribers<br>
+<strong>Paul Iusztin</strong> =&gt; 25k+ subscribers</p>
+<p>Most likes per post are around 10 to 20 only!</p>
+<p>The comments are around 0 to 5 :)</p>
+</section>
+</section>
+<section id="my-goal-in-the-coming-6-months" class="level3">
+<h3 class="anchored" data-anchor-id="my-goal-in-the-coming-6-months">My Goal in the coming 6 months?</h3>
+<p>I am doing multiple things at the current time.</p>
+<p>I am on 4 projects and doing my Master Thesis and a lot of projects and websites I am developing.</p>
+<p>I will not be able to provide much, but I will try my best.</p>
+<p>I don’t care about the number of subscribers, I care about real ones, who will comment and read the content. If I can get 30 people to read it, this is great. Really, if you imagine 30 people in your room watching what you did, it’s mind-blowing. Imagine 300 or 3,000…Wow.</p>
+<p>For money, if I can get only $200 per month, this is very great as a start.</p>
+<section id="disease-from-other-websites" class="level4">
+<h4 class="anchored" data-anchor-id="disease-from-other-websites">Disease from other websites?</h4>
+<p>I noticed the following issues on the first day:</p>
+<ol type="1">
+<li><p>Sh*** shorts and copyright issues: By copyright, I mean some people take others’ content from outside Substack and post it as if it is their own and get followers for this! This is very bad. I don’t like strict copyright like “you copied this sentence” or “used a logo,” but stealing the whole content!!!</p></li>
+<li><p>Very short articles compared to normal tweets! I found a lot of articles that appeared to me are like tweets…I thought I was in a place where people write in-depth content, not clickbait.</p></li>
+</ol>
+<p>I don’t talk about the post but the long-form ones.</p>
+<ol start="3" type="1">
+<li>Drop your Substack fake numbers: A lot of people post “drop your Substack below and whatever it’s about I will exchange” and multiple similar things!! What is the</li>
+<li>purpose then… you have 1 million subscribers, then what?</li>
+</ol>
+</section>
+<section id="there-is-no-official-api-for-substack" class="level4">
+<h4 class="anchored" data-anchor-id="there-is-no-official-api-for-substack">There is no official API for Substack</h4>
+<p>The most annoying thing in Substack is there is no current API to develop apps, create extensions, and automate a lot of things.</p>
+</section>
+</section>
+<section id="what-things-can-i-write-about" class="level3">
+<h3 class="anchored" data-anchor-id="what-things-can-i-write-about">What things can I write about?</h3>
+<p>You seem to love to talk a lot? What will you write then?</p>
+<p>It’s very obvious…</p>
+<p>I want to talk about the following:</p>
+<ol type="1">
+<li><p>Compute world with AI, fine-tuning/training, and cloud instances, etc.</p></li>
+<li><p>Products I use and tried, not product reviews.</p></li>
+<li><p>Books and papers I read and summarized.</p></li>
+<li><p>TILs, what I learned today!</p></li>
+<li><p>Novel writing about the AI world like vector databases, embedding, and searching, etc.</p></li>
+<li><p>Applications I build and services I provide.</p></li>
+<li><p>My workflow and software i use.</p></li>
+<li><p>Substack tips and analysis.</p></li>
+</ol>
+<p>you can find links here for now: 1. Gpuvec publications</p>
+<ol start="2" type="1">
+<li><p>Kareem’s TILs</p></li>
+<li><p>Kareem substack</p></li>
+</ol>
+<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
+</iframe>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>seo</category>
+  <category>substack</category>
+  <guid>https://kareemai.com/til/tils/2025-05-19-til.html</guid>
+  <pubDate>Sun, 18 May 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/images/old_ahead_of_ai.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Explore the Qdrant Blog core concepts | Part 1</title>
   <dc:creator>kareem </dc:creator>
