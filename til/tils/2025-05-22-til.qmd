@@ -1,0 +1,12 @@
+---
+title: A Day exploring DSPY 
+description: First Day Exploring and trying to learn about what is DSPy 
+author: kareem
+date: 2025-05-22
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+image: ""
+---

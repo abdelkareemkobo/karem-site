@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kareem">
-<meta name="dcterms.date" content="2025-05-20">
-<meta name="description" content="My experience moving my domain from Hostinger to Porkbun and connecting the domains with Vercel and Railway">
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2025-05-23">
+<meta name="description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
 
-<title>Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger – kareem’s Blog</title>
+<title>Brave Leo AI with Ollama, vllm, and any huggingface llm locally – kareem’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,16 +117,20 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger – kareem’s Blog">
-<meta property="og:description" content="My experience moving my domain from Hostinger to Porkbun and connecting the domains with Vercel and Railway">
-<meta property="og:image" content="https://kareemai.com/til/tils/quarto.png">
+<meta property="og:title" content="Brave Leo AI with Ollama, vllm, and any huggingface llm locally – kareem’s Blog">
+<meta property="og:description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
+<meta property="og:image" content="https://kareemai.com/til/tils/images/brave_leo.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger – kareem’s Blog">
-<meta name="twitter:description" content="My experience moving my domain from Hostinger to Porkbun and connecting the domains with Vercel and Railway">
-<meta name="twitter:image" content="https://kareemai.com/til/tils/quarto.png">
+<meta property="og:image:height" content="923">
+<meta property="og:image:width" content="1866">
+<meta name="twitter:title" content="Brave Leo AI with Ollama, vllm, and any huggingface llm locally – kareem’s Blog">
+<meta name="twitter:description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
+<meta name="twitter:image" content="https://kareemai.com/til/tils/images/brave_leo.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="923">
+<meta name="twitter:image-width" content="1866">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -149,34 +188,36 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#moving-my-domains" id="toc-moving-my-domains" class="nav-link active" data-scroll-target="#moving-my-domains">Moving My Domains</a>
+  <li><a href="#whats-brave-leo-ai-all-about" id="toc-whats-brave-leo-ai-all-about" class="nav-link active" data-scroll-target="#whats-brave-leo-ai-all-about">What’s Brave Leo AI All About?</a>
   <ul class="collapse">
-  <li><a href="#moving-from-hostinger-to-porkbun" id="toc-moving-from-hostinger-to-porkbun" class="nav-link" data-scroll-target="#moving-from-hostinger-to-porkbun">Moving from Hostinger to Porkbun</a></li>
-  <li><a href="#connecting-railway-and-vercel-with-porkbun" id="toc-connecting-railway-and-vercel-with-porkbun" class="nav-link" data-scroll-target="#connecting-railway-and-vercel-with-porkbun">Connecting Railway and Vercel with Porkbun</a></li>
+  <li><a href="#what-can-brave-leo-ai-do" id="toc-what-can-brave-leo-ai-do" class="nav-link" data-scroll-target="#what-can-brave-leo-ai-do">What Can Brave Leo AI Do?</a></li>
+  <li><a href="#is-brave-leo-safe-to-use" id="toc-is-brave-leo-safe-to-use" class="nav-link" data-scroll-target="#is-brave-leo-safe-to-use">Is Brave Leo Safe to Use?</a></li>
+  <li><a href="#what-about-your-chat-history-with-leo" id="toc-what-about-your-chat-history-with-leo" class="nav-link" data-scroll-target="#what-about-your-chat-history-with-leo">What About Your Chat History with Leo?</a></li>
   </ul></li>
+  <li><a href="#bring-your-own-model-byom-with-brave-leo" id="toc-bring-your-own-model-byom-with-brave-leo" class="nav-link" data-scroll-target="#bring-your-own-model-byom-with-brave-leo">Bring Your Own Model (BYOM) with Brave Leo</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/til/tils/2025-05-20-til.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/til/tils/2025-05-23-til.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger</h1>
+<h1 class="title">Brave Leo AI with Ollama, vllm, and any huggingface llm locally</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
-    <div class="quarto-category">seo</div>
-    <div class="quarto-category">domains</div>
-    <div class="quarto-category">vercel</div>
-    <div class="quarto-category">porkbun</div>
     <div class="quarto-category">web</div>
+    <div class="quarto-category">ai</div>
+    <div class="quarto-category">llm</div>
+    <div class="quarto-category">local_llm</div>
+    <div class="quarto-category">ollama</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    My experience moving my domain from Hostinger to Porkbun and connecting the domains with Vercel and Railway
+    How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers
   </div>
 </div>
 
@@ -186,14 +227,14 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Kareem </p>
+             <p>kareem </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 20, 2025</p>
+      <p class="date">May 23, 2025</p>
     </div>
   </div>
   
@@ -205,40 +246,63 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </header>
 
 
-<section id="moving-my-domains" class="level2">
-<h2 class="anchored" data-anchor-id="moving-my-domains">Moving My Domains</h2>
-<p>I decided to transfer all 11 of my domains from Hostinger to other providers. I consulted two friends—a team lead in Canada and an SEO specialist in Turkey—and both recommended Porkbun.</p>
-<p>I registered with Porkbun and was required to verify my identity. They offered multiple verification options, and I chose to use my government ID. However, I faced issues: I uploaded my ID about 10 times, and it failed every time, even though the verification platform supported my language. I reached out to their help center, and the fastest response came via email.</p>
-<p>It took about 12 hours to receive a reply, which felt like a long time. The good news? They instantly verified my ID with no further issues. Later, when I asked another question, their response again took several hours, unlike Hostinger, which typically responds within 1 to 30 minutes (and at most within 2 hours). However, I found Hostinger’s customer service stricter and sometimes less friendly.</p>
-<p>I’ll discuss my reasons for moving later, but for now, let’s focus on the process.</p>
-<section id="moving-from-hostinger-to-porkbun" class="level3">
-<h3 class="anchored" data-anchor-id="moving-from-hostinger-to-porkbun">Moving from Hostinger to Porkbun</h3>
-<p>I had never transferred a domain before, so I expected it to be challenging. However, Hostinger made the process straightforward without asking why I was transferring.</p>
-<p>Here’s how to do it:</p>
-<ol type="1">
-<li>Go to your Hostinger dashboard.</li>
-<li>Disable the <strong>Privacy Protection (WHOIS Privacy Protection)</strong> button.</li>
-<li>Disable the <strong>Transfer Lock</strong> button. This may take up to 12 hours to update.</li>
-<li>Obtain the <strong>Authorization Code</strong> (EPP code) from the dashboard and save it, as you’ll need to provide it to Porkbun for the domain transfer.</li>
-</ol>
-<p>On Porkbun’s website: - Enter your domain name in the <strong>Domain Name</strong> field under the transfer section. - Copy the authorization code from Hostinger and paste it into the <strong>Auth Code</strong> field. - Click <strong>Submit</strong>.</p>
-<p>The transfer(s) will be added to your cart. From there, click <strong>Continue to Billing</strong> to pay for the transfer. It’s that simple!</p>
-<p>If your domain is older than 60 days, the transfer typically takes 5 to 7 days. Some domains may transfer in as little as 2 days, but Hostinger will send a verification request via email to confirm the transfer.</p>
-<p>Note: If your domain is less than 60 days old, you’ll need to wait until it passes the 60-day mark. There’s talk of this being reduced to 30 days, but as of this writing (May 2025), the 60-day rule applies, per ICANN regulations, not Hostinger or Porkbun.</p>
+<section id="whats-brave-leo-ai-all-about" class="level2">
+<h2 class="anchored" data-anchor-id="whats-brave-leo-ai-all-about">What’s Brave Leo AI All About?</h2>
+<p>Brave Leo AI is a super handy, privacy-first AI assistant built right into the Brave browser.</p>
+<p>It’s there to help you out with all sorts of tasks, and it works on your computer (macOS, Windows, Linux) or phone (Android and iOS).</p>
+<p>The best part? You don’t need to sign up or log in to use it for free, and it’s designed to keep your data private.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/brave_leo.png" class="img-fluid figure-img"></p>
+<figcaption>Brave Leo with Ollama or VLLM</figcaption>
+</figure>
+</div>
+<section id="what-can-brave-leo-ai-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-brave-leo-ai-do">What Can Brave Leo AI Do?</h3>
+<p>Leo’s got a lot of tricks up its sleeve: - <strong>Summarize Stuff Instantly</strong>: It can give you quick summaries of webpages, PDFs, Google Docs, Google Sheets, or even YouTube videos by reading their transcripts.</p>
+<ul>
+<li><p><strong>Answer Questions</strong>: Whether it’s about a webpage or just something you’re curious about, Leo can explain things clearly and even offer different perspectives.</p></li>
+<li><p><strong>Write and Create</strong>: Need an article, email, essay, or some code? Leo can whip it up for you.</p></li>
+<li><p><strong>Translate and Code</strong>: It can translate text into different languages or help with coding by suggesting or generating code snippets.</p></li>
+<li><p><strong>Custom AI Models</strong>: With the “Bring Your Own Model” feature, you can plug in your own local or remote AI models for a personalized experience.</p></li>
+</ul>
 </section>
-<section id="connecting-railway-and-vercel-with-porkbun" class="level3">
-<h3 class="anchored" data-anchor-id="connecting-railway-and-vercel-with-porkbun">Connecting Railway and Vercel with Porkbun</h3>
-<p>Connecting a domain to Vercel is straightforward. Follow the instructions provided by Vercel, which are similar to those for any registrar. Add the necessary DNS records in Porkbun’s <strong>DNS Management</strong> section, accessible from the domain management dashboard under your account menu.</p>
-<p>Connecting to Railway was trickier. I needed an intermediary, and I chose Cloudflare to manage my Porkbun domain’s DNS. Here’s how it worked:</p>
-<ol type="1">
-<li><p>Configure Cloudflare to manage your Porkbun domain.</p></li>
-<li><p>Add the necessary Railway DNS records to Cloudflare.</p></li>
-<li><p>Wait approximately 1 to 2 days for the DNS changes to propagate.</p></li>
-</ol>
-<p>Once the DNS updates are complete, your domain should work seamlessly with Railway.</p>
+<section id="is-brave-leo-safe-to-use" class="level3">
+<h3 class="anchored" data-anchor-id="is-brave-leo-safe-to-use">Is Brave Leo Safe to Use?</h3>
+<p>Privacy is Leo’s middle name! Here’s why it’s safe:</p>
+<ul>
+<li><p><strong>Anonymized Requests</strong>: Leo uses a reverse proxy, so Brave can’t tie your requests to your IP address.</p></li>
+<li><p><strong>No Chat Storage</strong>: Your conversations aren’t saved on Brave’s servers or used to train AI models.</p></li>
+<li><p><strong>No Sign-Up Needed</strong>: You can use it for free without an account. Even the premium version uses anonymous tokens to keep things private.</p></li>
+<li><p><strong>Local Storage</strong>: Your chat history stays on your device, and you can clear it anytime through the browser settings.</p></li>
+<li><p><strong>Heads-Up on Third-Party Models</strong>: If you use external AI models (like Anthropic’s Claude), their data policies might differ (Claude keeps chats for 30 days, for</p></li>
+<li><p>example). Always check the privacy terms if you go that route.</p></li>
+</ul>
+</section>
+<section id="what-about-your-chat-history-with-leo" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-your-chat-history-with-leo">What About Your Chat History with Leo?</h3>
+<p>If you’re using Brave version 1.75 or higher on desktop or Android (not in Incognito or Tor mode), you can keep track of your chats with Leo.</p>
+<p>They’re stored locally on your device, not on any server, so you’re in control. You can revisit, continue, or delete them from the Leo full-page view (brave://leo-ai) or the browser’s sidebar.</p>
+<p>Just note that clearing your browsing history will also wipe out any webpage-related content in your chats. Easy peasy!</p>
+</section>
+</section>
+<section id="bring-your-own-model-byom-with-brave-leo" class="level2">
+<h2 class="anchored" data-anchor-id="bring-your-own-model-byom-with-brave-leo">Bring Your Own Model (BYOM) with Brave Leo</h2>
+<p>With <a href="https://support.brave.com/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo">BYOM</a> , you can connect your own AI models to Leo for a custom experience. You can use platforms like vLLM, SGLang, or any inefernce engines with any Hugging Face Transformers model, as long as it follows the OpenAI Chat Protocol.</p>
+<p>For example, you can run a model like Qwen2.5-VL-3B-Instruct locally with this command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m sglang.launch_server <span class="op">--</span>port <span class="dv">7501</span> <span class="op">--</span>model<span class="op">-</span>path Qwen<span class="op">/</span>Qwen2<span class="fl">.5</span><span class="op">-</span>VL<span class="op">-</span><span class="dv">3</span><span class="er">B</span><span class="op">-</span>Instruct</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This sets up a server for SGLang (or you can use vLLM with a similar command).</p>
+<p>Then, in Brave Leo’s BYOM settings, add your model with these details:</p>
+<p><strong>Label</strong>: Qwen2.5-VL-3B-Instruct</p>
+<p><strong>Model Request Name</strong>: Qwen2.5</p>
+<p><strong>Server Endpoint</strong>: http://127.0.0.1:7501/v1/chat/completions</p>
+<p><strong>Context Size</strong>: 4000</p>
+<p><strong>API Key</strong>: local</p>
+<p><strong>System Prompt</strong>: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify if needed, and ensure accuracy.”</p>
+<p>Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider. Once set up, your model integrates with Leo, letting you use it directly in the browser for tailored, private AI chats. It’s like giving Leo your own custom brain!</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -704,7 +768,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/til/tils/2025-05-20-til.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/til/tils/2025-05-23-til.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
