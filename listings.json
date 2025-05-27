@@ -1,5 +1,21 @@
 [
   {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/tils/2025-05-25-til.html",
+      "/til/tils/2025-05-23-til.html",
+      "/til/tils/2025-05-21-til.html",
+      "/til/tils/2025-05-20-til.html",
+      "/til/tils/2025-05-19-til.html",
+      "/til/tils/2025-05-18-til.html",
+      "/til/tils/2025-05-17-til.html"
+    ]
+  },
+  {
+    "listing": "/oss/opensource.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/blog/posts/ds_and_algo/Static_array.html",
@@ -24,21 +40,6 @@
       "/blog/posts/courses/havrard CS197 AI research experiences.html",
       "/blog/posts/life_style/why_I_am_blogging.html",
       "/blog/posts/seo/how_i_use_nlp_for_seo.html"
-    ]
-  },
-  {
-    "listing": "/oss/opensource.html",
-    "items": []
-  },
-  {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/tils/2025-05-23-til.html",
-      "/til/tils/2025-05-21-til.html",
-      "/til/tils/2025-05-20-til.html",
-      "/til/tils/2025-05-19-til.html",
-      "/til/tils/2025-05-18-til.html",
-      "/til/tils/2025-05-17-til.html"
     ]
   },
   {

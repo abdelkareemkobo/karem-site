@@ -15,7 +15,93 @@
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Thu, 22 May 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 24 May 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>RAG RAPTOR, DFloat11 and pyrefly</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-05-25-til.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>the last 2 days i was doing some writing some more well crafted articles they will publish later and they were 2 amazing and hard days ..let’s go into the details. 1. RAPTOR RAG 2. DFloat 1 3. pyrefly 4. fastembed</p>
+<section id="what-is-raptor-rag" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-raptor-rag">What is RAPTOR RAG?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/til/tils/images/raptor.png" class="img-fluid figure-img"></p>
+<figcaption>raptor rag</figcaption>
+</figure>
+</div>
+<p>It’s a technique to imrpove they way you RAG above your documents and they say it will improve the performance by 20% ..but it don’t!</p>
+<p>What is RAPTOR ? “It’s a Tree constructed from your chunks by recursively cluster chunks of text based on their vector embeddings and generates text summaries of those cluster, constructing a tree from the bottom up.”</p>
+<p>They try to solve the problem of retrieve only a few short, contiguous text chunks, which limits their ability to represent and levevarge large-scale discourse structure. This is particularly relevant for thematic questions that require integrating knowledge from multiple parts of a text, such as understanding an entire book, as in the NarrativeQA dataset (Kočiskỳ et al., 2018).</p>
+<p>Consider the fairy tale of Cinderella, and the question “How did Cinderella reach her happy ending?”. The top-k retrieved short contiguous texts will not contain enough context to answer the question.</p>
+<p>They solve this by making the indexing and retrieval uses a tree structure to capture both high-level and low-level details about a text. the steps are the following: 1. cluster chunks of text 2. generates summary for those clusters and then repeats 3. generating a tree from the bottom up.</p>
+<section id="the-model-based-summarization" class="level3">
+<h3 class="anchored" data-anchor-id="the-model-based-summarization">the model based summarization</h3>
+<p>After clustering the nodes using Gaussian Mixture Models, the nodes in each cluster are sent to a language model for summarization. This step allows the model to transform large chunks of text into concise, coherent summaries of the selected nodes. For our experiments, we use gpt-3.5-turbo to generate the summaries. The summarization step condenses the potentially large volume of retrieved information into a manageable size.</p>
+</section>
+<section id="querying-raptor" class="level3">
+<h3 class="anchored" data-anchor-id="querying-raptor">Querying RAPTOR</h3>
+<p><img src="https://kareemai.com/til/tils/images/raptor_query.png" class="img-fluid" alt="query RATPOR rag"> 1. Tree traversal 2. collapsed tree retreival</p>
+<p>to undersand how they work the picture above is very clear.</p>
+<p>what i want to say is the results are not fair and the claim of 20% is baisd. if you look at accuracy between raptor and the sbert solution you will find that it’s not much better while still very expensive to create and retrieve this if for question answering and flow of the information is very reptitive.</p>
+<p>what is cool about RAPTOR technique is using it for summary.</p>
+<p>having details, medium and high information for document will help you create better summary because you divide the task of generting a summary to a single LLM in one show which will not be much accurate. you know divided the task some of the summary already done and create in the vector store so the task is more easier for the final llm model.</p>
+</section>
+</section>
+<section id="dfloat11-efficient-lossless-compression-for-llms" class="level2">
+<h2 class="anchored" data-anchor-id="dfloat11-efficient-lossless-compression-for-llms">DFloat11: Efficient, Lossless Compression for LLMs</h2>
+<p>DFloat11 (DF11) is a novel, mathematically lossless compression technique that reduces large language model (LLM) memory usage by about 30%—with zero loss in accuracy. Unlike traditional quantization, which can degrade model quality, DF11 uses Huffman coding to compress only the predictable exponent bits of model weights, preserving all original information.</p>
+<section id="how-df11-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-df11-works">How DF11 Works</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/til/tils/images/df11.png" class="img-fluid figure-img"></p>
+<figcaption>DFloat11 encoding</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Sign and Fraction Bits:</strong> Kept unchanged, as they contain high-entropy information.</li>
+<li><strong>Exponent Bits:</strong> Compressed using a precomputed Huffman tree, replacing the fixed 8-bit exponent with a variable-length code. This saves about 5 bits per weight on average.</li>
+</ul>
+</section>
+<section id="storage-and-decoding" class="level3">
+<h3 class="anchored" data-anchor-id="storage-and-decoding">Storage and Decoding</h3>
+<ul>
+<li><strong>Storage:</strong> The sign/fraction and exponent bits are stored separately, along with a small header for the Huffman codebook.</li>
+<li><strong>Decoding:</strong> At runtime, the original weights are quickly reconstructed by combining the sign/fraction block with the decoded exponent, enabling fast, parallel processing on GPUs.</li>
+</ul>
+</section>
+<section id="key-benefits" class="level3">
+<h3 class="anchored" data-anchor-id="key-benefits">Key Benefits</h3>
+<ul>
+<li>30% reduction in model size compared to bf16</li>
+<li>100% identical accuracy to the original model</li>
+<li>Applicable to any transformer-based LLM ## Pyrefly with vscode Pyrefly it’s a pyton type check written in Rust. they I installed into vscode and tried it with llamaindex and typercodebase it was very nice expirence.</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">references</h2>
+<ol type="1">
+<li><a href="https://xmad.ai">xmad team blog</a></li>
+<li><a href="https://arxiv.org/html/2401.18059v1">RAPTOR paper</a></li>
+<li><a href="https://pyrefly.org/">pyrefly</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <guid>https://kareemai.com/til/tils/2025-05-25-til.html</guid>
+  <pubDate>Sat, 24 May 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils" medium="image"/>
+</item>
 <item>
   <title>Brave Leo AI with Ollama, vllm, and any huggingface llm locally</title>
   <dc:creator>kareem </dc:creator>
@@ -298,7 +384,6 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div>
 <section id="following-the-giants" class="level3">
 <h3 class="anchored" data-anchor-id="following-the-giants">Following the Giants?</h3>
 <p>When I started learning about DL, I searched for a great book about DL and PyTorch that is well explained in both code and theory.</p>
-<p>I found the amazing <a href="https://sebastianraschka.com/">Sebastian Raschka book</a>, then I wanted more content like this.</p>
 <p>I found his Substack where he publishes what he learns. At the same time, I found similar people like</p>
 <ul>
 <li><p><a href="https://substack.com/@jayalammar">Jay Alammar</a></p></li>
