@@ -2,6 +2,7 @@
   {
     "listing": "/til/index.html",
     "items": [
+      "/til/tils/2025-05-28-til.html",
       "/til/tils/2025-05-25-til.html",
       "/til/tils/2025-05-23-til.html",
       "/til/tils/2025-05-21-til.html",
@@ -18,8 +19,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/blog/posts/ds_and_algo/Static_array.html",
-      "/blog/posts/minishlab/zaraah.html",
+      "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",
       "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html",
       "/blog/posts/life_style/digital_minimalisim_arabic.html",
@@ -45,8 +45,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
-      "/blog/posts/ds_and_algo/Static_array.html",
-      "/blog/posts/minishlab/zaraah.html",
+      "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",
       "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html",
       "/blog/posts/life_style/digital_minimalisim_arabic.html",
