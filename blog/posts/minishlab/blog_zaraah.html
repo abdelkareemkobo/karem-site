@@ -8,9 +8,9 @@
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-15">
-<meta name="description" content="Zaraah model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta name="description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
 
-<title>Zaraah Embedding models – kareem’s Blog</title>
+<title>Bojji &amp; Zarra Embedding models – kareem’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,10 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-c053c160523a8a678a54242519966935.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4b70ae774c88f57ee81f4df4afba786a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,20 +88,181 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Zaraah Embedding models – kareem’s Blog">
-<meta property="og:description" content="Zaraah model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta property="og:title" content="Bojji &amp; Zarra Embedding models – kareem’s Blog">
+<meta property="og:description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="Zaraah Embedding models – kareem’s Blog">
-<meta name="twitter:description" content="Zaraah model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta name="twitter:title" content="Bojji &amp; Zarra Embedding models – kareem’s Blog">
+<meta name="twitter:description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -138,6 +303,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   </li>  
 </ul>
           <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
@@ -158,27 +324,28 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   <li><a href="#what-is-the-model2vec-distillation-method" id="toc-what-is-the-model2vec-distillation-method" class="nav-link" data-scroll-target="#what-is-the-model2vec-distillation-method">What is the model2vec Distillation Method?</a></li>
   </ul></li>
   <li><a href="#jina-embeddings-v3-for-arabic" id="toc-jina-embeddings-v3-for-arabic" class="nav-link" data-scroll-target="#jina-embeddings-v3-for-arabic">Jina Embeddings v3 for Arabic</a></li>
-  <li><a href="#zaraah-family" id="toc-zaraah-family" class="nav-link" data-scroll-target="#zaraah-family">Zaraah Family</a></li>
-  <li><a href="#zaraah-model-vs.-competitors" id="toc-zaraah-model-vs.-competitors" class="nav-link" data-scroll-target="#zaraah-model-vs.-competitors">Zaraah Model vs.&nbsp;Competitors</a>
+  <li><a href="#bojji-and-zarra" id="toc-bojji-and-zarra" class="nav-link" data-scroll-target="#bojji-and-zarra">Bojji and Zarra</a></li>
+  <li><a href="#bojji-model-vs-competitors" id="toc-bojji-model-vs-competitors" class="nav-link" data-scroll-target="#bojji-model-vs-competitors">Bojji Model vs Competitors</a>
   <ul class="collapse">
   <li><a href="#understanding-mteb-tasks-for-arabic" id="toc-understanding-mteb-tasks-for-arabic" class="nav-link" data-scroll-target="#understanding-mteb-tasks-for-arabic">Understanding MTEB Tasks for Arabic</a></li>
-  <li><a href="#zaraah-vs.-all-minilm" id="toc-zaraah-vs.-all-minilm" class="nav-link" data-scroll-target="#zaraah-vs.-all-minilm">Zaraah vs.&nbsp;all-MiniLM</a></li>
+  <li><a href="#bojji-vs.-all-minilm" id="toc-bojji-vs.-all-minilm" class="nav-link" data-scroll-target="#bojji-vs.-all-minilm">Bojji vs.&nbsp;all-MiniLM</a></li>
   <li><a href="#arabic-rag-leaderboard" id="toc-arabic-rag-leaderboard" class="nav-link" data-scroll-target="#arabic-rag-leaderboard">Arabic RAG Leaderboard</a></li>
   </ul></li>
   <li><a href="#speed-comprsion" id="toc-speed-comprsion" class="nav-link" data-scroll-target="#speed-comprsion">Speed comprsion</a>
   <ul class="collapse">
-  <li><a href="#whats-next-for-zaraah" id="toc-whats-next-for-zaraah" class="nav-link" data-scroll-target="#whats-next-for-zaraah">What’s Next for Zaraah?</a></li>
-  <li><a href="#zaraah-model-references" id="toc-zaraah-model-references" class="nav-link" data-scroll-target="#zaraah-model-references">Zaraah model references</a></li>
+  <li><a href="#whats-next-for-bojji" id="toc-whats-next-for-bojji" class="nav-link" data-scroll-target="#whats-next-for-bojji">What’s Next for Bojji?</a></li>
+  <li><a href="#bojji-model-references" id="toc-bojji-model-references" class="nav-link" data-scroll-target="#bojji-model-references">Bojji model references</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/abdelkareemkobo/karem-site/blob/master/blog/posts/minishlab/blog_zaraah.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Zaraah Embedding models</h1>
+<h1 class="title">Bojji &amp; Zarra Embedding models</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">embedding</div>
@@ -190,7 +357,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Zaraah model2vec family model analysis and testing on Arabic Embeddings tasks.
+    Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.
   </div>
 </div>
 
@@ -221,18 +388,18 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 <section id="arabic-embedding-models" class="level2">
 <h2 class="anchored" data-anchor-id="arabic-embedding-models">Arabic Embedding Models</h2>
-<p>This blog post introduces the <strong>Zaraah</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab.</p>
+<p>This blog post introduces the <strong>Bojji and Zarra</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab.</p>
 <p>These models distill knowledge from larger transformer models, such as SBERT, into compact, efficient embeddings.</p>
 <p>This approach balances performance with speed and resource efficiency.</p>
-<p>Below, I explore the Zaraah models, their relationship to <strong>Potion</strong> models, their strengths and limitations, and their applications in Arabic embedding tasks.</p>
+<p>Below, I explore the Bojji models and their relationship to <strong>Potion</strong> models, their strengths and limitations, and their applications in Arabic embedding tasks.</p>
 <section id="what-are-potion-models" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-potion-models">What are Potion Models?</h3>
 <p><strong>Potion models</strong> combine innovative techniques to create high-performing, compact static embeddings.</p>
 <p>I liken them to Bojji from <em>Ousama Ranking</em> small in size but capable of competing with giants like Jina AI and BGE models.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="blog_zaraah_files/figure-html/25bbb41a-1-image-2.png" class="img-fluid figure-img"></p>
-<figcaption>Potion models</figcaption>
+<p><img src="images/bojji.png" class="img-fluid figure-img"></p>
+<figcaption>Bojji Embedding</figcaption>
 </figure>
 </div>
 <p>Key features of Potion models include:</p>
@@ -259,27 +426,25 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </section>
 <section id="jina-embeddings-v3-for-arabic" class="level2">
 <h2 class="anchored" data-anchor-id="jina-embeddings-v3-for-arabic">Jina Embeddings v3 for Arabic</h2>
-<p>The <strong>jina-embeddings-v3</strong> model is currently the top-performing open-source, zero-shot embedding model for Arabic on the MTEB leaderboard. It excels across various tasks and has been validated in production for Arabic applications.</p>
-<p>However, its large size and high memory requirements make it computationally expensive and slow compared to other embedding models. To address this, I used model2vec to create a compact Arabic version, the <strong>Zaraah</strong> family, which retains strong performance while being significantly smaller and faster.</p>
+<p>The <strong>jina-embeddings-v3</strong> model is currently the top-performing open-source, zero-shot embedding model for Arabic on the MTEB leaderboard.</p>
+<p>It excels across various tasks and has been validated in production for Arabic applications.</p>
+<p>However, its large size and high memory requirements make it computationally expensive and slow compared to other embedding models.</p>
+<p>To address this, I used model2vec to create a compact Arabic version, the <strong>Zarra</strong> and <strong>bojji</strong> with with another base model and different method, which retains strong performance while being significantly smaller and faster.</p>
 </section>
-<section id="zaraah-family" class="level2">
-<h2 class="anchored" data-anchor-id="zaraah-family">Zaraah Family</h2>
-<p>The <strong>Zaraah</strong> models are the first static embedding models for Arabic trained with <strong>tokenlearn</strong> on the Arabic subset of the <a href="https://huggingface.co/datasets/allenai/c4">C4 dataset</a>.</p>
-<p>They are optimized for Arabic-specific tasks and come in multiple sizes:</p>
+<section id="bojji-and-zarra" class="level2">
+<h2 class="anchored" data-anchor-id="bojji-and-zarra">Bojji and Zarra</h2>
 <ul>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3">256D</a></p></li>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3_64D">64D</a></p></li>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3_32D">32D</a></p></li>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3_16D_int8">16D</a></p></li>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3_8D_int8">8D</a></p></li>
-<li><p><a href="https://huggingface.co/NAMAA-Space/zaraah_jina_v3_4D_int8">4D</a></p></li>
+<li><p><a href="https://huggingface.co/NAMAA-Space/bojji">Bojji HuggingFace</a></p></li>
+<li><p><a href="https://huggingface.co/NAMAA-Space/zarra">Zarra HuggingFace</a></p></li>
 </ul>
+<p>The <strong>Zarra</strong> models are the first static embedding models for Arabic trained with <strong>tokenlearn</strong> on the Arabic subset of the <a href="https://huggingface.co/datasets/allenai/c4">C4 dataset</a>.</p>
+<p>They are optimized for Arabic-specific tasks and come in multiple sizes:</p>
 <p>All variants support <strong>float32</strong> and <strong>int8</strong> quantization without performance loss, making them highly efficient for resource-constrained environments.</p>
 </section>
-<section id="zaraah-model-vs.-competitors" class="level2">
-<h2 class="anchored" data-anchor-id="zaraah-model-vs.-competitors">Zaraah Model vs.&nbsp;Competitors</h2>
-<p>To evaluate Zaraah’s performance, I compared it against several multilingual and Arabic-specific sentence transformer models using MTEB tasks tailored for Arabic.</p>
-<div id="e5c1683d" class="cell" data-execution_count="3">
+<section id="bojji-model-vs-competitors" class="level2">
+<h2 class="anchored" data-anchor-id="bojji-model-vs-competitors">Bojji Model vs Competitors</h2>
+<p>To evaluate Bojji’s performance, I compared it against several multilingual and Arabic-specific sentence transformer models using MTEB tasks tailored for Arabic.</p>
+<div id="e5c1683d" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-style: italic">                                            Model Evaluation Summary                                             </span>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┓
@@ -294,31 +459,28 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 │<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1           </span>│ 0.6138 │ 0.3799 │ 0.5011 │ 0.5600 │ 0.5749 │ 0.8559 │ 0.6122 │ 0.8125 │
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│ 0.5431 │ 0.2240 │ 0.3612 │ 0.4775 │ 0.5698 │ 0.8111 │ 0.5540 │ 0.8043 │
 │<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│ 0.5208 │ 0.2191 │ 0.3496 │ 0.4515 │ 0.5573 │ 0.7916 │ 0.4908 │ 0.7859 │
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│ 0.4822 │ 0.2295 │ 0.3473 │ 0.4119 │ 0.5237 │ 0.6469 │ 0.6218 │ 0.5942 │
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic_int8           </span>│ 0.4809 │ 0.2313 │ 0.3464 │ 0.4121 │ 0.5256 │ 0.6460 │ 0.6113 │ 0.5936 │
+│<span style="color: #008080; text-decoration-color: #008080"> bojji                                 </span>│ 0.5177 │ 0.2941 │ 0.3989 │ 0.4667 │ 0.5433 │ 0.7233 │ 0.5880 │ 0.6094 │
+│<span style="color: #008080; text-decoration-color: #008080"> zarra                                 </span>│ 0.4822 │ 0.2295 │ 0.3473 │ 0.4119 │ 0.5237 │ 0.6469 │ 0.6218 │ 0.5942 │
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│ 0.4699 │ 0.1658 │ 0.3150 │ 0.4285 │ 0.5338 │ 0.6511 │ 0.5951 │ 0.5999 │
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│ 0.4276 │ 0.1612 │ 0.1998 │ 0.3084 │ 0.5113 │ 0.5999 │ 0.6290 │ 0.5833 │
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32_int8_arabic            </span>│ 0.3892 │ 0.0924 │ 0.0986 │ 0.2186 │ 0.5144 │ 0.5787 │ 0.6323 │ 0.5894 │
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│ 0.3889 │ 0.0934 │ 0.0987 │ 0.2192 │ 0.5112 │ 0.5801 │ 0.6294 │ 0.5902 │
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│ 0.2843 │ 0.0005 │ 0.0064 │ 0.1905 │ 0.4934 │ 0.5089 │ 0.2518 │ 0.5384 │
 └───────────────────────────────────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘
 </pre>
 </div>
 </div>
-<p>I filtered the most related MTEB tasks that supports Arabic-script only the evalution script is in the references blow. We can say that the average score for the jina_zaraah are very low compared to the other models, but didn’t let the Average score fool you! Average is affected with the outliers so, if one task is the low the final answer with be low also.</p>
+<p>I filtered the most related MTEB tasks that supports Arabic-script only the evalution script is in the references blow. We can say that the average score for the Zarra are very low compared to the other models, but didn’t let the Average score fool you! Average is affected with the outliers so, if one task is the low the final answer with be low also.</p>
 <p>But from the first look, we can see the peformance is similar to the Arabic versions of MiniLM-L12 in Average and if you looked at the Sentence similarity for STS22 it’s score are very good compared to static-embedding model.</p>
 <section id="understanding-mteb-tasks-for-arabic" class="level3">
 <h3 class="anchored" data-anchor-id="understanding-mteb-tasks-for-arabic">Understanding MTEB Tasks for Arabic</h3>
-<p>The Massive Text Embedding Benchmark (MTEB) evaluates embedding models across various tasks. Here’s a breakdown of the tasks used to assess Zaraah:</p>
+<p>The Massive Text Embedding Benchmark (MTEB) evaluates embedding models across various tasks. Here’s a breakdown of the tasks used :</p>
 <ul>
-<li><p>MIRACLRetrievalHardNegatives: Measures retrieval accuracy for hard negative examples, critical for search and question-answering systems. Zaraah’s lower score here reflects its static embedding nature, which sacrifices some contextual nuance.</p></li>
-<li><p>MLQARetrieval: Tests retrieval performance on multilingual question-answering datasets, where Zaraah performs comparably to MiniLM models.</p></li>
-<li><p>STS17 &amp; STS22: Evaluates semantic textual similarity, where Zaraah excels, particularly in STS22, with scores rivaling larger models.</p></li>
-<li><p>XNLI: Assesses natural language inference, where Zaraah’s performance is competitive despite its compact size.</p></li>
+<li><p>MIRACLRetrievalHardNegatives: Measures retrieval accuracy for hard negative examples, critical for search and question-answering systems. Zarra’s lower score here reflects its static embedding nature, which sacrifices some contextual nuance.</p></li>
+<li><p>MLQARetrieval: Tests retrieval performance on multilingual question-answering datasets, where Zarra performs comparably to MiniLM models.</p></li>
+<li><p>STS17 &amp; STS22: Evaluates semantic textual similarity, where Zarra excels, particularly in STS22, with scores rivaling larger models.</p></li>
+<li><p>XNLI: Assesses natural language inference, where Zarra’s performance is competitive despite its compact size.</p></li>
 </ul>
-<p>These tasks highlight Zaraah’s strengths in semantic similarity and efficiency, making it ideal for applications like chatbots and lightweight search systems</p>
+<p>These tasks highlight Zarra’s strengths in semantic similarity and efficiency, making it ideal for applications like chatbots and lightweight search systems</p>
 <p>You can see the peformance for every task in MTEB here</p>
-<div id="31238d0d" class="cell" data-execution_count="7">
+<div id="31238d0d" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">             Sorted by MIRACLRetrievalHardNegatives_main (Score)             </span>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -338,21 +500,15 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼───────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1           </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                            0.380</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">                            0.231</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">                            0.294</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.230</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">                            0.230</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.224</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.219</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.166</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.161</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.093</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">                            0.092</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                            0.001</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴───────────────────────────────────┘
@@ -381,21 +537,15 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> gate_arabert-v1                       </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">             0.481</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">             0.399</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">             0.361</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">             0.350</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">             0.347</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">             0.346</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">             0.347</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">             0.315</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">             0.200</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">             0.099</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">             0.099</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">             0.006</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴────────────────────┘
@@ -426,19 +576,13 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.478</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.467</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼──────────────────────────────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>��<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.428</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.412</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.412</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.308</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                           0.219</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">                           0.219</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.412</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #800000; text-decoration-color: #800000">                           0.190</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴──────────────────────────────────┘
@@ -471,17 +615,11 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼──────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> arabic_sts_matryoshka                 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.549</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                       0.543</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼──────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.534</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                       0.526</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.524</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                       0.514</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.511</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.511</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                       0.524</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                       0.493</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴──────────────────────────────┘
@@ -514,17 +652,11 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base                 </span>│<span style="color: #008000; text-decoration-color: #008000">      0.788 </span>│
 ├───────────────────────────────────────┼────────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">     0.723</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000">      0.651 </span>│
 ├───────────────────────────────────────┼────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000">      0.647 </span>│
-├───────────────────────────────────────┼────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">     0.646</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">     0.600</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">     0.580</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">     0.579</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">     0.647</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">     0.509</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴────────────┘
@@ -541,29 +673,23 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
 │<span style="color: #008080; text-decoration-color: #008080"> arabic_triplet_matryoshka_v2          </span>│<span style="color: #008000; text-decoration-color: #008000">         0.640 </span>│
 ├───────────────────────────────────────┼───────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">        0.632</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> gate_arabert-v1                       </span>│<span style="color: #008000; text-decoration-color: #008000">         0.631 </span>│
 ├───────────────────────────────────────┼───────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000">         0.629 </span>│
-├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> muffakir_embedding                    </span>│<span style="color: #008000; text-decoration-color: #008000">         0.629 </span>│
-├───────────────────────────────────────┼───────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000">         0.629 </span>│
 ├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0                 </span>│<span style="color: #008000; text-decoration-color: #008000">         0.625 </span>│
 ├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> arabic_sts_matryoshka                 </span>│<span style="color: #008000; text-decoration-color: #008000">         0.624 </span>│
 ├───────────────────────────────────────┼───────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000">         0.622 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">        0.622</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base                 </span>│<span style="color: #008000; text-decoration-color: #008000">         0.615 </span>│
 ├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1           </span>│<span style="color: #008000; text-decoration-color: #008000">         0.612 </span>│
 ├───────────────────────────────────────┼───────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">        0.611</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">        0.595</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼───────────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">        0.588</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">        0.554</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────────┤
@@ -600,17 +726,11 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ├───────────────────────────────────────┼───────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0                 </span>│<span style="color: #008000; text-decoration-color: #008000">     0.739 </span>│
 ├───────────────────────────────────────┼───────────┤
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">    0.609</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+├───────────────────────────────────────┼───────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">    0.600</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256_arabic                </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">    0.594</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_256_arabic_int8          </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">    0.594</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">    0.590</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">jina_zaraah_32_int8_arabic           </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">    0.589</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼───────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_64_int8_arabic            </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">    0.583</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">zarra                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">    0.594</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼───────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> all_minilm_l6_v2                      </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">    0.538</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 └───────────────────────────────────────┴───────────┘
@@ -622,58 +742,65 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </div>
 </div>
 </section>
-<section id="zaraah-vs.-all-minilm" class="level3">
-<h3 class="anchored" data-anchor-id="zaraah-vs.-all-minilm">Zaraah vs.&nbsp;all-MiniLM</h3>
-<p>The Zaraah models outperform the <strong>all-MiniLM</strong> family from SBERT in Arabic tasks while being significantly faster and capable of running on CPU. This makes Zaraah an excellent lightweight alternative for applications requiring efficient Arabic embeddings.</p>
+<section id="bojji-vs.-all-minilm" class="level3">
+<h3 class="anchored" data-anchor-id="bojji-vs.-all-minilm">Bojji vs.&nbsp;all-MiniLM</h3>
+<p>The Bojji model outperform the <strong>all-MiniLM</strong> family from SBERT in Arabic tasks while being significantly faster and capable of running on CPU.</p>
+<p>This makes Bojji an excellent lightweight alternative for applications requiring efficient Arabic embeddings.</p>
 <p>Also the models performance is most of the time better than the <strong>potion-multilingual-128M</strong> which indicates that techniques are working with any language not just English.</p>
 </section>
 <section id="arabic-rag-leaderboard" class="level3">
 <h3 class="anchored" data-anchor-id="arabic-rag-leaderboard">Arabic RAG Leaderboard</h3>
-<p>To complement MTEB evaluations, I tested Zaraah on the <strong>Arabic-RAG Leaderboard</strong>, which provides a robust benchmark for Arabic-specific tasks. Zaraah ranks 37 out of 45 models with an average score of <strong>36.84</strong>. This is impressive, as Zaraah is the smallest model in the leaderboard, highlighting its efficiency and competitive performance in resource-constrained settings.</p>
+<p>To complement MTEB evaluations, I tested Zarra on the <strong>Arabic-RAG Leaderboard</strong>, which provides a robust benchmark for Arabic-specific tasks. Zarra ranks 37 out of 45 models with an average score of <strong>36.84</strong>.</p>
+<p>This is impressive, as Zarra is the smallest model in the leaderboard, highlighting its efficiency and competitive performance in resource-constrained settings.</p>
+<section id="what-about-bojji-perfomrance-in-arabic-rag-leaderboard" class="level4">
+<h4 class="anchored" data-anchor-id="what-about-bojji-perfomrance-in-arabic-rag-leaderboard">What about Bojji perfomrance in Arabic RAG Leaderboard?</h4>
+<p>Actually the first model with Zarra and not bojji is the second release of Zarra with different updates but..i know that if i didn’t write the blog as it as, i will not publish it again!</p>
+<p>Bojji will be test on the Arabic Rag soon.</p>
+</section>
 </section>
 </section>
 <section id="speed-comprsion" class="level2">
 <h2 class="anchored" data-anchor-id="speed-comprsion">Speed comprsion</h2>
-<div id="1409164c" class="cell" data-execution_count="1">
+<div id="1409164c" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stderr">
-<pre><code>Some weights of the model checkpoint at Alibaba-NLP/gte-multilingual-base were not used when initializing NewModel: {'classifier.bias', 'classifier.weight'}
+<pre><code>Some weights of the model checkpoint at Alibaba-NLP/gte-multilingual-base were not used when initializing NewModel: ['classifier.bias', 'classifier.weight']
 - This IS expected if you are initializing NewModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
 - This IS NOT expected if you are initializing NewModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed jina_zaraah_256 on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">11342.11</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed zarra on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">26893.63</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed jina_zaraah_32 on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">10947.39</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed bojji on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">27478.15</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed potion-multilingual-128M on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9973.48</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed potion-multilingual-128M on cpu: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">27145.31</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed paraphrase-multilingual-MiniLM-L12-v2 on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2120.08</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed paraphrase-multilingual-MiniLM-L12-v2 on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2363.24</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed silma_ai_embedding_sts_v0.<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">611.62</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed silma_ai_embedding_sts_v0.<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">627.13</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed muffakir_embedding on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">606.21</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed muffakir_embedding on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">621.77</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed get_multilingual_base on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">876.47</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed get_multilingual_base on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">895.41</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed arabic_retrieval_v1.<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span> on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">600.66</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed arabic_retrieval_v1.<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span> on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">618.56</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed arabic_triplet_matryoshka_v2 on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">590.78</span> sentences/second
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Completed arabic_triplet_matryoshka_v2 on cuda: <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">610.64</span> sentences/second
 </pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -681,20 +808,25 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
 ┃<span style="font-weight: bold"> Model                                 </span>┃<span style="font-weight: bold"> Speed (sentences/second) </span>┃<span style="font-weight: bold"> Device </span>┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256                       </span>│<span style="color: #800080; text-decoration-color: #800080"> 11342.11                 </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                        </span>│<span style="color: #800080; text-decoration-color: #800080"> 10947.39                 </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #800080; text-decoration-color: #800080"> 9973.48                  </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #800080; text-decoration-color: #800080"> 2120.08                  </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1           </span>│<span style="color: #800080; text-decoration-color: #800080"> 611.62                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> muffakir_embedding                    </span>│<span style="color: #800080; text-decoration-color: #800080"> 606.21                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 876.47                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 600.66                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> arabic_triplet_matryoshka_v2          </span>│<span style="color: #800080; text-decoration-color: #800080"> 590.78                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> zarra                                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 26893.63                 </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> bojji                                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 27478.15                 </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #800080; text-decoration-color: #800080"> 27145.31                 </span>│<span style="color: #008000; text-decoration-color: #008000"> cpu    </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #800080; text-decoration-color: #800080"> 2363.24                  </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1           </span>│<span style="color: #800080; text-decoration-color: #800080"> 627.13                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> muffakir_embedding                    </span>│<span style="color: #800080; text-decoration-color: #800080"> 621.77                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 895.41                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0                 </span>│<span style="color: #800080; text-decoration-color: #800080"> 618.56                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> arabic_triplet_matryoshka_v2          </span>│<span style="color: #800080; text-decoration-color: #800080"> 610.64                   </span>│<span style="color: #008000; text-decoration-color: #008000"> cuda   </span>│
 └───────────────────────────────────────┴──────────────────────────┴────────┘
 </pre>
 </div>
 </div>
-<div id="dd7c2361" class="cell" data-execution_count="18">
+<div id="44bcb016" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>SafetensorsRepoMetadata(metadata=None, sharded=False, weight_map={'embeddings': 'model.safetensors'}, files_metadata={'model.safetensors': SafetensorsFileMetadata(metadata={}, tensors={'embeddings': TensorInfo(dtype='F32', shape=[249999, 256], data_offsets=(0, 255998976), parameter_count=63999744)}, parameter_count={'F32': 63999744})}, parameter_count={'F32': 63999744})</code></pre>
+</div>
+</div>
+<div id="dd7c2361" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #008000; text-decoration-color: #008000">Results saved to model_info_results.csv</span>
 </pre>
@@ -704,29 +836,39 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃<span style="font-weight: bold"> Model                            </span>┃<span style="font-weight: bold"> Parameters (M) </span>┃<span style="font-weight: bold"> Size (MB) </span>┃<span style="font-weight: bold"> Relative to Largest (%) </span>┃<span style="font-weight: bold"> Less than Largest (x) </span>┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_32                   </span>│<span style="color: #808000; text-decoration-color: #808000"> 8.00           </span>│<span style="color: #008000; text-decoration-color: #008000"> 7.63      </span>│<span style="color: #800080; text-decoration-color: #800080"> 2.62                    </span>│<span style="color: #000080; text-decoration-color: #000080"> 38.17                 </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> jina_zaraah_256                  </span>│<span style="color: #808000; text-decoration-color: #808000"> 64.00          </span>│<span style="color: #008000; text-decoration-color: #008000"> 61.03     </span>│<span style="color: #800080; text-decoration-color: #800080"> 20.96                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 4.77                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M         </span>│<span style="color: #808000; text-decoration-color: #808000"> 128.09         </span>│<span style="color: #008000; text-decoration-color: #008000"> 122.16    </span>│<span style="color: #800080; text-decoration-color: #800080"> 41.95                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.38                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-… </span>│<span style="color: #808000; text-decoration-color: #808000"> 117.65         </span>│<span style="color: #008000; text-decoration-color: #008000"> 112.20    </span>│<span style="color: #800080; text-decoration-color: #800080"> 38.53                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.60                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1      </span>│<span style="color: #808000; text-decoration-color: #808000"> 135.19         </span>│<span style="color: #008000; text-decoration-color: #008000"> 128.93    </span>│<span style="color: #800080; text-decoration-color: #800080"> 44.27                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.26                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> muffakir_embedding               </span>│<span style="color: #808000; text-decoration-color: #808000"> 135.19         </span>│<span style="color: #008000; text-decoration-color: #008000"> 128.93    </span>│<span style="color: #800080; text-decoration-color: #800080"> 44.27                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.26                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0            </span>│<span style="color: #808000; text-decoration-color: #808000"> 135.19         </span>│<span style="color: #008000; text-decoration-color: #008000"> 128.93    </span>│<span style="color: #800080; text-decoration-color: #800080"> 44.27                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.26                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> arabic_triplet_matryoshka_v2     </span>│<span style="color: #808000; text-decoration-color: #808000"> 135.19         </span>│<span style="color: #008000; text-decoration-color: #008000"> 128.93    </span>│<span style="color: #800080; text-decoration-color: #800080"> 44.27                   </span>│<span style="color: #000080; text-decoration-color: #000080"> 2.26                  </span>│
-│<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base            </span>│<span style="color: #808000; text-decoration-color: #808000"> 305.37         </span>│<span style="color: #008000; text-decoration-color: #008000"> 291.22    </span>│<span style="color: #800080; text-decoration-color: #800080"> 100.00                  </span>│<span style="color: #000080; text-decoration-color: #000080"> 1.00                  </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> zarra                            </span>│<span style="color: #808000; text-decoration-color: #808000">          64.00 </span>│<span style="color: #008000; text-decoration-color: #008000">    244.14 </span>│<span style="color: #800080; text-decoration-color: #800080">                   41.92 </span>│<span style="color: #000080; text-decoration-color: #000080">                  2.39 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> bojji                            </span>│<span style="color: #808000; text-decoration-color: #808000">         124.88 </span>│<span style="color: #008000; text-decoration-color: #008000">    476.40 </span>│<span style="color: #800080; text-decoration-color: #800080">                   81.79 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.22 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M         </span>│<span style="color: #808000; text-decoration-color: #808000">         128.09 </span>│<span style="color: #008000; text-decoration-color: #008000">    488.63 </span>│<span style="color: #800080; text-decoration-color: #800080">                   83.89 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.19 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-… </span>│<span style="color: #808000; text-decoration-color: #808000">         117.65 </span>│<span style="color: #008000; text-decoration-color: #008000">    448.82 </span>│<span style="color: #800080; text-decoration-color: #800080">                   77.06 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.30 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> silma_ai_embedding_sts_v0.1      </span>│<span style="color: #808000; text-decoration-color: #808000">         135.19 </span>│<span style="color: #008000; text-decoration-color: #008000">    515.72 </span>│<span style="color: #800080; text-decoration-color: #800080">                   88.54 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.13 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> muffakir_embedding               </span>│<span style="color: #808000; text-decoration-color: #808000">         135.19 </span>│<span style="color: #008000; text-decoration-color: #008000">    515.72 </span>│<span style="color: #800080; text-decoration-color: #800080">                   88.54 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.13 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> arabic_retrieval_v1.0            </span>│<span style="color: #808000; text-decoration-color: #808000">         135.19 </span>│<span style="color: #008000; text-decoration-color: #008000">    515.73 </span>│<span style="color: #800080; text-decoration-color: #800080">                   88.54 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.13 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> arabic_triplet_matryoshka_v2     </span>│<span style="color: #808000; text-decoration-color: #808000">         135.19 </span>│<span style="color: #008000; text-decoration-color: #008000">    515.72 </span>│<span style="color: #800080; text-decoration-color: #800080">                   88.54 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.13 </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> get_multilingual_base            </span>│<span style="color: #808000; text-decoration-color: #808000">         305.37 </span>│<span style="color: #008000; text-decoration-color: #008000">    582.45 </span>│<span style="color: #800080; text-decoration-color: #800080">                  100.00 </span>│<span style="color: #000080; text-decoration-color: #000080">                  1.00 </span>│
 └──────────────────────────────────┴────────────────┴───────────┴─────────────────────────┴───────────────────────┘
 </pre>
 </div>
 </div>
-<section id="whats-next-for-zaraah" class="level3">
-<h3 class="anchored" data-anchor-id="whats-next-for-zaraah">What’s Next for Zaraah?</h3>
+<p>It’s very clear the main advantage of the static embedding models here:</p>
+<p>They can process large number of samples on cpu which make them very useful for : 1. Clustring 2. Build classification pipelines on top of them 3. Use them in edge-devices 4. base models for chunking algorithms and dudplications..more to come soon ! ❤️</p>
+<section id="whats-next-for-bojji" class="level3">
+<h3 class="anchored" data-anchor-id="whats-next-for-bojji">What’s Next for Bojji?</h3>
 <p>It’s just the start with initial tests, there is more to explore from the base models, datasets and the new features from minishlab which will try to narrow the gab between model2vec and sentence-transformers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bojji_and_zarra.png" class="img-fluid figure-img"></p>
+<figcaption>zarra and Bojji</figcaption>
+</figure>
+</div>
+<p>Also thanks a lot for the minishlab team for their continous help to debug and update the models with me!</p>
 </section>
-<section id="zaraah-model-references" class="level3">
-<h3 class="anchored" data-anchor-id="zaraah-model-references">Zaraah model references</h3>
+<section id="bojji-model-references" class="level3">
+<h3 class="anchored" data-anchor-id="bojji-model-references">Bojji model references</h3>
 <ol type="1">
 <li><a href="https://huggingface.co/blog/Navid-AI/arabic-rag-leaderboard">Arabic Leaderboard</a></li>
 <li><a href="https://huggingface.co/spaces/mteb/leaderboard">MTEB</a></li>
 <li><a href="https://minishlab.github.io/">Minishlab</a></li>
+<li><a href="">NAMAA-Space colleciton</a></li>
 </ol>
 
 
@@ -736,6 +878,19 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1196,7 +1351,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/abdelkareemkobo/karem-site/blob/master/blog/posts/minishlab/blog_zaraah.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    </div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

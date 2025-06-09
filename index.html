@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A collection of technical blogs and talks on machine learning and data science.">
+<meta name="description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
 
 <title>kareem’s Blog</title>
 <style>
@@ -39,10 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c053c160523a8a678a54242519966935.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4b70ae774c88f57ee81f4df4afba786a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,9 +84,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      valueNames: ['listing-date','listing-title','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -139,16 +144,15 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
 <link rel="alternate" type="application/rss+xml" title="kareem's Blog" href="index.xml" data-external="1"><meta property="og:title" content="kareem’s Blog">
-<meta property="og:description" content="A collection of technical blogs and talks on machine learning and data science.">
+<meta property="og:description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
 <meta property="og:image" content="https://kareemai.com/quarto.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:image:height" content="576">
 <meta property="og:image:width" content="960">
 <meta name="twitter:title" content="kareem’s Blog">
-<meta name="twitter:description" content="A collection of technical blogs and talks on machine learning and data science.">
+<meta name="twitter:description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
 <meta name="twitter:image" content="https://kareemai.com/quarto.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
@@ -156,7 +160,169 @@ window.Quarto = {
 <meta name="twitter:image-width" content="960">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -197,6 +363,7 @@ window.Quarto = {
   </li>  
 </ul>
           <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
@@ -211,19 +378,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abdelkareem-elkhateb" id="toc-abdelkareem-elkhateb" class="nav-link active" data-scroll-target="#abdelkareem-elkhateb">Abdelkareem Elkhateb</a>
+  <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
+  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a></li>
+  <li><a href="#my-research" id="toc-my-research" class="nav-link" data-scroll-target="#my-research">My Research</a>
   <ul class="collapse">
-  <li><a href="#my-trainedfine-tuned-models" id="toc-my-trainedfine-tuned-models" class="nav-link" data-scroll-target="#my-trainedfine-tuned-models">My trained/fine-tuned models</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
-  <li><a href="#my-mind" id="toc-my-mind" class="nav-link" data-scroll-target="#my-mind">🧠 My Mind</a></li>
-  <li><a href="#subscribe" id="toc-subscribe" class="nav-link" data-scroll-target="#subscribe">📬 Subscribe</a>
-  <ul class="collapse">
-  <li><a href="#my-compute" id="toc-my-compute" class="nav-link" data-scroll-target="#my-compute">My compute</a></li>
+  <li><a href="#compute" id="toc-compute" class="nav-link" data-scroll-target="#compute">Compute</a></li>
+  <li><a href="#stay-connected" id="toc-stay-connected" class="nav-link" data-scroll-target="#stay-connected">📬 Stay Connected</a></li>
   </ul></li>
-  <li><a href="#my-papers" id="toc-my-papers" class="nav-link" data-scroll-target="#my-papers">My papers</a></li>
-  </ul></li>
+  <li><a href="#blog-posts" id="toc-blog-posts" class="nav-link" data-scroll-target="#blog-posts">📝 Blog Posts</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -231,330 +395,532 @@ window.Quarto = {
 
 
 
-<section id="abdelkareem-elkhateb" class="level1">
-<h1>Abdelkareem Elkhateb</h1>
-<p>Hello, I’m <code>Abdelkareem Elkhateb</code>, AI Engineer trying to learn and create new research ideas about LLMs, NLP and searching.</p>
-<p>while also applying this knowledge in real applications.</p>
-<p>I hope that i can improve the current Arabic opensource projects related to AI.</p>
-<p>I am one of the mainter in NAMAA community accelerating AI applications for Arabic and Islamic culture.</p>
-<hr>
-<div class="profile-header quarto-layout-panel" data-layout="[21,79]">
+
+<p>Hi, I’m <strong>Abdelkareem Elkhateb</strong>, an AI Engineer passionate about advancing Arabic NLP, LLMs, and generative AI.</p>
+<p>I focus on building innovative AI applications and contributing to open-source projects, particularly through my role as a maintainer in the <strong>NAMAA community</strong>, accelerating AI for Arabic and Islamic culture.</p>
+<div class="profile-header quarto-layout-panel" data-layout="[30,70]">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 21.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center" style="border-radius: 50%; width: 14rem; height: 14rem; object-fit: contain;">
 <figure class="figure">
-<p><img src="ai_hacker.png" class="profile-pic img-fluid figure-img"></p>
-<figcaption>young dreamer</figcaption>
+<p><img src="kareem.png" class="profile-pic img-fluid figure-img"></p>
+<figcaption>Abdelkareem</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 79.0%;justify-content: flex-start;">
-<p>“فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف يجاهدُ”</p>
+<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<blockquote class="blockquote">
+<p>“فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف يجاهدُ”<br>
+A young dreamer striving to innovate in AI and NLP.</p>
+</blockquote>
 </div>
 </div>
 </div>
-<p>This blog is where I document my journey to learn about programming, deep learning, and AGI.</p>
-<p>Currently I’m Learning <code>NLP</code>, <code>Generative AI</code>, <code>Recs</code>, and <code>IR</code> to build charming language models that able to talk, hear and see, made me some coffee</p>
-<p>I love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.</p>
-<p>My research focuses on Arabic NLP, small model optimization, image denoising, and vector computing.</p>
-<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
-</iframe>
-<section id="my-trainedfine-tuned-models" class="level2">
-<h2 class="anchored" data-anchor-id="my-trainedfine-tuned-models">My trained/fine-tuned models</h2>
+<p>This blog captures my journey in programming, deep learning, and AGI, with a focus on <strong>NLP</strong>, <strong>Generative AI</strong>, <strong>Recommendation Systems</strong>, and <strong>Information Retrieval</strong>.</p>
+<p>I build <strong>Astro.js</strong>-powered websites integrated with AI, such as <a href="https://kamcalorie.com">Kam Calorie</a> and <a href="https://awazly.com">Awazly</a>. My research centers on Arabic NLP, small model optimization, image denoising, and vector computing.</p>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<p>Explore my open-source and production projects:</p>
+<ul>
+<li><p><strong><a href="https://kamcalorie.com">🍹 Kam Calorie</a></strong>: A semantic search engine for healthcare.</p></li>
+<li><p><strong><a href="https://github.com/abdelkareemkobo/seo_rat">🐀 SEO Rat</a></strong>: SEO optimization tool for GSC and Jamstack sites (Astro, Quarto, etc.).</p></li>
+<li><p><strong><a href="https://gpuvec.com">🔋 GpuVec</a></strong>: Compare GPU rental options by VRAM, price, CUDA cores, and more.</p></li>
+</ul>
+</section>
+<section id="models" class="level2">
+<h2 class="anchored" data-anchor-id="models">Models</h2>
+<ul>
+<li><strong>⚛️ boji</strong>: A powerful model2vec for Arabic NLP, designed for high-performance language tasks.</li>
+<li><strong>🧲 Ara-Gliner</strong>: One-shote Arabic Named Entity Recognition</li>
+<li><strong>🔬 Abjd</strong>: It’s not a modal family, but a smart way for training embedding with minial effort.</li>
+</ul>
+<p>more to create, check the <a href="https://huggingface.co/Abdelkareem">huggingface profile 🤗</a></p>
+</section>
+<section id="my-research" class="level2">
+<h2 class="anchored" data-anchor-id="my-research">My Research</h2>
+<p>Find my work on:</p>
+<ul>
+<li><p><a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ&amp;hl=en">Google Scholar</a></p></li>
+<li><p><a href="https://www.researchgate.net/profile/Abdelkareem-Elkhateb">ResearchGate</a></p></li>
+</ul>
+<section id="compute" class="level3">
+<h3 class="anchored" data-anchor-id="compute">Compute</h3>
+<p>I work with:</p>
+<ul>
+<li><p>🐉 MSI Laptop (1660TI GTX)</p></li>
+<li><p>🐉🐉 Dual Titan RTX 24GB (occasional access)</p></li>
+</ul>
+</section>
+<section id="stay-connected" class="level3">
+<h3 class="anchored" data-anchor-id="stay-connected">📬 Stay Connected</h3>
+<p>Subscribe to my blog via RSS or follow my newsletters or reache me with:</p>
 <ol type="1">
-<li>zaraah: model2vec for arabic nlp with a lot of power.</li>
+<li><a href="https://www.linkedin.com/in/kareemkobo">Linkedin 🖇️</a></li>
+<li><a href="https://twitter.com/AbdelkareemElk1">X 🐦</a></li>
 </ol>
 </section>
-<section id="applications" class="level2">
-<h2 class="anchored" data-anchor-id="applications">Applications</h2>
-<p>You can look at some of my projects on both opensource and production like:</p>
-<ol type="1">
-<li><p><a href="https://kamcalorie.com">كم كالوري</a> : semantic search engine built for healthcare</p></li>
-<li><p><a href="https://github.com/abdelkareemkobo/seo_rat">seo rat</a> : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more</p></li>
-<li><h2 id="gpuvec-rent-gpus-pricing-find-the-best-gpu-to-rent-from-best-cloud-providers-based-on-mulitple-factors-like-vram-price-cuda-core..etc" class="anchored"><a href="https://gpuvec.com">GpuVec: Rent GPUs pricing</a> : Find the best GPU to rent from best Cloud Providers based on Mulitple factors like Vram, price, cuda core..etc</h2></li>
-</ol>
 </section>
-<section id="my-mind" class="level2">
-<h2 class="anchored" data-anchor-id="my-mind">🧠 My Mind</h2>
-<p>A curated collection of blog posts and shorter form notes.</p>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-table">
+<section id="blog-posts" class="level2">
+<h2 class="anchored" data-anchor-id="blog-posts">📝 Blog Posts</h2>
+<p>A curated collection of insights and notes on AI and machine learning.</p>
+<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-grid">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Date
-</th>
-
-<th>
-Title
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1749025125394" data-listing-reading-time-sort="5" data-listing-word-count-sort="905" data-listing-title-sort="jupyter: python3" data-listing-filename-sort="test.ipynb">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./blog/posts/minishlab/test.html" class="title listing-title">jupyter: python3</a>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1748796078639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="859" data-listing-title-sort="Zaraah Embedding models" data-listing-filename-sort="blog_zaraah.ipynb">
-<td>
-<span class="listing-date">5/15/25</span>
-</td>
-<td>
-<a href="./blog/posts/minishlab/blog_zaraah.html" class="title listing-title">Zaraah Embedding models</a>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1743717600000" data-listing-file-modified-sort="1743983348304" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742" data-listing-title-sort="Cloud GPU Pricing Comparsion in 2025" data-listing-filename-sort="gpuvec.qmd">
-<td>
-<span class="listing-date">4/4/25</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/gpuvec.html" class="title listing-title">Cloud GPU Pricing Comparsion in 2025</a>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1742248800000" data-listing-file-modified-sort="1742270303181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="903" data-listing-title-sort="my dream job at Tarteel" data-listing-filename-sort="my_dream_job_at_tarteel.md">
-<td>
-<span class="listing-date">3/18/25</span>
-</td>
-<td>
-<a href="./blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="title listing-title">my dream job at Tarteel</a>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1738706400000" data-listing-file-modified-sort="1738733019959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="فن تبسيط الحياة الرقمية" data-listing-filename-sort="digital_minimalisim_arabic.qmd">
-<td>
-<span class="listing-date">2/5/25</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/digital_minimalisim_arabic.html" class="title listing-title">فن تبسيط الحياة الرقمية</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="YmxvZ2dpbmclMkNhaSUyQ21hdGglMkNsaW5lYXJfYWxnZWJyYSUyQ2NhbGN1bHVzJTJDc3RhdGlzdGljcyUyQ3Byb2JhYmlsaXR5" data-listing-date-sort="1737928800000" data-listing-file-modified-sort="1738725506942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3149" data-listing-title-sort="Math Skills For AI" data-listing-filename-sort="math_skills_for_AI.md">
-<td>
-<span class="listing-date">1/27/25</span>
-</td>
-<td>
-<a href="./blog/posts/math/math_skills_for_AI.html" class="title listing-title">Math Skills For AI</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189" data-listing-title-sort="كم كالوري في الطعام ؟" data-listing-filename-sort="kamcalorie.qmd">
-<td>
-<span class="listing-date">1/8/25</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/kamcalorie.html" class="title listing-title">كم كالوري في الطعام ؟</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262" data-listing-title-sort="أفضل أنواع الكرياتين مونوهيدرات و  بروتيانات للتضخيم" data-listing-filename-sort="protienai.qmd">
-<td>
-<span class="listing-date">1/8/25</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/protienai.html" class="title listing-title">أفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZmw=" data-listing-date-sort="1731362400000" data-listing-file-modified-sort="1738733056562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891" data-listing-title-sort="What is Federated Learning" data-listing-filename-sort="what_is_federated_learning.md">
-<td>
-<span class="listing-date">11/12/24</span>
-</td>
-<td>
-<a href="./blog/posts/fl/what_is_federated_learning.html" class="title listing-title">What is Federated Learning</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZ29vZ2xlJTJDc2VvJTJDYWRz" data-listing-date-sort="1728075600000" data-listing-file-modified-sort="1738725506957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="341" data-listing-title-sort="Google Ads Black Box" data-listing-filename-sort="google_ads_black_box.md">
-<td>
-<span class="listing-date">10/5/24</span>
-</td>
-<td>
-<a href="./blog/posts/seo/google_ads_black_box.html" class="title listing-title">Google Ads Black Box</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1738725506933" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473" data-listing-title-sort="Learning Data Structures and Algorithms as Machine Learning Engineer" data-listing-filename-sort="master_ds.md">
-<td>
-<span class="listing-date">10/4/24</span>
-</td>
-<td>
-<a href="./blog/posts/ds_and_algo/master_ds.html" class="title listing-title">Learning Data Structures and Algorithms as Machine Learning Engineer</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-categories="aHVhd2VpJTJDd2F0Y2glMkNleHAlMkNibG9nZ2luZyUyQ3B1Ymxpc2g=" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278" data-listing-title-sort="Review of Huawei watch gt 4" data-listing-filename-sort="Huawei_watch_gt_4_experience.md">
-<td>
-<span class="listing-date">10/4/24</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="title listing-title">Review of Huawei watch gt 4</a>
-</td>
-
-</tr>
-
-<tr data-index="12" data-categories="YmxvZ2dpbmclMkNzZW8=" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1738725506959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="883" data-listing-title-sort="The curse of SEO" data-listing-filename-sort="the_curse_of_seo.qmd">
-<td>
-<span class="listing-date">7/31/24</span>
-</td>
-<td>
-<a href="./blog/posts/seo/the_curse_of_seo.html" class="title listing-title">The curse of SEO</a>
-</td>
-
-</tr>
-
-<tr data-index="13" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1720558800000" data-listing-file-modified-sort="1738725506937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2155" data-listing-title-sort="جاذبية مزيفة و عالم مخادع" data-listing-filename-sort="fake_graviety.qmd">
-<td>
-<span class="listing-date">7/10/24</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/fake_graviety.html" class="title listing-title">جاذبية مزيفة و عالم مخادع</a>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-date-sort="1704060000000" data-listing-file-modified-sort="1738725506953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208" data-listing-title-sort="My little Dragon &quot;kobo&quot;" data-listing-filename-sort="my_little_dargon.md">
-<td>
-<span class="listing-date">1/1/24</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/my_little_dargon.html" class="title listing-title">My little Dragon “kobo”</a>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-date-sort="1701900000000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="439" data-listing-title-sort="After one year of using Huawei Mate 11 without google services" data-listing-filename-sort="Huawei_mate_pad_11.md">
-<td>
-<span class="listing-date">12/7/23</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei_mate_pad_11.html" class="title listing-title">After one year of using Huawei Mate 11 without google services</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-date-sort="1701813600000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1094" data-listing-title-sort="Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!" data-listing-filename-sort="Huawei freebuds 5i.md">
-<td>
-<span class="listing-date">12/6/23</span>
-</td>
-<td>
-<a href="./blog/posts/products_reviews/Huawei freebuds 5i.html" class="title listing-title">Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!</a>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-date-sort="1698444000000" data-listing-file-modified-sort="1738725506942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2025" data-listing-title-sort="MTEB Massive Text Embedding Benchmark" data-listing-filename-sort="MTEB_massive_text_embedding_benchmark.md">
-<td>
-<span class="listing-date">10/28/23</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="title listing-title">MTEB Massive Text Embedding Benchmark</a>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-date-sort="1697835600000" data-listing-file-modified-sort="1738725506953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="109" data-listing-title-sort="tiny-gte  &quot;Tiny, yet powerful, it is small in size but packs a lot of power.&quot;" data-listing-filename-sort="tiny-gte_transformer_model.md">
-<td>
-<span class="listing-date">10/21/23</span>
-</td>
-<td>
-<a href="./blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="title listing-title">tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</a>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509" data-listing-title-sort="havrard CS197 AI research experiences" data-listing-filename-sort="havrard CS197 AI research experiences.md">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/courses/havrard CS197 AI research experiences.html" class="title listing-title">havrard CS197 AI research experiences</a>
-</td>
-
-</tr>
-
-<tr data-index="20" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaA==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274" data-listing-title-sort="why i am blogging" data-listing-filename-sort="why_I_am_blogging.qmd">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/life_style/why_I_am_blogging.html" class="title listing-title">why i am blogging</a>
-</td>
-
-</tr>
-
-<tr data-index="21" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaCUyQ3Nlbw==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606" data-listing-title-sort="How I am using NLP to improve my Websites SEO" data-listing-filename-sort="how_i_use_nlp_for_seo.qmd">
-<td>
-<span class="listing-date">7/18/23</span>
-</td>
-<td>
-<a href="./blog/posts/seo/how_i_use_nlp_for_seo.html" class="title listing-title">How I am using NLP to improve my Websites SEO</a>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1749488191216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
+<a href="./blog/posts/minishlab/blog_zaraah.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/minishlab/images/minishlab.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bojji &amp; Zarra Embedding models
+</h5>
+<div class="card-text listing-description delink">
+<p>Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.</p>
 </div>
-</section>
-<section id="subscribe" class="level2">
-<h2 class="anchored" data-anchor-id="subscribe">📬 Subscribe</h2>
-<p>Subscribe via <a href="index.xml"><i class="bi bi-rss"></i> RSS</a>.</p>
-<iframe src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
-</iframe>
-<section id="my-compute" class="level3">
-<h3 class="anchored" data-anchor-id="my-compute">My compute</h3>
-<p>I am doing all my work in two devices</p>
-<ol type="1">
-<li><p>old MSI laptop with 1660TI GTX</p></li>
-<li><p>sometimes i have access to dual Titan RTX 24GB</p></li>
-</ol>
-</section>
-</section>
-<section id="my-papers" class="level2">
-<h2 class="anchored" data-anchor-id="my-papers">My papers</h2>
-<p>more to come….but you visit the the google scholar and research gate profiles here:</p>
-<ol type="1">
-<li><p><a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ&amp;hl=en">Abdelkareem Google Scholar</a></p></li>
-<li><p><a href="https://www.researchgate.net/profile/Abdelkareem-Elkhateb">Abdelkareem Research Gate</a></p></li>
-</ol>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+5/15/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1743717600000" data-listing-file-modified-sort="1743983348304" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
+<a href="./blog/posts/life_style/gpuvec.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/life_style/images/gpuvec.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cloud GPU Pricing Comparsion in 2025
+</h5>
+<div class="card-text listing-description delink">
+<p>Explore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like our model size calculator to find the cheapest cloud GPUs for AI and HPC…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+4/4/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1742248800000" data-listing-file-modified-sort="1742270303181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="903">
+<a href="./blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/speech_recognition/images/tarteel_ai.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+my dream job at Tarteel
+</h5>
+<div class="card-text listing-description delink">
+<p>Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+3/18/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1738706400000" data-listing-file-modified-sort="1738733019959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
+<a href="./blog/posts/life_style/digital_minimalisim_arabic.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/life_style/images/fake_graviety.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+فن تبسيط الحياة الرقمية
+</h5>
+<div class="card-text listing-description delink">
+<p>فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+2/5/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="YmxvZ2dpbmclMkNhaSUyQ21hdGglMkNsaW5lYXJfYWxnZWJyYSUyQ2NhbGN1bHVzJTJDc3RhdGlzdGljcyUyQ3Byb2JhYmlsaXR5" data-listing-date-sort="1737928800000" data-listing-file-modified-sort="1738725506942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3149">
+<a href="./blog/posts/math/math_skills_for_AI.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/math/images/Maslakiat.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Math Skills For AI
+</h5>
+<div class="card-text listing-description delink">
+<p>Improving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+1/27/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
+<a href="./blog/posts/life_style/kamcalorie.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/life_style/images/kcal.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+كم كالوري في الطعام ؟
+</h5>
+<div class="card-text listing-description delink">
+<p>أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+1/8/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
+<a href="./blog/posts/life_style/protienai.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/life_style/images/proteinai.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+أفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم
+</h5>
+<div class="card-text listing-description delink">
+<p>بروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج رامي لابس</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+1/8/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZmw=" data-listing-date-sort="1731362400000" data-listing-file-modified-sort="1738733056562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891">
+<a href="./blog/posts/fl/what_is_federated_learning.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/fl/images/federate_learning.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+What is Federated Learning
+</h5>
+<div class="card-text listing-description delink">
+<p>A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+11/12/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZ29vZ2xlJTJDc2VvJTJDYWRz" data-listing-date-sort="1728075600000" data-listing-file-modified-sort="1738725506957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="341">
+<a href="./blog/posts/seo/google_ads_black_box.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/seo" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Google Ads Black Box
+</h5>
+<div class="card-text listing-description delink">
+<p>Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/5/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1738725506933" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473">
+<a href="./blog/posts/ds_and_algo/master_ds.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Data Structures and Algorithms as Machine Learning Engineer
+</h5>
+<div class="card-text listing-description delink">
+<p>Trying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/4/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="aHVhd2VpJTJDd2F0Y2glMkNleHAlMkNibG9nZ2luZyUyQ3B1Ymxpc2g=" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278">
+<a href="./blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/products_reviews/images/huawei-watch-gt4-14-day-battery-life.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Review of Huawei watch gt 4
+</h5>
+<div class="card-text listing-description delink">
+<p>Huawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/4/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="YmxvZ2dpbmclMkNzZW8=" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1738725506959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="883">
+<a href="./blog/posts/seo/the_curse_of_seo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/seo/images/labtop.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The curse of SEO
+</h5>
+<div class="card-text listing-description delink">
+<p>Discover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+7/31/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="12" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1720558800000" data-listing-file-modified-sort="1738725506937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2155">
+<a href="./blog/posts/life_style/fake_graviety.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./blog/posts/life_style/images/burn_out.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+جاذبية مزيفة و عالم مخادع
+</h5>
+<div class="card-text listing-description delink">
+<p>مخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+7/10/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="13" data-listing-date-sort="1704060000000" data-listing-file-modified-sort="1738725506953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
+<a href="./blog/posts/mteb_encoding/my_little_dargon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="blog/posts/mteb_encoding/dragon_2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+My little Dragon “kobo”
+</h5>
+<div class="card-text listing-description delink">
+<p>A review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+1/1/24
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="14" data-listing-date-sort="1701900000000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="439">
+<a href="./blog/posts/products_reviews/Huawei_mate_pad_11.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+After one year of using Huawei Mate 11 without google services
+</h5>
+<div class="card-text listing-description delink">
+<p>Sharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience with, noteshelf,concepts, …</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+12/7/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="15" data-listing-date-sort="1701813600000" data-listing-file-modified-sort="1738725506954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1094">
+<a href="./blog/posts/products_reviews/Huawei freebuds 5i.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!
+</h5>
+<div class="card-text listing-description delink">
+<p>Review of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+12/6/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="16" data-listing-date-sort="1698444000000" data-listing-file-modified-sort="1738725506942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2025">
+<a href="./blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+MTEB Massive Text Embedding Benchmark
+</h5>
+<div class="card-text listing-description delink">
+<p>MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/28/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="17" data-listing-date-sort="1697835600000" data-listing-file-modified-sort="1738725506953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
+<a href="./blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”
+</h5>
+<div class="card-text listing-description delink">
+<p>let’s explore this applications with txtai and other workflow with some notes and future directions</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/21/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="18" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
+<a href="./blog/posts/courses/havrard CS197 AI research experiences.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+havrard CS197 AI research experiences
+</h5>
+<div class="card-text listing-description delink">
+<p>Embark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+7/18/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="19" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaA==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
+<a href="./blog/posts/life_style/why_I_am_blogging.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+why i am blogging
+</h5>
+<div class="card-text listing-description delink">
+<p>why i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+7/18/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="20" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaCUyQ3Nlbw==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1738725506957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
+<a href="./blog/posts/seo/how_i_use_nlp_for_seo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+How I am using NLP to improve my Websites SEO
+</h5>
+<div class="card-text listing-description delink">
+<p>How i use python scripts and natural language processing to improve my landing page SEO</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+7/18/23
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="blog-listings-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
 
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1015,7 +1381,7 @@ Title
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abdelkareemkobo/karem-site/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    </div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

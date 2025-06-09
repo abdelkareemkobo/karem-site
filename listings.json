@@ -1,8 +1,25 @@
 [
   {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/tils/2025-06-06-til.html",
+      "/til/tils/2025-05-28-til.html",
+      "/til/tils/2025-05-25-til.html",
+      "/til/tils/2025-05-23-til.html",
+      "/til/tils/2025-05-21-til.html",
+      "/til/tils/2025-05-20-til.html",
+      "/til/tils/2025-05-19-til.html",
+      "/til/tils/2025-05-18-til.html",
+      "/til/tils/2025-05-17-til.html"
+    ]
+  },
+  {
+    "listing": "/oss/opensource.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/blog/posts/minishlab/test.html",
       "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",
       "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html",
@@ -27,27 +44,8 @@
     ]
   },
   {
-    "listing": "/oss/opensource.html",
-    "items": []
-  },
-  {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/tils/2025-06-06-til.html",
-      "/til/tils/2025-05-28-til.html",
-      "/til/tils/2025-05-25-til.html",
-      "/til/tils/2025-05-23-til.html",
-      "/til/tils/2025-05-21-til.html",
-      "/til/tils/2025-05-20-til.html",
-      "/til/tils/2025-05-19-til.html",
-      "/til/tils/2025-05-18-til.html",
-      "/til/tils/2025-05-17-til.html"
-    ]
-  },
-  {
     "listing": "/blog/feed.html",
     "items": [
-      "/blog/posts/minishlab/test.html",
       "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",
       "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html",
