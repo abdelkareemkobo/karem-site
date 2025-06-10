@@ -17,7 +17,88 @@
 <width>144</width>
 </image>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Wed, 14 May 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 09 Jun 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Getting Back to RSS</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/life_style/back_to_rss.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Hi!<br>
+These are my thoughts on digital minimalism and staying ahead in AI without burning out.</p>
+<section id="the-flood-of-information" class="level2">
+<h2 class="anchored" data-anchor-id="the-flood-of-information">The Flood of Information</h2>
+<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more.<br>
+<img src="https://kareemai.com/blog/posts/life_style/images/vision_read.png" class="img-fluid" alt="Fluent Reader"></p>
+<p>Yesterday, I read an article from <a href="https://www.answer.ai/posts/2025-06-05-readbench.html">Answerdotai</a> about Vision Language Models (VLMs).</p>
+<p>I spent about 15 minutes diving into the ideas and reflecting on how they relate to my recent projects using Colpali and DSE.</p>
+<p>Today, I opened X.com and saw a thread by Benjamin about the same article.</p>
+<p>I skimmed it but couldn’t recall anything meaningful! There was no real engagement—just a fleeting sense of encountering new VLM updates.</p>
+<p>I bookmarked the post, thinking I’d revisit it for my next project or research idea that could “change my life.” Spoiler: I probably won’t.</p>
+</section>
+<section id="is-twitter-the-best-for-ml-maybe" class="level2">
+<h2 class="anchored" data-anchor-id="is-twitter-the-best-for-ml-maybe">Is Twitter the Best for ML? Maybe!</h2>
+<p>My Twitter feed is highly customized, and I use an extension to block distractions.</p>
+<p>Yet, every time I open it, I’m flooded with ideas and AI updates that feel overwhelming.</p>
+<p>It’s one reason I struggle to finish projects. While X is great for staying updated and connecting with top minds in the field, it’s not the only way.</p>
+<p>You can mention people like Jeremy Howard, Tom Arson, or the Hugging Face team and often get a response within an hour—pretty cool!</p>
+<p>I deleted my Twitter account last year but created a new one, hoping to earn from the ad system and share my projects.</p>
+<p>However, I haven’t completed a single project I’m proud to share. Everything’s still in the early stages.</p>
+<p>I don’t need X! These feel like flimsy reasons to stay active there. There’s a way to get the benefits without harming my focus, health, or life.</p>
+</section>
+<section id="personal-branding-and-linkedin" class="level2">
+<h2 class="anchored" data-anchor-id="personal-branding-and-linkedin">Personal Branding and LinkedIn</h2>
+<p>What is LinkedIn? It’s supposed to be your portfolio for job opportunities and personal branding. I’ve tried perfecting my profile, applying for jobs, and sharing work, but I’ve had no offers through LinkedIn. This week, I landed two jobs—one through a friend’s referral and another via open-source connections—without LinkedIn’s help.</p>
+<p>To me, LinkedIn feels fake. The algorithms are broken, and it’s become a waste of time. If you want to learn about me, check my CV and website at kareemai.com.</p>
+<p>By focusing on deep, unique work, I believe I can create my own gravity to attract better opportunities aligned with my interests. Will this work for everyone? Probably not. These are just my thoughts and experiences.</p>
+<p>By the way, a Hugging Face profile might be better for landing AI jobs if you’re creating real, impactful work.</p>
+</section>
+<section id="make-it-hard-for-people-to-reach-you" class="level2">
+<h2 class="anchored" data-anchor-id="make-it-hard-for-people-to-reach-you">Make It Hard for People to Reach You</h2>
+<p>Am I going to live in a cave? No! In a recent meeting, a friend jokingly called me “our search engine.”</p>
+<p>I want to stay connected to what matters and gain maximum benefits without fracturing my attention with short posts or inauthentic interactions.</p>
+<p>There’s freedom in posting something without expecting comments or reactions. If you like it, great! If not, that’s fine too. Why didn’t you like it? Maybe it’s beginner-level or poorly written. I’ll do better next time.</p>
+<p>I’ve set boundaries to manage interactions:</p>
+<pre><code>Don’t send me voice notes—write instead. It’s quicker, and I don’t have to pause everything to listen.
+Don’t call me—send a message first.
+Don’t leave comments—email me instead.</code></pre>
+<p>Tough? Sure. Some people might not like it, but it filters out noise and preserves what’s important. People may get annoyed initially, but they adapt quickly.</p>
+</section>
+<section id="back-to-rss-discord" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-rss-discord">Back to RSS + Discord</h2>
+<p>After five years, I’ve identified the sources I value and noticed a pattern. Why not collect them in one managed place, free from algorithms and ads? That’s where RSS comes in. I love it—it’s a superpower! When I first learned about RSS in college, I pictured an old Englishman in a garden reading about obscure topics. Now, I’ve become that “old man” who craves calm, minimal, and boring tools.</p>
+<p>You can even follow YouTube channels via RSS without opening a browser! <img src="https://kareemai.com/blog/posts/life_style/images/fluent_reader.png" class="img-fluid" alt="Fluent Reader"></p>
+<p>For interacting with people, Discord channels are better. I can still reach folks like Jeremy and Tom there.</p>
+</section>
+<section id="next-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="next-ideas">Next Ideas</h2>
+<p>I have many changes I want to implement and thoughts to refine. I’m working on improving:</p>
+<pre><code>Activity Watch
+Todo Manager
+Thoughts Logging
+Media Manager</code></pre>
+<p>I’m also focusing on better habits like sleeping, eating, and walking.</p>
+<p>Want to find me? Visit my customized space at kareeai.com.</p>
+<p>All my love,</p>
+<p>Kareem</p>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>idea_Forge</category>
+  <category>publish</category>
+  <category>rough_thoughts</category>
+  <category>life_style</category>
+  <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
+  <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
+</item>
 <item>
   <title>Bojji &amp; Zarra Embedding models</title>
   <dc:creator>kareem </dc:creator>
@@ -2914,56 +2995,6 @@ Inputs are two sets of sentences from two different languages. For each sentence
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</guid>
-  <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>why i am blogging</title>
-  <dc:creator>Kareem Elkhateb</dc:creator>
-  <link>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="table-of-contents" class="level2">
-
-</section>
-<section id="why-i-am-blogging" class="level2">
-<h2 class="anchored" data-anchor-id="why-i-am-blogging">Why I am blogging</h2>
-<ol type="1">
-<li>I am blogging to establish a presence on the internet and hope to collaborate with people who are interested in what I write or think about (reducing the search space by reversing the process).</li>
-<li>It serves as a resume and blueprint for my existence in this world.</li>
-<li>My goal is to help others by providing valuable content that makes their lives easier and better.</li>
-<li>Organizing my knowledge and recapping topics I’ve forgotten helps me experience “aha” moments! 💡
-<ol type="1">
-<li>It’s a test of whether I truly understand something or not.</li>
-</ol></li>
-<li>I don’t like social media posts, Facebook, Twitter, or LinkedIn articles. I believe these platforms are not the best places for technical blogs, and their disadvantages outweigh the advantages.</li>
-<li>I value the freedom of speech. Some topics or thoughts may be censored on social media, but I want to express my opinions without restrictions from others whose opinions I may not respect.</li>
-<li>I want to discuss topics while I’m learning them because they’re still fresh in my mind. This will help anyone in a similar position as me in the future.</li>
-<li>When studying a topic and knowing that I can write about it on my blog, I find my mind more focused on details that would fit well in the blog. This makes the learning process more enjoyable, focused, and valuable.</li>
-<li>I want my posts and knowledge to be more organized!
-<ol type="1">
-<li>Who will search for a post written six years ago on Facebook or see your first tweet?</li>
-<li>This problem is related to the feed of these social platforms.</li>
-</ol></li>
-</ol>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li>https://medium.com/<span class="citation" data-cites="racheltho/why-you-yes-you-should-blog-7d2544ac1045">@racheltho/why-you-yes-you-should-blog-7d2544ac1045</span></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>life</category>
-  <category>blogging</category>
-  <category>publish</category>
-  <guid>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</guid>
   <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>
