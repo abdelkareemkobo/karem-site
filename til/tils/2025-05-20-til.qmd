@@ -1,0 +1,64 @@
+---
+title: "Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger"
+description: "My experience moving my domain from Hostinger to Porkbun and connecting the domains with Vercel and Railway"
+author: Kareem
+date: 2025-05-20
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+  - seo 
+  - domains
+  - vercel 
+  - porkbun
+  - web
+image: ""
+---
+
+## Moving My Domains 
+
+I decided to transfer all 11 of my domains from Hostinger to other providers. I consulted two friends—a team lead in Canada and an SEO specialist in Turkey—and both recommended Porkbun.
+
+I registered with Porkbun and was required to verify my identity. They offered multiple verification options, and I chose to use my government ID. However, I faced issues: I uploaded my ID about 10 times, and it failed every time, even though the verification platform supported my language. I reached out to their help center, and the fastest response came via email.
+
+It took about 12 hours to receive a reply, which felt like a long time. The good news? They instantly verified my ID with no further issues. Later, when I asked another question, their response again took several hours, unlike Hostinger, which typically responds within 1 to 30 minutes (and at most within 2 hours). However, I found Hostinger’s customer service stricter and sometimes less friendly.
+
+I’ll discuss my reasons for moving later, but for now, let’s focus on the process.
+
+### Moving from Hostinger to Porkbun 
+
+I had never transferred a domain before, so I expected it to be challenging. However, Hostinger made the process straightforward without asking why I was transferring.
+
+Here’s how to do it:
+
+1. Go to your Hostinger dashboard.
+2. Disable the **Privacy Protection (WHOIS Privacy Protection)** button.
+3. Disable the **Transfer Lock** button. This may take up to 12 hours to update.
+4. Obtain the **Authorization Code** (EPP code) from the dashboard and save it, as you’ll need to provide it to Porkbun for the domain transfer.
+
+On Porkbun’s website:
+- Enter your domain name in the **Domain Name** field under the transfer section.
+- Copy the authorization code from Hostinger and paste it into the **Auth Code** field.
+- Click **Submit**.
+
+The transfer(s) will be added to your cart. From there, click **Continue to Billing** to pay for the transfer. It’s that simple!
+
+If your domain is older than 60 days, the transfer typically takes 5 to 7 days. Some domains may transfer in as little as 2 days, but Hostinger will send a verification request via email to confirm the transfer.
+
+Note: If your domain is less than 60 days old, you’ll need to wait until it passes the 60-day mark. There’s talk of this being reduced to 30 days, but as of this writing (May 2025), the 60-day rule applies, per ICANN regulations, not Hostinger or Porkbun.
+
+### Connecting Railway and Vercel with Porkbun 
+
+Connecting a domain to Vercel is straightforward. Follow the instructions provided by Vercel, which are similar to those for any registrar. Add the necessary DNS records in Porkbun’s **DNS Management** section, accessible from the domain management dashboard under your account menu.
+
+Connecting to Railway was trickier. I needed an intermediary, and I chose Cloudflare to manage my Porkbun domain’s DNS. Here’s how it worked:
+
+
+1. Configure Cloudflare to manage your Porkbun domain.
+
+2. Add the necessary Railway DNS records to Cloudflare.
+
+3. Wait approximately 1 to 2 days for the DNS changes to propagate.
+
+Once the DNS updates are complete, your domain should work seamlessly with Railway.

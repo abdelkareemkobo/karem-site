@@ -1,0 +1,42 @@
+---
+title: Connecting with ideas in ML
+description: some random thoughts about nonsense thoughts. 
+author: kareem
+date: 2025-06-06
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+image: ""
+---
+Here is the corrected version with grammar errors fixed and improved clarity, while preserving the original meaning and tone:
+
+- Get paid for your knowledge!
+- I’m not interested in all this talk about being replaced by AI. If AI can replace an engineer’s mind, it will replace everything in the world.
+- When this happens, it won’t really matter!
+- I got my first job one year after graduation with a good salary for my experience and the local currency.
+- الحمد والشكر والفضل لله وحده. 
+- Actually, I got two jobs, not one!
+- I landed a full-time AI Engineer position at a startup that is already operational with its own customers, plus a part-time role with flexible meetings. I’m the wildcard—maybe even the AI—in this startup, which is set to receive funding in the coming weeks.
+- This might give the impression that I’m a great engineer, but I’m not!
+- I’m not good at programming; I’m below average and can barely do cool stuff on my own. I only know some solutions to try, and I’m familiar with multiple resources and places to get help. I love asking more experienced people for feedback.
+- I can only say that I love this field a lot! It’s very interesting. With just a laptop and my mind, I can create things the world needs and will pay for!
+- This may sound silly, but it’s an amazing idea to think about, especially for someone like me who doesn’t enjoy the outside world or dealing with people in real life.
+- What I like is that the world is connected, and you can gain recognition quickly if you’re doing real work and building connections with people in your field.
+- I’m interested in Machine Learning and focus on niche areas where not many people are working. In my language, there’s little competition, which gives me a unique edge! But in reality, I’m below average; the basics I explore in these areas are enough for now.
+- I don’t advise anyone to do this, but I want to say that when you try your best, reflect on your goals, start crafting your ideas, and engage with others’ ideas, your influence and impact will grow significantly.
+- I’ve met many ordinary people who simply read documentation, ask questions about what they don’t know, and are beginners, yet others look at them and think, “Wow, they must be geniuses!”
+- But they’re not! You may have more knowledge and experience than them, but business, your birthplace, and the college you graduated from are strong factors in determining your path.
+- You can reach great places without these, but they accelerate your progress!
+- We all know the story of the child who learned programming at 11 years old and now, at 25, codes as easily as walking.
+- What I’ve found is that you can still build great connections with someone who has 10 years more experience than you, and they might even say, “You’re a smart person! I want you to work with me.”
+- We’re all limited, and there will always be gaps that require other minds to fill. The great thing is that we grow faster when we connect with such minds!
+- I really admire the work from the AnswerDotAI team. I find that Jeremy Howard has a profound impact on how I think about AI and learning.
+- The courses I’ve taken with him, the community, and the tools make me feel ahead of the curve and capable of creating things!
+- When you start following people like Omar Khatab, Benjamin, Antoine, Tom Arson, and many others, and interact with their work, you begin to gain weight in these spaces. I’m not just talking about getting a job—I’m talking about the level of ideas.
+- There are people watching, people building tools around concepts, and people creating new concepts!
+- I wish I could reach the cutting edge of knowledge. This may not be precise, but I see it as a journey I want to pursue.
+- There’s more to say, but this world has immense potential for smart people—not in terms of marketing or being a shallow influencer.
+- I want to say that I have many ideas I want to create and share with other minds. I believe I’ll be able to make a positive impact in the areas I’m passionate about and improve Islamic tech and Arabic NLP.
+

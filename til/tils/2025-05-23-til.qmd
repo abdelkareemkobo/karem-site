@@ -1,0 +1,109 @@
+---
+title: Brave Leo AI with Ollama, vllm, and any huggingface llm locally
+description: "How to configure Brave Leo to use your any LLM provider privately in your browser  like Ollama or VLLM local models from hugginface transformers"
+author: kareem
+date: 2025-05-23
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+  - web 
+  - ai
+  - llm
+  - local_llm
+  - ollama
+image: "images/brave_leo.png"
+---
+
+## What’s Brave Leo AI All About?
+
+Brave Leo AI is a super handy, privacy-first AI assistant built right into the Brave browser. 
+
+It’s there to help you out with all sorts of tasks, and it works on your computer (macOS, Windows, Linux) or phone (Android and iOS). 
+
+The best part? You don’t need to sign up or log in to use it for free, and it’s designed to keep your data private.
+
+![Brave Leo with Ollama or VLLM](images/brave_leo.png)
+
+### What Can Brave Leo AI Do?
+
+
+Leo’s got a lot of tricks up its sleeve:
+- **Summarize Stuff Instantly**: It can give you quick summaries of webpages, PDFs, Google Docs, Google Sheets, or even YouTube videos by reading their transcripts.
+
+- **Answer Questions**: Whether it’s about a webpage or just something you’re curious about, Leo can explain things clearly and even offer different perspectives.
+
+- **Write and Create**: Need an article, email, essay, or some code? Leo can whip it up for you.
+
+- **Translate and Code**: It can translate text into different languages or help with coding by suggesting or generating code snippets.
+
+- **Custom AI Models**: With the “Bring Your Own Model” feature, you can plug in your own local or remote AI models for a personalized experience.
+
+### Is Brave Leo Safe to Use?
+
+Privacy is Leo’s middle name! Here’s why it’s safe:
+
+- **Anonymized Requests**: Leo uses a reverse proxy, so Brave can’t tie your requests to your IP address.
+
+- **No Chat Storage**: Your conversations aren’t saved on Brave’s servers or used to train AI models.
+
+- **No Sign-Up Needed**: You can use it for free without an account. Even the premium version uses anonymous tokens to keep things private.
+
+- **Local Storage**: Your chat history stays on your device, and you can clear it anytime through the browser settings.
+
+- **Heads-Up on Third-Party Models**: If you use external AI models (like Anthropic’s Claude), their data policies might differ (Claude keeps chats for 30 days, for 
+- example). Always check the privacy terms if you go that route.
+
+
+
+### What About Your Chat History with Leo?
+
+
+
+If you’re using Brave version 1.75 or higher on desktop or Android (not in Incognito or Tor mode), you can keep track of your chats with Leo. 
+
+They’re stored locally on your  device, not on any server, so you’re in control. 
+You can revisit, continue, or delete them from the Leo full-page view (brave://leo-ai) or the browser’s sidebar. 
+
+Just note that clearing your browsing history will also wipe out any webpage-related content in your chats. 
+Easy peasy!
+
+## Bring Your Own Model (BYOM) with Brave Leo
+
+With [BYOM](https://support.brave.com/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo) , you can connect your own AI models to Leo for a custom experience. You can use platforms like vLLM, SGLang, or any inefernce engines with any Hugging Face Transformers model, as long as it follows the OpenAI 
+Chat Protocol. 
+
+
+For example, you can run a model like Qwen2.5-VL-3B-Instruct locally with this command:
+
+
+```python
+
+python -m sglang.launch_server --port 7501 --model-path Qwen/Qwen2.5-VL-3B-Instruct
+
+```
+
+This sets up a server for SGLang (or you can use vLLM with a similar command). 
+
+
+Then, in Brave Leo’s BYOM settings, add your model with these details:
+
+
+**Label**: Qwen2.5-VL-3B-Instruct
+
+**Model Request Name**: Qwen2.5
+
+**Server Endpoint**: http://127.0.0.1:7501/v1/chat/completions
+
+**Context Size**: 4000
+
+**API Key**: local
+
+**System Prompt**: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify 
+if needed, and ensure accuracy.”
+
+
+Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider. 
+Once set up, your model integrates with Leo, letting you use it directly in the browser for tailored, private AI chats. It’s like giving Leo your own custom brain!
+

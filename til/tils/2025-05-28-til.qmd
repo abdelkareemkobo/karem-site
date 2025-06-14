@@ -1,0 +1,195 @@
+---
+title: Pylate Day 1 
+description: Trying to explore pylate and create my first Arabic model 
+author: kareem
+date: 2025-05-28
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+image: ""
+---
+# PyLate & ColBERT Evaluation - Complete Learning Guide
+
+## Core Concepts
+
+### What is PyLate?
+**Q: What is PyLate and what does it do?**
+A: PyLate is a Python library for vector retrieval and search, specifically designed for ColBERT models. It provides tools for indexing documents, encoding queries, and performing similarity search.
+
+### What is ColBERT?
+**Q: How does ColBERT work?**
+A: ColBERT (Contextualized Late Interaction over BERT) creates dense vector representations for documents and queries, then uses late interaction (token-level matching) for retrieval instead of single vector similarity.
+
+## Dataset Formats
+
+### Format 1: Triplet/Multi-negative Format
+**Q: What does triplet format look like?**
+A: Each row contains:
+- `query`: The search query
+- `positive`: One relevant document  
+- `negative1`, `negative2`, ...: Multiple irrelevant documents
+
+**Pros**: Good for training with hard negatives
+**Cons**: No separate corpus, harder to evaluate
+
+### Format 2: Structured Retrieval Format  
+**Q: What does structured format contain?**
+A: Three separate components:
+- `corpus`: All documents with IDs
+- `queries`: All queries with IDs
+- `qrels`: Relevance judgments (query-doc pairs)
+
+**Pros**: Standard IR evaluation format, works with PyLate directly
+**Cons**: More complex structure
+
+### Format 3: Passage Ranking Format
+**Q: How does passage ranking format work?**
+A: Each row has:
+- `query_id`, `query`: Query information
+- `positive_passages`: List of relevant documents
+- `negative_passages`: List of irrelevant documents
+
+**Pros**: Multiple positives/negatives per query, rich annotations
+**Cons**: Requires extraction to create corpus
+
+## Data Conversion Strategies
+
+### Memory-Efficient File Writing
+**Q: How do you handle large datasets efficiently?**
+A: Stream processing with direct file writing:
+```python
+with open('corpus.jsonl', 'w') as f:
+    for el in dataset['corpus']:
+        if el['corpus-id'] and el['text']:
+            json.dump({"_id": el['corpus-id'], "text": el['text']}, f)
+            f.write('\n')
+```
+
+**Pros**: Low memory usage, handles any dataset size
+**Cons**: Requires file I/O, slightly slower
+
+### PyLate File Requirements
+**Q: What files does  BEIR datasets is ?**
+A: 
+- `corpus.jsonl`: `{"_id": "doc1", "text": "document text"}`
+- `queries.jsonl`: `{"_id": "q1", "text": "query text"}`
+- `qrels/split.tsv`: `query_id\tdoc_id\tscore`
+
+**Critical**: File names and folder structure must match exactly
+
+### Direct Dictionary Conversion
+**Q: How do you convert without files?**
+A: Transform to PyLate's expected return format:
+```python
+documents = [{"id": doc_id, "text": text} for doc_id, text in corpus.items()]
+queries = list(queries.values())
+# qrels stays as dictionary
+```
+
+**Pros**: Faster, no file operations
+**Cons**: Must match exact format, harder to debug
+
+## Evaluation Approaches
+
+### Custom Evaluation with ranx
+**Q: When do you use ranx for evaluation?**
+A: When you have non-standard formats or want custom metrics:
+```python
+qrels = Qrels(qrels_dict)
+run = Run(run_dict)
+metrics = evaluate(qrels, run, ["ndcg@5", "map@5"])
+```
+
+**Pros**: Flexible, works with any format
+**Cons**: Manual setup required
+
+### PyLate Built-in Evaluation
+**Q: When do you use PyLate's evaluation?**
+A: When data is in standard BEIR format with proper file structure
+
+**Pros**: Standardized, less code
+**Cons**: Strict format requirements
+
+## Indexing Strategies
+
+### PLAID Index
+**Q: What is PLAID indexing?**
+A: PyLate's efficient indexing method for ColBERT embeddings, supporting fast similarity search
+
+**Key Parameters**:
+- `index_folder`: Where to store index
+- `index_name`: Identifier for the index  
+- `override=True`: Overwrites existing index
+
+### Document Processing
+**Q: How do you prepare documents for indexing?**
+A: 
+1. Extract unique documents from all sources
+2. Create document IDs and embeddings
+3. Add to index with `add_documents()`
+
+**Important**: Use `is_query=False` for documents, `is_query=True` for queries
+
+## Common Pitfalls & Solutions
+
+### File Format Issues
+**Q: What are common file format mistakes?**
+A:
+- Wrong file extensions (.csv instead of .tsv)
+- Incorrect folder structure (missing qrels folder)
+- Wrong field names (`id` vs `_id`)
+
+### Data Extraction Problems
+**Q: How do you handle variable-length lists?**
+A: Use nested loops for negative passages:
+```python
+for row in dataset:
+    for neg_doc in row['negative_passages']:
+        # process each negative document
+```
+
+### Memory Management
+**Q: How do you avoid memory issues?**
+A:
+- Process datasets in chunks
+- Use generators instead of lists
+- Write to files incrementally
+- Use dictionaries to avoid duplicates
+
+## Performance Considerations
+
+### Batch Processing
+**Q: How do you optimize encoding speed?**
+A: Use appropriate batch sizes:
+- Larger batches: Faster but more memory
+- Smaller batches: Slower but memory-safe
+- Typical: `batch_size=32` or `batch_size=64`
+
+### Index Management
+**Q: How do you manage multiple indexes?**
+A: Use descriptive names and separate folders:
+- `index_folder="arabic_index"`
+- `index_name="gte-multilingual-base"`
+
+## Evaluation Metrics
+
+### Standard IR Metrics
+**Q: What metrics should you track?**
+A:
+- **NDCG@k**: Normalized discounted cumulative gain
+- **MAP@k**: Mean average precision  
+- **Recall@k**: Proportion of relevant docs retrieved
+- **Precision@k**: Proportion of retrieved docs that are relevant
+
+### Interpreting Results
+**Q: What makes good retrieval performance?**
+A:
+- NDCG@5 > 0.7: Excellent
+- NDCG@5 > 0.5: Good  
+- NDCG@5 > 0.3: Acceptable
+- NDCG@5 < 0.3: Needs improvement
+
+This comprehensive guide covers all the key concepts, trade-offs, and practical considerations for working with PyLate and ColBERT evaluation pipelines.
+

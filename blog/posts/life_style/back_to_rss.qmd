@@ -1,0 +1,110 @@
+---
+title: Getting Back to RSS 
+description: Exploring digital minimalism and strategies to stay ahead in AI without burnout. This post discusses the overwhelm of social media, the power of RSS for curated content, and setting boundaries for better focus and productivity.  
+date: 2025-06-10
+categories: [blogging, idea_Forge, publish, rough_thoughts, life_style]
+image: images/vision_read.png
+order: 1
+draft: false
+featured: true
+author: kareem
+---
+
+Hi!  
+These are my thoughts on digital minimalism and staying ahead in AI without burning out.
+
+## The Flood of Information
+
+I use [Fluent Reader](https://github.com/yang991178/fluent-reader) to keep track of the feeds I love, covering topics like machine learning (ML), life, and more.  
+![Fluent Reader](images/vision_read.png)  
+
+Yesterday, I read an article from [Answerdotai](https://www.answer.ai/posts/2025-06-05-readbench.html) about Vision Language Models (VLMs). 
+
+I spent about 15 minutes diving into the ideas and reflecting on how they relate to my recent projects using Colpali and DSE.  
+
+Today, I opened X.com and saw a thread by Benjamin about the same article. 
+
+I skimmed it but couldn’t recall anything meaningful! There was no real engagement—just a fleeting sense of encountering new VLM updates. 
+
+I bookmarked the post, thinking I’d revisit it for my next project or research idea that could “change my life.” Spoiler: I probably won’t.
+
+## Is Twitter the Best for ML? Maybe!
+
+My Twitter feed is highly customized, and I use an extension to block distractions. 
+
+Yet, every time I open it, I’m flooded with ideas and AI updates that feel overwhelming. 
+
+It’s one reason I struggle to finish projects. While X is great for staying updated and connecting with top minds in the field, it’s not the only way.
+
+You can mention people like Jeremy Howard, Tom Arson, or the Hugging Face team and often get a response within an hour—pretty cool! 
+
+I deleted my Twitter account last year but created a new one, hoping to earn from the ad system and share my projects. 
+
+However, I haven’t completed a single project I’m proud to share. Everything’s still in the early stages.
+
+I don’t need X! These feel like flimsy reasons to stay active there. 
+There’s a way to get the benefits without harming my focus, health, or life.
+
+## Personal Branding and LinkedIn
+
+What is LinkedIn? It’s supposed to be your portfolio for job opportunities and personal branding. 
+I’ve tried perfecting my profile, applying for jobs, and sharing work, but I’ve had no offers through LinkedIn. 
+This week, I landed two jobs—one through a friend’s referral and another via open-source connections—without LinkedIn’s help.
+
+To me, LinkedIn feels fake. 
+The algorithms are broken, and it’s become a waste of time. 
+If you want to learn about me, check my CV and website at kareemai.com.
+
+By focusing on deep, unique work, I believe I can create my own gravity to attract better opportunities aligned with my interests. 
+Will this work for everyone? Probably not. 
+These are just my thoughts and experiences.
+
+By the way, a Hugging Face profile might be better for landing AI jobs if you’re creating real, impactful work.
+
+## Make It Hard for People to Reach You
+
+Am I going to live in a cave? No! In a recent meeting, a friend jokingly called me “our search engine.” 
+
+I want to stay connected to what matters and gain maximum benefits without fracturing my attention with short posts or inauthentic interactions.
+
+There’s freedom in posting something without expecting comments or reactions. 
+If you like it, great! If not, that’s fine too. 
+Why didn’t you like it? Maybe it’s beginner-level or poorly written. I’ll do better next time.
+
+I’ve set boundaries to manage interactions:
+
+    Don’t send me voice notes—write instead. It’s quicker, and I don’t have to pause everything to listen.
+    Don’t call me—send a message first.
+    Don’t leave comments—email me instead.
+
+Tough? Sure. Some people might not like it, but it filters out noise and preserves what’s important. 
+People may get annoyed initially, but they adapt quickly.
+
+## Back to RSS + Discord
+
+After five years, I’ve identified the sources I value and noticed a pattern. 
+Why not collect them in one managed place, free from algorithms and ads? That’s where RSS comes in.
+I love it—it’s a superpower! When I first learned about RSS in college, I pictured an old Englishman in a garden reading about obscure topics.
+Now, I’ve become that “old man” who craves calm, minimal, and boring tools.
+
+You can even follow YouTube channels via RSS without opening a browser!
+![Fluent Reader](images/fluent_reader.png)  
+
+For interacting with people, Discord channels are better. I can still reach folks like Jeremy and Tom there.
+
+## Next Ideas
+
+I have many changes I want to implement and thoughts to refine. I’m working on improving:
+
+    Activity Watch
+    Todo Manager
+    Thoughts Logging
+    Media Manager
+
+I’m also focusing on better habits like sleeping, eating, and walking.
+
+Want to find me? Visit my customized space at kareeai.com.
+
+All my love,
+
+Kareem

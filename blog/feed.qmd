@@ -3,7 +3,8 @@ title: Kareem's Blog
 sidebar: false
 listing:
   sort: "date desc"
-  contents: "posts"
+  contents: 
+   - "posts"
   sort-ui: true
   filter-ui: true
   categories: true

@@ -1,0 +1,30 @@
+---
+id: TIL
+title: 📚 kareem's TILs
+image: "https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png"
+search: true
+toc: true
+listing:
+  filter-ui: true
+  sort-ui: true
+  categories: true
+  feed:
+    type: full 
+    description: "Latest TILs by Kareem" 
+  sort: "date desc"
+  max-description-length: 50
+  type: default
+
+  contents: 
+   - "/*.qmd"
+   - "/*/*.qmd"
+   - "/*/index.qmd"
+format: 
+  html:
+    anchor-sections: true
+
+---
+This the place where is share what i learn nearly everyday..for more crafted articles see the [blogs](../blog/feed.qmd)
+
+You can also get in touch with me [here](../index.qmd).
+

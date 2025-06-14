@@ -1,0 +1,97 @@
+---
+title: TIL ? Tody I lernt to create TIL 
+description: Starting with TIL for creating posts on my blogg that i create 1.5 year ago and don't write anything because i didn't complete any blog for the level that i am satifified with
+author: kareem
+date: 2025-05-17
+draft: false
+featured: false
+categories:
+  - blogging
+  - til
+image: "til.jpg"
+---
+
+## Why TIL ?
+
+It helps you overcome the perfacationsim in writting. 
+you don't need to create great article in depth about things you want to share or learn about..etc, all what you want it to write a thing you were trying to learn or solve 
+today and how you solve it
+
+which will help me more focused and make the process of learning more easier and useful for me and others
+
+## create your own gravitey 
+
+sometimes you want to reach and communicate with people in the same space of problems you are solving,
+search engines are very bad in provide the information you want..this is related to how these engines work and other SEO stuff. but for me, i can't reach people and help them or get benefit from them 
+because they simple don't know about me!!
+
+TIL will decreases this spaces and daily TIl about the things  i am learning which are alot will start to give me nice SEO and unique because i am talking about things i don't know and i am interested in and there will be much people in the same boat
+this will increase my X account and linkedin and this is very useful in the current time. 
+
+## TILs level up 
+
+I also want to think in way to extract more crafted blogs from my TILs. 
+but just start making it habbit and will see who will it comes in the end. 
+
+initial thoughts:
+1. weekly recap from my TILs and SEO optimization for the keywords that is increasing and i am interested in
+2. ML to extract related stuff, for example i will want to take about the folloinwg topics:
+- Late interaciton (Pylate, Colbertv2, ColPali)
+- Searching 
+- Model2vec
+- Visino Language models..etc
+collecting them and start writing about them and adding internal links for them will be very useful to improve my blog system 
+
+
+## Things i learned the last 2 days
+
+### The best way to increase traffic is comment with valuble knowledge. 
+I was scorlling on X and found some popular account tweets about Harvard CS197 AI Research and i had create a review year ago about it
+I add the link in the comment and just slept. 
+Boom i found reply analytics links opened wihtout annoying anyone!!
+- 501 Impressions
+- 77 Engagements
+- 2 profile visits
+- 74 clicks
+
+## What is PALID index?
+
+PLAID index is for indexing very large datasets with Later interaction models like (Colbertv2 & ColPali)
+IT Solves the storage footprint and allow you to scale to infinity
+
+They swapped the faiss from facebook what is nice thing because i have multiple bad time to install it especially the GPU version. 
+
+and used fastkeamns from the amazing @bclaive which i really like his work on embeddings
+
+It's replacement for Voyager-based HNSW index which was very bad for scaling Late-Interaction retrieval  models
+
+## Prime Intellect VS  Gpuvec
+
+I was creating a website to find and compare the cloud compute instances from all cloud providers in easy and interactive way. 
+
+I started to work on it the last month, but stoped for other work. 
+
+suddenly i found this website which is called Prime intellect. 
+
+And i just want to say,woooooow. 
+it's a piece of art. 
+The design and information on it and how fast, accurate is very embrassing for my poor gpuvec.com
+
+should i continue improve my website?
+
+Actually yes, we share similar goals but there is multiple chances to compete or even collaborite!! who knows!
+
+They are more than just listing and compare prices, then enable you to use these GPUs from their website. 
+
+Also they create decentralized models and have a mutliple expirened engineers. 
+
+
+
+## References
+
+1. [Antoine tweet](https://x.com/antoine_chaffin/status/1923378986219958526)
+2. [betatim TIL](https://betatim.github.io/posts/til-explained/)
+3. [other TILs](https://kareemai.com/til/)
+
+
+

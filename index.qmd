@@ -7,11 +7,11 @@ listing:
   date-format: short
   feed: true
   filter-ui: true
-  type: table
+  type: grid
   sort-ui: false
   sort: "date desc"
   categories: false
-  fields: [date, title]
+  fields: [date, title, image]
   id: blog-listings
   contents: [blog_data/blogs.yml, blog/posts]
 aliases: ["blog/"]
@@ -20,48 +20,77 @@ format:
     anchor-sections: true
 ---
 
-::: {layout="[21,79]" .profile-header}
+# Kareemai - Digital Garden 🌱
 
-![](ai_hacker.png){.profile-pic}
+Hello, I’m **Abdelkareem Elkhateb**, an AI Engineer passionate about learning and developing new research ideas in LLMs, NLP, and information retrieval. 
 
-Hello, I’m `Abdelkareem Elkhateb`, I like to train deep neural nets on distinct domains, interested in improving current web developements with AI applications. 
+I am dedicated to applying this knowledge in real-world applications and advancing open-source Arabic AI projects.
 
-"فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف 
-يجاهدُ"
+I am one of the maintainers of the NAMAA community, which accelerates AI applications for Arabic and Islamic culture.
+
+****
+::: {layout="[80,80]" .profile-header}
+
+![تيمي](dev.svg){.profile-pic}
+
+>   اللغة ليست عِلمًا .. بل هي شيء فوق العلم  لغتنا في خطر داهم .. ونحن أيضًا
+
 :::
 
-This blog is where I document my journey to learn about programming, deep learning, and AGI.
+This blog documents my journey in programming, deep learning, and AGI. 
 
-Currently I’m Learning `NLP`, `Generative AI`, `Recs`, and `IR` to build charming language models that able to talk, hear and see, made me some coffee
+Currently, I am focused on learning:
 
-I love building Astro.js websites and powering them with AI, like kam_calorie, Awazly, and more.
+1. **Signal Processing**: Building speech processing and AI applications for human voice understanding.
 
-My research focuses on Arabic NLP, small model optimization, image denoising, and vector computing.
+2. **Generative AI**: Building generative models for business solutions and creative applications.
 
-## 💼 Get In Touch
+3. **Recommendation Systems**: Passionate about personalization—enjoy designing recommendation systems for projects of all sizes.
 
-Do you need help operationalizing ML, Recommendition systems or large language models?  
+4. **Information Retrieval**: Working with embeddings and vector databases to improve search and knowledge discovery.
 
-I'm open to consulting work and other forms of advisory. Email me at `kareem01095134688@gmail.com` if you'd like to chat!
+5. **Hypermedia Systems**: Developing small apps with htmx to accelerate AI pipelines, from data processing to observability.
 
-## Production projects
 
-You can look at some of my projects on both opensource and production  like:
+<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
-1. [كم كالوري](https://kamcalorie.com) : semantic search engine built for healthcare 
+## My Trained/Fine-Tuned Models
 
-2. [seo rat](https://github.com/abdelkareemkobo/seo_rat) : SEO optimization tool for gsc and jamstack websites like Astro,Quarto and much more 
+1. **[Zarra & Bojji](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)**: model2vec for Arabic NLP with significant capabilities.
 
-3. [GpuVec: Rent GPUs pricing](https://gpuvec.com) : Find the best GPU to rent from best Cloud Providers based on Mulitple factors like Vram, price, cuda core..etc
+2. **Arabic Gliner**:  Named Entity Recognition (NER) model designed for processing Arabic text with high accuracy and robustness
+
+## Applications
+
+1. [كم كالوري](https://kamcalorie.com): A semantic search engine for healthcare.
+2. [seo rat](https://github.com/abdelkareemkobo/seo_rat): An SEO optimization tool for GSC and Jamstack websites such as Astro and Quarto.
+3. [GPU Compute guide](https://gpuvec.com): Find the best GPU rentals from top cloud providers based on VRAM, price, CUDA cores, and more.
+
 ---
 
-## 📮 Feed
+## 🧠 My Mind
 
-A curated collection of blog posts and shorter form notes.
+A curated collection of blog posts and short-form notes.
 
 ::: {#blog-listings}
 :::
 
-## 📬 Subscribe
+## 📬 Subscribe 
 
 Subscribe via [<i class="bi bi-rss"></i> RSS](index.xml).
+
+<iframe src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+### My Compute 
+
+I primarily work on two devices:
+
+1. An old MSI laptop with a GTX 1660TI GPU.
+2. Occasional access to a dual Titan RTX 24GB setup.
+
+## My Papers 
+
+More coming soon. You can also visit my profiles:
+
+1. [Abdelkareem Google Scholar](https://scholar.google.com/citations?user=lF1wxvcAAAAJ&hl=en)
+2. [Abdelkareem Research Gate](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
