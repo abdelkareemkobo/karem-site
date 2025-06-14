@@ -380,37 +380,44 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "kareem's Blog",
+    "title": "Kareemai - Digital Garden 🌱",
     "section": "",
-    "text": "Hi, I’m Abdelkareem Elkhateb, an AI Engineer passionate about advancing Arabic NLP, LLMs, and generative AI.\nI focus on building innovative AI applications and contributing to open-source projects, particularly through my role as a maintainer in the NAMAA community, accelerating AI for Arabic and Islamic culture.\nThis blog captures my journey in programming, deep learning, and AGI, with a focus on NLP, Generative AI, Recommendation Systems, and Information Retrieval.\nI build Astro.js-powered websites integrated with AI, such as Kam Calorie and Awazly. My research centers on Arabic NLP, small model optimization, image denoising, and vector computing."
+    "text": "Hello, I’m Abdelkareem Elkhateb, an AI Engineer passionate about learning and developing new research ideas in LLMs, NLP, and information retrieval.\nI am dedicated to applying this knowledge in real-world applications and advancing open-source Arabic AI projects.\nI am one of the maintainers of the NAMAA community, which accelerates AI applications for Arabic and Islamic culture.\n\n\n\n\n\n\n\nتيمي\n\n\n\n\n\nاللغة ليست عِلمًا .. بل هي شيء فوق العلم لغتنا في خطر داهم .. ونحن أيضًا\n\n\n\n\nThis blog documents my journey in programming, deep learning, and AGI.\nCurrently, I am focused on learning:\n\nSignal Processing: Building speech processing and AI applications for human voice understanding.\nGenerative AI: Building generative models for business solutions and creative applications.\nRecommendation Systems: Passionate about personalization—enjoy designing recommendation systems for projects of all sizes.\nInformation Retrieval: Working with embeddings and vector databases to improve search and knowledge discovery.\nHypermedia Systems: Developing small apps with htmx to accelerate AI pipelines, from data processing to observability.\n\n\n\n\n\n\nZarra & Bojji: model2vec for Arabic NLP with significant capabilities.\nArabic Gliner: Named Entity Recognition (NER) model designed for processing Arabic text with high accuracy and robustness\n\n\n\n\n\nكم كالوري: A semantic search engine for healthcare.\nseo rat: An SEO optimization tool for GSC and Jamstack websites such as Astro and Quarto.\nGPU Compute guide: Find the best GPU rentals from top cloud providers based on VRAM, price, CUDA cores, and more.\n\n\n\n\n\nA curated collection of blog posts and short-form notes.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n6/10/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5/15/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4/4/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3/18/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2/5/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/27/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11/12/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/5/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/31/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/10/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/1/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/7/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/6/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/28/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/21/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\nNo matching items\n\n  \n\n\n\n\n\nSubscribe via  RSS.\n\n\n\n\nI primarily work on two devices:\n\nAn old MSI laptop with a GTX 1660TI GPU.\nOccasional access to a dual Titan RTX 24GB setup.\n\n\n\n\n\nMore coming soon. You can also visit my profiles:\n\nAbdelkareem Google Scholar\nAbdelkareem Research Gate"
   },
   {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "kareem's Blog",
-    "section": "Projects",
-    "text": "Projects\nExplore my open-source and production projects:\n\n🍹 Kam Calorie: A semantic search engine for healthcare.\n🐀 SEO Rat: SEO optimization tool for GSC and Jamstack sites (Astro, Quarto, etc.).\n🔋 GpuVec: Compare GPU rental options by VRAM, price, CUDA cores, and more."
+    "objectID": "index.html#my-trainedfine-tuned-models",
+    "href": "index.html#my-trainedfine-tuned-models",
+    "title": "Kareemai - Digital Garden 🌱",
+    "section": "",
+    "text": "Zarra & Bojji: model2vec for Arabic NLP with significant capabilities.\nArabic Gliner: Named Entity Recognition (NER) model designed for processing Arabic text with high accuracy and robustness"
   },
   {
-    "objectID": "index.html#models",
-    "href": "index.html#models",
-    "title": "kareem's Blog",
-    "section": "Models",
-    "text": "Models\n\n⚛️ boji: A powerful model2vec for Arabic NLP, designed for high-performance language tasks.\n🧲 Ara-Gliner: One-shote Arabic Named Entity Recognition\n🔬 Abjd: It’s not a modal family, but a smart way for training embedding with minial effort.\n\nmore to create, check the huggingface profile 🤗"
+    "objectID": "index.html#applications",
+    "href": "index.html#applications",
+    "title": "Kareemai - Digital Garden 🌱",
+    "section": "",
+    "text": "كم كالوري: A semantic search engine for healthcare.\nseo rat: An SEO optimization tool for GSC and Jamstack websites such as Astro and Quarto.\nGPU Compute guide: Find the best GPU rentals from top cloud providers based on VRAM, price, CUDA cores, and more."
   },
   {
-    "objectID": "index.html#my-research",
-    "href": "index.html#my-research",
-    "title": "kareem's Blog",
-    "section": "My Research",
-    "text": "My Research\nFind my work on:\n\nGoogle Scholar\nResearchGate\n\n\nCompute\nI work with:\n\n🐉 MSI Laptop (1660TI GTX)\n🐉🐉 Dual Titan RTX 24GB (occasional access)\n\n\n\n📬 Stay Connected\nSubscribe to my blog via RSS or follow my newsletters or reache me with:\n…"
+    "objectID": "index.html#my-mind",
+    "href": "index.html#my-mind",
+    "title": "Kareemai - Digital Garden 🌱",
+    "section": "",
+    "text": "A curated collection of blog posts and short-form notes.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n6/10/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5/15/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4/4/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3/18/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2/5/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/27/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11/12/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/5/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/31/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/10/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n1/1/24\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/7/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/6/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/28/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n10/21/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\n\n\n7/18/23\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#blog-posts",
-    "href": "index.html#blog-posts",
-    "title": "kareem's Blog",
-    "section": "📝 Blog Posts",
-    "text": "📝 Blog Posts\nA curated collection of insights and notes on AI and machine learning.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGetting Back to RSS\n\n\nExploring digital minimalism and strategies to stay ahead in AI without burnout. This post discusses the overwhelm of social media, the power of RSS for curated content, and…\n\n\n\n6/10/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nBojji & Zarra Embedding models\n\n\nBojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.\n\n\n\n5/15/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nCloud GPU Pricing Comparsion in 2025\n\n\nExplore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like our model size calculator to find the cheapest cloud GPUs for AI and HPC…\n\n\n\n4/4/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nmy dream job at Tarteel\n\n\nSharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer\n\n\n\n3/18/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nفن تبسيط الحياة الرقمية\n\n\nفن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية\n\n\n\n2/5/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nMath Skills For AI\n\n\nImproving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible\n\n\n\n1/27/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nكم كالوري في الطعام ؟\n\n\nأول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nأفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم\n\n\nبروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج رامي لابس\n\n\n\n1/8/25\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is Federated Learning\n\n\nA quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.\n\n\n\n11/12/24\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Ads Black Box\n\n\nSuspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy\n\n\n\n10/5/24\n\n\n\n\n\n\n\n\n\n\n\nLearning Data Structures and Algorithms as Machine Learning Engineer\n\n\nTrying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\nReview of Huawei watch gt 4\n\n\nHuawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media\n\n\n\n10/4/24\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe curse of SEO\n\n\nDiscover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine…\n\n\n\n7/31/24\n\n\n\n\n\n\n\n\n\n\n\n\n\nجاذبية مزيفة و عالم مخادع\n\n\nمخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.\n\n\n\n7/10/24\n\n\n\n\n\n\n\n\n\n\n\nMy little Dragon “kobo”\n\n\nA review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.\n\n\n\n1/1/24\n\n\n\n\n\n\n\n\n\n\n\nAfter one year of using Huawei Mate 11 without google services\n\n\nSharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience with, noteshelf,concepts, …\n\n\n\n12/7/23\n\n\n\n\n\n\n\n\n\n\n\nHuawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!\n\n\nReview of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the…\n\n\n\n12/6/23\n\n\n\n\n\n\n\n\n\n\n\nMTEB Massive Text Embedding Benchmark\n\n\nMTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable…\n\n\n\n10/28/23\n\n\n\n\n\n\n\n\n\n\n\ntiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”\n\n\nlet’s explore this applications with txtai and other workflow with some notes and future directions\n\n\n\n10/21/23\n\n\n\n\n\n\n\n\n\n\n\nhavrard CS197 AI research experiences\n\n\nEmbark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of…\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\nwhy i am blogging\n\n\nwhy i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer\n\n\n\n7/18/23\n\n\n\n\n\n\n\n\n\n\n\nHow I am using NLP to improve my Websites SEO\n\n\nHow i use python scripts and natural language processing to improve my landing page SEO\n\n\n\n7/18/23\n\n\n\n\n\n\nNo matching items"
+    "objectID": "index.html#subscribe",
+    "href": "index.html#subscribe",
+    "title": "Kareemai - Digital Garden 🌱",
+    "section": "",
+    "text": "Subscribe via  RSS.\n\n\n\n\nI primarily work on two devices:\n\nAn old MSI laptop with a GTX 1660TI GPU.\nOccasional access to a dual Titan RTX 24GB setup."
+  },
+  {
+    "objectID": "index.html#my-papers",
+    "href": "index.html#my-papers",
+    "title": "Kareemai - Digital Garden 🌱",
+    "section": "",
+    "text": "More coming soon. You can also visit my profiles:\n\nAbdelkareem Google Scholar\nAbdelkareem Research Gate"
   },
   {
     "objectID": "oss/opensource.html",
@@ -753,7 +760,7 @@
     "href": "papers.html",
     "title": "📝 Papers",
     "section": "",
-    "text": "These are a list of papers I’ve given:\n\nExplainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers"
+    "text": "These are a list of papers I’ve given:\n\nQARI-OCR: High-Fidelity Arabic Text Recognition through Multimodal Large Language Model Adaptation\nXAI for Alzheimer’s Dieases based on Particle Swarm Optimization: Explainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers\nOptimiznig Medical Image Classification : Leveraging Advanced Segmentation Models for Enhanced Object Detection in Real-World Scenarios\nAI-Powered ICare ifnant cry Analysis and Speech Therapy"
   },
   {
     "objectID": "blog/posts/courses/havrard CS197 AI research experiences.html",

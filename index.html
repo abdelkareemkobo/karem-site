@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
+<meta name="description" content="A collection of technical blogs and talks on machine learning and data science.">
 
 <title>kareem’s Blog</title>
 <style>
@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd3cde525ce9dc94b502979d9749acf0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-4b70ae774c88f57ee81f4df4afba786a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a0cffff56eee3e02bed0e4239494ea3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd3cde525ce9dc94b502979d9749acf0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 18,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
@@ -145,14 +145,14 @@ window.Quarto = {
 </script>
 
 <link rel="alternate" type="application/rss+xml" title="kareem's Blog" href="index.xml" data-external="1"><meta property="og:title" content="kareem’s Blog">
-<meta property="og:description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
+<meta property="og:description" content="A collection of technical blogs and talks on machine learning and data science.">
 <meta property="og:image" content="https://kareemai.com/quarto.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:image:height" content="576">
 <meta property="og:image:width" content="960">
 <meta name="twitter:title" content="kareem’s Blog">
-<meta name="twitter:description" content="Technical blogs and insights on AI, machine learning, and Arabic NLP.">
+<meta name="twitter:description" content="A collection of technical blogs and talks on machine learning and data science.">
 <meta name="twitter:image" content="https://kareemai.com/quarto.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
@@ -378,14 +378,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
-  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a></li>
-  <li><a href="#my-research" id="toc-my-research" class="nav-link" data-scroll-target="#my-research">My Research</a>
+  <li><a href="#kareemai---digital-garden" id="toc-kareemai---digital-garden" class="nav-link active" data-scroll-target="#kareemai---digital-garden">Kareemai - Digital Garden 🌱</a>
   <ul class="collapse">
-  <li><a href="#compute" id="toc-compute" class="nav-link" data-scroll-target="#compute">Compute</a></li>
-  <li><a href="#stay-connected" id="toc-stay-connected" class="nav-link" data-scroll-target="#stay-connected">📬 Stay Connected</a></li>
+  <li><a href="#my-trainedfine-tuned-models" id="toc-my-trainedfine-tuned-models" class="nav-link" data-scroll-target="#my-trainedfine-tuned-models">My Trained/Fine-Tuned Models</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  <li><a href="#my-mind" id="toc-my-mind" class="nav-link" data-scroll-target="#my-mind">🧠 My Mind</a></li>
+  <li><a href="#subscribe" id="toc-subscribe" class="nav-link" data-scroll-target="#subscribe">📬 Subscribe</a>
+  <ul class="collapse">
+  <li><a href="#my-compute" id="toc-my-compute" class="nav-link" data-scroll-target="#my-compute">My Compute</a></li>
   </ul></li>
-  <li><a href="#blog-posts" id="toc-blog-posts" class="nav-link" data-scroll-target="#blog-posts">📝 Blog Posts</a></li>
+  <li><a href="#my-papers" id="toc-my-papers" class="nav-link" data-scroll-target="#my-papers">My Papers</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -396,70 +399,59 @@ window.Quarto = {
 
 
 
-<p>Hi, I’m <strong>Abdelkareem Elkhateb</strong>, an AI Engineer passionate about advancing Arabic NLP, LLMs, and generative AI.</p>
-<p>I focus on building innovative AI applications and contributing to open-source projects, particularly through my role as a maintainer in the <strong>NAMAA community</strong>, accelerating AI for Arabic and Islamic culture.</p>
-<div class="profile-header quarto-layout-panel" data-layout="[30,70]">
+<section id="kareemai---digital-garden" class="level1">
+<h1>Kareemai - Digital Garden 🌱</h1>
+<p>Hello, I’m <strong>Abdelkareem Elkhateb</strong>, an AI Engineer passionate about learning and developing new research ideas in LLMs, NLP, and information retrieval.</p>
+<p>I am dedicated to applying this knowledge in real-world applications and advancing open-source Arabic AI projects.</p>
+<p>I am one of the maintainers of the NAMAA community, which accelerates AI applications for Arabic and Islamic culture.</p>
+<hr>
+<div class="profile-header quarto-layout-panel" data-layout="[80,80]">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center" style="border-radius: 50%; width: 14rem; height: 14rem; object-fit: contain;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="kareem.png" class="profile-pic img-fluid figure-img"></p>
-<figcaption>Abdelkareem</figcaption>
+<p><img src="dev.svg" class="profile-pic img-fluid figure-img"></p>
+<figcaption>تيمي</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <blockquote class="blockquote">
-<p>“فتًى جاهدَ الدّنيا وجاهد أهلَها وفي نفسهِ لم يَدرِ كيف يجاهدُ”<br>
-A young dreamer striving to innovate in AI and NLP.</p>
+<p>اللغة ليست عِلمًا .. بل هي شيء فوق العلم لغتنا في خطر داهم .. ونحن أيضًا</p>
 </blockquote>
 </div>
 </div>
 </div>
-<p>This blog captures my journey in programming, deep learning, and AGI, with a focus on <strong>NLP</strong>, <strong>Generative AI</strong>, <strong>Recommendation Systems</strong>, and <strong>Information Retrieval</strong>.</p>
-<p>I build <strong>Astro.js</strong>-powered websites integrated with AI, such as <a href="https://kamcalorie.com">Kam Calorie</a> and <a href="https://awazly.com">Awazly</a>. My research centers on Arabic NLP, small model optimization, image denoising, and vector computing.</p>
-<section id="projects" class="level2">
-<h2 class="anchored" data-anchor-id="projects">Projects</h2>
-<p>Explore my open-source and production projects:</p>
-<ul>
-<li><p><strong><a href="https://kamcalorie.com">🍹 Kam Calorie</a></strong>: A semantic search engine for healthcare.</p></li>
-<li><p><strong><a href="https://github.com/abdelkareemkobo/seo_rat">🐀 SEO Rat</a></strong>: SEO optimization tool for GSC and Jamstack sites (Astro, Quarto, etc.).</p></li>
-<li><p><strong><a href="https://gpuvec.com">🔋 GpuVec</a></strong>: Compare GPU rental options by VRAM, price, CUDA cores, and more.</p></li>
-</ul>
+<p>This blog documents my journey in programming, deep learning, and AGI.</p>
+<p>Currently, I am focused on learning:</p>
+<ol type="1">
+<li><p><strong>Signal Processing</strong>: Building speech processing and AI applications for human voice understanding.</p></li>
+<li><p><strong>Generative AI</strong>: Building generative models for business solutions and creative applications.</p></li>
+<li><p><strong>Recommendation Systems</strong>: Passionate about personalization—enjoy designing recommendation systems for projects of all sizes.</p></li>
+<li><p><strong>Information Retrieval</strong>: Working with embeddings and vector databases to improve search and knowledge discovery.</p></li>
+<li><p><strong>Hypermedia Systems</strong>: Developing small apps with htmx to accelerate AI pipelines, from data processing to observability.</p></li>
+</ol>
+<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
+</iframe>
+<section id="my-trainedfine-tuned-models" class="level2">
+<h2 class="anchored" data-anchor-id="my-trainedfine-tuned-models">My Trained/Fine-Tuned Models</h2>
+<ol type="1">
+<li><p><strong><a href="http://kareemai.com/blog/posts/minishlab/blog_zaraah.html">Zarra &amp; Bojji</a></strong>: model2vec for Arabic NLP with significant capabilities.</p></li>
+<li><p><strong>Arabic Gliner</strong>: Named Entity Recognition (NER) model designed for processing Arabic text with high accuracy and robustness</p></li>
+</ol>
 </section>
-<section id="models" class="level2">
-<h2 class="anchored" data-anchor-id="models">Models</h2>
-<ul>
-<li><strong>⚛️ boji</strong>: A powerful model2vec for Arabic NLP, designed for high-performance language tasks.</li>
-<li><strong>🧲 Ara-Gliner</strong>: One-shote Arabic Named Entity Recognition</li>
-<li><strong>🔬 Abjd</strong>: It’s not a modal family, but a smart way for training embedding with minial effort.</li>
-</ul>
-<p>more to create, check the <a href="https://huggingface.co/Abdelkareem">huggingface profile 🤗</a></p>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<ol type="1">
+<li><a href="https://kamcalorie.com">كم كالوري</a>: A semantic search engine for healthcare.</li>
+<li><a href="https://github.com/abdelkareemkobo/seo_rat">seo rat</a>: An SEO optimization tool for GSC and Jamstack websites such as Astro and Quarto.</li>
+<li><a href="https://gpuvec.com">GPU Compute guide</a>: Find the best GPU rentals from top cloud providers based on VRAM, price, CUDA cores, and more.</li>
+</ol>
+<hr>
 </section>
-<section id="my-research" class="level2">
-<h2 class="anchored" data-anchor-id="my-research">My Research</h2>
-<p>Find my work on:</p>
-<ul>
-<li><p><a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ&amp;hl=en">Google Scholar</a></p></li>
-<li><p><a href="https://www.researchgate.net/profile/Abdelkareem-Elkhateb">ResearchGate</a></p></li>
-</ul>
-<section id="compute" class="level3">
-<h3 class="anchored" data-anchor-id="compute">Compute</h3>
-<p>I work with:</p>
-<ul>
-<li><p>🐉 MSI Laptop (1660TI GTX)</p></li>
-<li><p>🐉🐉 Dual Titan RTX 24GB (occasional access)</p></li>
-</ul>
-</section>
-<section id="stay-connected" class="level3">
-<h3 class="anchored" data-anchor-id="stay-connected">📬 Stay Connected</h3>
-<p>Subscribe to my blog via RSS or follow my newsletters or reache me with:</p>
-<p>…</p>
-</section>
-</section>
-<section id="blog-posts" class="level2">
-<h2 class="anchored" data-anchor-id="blog-posts">📝 Blog Posts</h2>
-<p>A curated collection of insights and notes on AI and machine learning.</p>
+<section id="my-mind" class="level2">
+<h2 class="anchored" data-anchor-id="my-mind">🧠 My Mind</h2>
+<p>A curated collection of blog posts and short-form notes.</p>
 <div id="listing-blog-listings" class="quarto-listing quarto-listing-container-grid">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -478,9 +470,6 @@ A young dreamer striving to innovate in AI and NLP.</p>
 <h5 class="no-anchor card-title listing-title">
 Getting Back to RSS
 </h5>
-<div class="card-text listing-description delink">
-<p>Exploring digital minimalism and strategies to stay ahead in AI without burnout. This post discusses the overwhelm of social media, the power of RSS for curated content, and…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 6/10/25
@@ -499,9 +488,6 @@ Getting Back to RSS
 <h5 class="no-anchor card-title listing-title">
 Bojji &amp; Zarra Embedding models
 </h5>
-<div class="card-text listing-description delink">
-<p>Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 5/15/25
@@ -520,9 +506,6 @@ Bojji &amp; Zarra Embedding models
 <h5 class="no-anchor card-title listing-title">
 Cloud GPU Pricing Comparsion in 2025
 </h5>
-<div class="card-text listing-description delink">
-<p>Explore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like our model size calculator to find the cheapest cloud GPUs for AI and HPC…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 4/4/25
@@ -541,9 +524,6 @@ Cloud GPU Pricing Comparsion in 2025
 <h5 class="no-anchor card-title listing-title">
 my dream job at Tarteel
 </h5>
-<div class="card-text listing-description delink">
-<p>Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 3/18/25
@@ -562,9 +542,6 @@ my dream job at Tarteel
 <h5 class="no-anchor card-title listing-title">
 فن تبسيط الحياة الرقمية
 </h5>
-<div class="card-text listing-description delink">
-<p>فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 2/5/25
@@ -583,9 +560,6 @@ my dream job at Tarteel
 <h5 class="no-anchor card-title listing-title">
 Math Skills For AI
 </h5>
-<div class="card-text listing-description delink">
-<p>Improving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 1/27/25
@@ -604,9 +578,6 @@ Math Skills For AI
 <h5 class="no-anchor card-title listing-title">
 كم كالوري في الطعام ؟
 </h5>
-<div class="card-text listing-description delink">
-<p>أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 1/8/25
@@ -625,9 +596,6 @@ Math Skills For AI
 <h5 class="no-anchor card-title listing-title">
 أفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم
 </h5>
-<div class="card-text listing-description delink">
-<p>بروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج رامي لابس</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 1/8/25
@@ -646,9 +614,6 @@ Math Skills For AI
 <h5 class="no-anchor card-title listing-title">
 What is Federated Learning
 </h5>
-<div class="card-text listing-description delink">
-<p>A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 11/12/24
@@ -667,9 +632,6 @@ What is Federated Learning
 <h5 class="no-anchor card-title listing-title">
 Google Ads Black Box
 </h5>
-<div class="card-text listing-description delink">
-<p>Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 10/5/24
@@ -686,9 +648,6 @@ Google Ads Black Box
 <h5 class="no-anchor card-title listing-title">
 Learning Data Structures and Algorithms as Machine Learning Engineer
 </h5>
-<div class="card-text listing-description delink">
-<p>Trying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 10/4/24
@@ -707,9 +666,6 @@ Learning Data Structures and Algorithms as Machine Learning Engineer
 <h5 class="no-anchor card-title listing-title">
 Review of Huawei watch gt 4
 </h5>
-<div class="card-text listing-description delink">
-<p>Huawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 10/4/24
@@ -728,9 +684,6 @@ Review of Huawei watch gt 4
 <h5 class="no-anchor card-title listing-title">
 The curse of SEO
 </h5>
-<div class="card-text listing-description delink">
-<p>Discover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 7/31/24
@@ -749,9 +702,6 @@ The curse of SEO
 <h5 class="no-anchor card-title listing-title">
 جاذبية مزيفة و عالم مخادع
 </h5>
-<div class="card-text listing-description delink">
-<p>مخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 7/10/24
@@ -768,9 +718,6 @@ The curse of SEO
 <h5 class="no-anchor card-title listing-title">
 My little Dragon “kobo”
 </h5>
-<div class="card-text listing-description delink">
-<p>A review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 1/1/24
@@ -787,9 +734,6 @@ My little Dragon “kobo”
 <h5 class="no-anchor card-title listing-title">
 After one year of using Huawei Mate 11 without google services
 </h5>
-<div class="card-text listing-description delink">
-<p>Sharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience with, noteshelf,concepts, …</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 12/7/23
@@ -806,9 +750,6 @@ After one year of using Huawei Mate 11 without google services
 <h5 class="no-anchor card-title listing-title">
 Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!
 </h5>
-<div class="card-text listing-description delink">
-<p>Review of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 12/6/23
@@ -825,9 +766,6 @@ Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!
 <h5 class="no-anchor card-title listing-title">
 MTEB Massive Text Embedding Benchmark
 </h5>
-<div class="card-text listing-description delink">
-<p>MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal text embedding applicable…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 10/28/23
@@ -844,9 +782,6 @@ MTEB Massive Text Embedding Benchmark
 <h5 class="no-anchor card-title listing-title">
 tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”
 </h5>
-<div class="card-text listing-description delink">
-<p>let’s explore this applications with txtai and other workflow with some notes and future directions</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 10/21/23
@@ -863,9 +798,6 @@ tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”
 <h5 class="no-anchor card-title listing-title">
 havrard CS197 AI research experiences
 </h5>
-<div class="card-text listing-description delink">
-<p>Embark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of…</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 7/18/23
@@ -882,9 +814,6 @@ havrard CS197 AI research experiences
 <h5 class="no-anchor card-title listing-title">
 why i am blogging
 </h5>
-<div class="card-text listing-description delink">
-<p>why i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 7/18/23
@@ -901,9 +830,6 @@ why i am blogging
 <h5 class="no-anchor card-title listing-title">
 How I am using NLP to improve my Websites SEO
 </h5>
-<div class="card-text listing-description delink">
-<p>How i use python scripts and natural language processing to improve my landing page SEO</p>
-</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 7/18/23
@@ -918,9 +844,32 @@ How I am using NLP to improve my Websites SEO
   <ul class="pagination"></ul>
 </nav>
 </div>
+</section>
+<section id="subscribe" class="level2">
+<h2 class="anchored" data-anchor-id="subscribe">📬 Subscribe</h2>
+<p>Subscribe via <a href="index.xml"><i class="bi bi-rss"></i> RSS</a>.</p>
+<iframe src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
+</iframe>
+<section id="my-compute" class="level3">
+<h3 class="anchored" data-anchor-id="my-compute">My Compute</h3>
+<p>I primarily work on two devices:</p>
+<ol type="1">
+<li>An old MSI laptop with a GTX 1660TI GPU.</li>
+<li>Occasional access to a dual Titan RTX 24GB setup.</li>
+</ol>
+</section>
+</section>
+<section id="my-papers" class="level2">
+<h2 class="anchored" data-anchor-id="my-papers">My Papers</h2>
+<p>More coming soon. You can also visit my profiles:</p>
+<ol type="1">
+<li><a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ&amp;hl=en">Abdelkareem Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Abdelkareem-Elkhateb">Abdelkareem Research Gate</a></li>
+</ol>
 
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
