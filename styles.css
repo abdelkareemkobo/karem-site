@@ -160,6 +160,64 @@ a[href*="youtube.com"]:active {
     box-shadow: 0 5px 15px rgba(248, 113, 113, 0.5) !important;
 }
 
+/* GPUVec button styling - Beautiful blue gradient */
+.navbar a[href*="gpuvec.com"],
+.navbar-nav a[href*="gpuvec.com"],
+.navbar-right a[href*="gpuvec.com"],
+.nav-link[href*="gpuvec.com"],
+a[href*="gpuvec.com"] {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+    margin-left: 10px !important;
+}
+
+.navbar a[href*="gpuvec.com"]:hover,
+.navbar-nav a[href*="gpuvec.com"]:hover,
+.navbar-right a[href*="gpuvec.com"]:hover,
+.nav-link[href*="gpuvec.com"]:hover,
+a[href*="gpuvec.com"]:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar a[href*="gpuvec.com"]:active,
+.navbar-nav a[href*="gpuvec.com"]:active,
+.navbar-right a[href*="gpuvec.com"]:active,
+.nav-link[href*="gpuvec.com"]:active,
+a[href*="gpuvec.com"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Dark mode GPUVec button adjustments */
+.quarto-dark .navbar a[href*="gpuvec.com"],
+.quarto-dark .navbar-nav a[href*="gpuvec.com"],
+.quarto-dark .navbar-right a[href*="gpuvec.com"],
+.quarto-dark .nav-link[href*="gpuvec.com"],
+.quarto-dark a[href*="gpuvec.com"] {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
+    box-shadow: 0 3px 10px rgba(96, 165, 250, 0.4) !important;
+}
+
+.quarto-dark .navbar a[href*="gpuvec.com"]:hover,
+.quarto-dark .navbar-nav a[href*="gpuvec.com"]:hover,
+.quarto-dark .navbar-right a[href*="gpuvec.com"]:hover,
+.quarto-dark .nav-link[href*="gpuvec.com"]:hover,
+.quarto-dark a[href*="gpuvec.com"]:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.5) !important;
+}
+
 /* .sourceCode .at, code{   
     color:#d4d0ab;
     font-weight: normal;
