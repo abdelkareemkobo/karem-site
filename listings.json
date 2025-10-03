@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/oss/opensource.html",
+    "items": []
+  },
+  {
     "listing": "/til/index.html",
     "items": [
       "/til/tils/2025-06-06-til.html",
@@ -14,12 +18,9 @@
     ]
   },
   {
-    "listing": "/oss/opensource.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/blog/posts/minishlab/ctranslate_maswray.html",
       "/blog/posts/life_style/back_to_rss.html",
       "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",
@@ -47,6 +48,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/minishlab/ctranslate_maswray.html",
       "/blog/posts/life_style/back_to_rss.html",
       "/blog/posts/minishlab/blog_zaraah.html",
       "/blog/posts/life_style/gpuvec.html",

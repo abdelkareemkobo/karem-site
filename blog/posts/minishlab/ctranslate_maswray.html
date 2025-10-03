@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
-<meta name="dcterms.date" content="2025-01-08">
-<meta name="description" content="أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية">
+<meta name="dcterms.date" content="2025-10-03">
+<meta name="description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
 
-<title>كم كالوري في الطعام ؟ – kareem’s Blog</title>
+<title>From $32,000 to $0 with Small Models and CTranslate2 – kareem’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -87,20 +122,20 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="كم كالوري في الطعام ؟ – kareem’s Blog">
-<meta property="og:description" content="أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية">
-<meta property="og:image" content="https://kareemai.com/blog/posts/life_style/images/kcal.png">
+<meta property="og:title" content="From $32,000 to $0 with Small Models and CTranslate2 – kareem’s Blog">
+<meta property="og:description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
+<meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/bojji.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
-<meta property="og:image:height" content="500">
-<meta property="og:image:width" content="500">
-<meta name="twitter:title" content="كم كالوري في الطعام ؟ – kareem’s Blog">
-<meta name="twitter:description" content="أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/life_style/images/kcal.png">
+<meta property="og:image:height" content="1536">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="From $32,000 to $0 with Small Models and CTranslate2 – kareem’s Blog">
+<meta name="twitter:description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/bojji.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image-height" content="500">
-<meta name="twitter:image-width" content="500">
+<meta name="twitter:image-height" content="1536">
+<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -337,9 +372,18 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#كم-كالوري" id="toc-كم-كالوري" class="nav-link active" data-scroll-target="#كم-كالوري">كم كالوري</a></li>
-  <li><a href="#مميزات-الموقع" id="toc-مميزات-الموقع" class="nav-link" data-scroll-target="#مميزات-الموقع">مميزات الموقع</a></li>
-  <li><a href="#خاتمة" id="toc-خاتمة" class="nav-link" data-scroll-target="#خاتمة">خاتمة</a></li>
+  <li><a href="#going-from-44000-to-0-cost-with-small-models" id="toc-going-from-44000-to-0-cost-with-small-models" class="nav-link active" data-scroll-target="#going-from-44000-to-0-cost-with-small-models">Going from 44,000$ to 0 cost with small models</a></li>
+  <li><a href="#how-poor-i-am-very-gpu-poor" id="toc-how-poor-i-am-very-gpu-poor" class="nav-link" data-scroll-target="#how-poor-i-am-very-gpu-poor">How poor I am ? very GPU poor! 💻</a></li>
+  <li><a href="#pytorch-pipeline-with-hf-inference-through-transformers" id="toc-pytorch-pipeline-with-hf-inference-through-transformers" class="nav-link" data-scroll-target="#pytorch-pipeline-with-hf-inference-through-transformers">Pytorch Pipeline with HF Inference through Transformers</a></li>
+  <li><a href="#lets-do-quantization" id="toc-lets-do-quantization" class="nav-link" data-scroll-target="#lets-do-quantization">Let’s Do Quantization</a></li>
+  <li><a href="#vllms-and-sglang-for-hf-translation-pipelie" id="toc-vllms-and-sglang-for-hf-translation-pipelie" class="nav-link" data-scroll-target="#vllms-and-sglang-for-hf-translation-pipelie">VLLMs and SGLang for HF translation pipelie</a></li>
+  <li><a href="#more-search-and-ctranslate-magic" id="toc-more-search-and-ctranslate-magic" class="nav-link" data-scroll-target="#more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</a>
+  <ul class="collapse">
+  <li><a href="#key-features-of-ctranslate" id="toc-key-features-of-ctranslate" class="nav-link" data-scroll-target="#key-features-of-ctranslate">Key features of Ctranslate</a></li>
+  <li><a href="#lets-try-it" id="toc-lets-try-it" class="nav-link" data-scroll-target="#lets-try-it">Let’s try it !</a></li>
+  </ul></li>
+  <li><a href="#getting-help-from-the-titan-rtx-24gb" id="toc-getting-help-from-the-titan-rtx-24gb" class="nav-link" data-scroll-target="#getting-help-from-the-titan-rtx-24gb">getting help from The Titan RTX 24GB</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps!</a></li>
   </ul>
 </nav>
     </div>
@@ -349,19 +393,19 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">كم كالوري في الطعام ؟</h1>
+<h1 class="title">From $32,000 to $0 with Small Models and CTranslate2</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">blogging</div>
-    <div class="quarto-category">idea_Forge</div>
-    <div class="quarto-category">publish</div>
-    <div class="quarto-category">rough_thoughts</div>
-    <div class="quarto-category">life_style</div>
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">optimization</div>
+    <div class="quarto-category">translation</div>
+    <div class="quarto-category">ctranslate2</div>
+    <div class="quarto-category">cost-optimization</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية
+    How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements
   </div>
 </div>
 
@@ -378,7 +422,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2025</p>
+      <p class="date">October 3, 2025</p>
     </div>
   </div>
   
@@ -390,25 +434,419 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </header>
 
 
-<section id="كم-كالوري" class="level2">
-<h2 class="anchored" data-anchor-id="كم-كالوري"><a href="https://www.kamcalorie.com/">كم كالوري</a></h2>
-<p>موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي</p>
-</section>
-<section id="مميزات-الموقع" class="level2">
-<h2 class="anchored" data-anchor-id="مميزات-الموقع">مميزات الموقع</h2>
-<p>الموقع مبني بهدف تطبيقات تقنيات معالجة اللغات الطبيعية والنماذج اللغوية لتوفير كافة المعلومات التي قد يحتاجها الفرد مثل: 1. البحث الذكي : البحث باستخدام المعني سواء باللغة العربية أو الإنجيليزية وحتي كافة اللغات و يمكنك البحث باي طريقة سواء لغة عربية فصحية او العامية او حتي أخطاء إملائية 2. سرعة في إستراجاع المعلومات وعرضها في شكل بياني مميز يسمح لك بمعرفة المهم في وقت فوري 3. يمكنك إدخال ما أكل بشكل كامل و الموقع يقوم بحساب التقديرات اللازمة لك</p>
+<section id="going-from-44000-to-0-cost-with-small-models" class="level2">
+<h2 class="anchored" data-anchor-id="going-from-44000-to-0-cost-with-small-models">Going from 44,000$ to 0 cost with small models</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/kcal.png" class="img-fluid figure-img"></p>
-<figcaption>كم كالوري</figcaption>
+<p><img src="images/bojji.png" class="img-fluid figure-img"></p>
+<figcaption>faster masrawy</figcaption>
 </figure>
 </div>
+<p>It’s friday and i have sometime to continue working on opensource tasks, i had an idea that requires a translate a dataset it’s not large 2GB it consist of some paragraph from English the average of words is around 400 token each row from the 8 million :) I get into the OpenAI models to calculate how much this will cost me to translate all these with gpt4.1 and gpt4.1-mini and the prices are the following : my total tokens =&gt;8,000,000 rows * 400 toknes = 3,200,000,000 which costs the following as input and output i will assume they are the same here for the ease of calculations i will use the normal APi not Batched API:</p>
+<ul>
+<li>total input tokens =&gt; 3,200,000,000</li>
+<li>total output tokens =&gt; 3,200,000,000</li>
+</ul>
+<p><strong>The calculation based on this date 2025-10-03</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>GPT4.1</th>
+<th>GPT4.1-mini</th>
+<th>GPT3.5 Turbo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input tokens</td>
+<td>3,200 * 2</td>
+<td>3,200 * 0.40</td>
+<td>3,200 * 0.50</td>
+</tr>
+<tr class="even">
+<td>output outputs</td>
+<td>3,200 * 8</td>
+<td>3,200 * 1.60</td>
+<td>3,200 * 1.50</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 70%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>GPT4.1</th>
+<th>GPT4.1-mini</th>
+<th>GPT3.5 Turbo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input tokens</td>
+<td>6400</td>
+<td>1280</td>
+<td>1600</td>
+</tr>
+<tr class="even">
+<td>output outputs</td>
+<td>25600</td>
+<td>5120</td>
+<td>4800</td>
+</tr>
+<tr class="odd">
+<td>Total $ cost</td>
+<td>32000</td>
+<td>6400</td>
+<td>6400</td>
+</tr>
+<tr class="even">
+<td>Total EGP cost</td>
+<td>1,527,680</td>
+<td>305,536</td>
+<td>305,536</td>
+</tr>
+<tr class="odd">
+<td>it’s interesting that the cost of gpt4.1 mini is the same as gpt3.5 Turbo ^ ^</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>also this is insane i can afford only 1000 EGP or 50$ at max :)</p>
+</section>
+<section id="how-poor-i-am-very-gpu-poor" class="level2">
+<h2 class="anchored" data-anchor-id="how-poor-i-am-very-gpu-poor">How poor I am ? very GPU poor! 💻</h2>
+<p>I wish has a Local GPU to be able to test Opensource LLMs like Cohere 70B and such strong models and i will not care about time!</p>
+<p>I remeber there is an amazing work that is not even llm for translation created by <a href="https://www.linkedin.com/in/ahmedwasfy/">Ahmed Wasfy</a> from <a href="https://www.linkedin.com/company/namaa-community/posts/?feedView=all">NAMMA Community</a></p>
+<p>it’s a 240M Params small model traied to translate English into Egyptian It was trained on more than&nbsp;<em><strong>150,000</strong></em>&nbsp;rows with more than&nbsp;<em><strong>10 Million tokens</strong></em> for Arabic Language it’s competes with Closed LLMs like Gpt-4o and Claude-3-5-sonnet ![[Pasted image 20251003174247.png]]i tested it with my local laptop gpu 1660Ti GTX mobile version with 6GB and CPU is core i 7 gen9 from intel with 32GB ddr4 i tested the model and it worked with pytorch very fast and very efficient! the translation are very similar and this is enough for the task i want to build on these translated dataset! let’s do the math for how much this will cost on my laptop :)</p>
 <hr>
 </section>
-<section id="خاتمة" class="level2">
-<h2 class="anchored" data-anchor-id="خاتمة">خاتمة</h2>
-<p>يعتبر موقع كم كالوري بداية الي سلسلة ممن المنتجات التي تسهل علي الناطقين بالعربية ممارسة الرياضة و لعيش حياة أفضل و هناك الكثير قادم مثل : 1. كوب بروتين 2. عضلاتي</p>
-<p>قام بتطوير و إنشاء الموقع عبد الكريم الخطيب باحث في علوم الذكاء الإصطناعي و مهتم باثراء المحتوي العربي</p>
+<section id="pytorch-pipeline-with-hf-inference-through-transformers" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-pipeline-with-hf-inference-through-transformers">Pytorch Pipeline with HF Inference through Transformers</h2>
+<p>i created the translation pipeline and tested it with these batch size with these settings float16 and batch sizes = [ 2,4,6,8,16] I found that even i have enough memory to load more batch the optimal batch size was 4 and this is becuase the ram and CPU power. i was able to process 100 examples in these results:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 0%">
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pytorch + float16</td>
+<td></td>
+<td>100</td>
+<td>8</td>
+<td>1660TI laptop GPU</td>
+<td>60s</td>
+<td>55.56 Days</td>
+</tr>
+<tr class="even">
+<td>Pytorch + float16</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>45s</td>
+<td>41.67 Days</td>
+</tr>
+<tr class="odd">
+<td>Pytorch + float16 + optimized version</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>35s</td>
+<td>32.41 Days</td>
+</tr>
+</tbody>
+</table>
+<p>optimized version here i mean</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> torch.<span class="bu">compile</span>(model, mode<span class="op">=</span><span class="st">"max-autotune"</span>, fullgraph<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> model.<span class="bu">eval</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>it’s a new feature in <a href="https://pytorch.org/get-started/pytorch-2-x/">pytorch 2</a> to accelerate the models speeds i tried multiple settings and also the different backends but the there is no huge difference convert to onnex? it’s a nightmare i did it before and the results didn’t worth the headache! I may be try it when i have time</p>
+</section>
+<section id="lets-do-quantization" class="level2">
+<h2 class="anchored" data-anchor-id="lets-do-quantization">Let’s Do Quantization</h2>
+<p>I Tried to use the <a href="https://docs.pytorch.org/ao/stable/serving.html">torchao</a> which enable performing quantization in more stable and easer ways i tried it alot with my GPU but due to cuda version it always throughs this error:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">1.</span> AssertionError: Float8 dynamic activation quantization is only supported on CUDA<span class="op">&gt;</span>=8.9 and MI300+</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>the library code is not straightforward and i don’t have time i have just 2 days to finish this before i return to my main work.</p>
+<p>I also faced some error because the model i am trying to use is an old and not optimzied one for these method it’s based on the <a href="https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-ar">OPUS-MT-en-ar</a> created with <a href="https://marian-nmt.github.io/">marianNMT</a> which is an efficient NMT implementation written in pure C++. The models have been converted to pyTorch using the transformers library by huggingface</p>
+</section>
+<section id="vllms-and-sglang-for-hf-translation-pipelie" class="level2">
+<h2 class="anchored" data-anchor-id="vllms-and-sglang-for-hf-translation-pipelie">VLLMs and SGLang for HF translation pipelie</h2>
+<p>i search for SGLang solution with the the model and i didn’t find any help i tried the VLLMs documentation also and found the following page <a href="https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code">bring_your_own_model</a> and <a href="https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope">this</a> the model speed was worth than normal HF tensors it was more 5 seconds. I think there is a better way to write the VLLm version better mine.</p>
+</section>
+<section id="more-search-and-ctranslate-magic" class="level2">
+<h2 class="anchored" data-anchor-id="more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</h2>
+<p>I want to give up , but let’s try a final search how to serve marian model and in an old forum answer i found what is called <a href="https://opennmt.net/CTranslate2/quickstart.html">Ctranslate</a> they say it’s faster than HF transformer for specific architecture by around 4-6x</p>
+<p>#defintion CTranslate2 is a C++ and Python library for efficient inference with Transformer models. The following model types are currently supported:</p>
+<ul>
+<li>Encoder-decoder models: Transformer base/big, M2M-100, NLLB, BART, mBART, Pegasus, T5, Whisper</li>
+<li>Decoder-only models: GPT-2, GPT-J, GPT-NeoX, OPT, BLOOM, MPT, Llama, Mistral, Gemma, CodeGen, GPTBigCode, Falcon, Qwen2</li>
+<li>Encoder-only models: BERT, DistilBERT, XLM-RoBERTa</li>
+</ul>
+<p>Compatible models should be first converted into an optimized model format. The library includes converters for multiple frameworks:</p>
+<ul>
+<li><a href="https://opennmt.net/CTranslate2/guides/opennmt_py.html">OpenNMT-py</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/opennmt_tf.html">OpenNMT-tf</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/fairseq.html">Fairseq</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/marian.html">Marian</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/opus_mt.html">OPUS-MT</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/transformers.html">Transformers</a></li>
+</ul>
+<section id="key-features-of-ctranslate" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-of-ctranslate">Key features of Ctranslate</h3>
+<p><strong>Fast and efficient execution on CPU and GPU</strong><br>
+The execution&nbsp;<a href="https://github.com/OpenNMT/CTranslate2#benchmarks">is significantly faster and requires less resources</a>&nbsp;than general-purpose deep learning frameworks on supported models and tasks thanks to many advanced optimizations: layer fusion, padding removal, batch reordering, in-place operations, caching mechanism, etc.</p>
+<ul>
+<li><strong>Quantization and reduced precision</strong><br>
+The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ quantization (INT4).</li>
+<li><strong>Multiple CPU architectures support</strong><br>
+The project supports x86-64 and AArch64/ARM64 processors and integrates multiple backends that are optimized for these platforms:&nbsp;<a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html">Intel MKL</a>,&nbsp;<a href="https://github.com/oneapi-src/oneDNN">oneDNN</a>,&nbsp;<a href="https://www.openblas.net/">OpenBLAS</a>,&nbsp;<a href="https://github.com/google/ruy">Ruy</a>, and&nbsp;<a href="https://developer.apple.com/documentation/accelerate">Apple Accelerate</a>.</li>
+<li><strong>Automatic CPU detection and code dispatch</strong><br>
+One binary can include multiple backends (e.g.&nbsp;Intel MKL and oneDNN) and instruction set architectures (e.g.&nbsp;AVX, AVX2) that are automatically selected at runtime based on the CPU information.</li>
+<li><strong>Parallel and asynchronous execution</strong><br>
+Multiple batches can be processed in parallel and asynchronously using multiple GPUs or CPU cores.</li>
+<li><strong>Dynamic memory usage</strong><br>
+The memory usage changes dynamically depending on the request size while still meeting performance requirements thanks to caching allocators on both CPU and GPU.</li>
+<li><strong>Lightweight on disk</strong><br>
+Quantization can make the models 4 times smaller on disk with minimal accuracy loss.</li>
+<li><strong>Simple integration</strong><br>
+The project has few dependencies and exposes simple APIs in&nbsp;<a href="https://opennmt.net/CTranslate2/python/overview.html">Python</a>&nbsp;and C++ to cover most integration needs.</li>
+<li><strong>Configurable and interactive decoding</strong><br>
+<a href="https://opennmt.net/CTranslate2/decoding.html">Advanced decoding features</a>&nbsp;allow autocompleting a partial sequence and returning alternatives at a specific location in the sequence.</li>
+<li><strong>Support tensor parallelism for distributed inference</strong><br>
+Very large model can be split into multiple GPUs. Following this&nbsp;<a href="https://github.com/OpenNMT/CTranslate2/blob/master/docs/parallel.md#model-and-tensor-parallelism">documentation</a>&nbsp;to set up the required environment.</li>
+</ul>
+<p>Some of these features are difficult to achieve with standard deep learning frameworks and are the motivation for this project.</p>
+</section>
+<section id="lets-try-it" class="level3">
+<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it !</h3>
+<p>i used the following script to convert the HF version into Ctranslate expected one</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ct2-transformers-converter</span> <span class="at">--model</span> NAMAA-Space/masrawy-english-to-egyptian-arabic-translator-v2.9 <span class="at">--output_dir</span> ct2_model_masrawy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>then i used the model with this version</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>translator <span class="op">=</span> ctranslate2.Translator(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ct2_model_masrawy"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cuda"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    compute_type<span class="op">=</span><span class="st">"float16"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>it worked and was very fast much, much faster</p>
+<hr>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 1%">
+<col style="width: 21%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>100</td>
+<td>8</td>
+<td>1660TI laptop GPU</td>
+<td>11s</td>
+<td>10.19 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>16s</td>
+<td>12.04 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate</td>
+<td></td>
+<td>100</td>
+<td>6</td>
+<td>1660TI laptop GPU</td>
+<td>13s</td>
+<td>14.81 days</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>we moved from 32.4 Days into 10 Days!!!</p>
+</section>
+</section>
+<section id="getting-help-from-the-titan-rtx-24gb" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">getting help from The Titan RTX 24GB</h2>
+<p>One of my friends offered me an access to it’s Workstation which is dual gpu Titan RTX it’s an old gpu but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a></p>
+<p>I found that the optimal batch is 64 with after some tries. let’s use this and see the results i will also increase the size from 100 samples into 1000</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 0%">
+<col style="width: 14%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pytorch + float16 + optimized version</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>240s</td>
+<td>22.22 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + int8 <br></td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>7.89s</td>
+<td>0.73&nbsp;days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + int8 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>4.42s</td>
+<td>0.41 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>6.46s</td>
+<td>0.60 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + float16 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>3.72</td>
+<td>0.34 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + int8_float16</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>6.81s</td>
+<td>0.63 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + int8_float16 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>3.85s</td>
+<td>0.36 days</td>
+</tr>
+<tr class="even">
+<td>==we moved now from 22 days in single titan rtx into 0.60 days! ==</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="why-float16-is-faster-than-int8" class="level4">
+<h4 class="anchored" data-anchor-id="why-float16-is-faster-than-int8">Why float16 is faster than int8</h4>
+<p><strong>Float16 Version (faster!):</strong></p>
+<ul>
+<li>Dual GPU: <strong>269.2 docs/sec</strong></li>
+<li>Single GPU: 154.7 docs/sec</li>
+<li>Time for 1000 docs: 3.72 seconds</li>
+</ul>
+<p><strong>Int8 Version (slower):</strong></p>
+<ul>
+<li>Dual GPU: <strong>225.8 docs/sec</strong></li>
+<li>Single GPU: 126.7 docs/sec</li>
+<li>Time for 1000 docs: 4.43 seconds</li>
+</ul>
+<p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for the int8 and see which batch size will be now better!</p>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps!</h2>
+<p>This is just the start i will search more and invistage how to make this more faster because the 8 million are only 2GB and the next task is to translate 500GB :) every second will make a huge difference!</p>
+<ul>
+<li>use large batch size with int8</li>
+<li>use different GPU with modern architecture and better CPU</li>
+<li>deep dive into VLLm</li>
+<li>Try the onnex version for GPU not cpu</li>
+<li>try again with torchao</li>
+</ul>
+<p>Thanks for your time! here is the converted version on huggingface <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a> small models can save your life ^ ^</p>
 
 
 </section>

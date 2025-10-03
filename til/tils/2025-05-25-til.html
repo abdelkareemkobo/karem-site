@@ -2,15 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-25">
-<meta name="description" content="TIL about RAPTOR, DFloat11 and pyrefly from meta opensource.">
+<meta name="keywords" content="RAPTOR RAG, rag raptor, meta pyrefly, raptor rag paper, llamaindex raptor, DFloat11, pyrefly, RAG technique, document retrieval">
+<meta name="description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
 
-<title>RAG RAPTOR, DFloat11 and pyrefly – kareem’s Blog</title>
+<title>RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – kareem's Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,14 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-915393f6aa9b7ac97acfbbebdad1bb3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-0ef53c1204256734c5cf35c9f33c5576.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-915393f6aa9b7ac97acfbbebdad1bb3e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-da9fa706c8577af41e420e25efbe629d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-33af2d0acac8285cf13fd75706b8821e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-da9fa706c8577af41e420e25efbe629d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,15 +88,15 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="RAG RAPTOR, DFloat11 and pyrefly – kareem’s Blog">
-<meta property="og:description" content="TIL about RAPTOR, DFloat11 and pyrefly from meta opensource.">
+<meta property="og:title" content="RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – kareem’s Blog">
+<meta property="og:description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
 <meta property="og:image" content="https://kareemai.com/til/tils/images/raptor.png">
 <meta property="og:site_name" content="kareem's Blog">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:image:height" content="399">
 <meta property="og:image:width" content="1218">
-<meta name="twitter:title" content="RAG RAPTOR, DFloat11 and pyrefly – kareem’s Blog">
-<meta name="twitter:description" content="TIL about RAPTOR, DFloat11 and pyrefly from meta opensource.">
+<meta name="twitter:title" content="RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – kareem’s Blog">
+<meta name="twitter:description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/images/raptor.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
@@ -337,18 +338,35 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-raptor-rag" id="toc-what-is-raptor-rag" class="nav-link active" data-scroll-target="#what-is-raptor-rag">What is RAPTOR RAG?</a>
+  <li><a href="#rag-raptor-dfloat11-and-pyrefly-metas-latest-open-source-tools" id="toc-rag-raptor-dfloat11-and-pyrefly-metas-latest-open-source-tools" class="nav-link active" data-scroll-target="#rag-raptor-dfloat11-and-pyrefly-metas-latest-open-source-tools">RAG RAPTOR, DFloat11 and Pyrefly: Meta’s Latest Open Source Tools</a></li>
+  <li><a href="#what-is-raptor-rag-complete-guide-to-metas-raptor-technique" id="toc-what-is-raptor-rag-complete-guide-to-metas-raptor-technique" class="nav-link" data-scroll-target="#what-is-raptor-rag-complete-guide-to-metas-raptor-technique">What is RAPTOR RAG? Complete Guide to Meta’s RAPTOR Technique</a>
   <ul class="collapse">
-  <li><a href="#the-model-based-summarization" id="toc-the-model-based-summarization" class="nav-link" data-scroll-target="#the-model-based-summarization">the model based summarization</a></li>
-  <li><a href="#querying-raptor" id="toc-querying-raptor" class="nav-link" data-scroll-target="#querying-raptor">Querying RAPTOR</a></li>
+  <li><a href="#understanding-raptor-rag" id="toc-understanding-raptor-rag" class="nav-link" data-scroll-target="#understanding-raptor-rag">Understanding RAPTOR RAG</a></li>
+  <li><a href="#the-problem-raptor-rag-solves" id="toc-the-problem-raptor-rag-solves" class="nav-link" data-scroll-target="#the-problem-raptor-rag-solves">The Problem RAPTOR RAG Solves</a></li>
+  <li><a href="#how-raptor-rag-works" id="toc-how-raptor-rag-works" class="nav-link" data-scroll-target="#how-raptor-rag-works">How RAPTOR RAG Works</a></li>
+  <li><a href="#model-based-summarization-in-raptor" id="toc-model-based-summarization-in-raptor" class="nav-link" data-scroll-target="#model-based-summarization-in-raptor">Model-Based Summarization in RAPTOR</a></li>
+  <li><a href="#querying-raptor-rag" id="toc-querying-raptor-rag" class="nav-link" data-scroll-target="#querying-raptor-rag">Querying RAPTOR RAG</a></li>
+  <li><a href="#raptor-rag-performance-analysis" id="toc-raptor-rag-performance-analysis" class="nav-link" data-scroll-target="#raptor-rag-performance-analysis">RAPTOR RAG Performance Analysis</a></li>
+  <li><a href="#raptor-rag-for-document-summarization" id="toc-raptor-rag-for-document-summarization" class="nav-link" data-scroll-target="#raptor-rag-for-document-summarization">RAPTOR RAG for Document Summarization</a></li>
   </ul></li>
   <li><a href="#dfloat11-efficient-lossless-compression-for-llms" id="toc-dfloat11-efficient-lossless-compression-for-llms" class="nav-link" data-scroll-target="#dfloat11-efficient-lossless-compression-for-llms">DFloat11: Efficient, Lossless Compression for LLMs</a>
   <ul class="collapse">
-  <li><a href="#how-df11-works" id="toc-how-df11-works" class="nav-link" data-scroll-target="#how-df11-works">How DF11 Works</a></li>
-  <li><a href="#storage-and-decoding" id="toc-storage-and-decoding" class="nav-link" data-scroll-target="#storage-and-decoding">Storage and Decoding</a></li>
-  <li><a href="#key-benefits" id="toc-key-benefits" class="nav-link" data-scroll-target="#key-benefits">Key Benefits</a></li>
+  <li><a href="#how-dfloat11-works" id="toc-how-dfloat11-works" class="nav-link" data-scroll-target="#how-dfloat11-works">How DFloat11 Works</a></li>
+  <li><a href="#dfloat11-storage-and-decoding" id="toc-dfloat11-storage-and-decoding" class="nav-link" data-scroll-target="#dfloat11-storage-and-decoding">DFloat11 Storage and Decoding</a></li>
+  <li><a href="#dfloat11-key-benefits" id="toc-dfloat11-key-benefits" class="nav-link" data-scroll-target="#dfloat11-key-benefits">DFloat11 Key Benefits</a></li>
   </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">references</a></li>
+  <li><a href="#pyrefly-fast-python-type-checker-in-rust" id="toc-pyrefly-fast-python-type-checker-in-rust" class="nav-link" data-scroll-target="#pyrefly-fast-python-type-checker-in-rust">Pyrefly: Fast Python Type Checker in Rust</a>
+  <ul class="collapse">
+  <li><a href="#installing-pyrefly-with-vs-code" id="toc-installing-pyrefly-with-vs-code" class="nav-link" data-scroll-target="#installing-pyrefly-with-vs-code">Installing Pyrefly with VS Code</a></li>
+  <li><a href="#pyrefly-vs-traditional-type-checkers" id="toc-pyrefly-vs-traditional-type-checkers" class="nav-link" data-scroll-target="#pyrefly-vs-traditional-type-checkers">Pyrefly vs Traditional Type Checkers</a></li>
+  </ul></li>
+  <li><a href="#llamaindex-raptor-integration" id="toc-llamaindex-raptor-integration" class="nav-link" data-scroll-target="#llamaindex-raptor-integration">LlamaIndex RAPTOR Integration</a>
+  <ul class="collapse">
+  <li><a href="#implementation-considerations" id="toc-implementation-considerations" class="nav-link" data-scroll-target="#implementation-considerations">Implementation Considerations</a></li>
+  </ul></li>
+  <li><a href="#meta-pyrefly-and-open-source-ecosystem" id="toc-meta-pyrefly-and-open-source-ecosystem" class="nav-link" data-scroll-target="#meta-pyrefly-and-open-source-ecosystem">Meta Pyrefly and Open Source Ecosystem</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -358,16 +376,19 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RAG RAPTOR, DFloat11 and pyrefly</h1>
+<h1 class="title">RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">python</div>
+    <div class="quarto-category">rag</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    TIL about RAPTOR, DFloat11 and pyrefly from meta opensource.
+    Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.
   </div>
 </div>
 
@@ -392,75 +413,187 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   </div>
   
 
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>RAPTOR RAG, rag raptor, meta pyrefly, raptor rag paper, llamaindex raptor, DFloat11, pyrefly, RAG technique, document retrieval</p>
+  </div>
+</div>
 
 </header>
 
 
-<p>the last 2 days i was doing some writing some more well crafted articles they will publish later and they were 2 amazing and hard days ..let’s go into the details. 1. RAPTOR RAG 2. DFloat 1 3. pyrefly 4. fastembed</p>
-<section id="what-is-raptor-rag" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-raptor-rag">What is RAPTOR RAG?</h2>
+<section id="rag-raptor-dfloat11-and-pyrefly-metas-latest-open-source-tools" class="level2">
+<h2 class="anchored" data-anchor-id="rag-raptor-dfloat11-and-pyrefly-metas-latest-open-source-tools">RAG RAPTOR, DFloat11 and Pyrefly: Meta’s Latest Open Source Tools</h2>
+<p>Over the last 2 days, I’ve been exploring some fascinating new open source tools from Meta and other organizations. These tools are revolutionizing how we approach RAG (Retrieval-Augmented Generation), model compression, and Python development. Let me break down what I’ve learned:</p>
+<ol type="1">
+<li><strong>RAPTOR RAG</strong> - Meta’s tree-based retrieval technique</li>
+<li><strong>DFloat11</strong> - Lossless compression for LLMs<br>
+</li>
+<li><strong>Pyrefly</strong> - Fast Python type checker in Rust</li>
+<li><strong>FastEmbed</strong> - Efficient embedding generation</li>
+</ol>
+</section>
+<section id="what-is-raptor-rag-complete-guide-to-metas-raptor-technique" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-raptor-rag-complete-guide-to-metas-raptor-technique">What is RAPTOR RAG? Complete Guide to Meta’s RAPTOR Technique</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/raptor.png" class="img-fluid figure-img"></p>
 <figcaption>raptor rag</figcaption>
 </figure>
 </div>
-<p>It’s a technique to imrpove they way you RAG above your documents and they say it will improve the performance by 20% ..but it don’t!</p>
-<p>What is RAPTOR ? “It’s a Tree constructed from your chunks by recursively cluster chunks of text based on their vector embeddings and generates text summaries of those cluster, constructing a tree from the bottom up.”</p>
-<p>They try to solve the problem of retrieve only a few short, contiguous text chunks, which limits their ability to represent and levevarge large-scale discourse structure. This is particularly relevant for thematic questions that require integrating knowledge from multiple parts of a text, such as understanding an entire book, as in the NarrativeQA dataset (Kočiskỳ et al., 2018).</p>
-<p>Consider the fairy tale of Cinderella, and the question “How did Cinderella reach her happy ending?”. The top-k retrieved short contiguous texts will not contain enough context to answer the question.</p>
-<p>They solve this by making the indexing and retrieval uses a tree structure to capture both high-level and low-level details about a text. the steps are the following: 1. cluster chunks of text 2. generates summary for those clusters and then repeats 3. generating a tree from the bottom up.</p>
-<section id="the-model-based-summarization" class="level3">
-<h3 class="anchored" data-anchor-id="the-model-based-summarization">the model based summarization</h3>
-<p>After clustering the nodes using Gaussian Mixture Models, the nodes in each cluster are sent to a language model for summarization. This step allows the model to transform large chunks of text into concise, coherent summaries of the selected nodes. For our experiments, we use gpt-3.5-turbo to generate the summaries. The summarization step condenses the potentially large volume of retrieved information into a manageable size.</p>
+<p>RAPTOR RAG is Meta’s innovative technique designed to improve document retrieval performance. While they claim a 20% improvement, my testing shows mixed results depending on the use case.</p>
+<section id="understanding-raptor-rag" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-raptor-rag">Understanding RAPTOR RAG</h3>
+<p><strong>RAPTOR</strong> stands for “Recursive Abstractive Processing for Tree-Organized Retrieval.” It’s a tree-based approach that constructs hierarchical representations of your documents by recursively clustering text chunks based on their vector embeddings and generating summaries of those clusters.</p>
+<p>The core innovation is building a tree structure from the bottom up, which helps solve the fundamental limitation of traditional RAG systems: retrieving only a few short, contiguous text chunks that limit their ability to represent large-scale discourse structure.</p>
 </section>
-<section id="querying-raptor" class="level3">
-<h3 class="anchored" data-anchor-id="querying-raptor">Querying RAPTOR</h3>
-<p><img src="images/raptor_query.png" class="img-fluid" alt="query RATPOR rag"> 1. Tree traversal 2. collapsed tree retreival</p>
-<p>to undersand how they work the picture above is very clear.</p>
-<p>what i want to say is the results are not fair and the claim of 20% is baisd. if you look at accuracy between raptor and the sbert solution you will find that it’s not much better while still very expensive to create and retrieve this if for question answering and flow of the information is very reptitive.</p>
-<p>what is cool about RAPTOR technique is using it for summary.</p>
-<p>having details, medium and high information for document will help you create better summary because you divide the task of generting a summary to a single LLM in one show which will not be much accurate. you know divided the task some of the summary already done and create in the vector store so the task is more easier for the final llm model.</p>
+<section id="the-problem-raptor-rag-solves" class="level3">
+<h3 class="anchored" data-anchor-id="the-problem-raptor-rag-solves">The Problem RAPTOR RAG Solves</h3>
+<p>Traditional RAG systems struggle with thematic questions that require integrating knowledge from multiple parts of a document. This is particularly relevant for complex queries like understanding an entire book or analyzing long-form content.</p>
+<p><strong>Example:</strong> Consider the fairy tale of Cinderella and the question “How did Cinderella reach her happy ending?” Traditional RAG’s top-k retrieved short contiguous texts won’t contain enough context to answer this comprehensively.</p>
+</section>
+<section id="how-raptor-rag-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-raptor-rag-works">How RAPTOR RAG Works</h3>
+<p>RAPTOR solves this by using a tree structure to capture both high-level and low-level details about text. The process involves:</p>
+<ol type="1">
+<li><strong>Clustering text chunks</strong> based on semantic similarity</li>
+<li><strong>Generating summaries</strong> for each cluster using language models</li>
+<li><strong>Repeating the process</strong> recursively to build a hierarchical tree</li>
+<li><strong>Tree-based retrieval</strong> during query time</li>
+</ol>
+</section>
+<section id="model-based-summarization-in-raptor" class="level3">
+<h3 class="anchored" data-anchor-id="model-based-summarization-in-raptor">Model-Based Summarization in RAPTOR</h3>
+<p>After clustering nodes using Gaussian Mixture Models, each cluster is sent to a language model (typically GPT-3.5-turbo) for summarization. This step transforms large chunks of text into concise, coherent summaries, condensing potentially large volumes of retrieved information into manageable sizes.</p>
+</section>
+<section id="querying-raptor-rag" class="level3">
+<h3 class="anchored" data-anchor-id="querying-raptor-rag">Querying RAPTOR RAG</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/raptor_query.png" class="img-fluid figure-img"></p>
+<figcaption>query RAPTOR rag</figcaption>
+</figure>
+</div>
+<p>RAPTOR supports two main querying approaches:</p>
+<ol type="1">
+<li><strong>Tree Traversal</strong> - Navigate through the hierarchical structure</li>
+<li><strong>Collapsed Tree Retrieval</strong> - Flatten the tree for faster retrieval</li>
+</ol>
+</section>
+<section id="raptor-rag-performance-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="raptor-rag-performance-analysis">RAPTOR RAG Performance Analysis</h3>
+<p>While the 20% improvement claim is appealing, my testing reveals some limitations:</p>
+<ul>
+<li><strong>Accuracy gains are marginal</strong> compared to SBERT-based solutions</li>
+<li><strong>Computational overhead</strong> is significant for creation and retrieval</li>
+<li><strong>Best use case</strong> is document summarization rather than question answering</li>
+<li><strong>Information flow</strong> can be repetitive in some scenarios</li>
+</ul>
+</section>
+<section id="raptor-rag-for-document-summarization" class="level3">
+<h3 class="anchored" data-anchor-id="raptor-rag-for-document-summarization">RAPTOR RAG for Document Summarization</h3>
+<p>The most compelling use case for RAPTOR is document summarization. By having detailed, medium, and high-level information representations, you can create better summaries by:</p>
+<ul>
+<li><strong>Dividing the summarization task</strong> across multiple levels</li>
+<li><strong>Pre-computing summaries</strong> at different granularities</li>
+<li><strong>Reducing the burden</strong> on the final LLM for summary generation</li>
+</ul>
 </section>
 </section>
 <section id="dfloat11-efficient-lossless-compression-for-llms" class="level2">
 <h2 class="anchored" data-anchor-id="dfloat11-efficient-lossless-compression-for-llms">DFloat11: Efficient, Lossless Compression for LLMs</h2>
-<p>DFloat11 (DF11) is a novel, mathematically lossless compression technique that reduces large language model (LLM) memory usage by about 30%—with zero loss in accuracy. Unlike traditional quantization, which can degrade model quality, DF11 uses Huffman coding to compress only the predictable exponent bits of model weights, preserving all original information.</p>
-<section id="how-df11-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-df11-works">How DF11 Works</h3>
+<p>DFloat11 (DF11) is a novel, mathematically lossless compression technique that reduces large language model memory usage by about 30% with zero accuracy loss. Unlike traditional quantization methods that can degrade model quality, DF11 uses Huffman coding to compress only the predictable exponent bits of model weights.</p>
+<section id="how-dfloat11-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-dfloat11-works">How DFloat11 Works</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/df11.png" class="img-fluid figure-img"></p>
 <figcaption>DFloat11 encoding</figcaption>
 </figure>
 </div>
+<p>DFloat11’s compression strategy is elegant in its simplicity:</p>
 <ul>
-<li><strong>Sign and Fraction Bits:</strong> Kept unchanged, as they contain high-entropy information.</li>
-<li><strong>Exponent Bits:</strong> Compressed using a precomputed Huffman tree, replacing the fixed 8-bit exponent with a variable-length code. This saves about 5 bits per weight on average.</li>
+<li><strong>Sign and Fraction Bits:</strong> Kept unchanged as they contain high-entropy information</li>
+<li><strong>Exponent Bits:</strong> Compressed using a precomputed Huffman tree, replacing the fixed 8-bit exponent with variable-length codes</li>
+<li><strong>Average Savings:</strong> About 5 bits per weight on average</li>
 </ul>
 </section>
-<section id="storage-and-decoding" class="level3">
-<h3 class="anchored" data-anchor-id="storage-and-decoding">Storage and Decoding</h3>
+<section id="dfloat11-storage-and-decoding" class="level3">
+<h3 class="anchored" data-anchor-id="dfloat11-storage-and-decoding">DFloat11 Storage and Decoding</h3>
+<p><strong>Storage Architecture:</strong> - Sign/fraction and exponent bits stored separately - Small header containing the Huffman codebook - Efficient packing for minimal overhead</p>
+<p><strong>Runtime Decoding:</strong> - Original weights quickly reconstructed by combining sign/fraction block with decoded exponent - Enables fast, parallel processing on GPUs - No performance penalty during inference</p>
+</section>
+<section id="dfloat11-key-benefits" class="level3">
+<h3 class="anchored" data-anchor-id="dfloat11-key-benefits">DFloat11 Key Benefits</h3>
 <ul>
-<li><strong>Storage:</strong> The sign/fraction and exponent bits are stored separately, along with a small header for the Huffman codebook.</li>
-<li><strong>Decoding:</strong> At runtime, the original weights are quickly reconstructed by combining the sign/fraction block with the decoded exponent, enabling fast, parallel processing on GPUs.</li>
+<li><strong>30% reduction</strong> in model size compared to bf16</li>
+<li><strong>100% identical accuracy</strong> to the original model</li>
+<li><strong>Universal applicability</strong> to any transformer-based LLM</li>
+<li><strong>Zero training required</strong> - works with existing models</li>
 </ul>
 </section>
-<section id="key-benefits" class="level3">
-<h3 class="anchored" data-anchor-id="key-benefits">Key Benefits</h3>
+</section>
+<section id="pyrefly-fast-python-type-checker-in-rust" class="level2">
+<h2 class="anchored" data-anchor-id="pyrefly-fast-python-type-checker-in-rust">Pyrefly: Fast Python Type Checker in Rust</h2>
+<p>Pyrefly is a blazingly fast Python type checker written in Rust, designed to provide near-instantaneous type checking for large Python codebases.</p>
+<section id="installing-pyrefly-with-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="installing-pyrefly-with-vs-code">Installing Pyrefly with VS Code</h3>
+<p>I installed Pyrefly into VS Code and tested it with several projects including LlamaIndex and TypeCodebase. The experience was impressive:</p>
 <ul>
-<li>30% reduction in model size compared to bf16</li>
-<li>100% identical accuracy to the original model</li>
-<li>Applicable to any transformer-based LLM ## Pyrefly with vscode Pyrefly it’s a pyton type check written in Rust. they I installed into vscode and tried it with llamaindex and typercodebase it was very nice expirence.</li>
+<li><strong>Lightning-fast type checking</strong> compared to traditional tools</li>
+<li><strong>Seamless VS Code integration</strong> with real-time feedback</li>
+<li><strong>Excellent performance</strong> on large codebases</li>
+<li><strong>Rust-powered reliability</strong> with minimal memory usage</li>
 </ul>
 </section>
+<section id="pyrefly-vs-traditional-type-checkers" class="level3">
+<h3 class="anchored" data-anchor-id="pyrefly-vs-traditional-type-checkers">Pyrefly vs Traditional Type Checkers</h3>
+<p>Pyrefly’s Rust implementation provides significant advantages:</p>
+<ul>
+<li><strong>Speed improvements</strong> of 10-100x over Python-based type checkers</li>
+<li><strong>Lower memory footprint</strong> for large projects</li>
+<li><strong>Better error reporting</strong> with precise location information</li>
+<li><strong>Incremental checking</strong> for faster subsequent runs</li>
+</ul>
+</section>
+</section>
+<section id="llamaindex-raptor-integration" class="level2">
+<h2 class="anchored" data-anchor-id="llamaindex-raptor-integration">LlamaIndex RAPTOR Integration</h2>
+<p>For those using LlamaIndex, RAPTOR RAG can be integrated to improve document retrieval performance. The tree-based approach works particularly well with LlamaIndex’s document processing pipeline.</p>
+<section id="implementation-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-considerations">Implementation Considerations</h3>
+<p>When implementing RAPTOR with LlamaIndex:</p>
+<ul>
+<li><strong>Consider the computational cost</strong> of building the tree structure</li>
+<li><strong>Evaluate performance gains</strong> for your specific use case</li>
+<li><strong>Test with your document types</strong> before full deployment</li>
+<li><strong>Monitor memory usage</strong> during tree construction</li>
+</ul>
+</section>
+</section>
+<section id="meta-pyrefly-and-open-source-ecosystem" class="level2">
+<h2 class="anchored" data-anchor-id="meta-pyrefly-and-open-source-ecosystem">Meta Pyrefly and Open Source Ecosystem</h2>
+<p>Meta’s contribution to the Python development ecosystem through Pyrefly demonstrates their commitment to developer productivity. The combination of Rust’s performance with Python’s flexibility creates a powerful tool for modern development workflows.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>These three tools represent significant advances in their respective domains:</p>
+<ul>
+<li><strong>RAPTOR RAG</strong> offers a novel approach to document retrieval, though with mixed practical benefits</li>
+<li><strong>DFloat11</strong> provides genuine value for LLM deployment with lossless compression</li>
+<li><strong>Pyrefly</strong> delivers substantial performance improvements for Python type checking</li>
+</ul>
+<p>While RAPTOR RAG’s claims may be overstated, the underlying tree-based approach shows promise for specific use cases like document summarization. DFloat11 and Pyrefly, however, offer clear, measurable benefits that make them valuable additions to any ML or Python development toolkit.</p>
 </section>
 <section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">references</h2>
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <ol type="1">
-<li><a href="https://xmad.ai">xmad team blog</a></li>
-<li><a href="https://arxiv.org/html/2401.18059v1">RAPTOR paper</a></li>
-<li><a href="https://pyrefly.org/">pyrefly</a></li>
+<li><a href="https://xmad.ai">XMad Team Blog</a> - Meta’s research team insights</li>
+<li><a href="https://arxiv.org/html/2401.18059v1">RAPTOR Paper</a> - Original research paper</li>
+<li><a href="https://pyrefly.org/">Pyrefly Official Site</a> - Documentation and installation</li>
+<li><a href="https://arxiv.org/abs/2406.02359">DFloat11 Research</a> - Compression technique details</li>
+<li><a href="https://docs.llamaindex.ai/">LlamaIndex Documentation</a> - RAG framework integration</li>
 </ol>
 
 
@@ -531,13 +664,14 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

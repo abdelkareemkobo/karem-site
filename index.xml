@@ -8,7 +8,7 @@
 <title>kareem&#39;s Blog</title>
 <link>https://kareemai.com/</link>
 <atom:link href="https://kareemai.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>A collection of technical blogs and talks on machine learning and data science.</description>
+<description>Abdelkareem Elkhateb&#39;s personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi also arabic Natural Language Processing and Rust language.</description>
 <image>
 <url>https://kareemai.com/quarto.png</url>
 <title>kareem&#39;s Blog</title>
@@ -16,8 +16,483 @@
 <height>86</height>
 <width>144</width>
 </image>
-<generator>quarto-1.8.19</generator>
-<lastBuildDate>Mon, 09 Jun 2025 21:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Thu, 02 Oct 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>From $32,000 to $0 with Small Models and CTranslate2</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="going-from-44000-to-0-cost-with-small-models" class="level2">
+<h2 class="anchored" data-anchor-id="going-from-44000-to-0-cost-with-small-models">Going from 44,000$ to 0 cost with small models</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
+<figcaption>faster masrawy</figcaption>
+</figure>
+</div>
+<p>It’s friday and i have sometime to continue working on opensource tasks, i had an idea that requires a translate a dataset it’s not large 2GB it consist of some paragraph from English the average of words is around 400 token each row from the 8 million :) I get into the OpenAI models to calculate how much this will cost me to translate all these with gpt4.1 and gpt4.1-mini and the prices are the following : my total tokens =&gt;8,000,000 rows * 400 toknes = 3,200,000,000 which costs the following as input and output i will assume they are the same here for the ease of calculations i will use the normal APi not Batched API:</p>
+<ul>
+<li>total input tokens =&gt; 3,200,000,000</li>
+<li>total output tokens =&gt; 3,200,000,000</li>
+</ul>
+<p><strong>The calculation based on this date 2025-10-03</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>GPT4.1</th>
+<th>GPT4.1-mini</th>
+<th>GPT3.5 Turbo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input tokens</td>
+<td>3,200 * 2</td>
+<td>3,200 * 0.40</td>
+<td>3,200 * 0.50</td>
+</tr>
+<tr class="even">
+<td>output outputs</td>
+<td>3,200 * 8</td>
+<td>3,200 * 1.60</td>
+<td>3,200 * 1.50</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 70%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>GPT4.1</th>
+<th>GPT4.1-mini</th>
+<th>GPT3.5 Turbo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input tokens</td>
+<td>6400</td>
+<td>1280</td>
+<td>1600</td>
+</tr>
+<tr class="even">
+<td>output outputs</td>
+<td>25600</td>
+<td>5120</td>
+<td>4800</td>
+</tr>
+<tr class="odd">
+<td>Total $ cost</td>
+<td>32000</td>
+<td>6400</td>
+<td>6400</td>
+</tr>
+<tr class="even">
+<td>Total EGP cost</td>
+<td>1,527,680</td>
+<td>305,536</td>
+<td>305,536</td>
+</tr>
+<tr class="odd">
+<td>it’s interesting that the cost of gpt4.1 mini is the same as gpt3.5 Turbo ^ ^</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>also this is insane i can afford only 1000 EGP or 50$ at max :)</p>
+</section>
+<section id="how-poor-i-am-very-gpu-poor" class="level2">
+<h2 class="anchored" data-anchor-id="how-poor-i-am-very-gpu-poor">How poor I am ? very GPU poor! 💻</h2>
+<p>I wish has a Local GPU to be able to test Opensource LLMs like Cohere 70B and such strong models and i will not care about time!</p>
+<p>I remeber there is an amazing work that is not even llm for translation created by <a href="https://www.linkedin.com/in/ahmedwasfy/">Ahmed Wasfy</a> from <a href="https://www.linkedin.com/company/namaa-community/posts/?feedView=all">NAMMA Community</a></p>
+<p>it’s a 240M Params small model traied to translate English into Egyptian It was trained on more than&nbsp;<em><strong>150,000</strong></em>&nbsp;rows with more than&nbsp;<em><strong>10 Million tokens</strong></em> for Arabic Language it’s competes with Closed LLMs like Gpt-4o and Claude-3-5-sonnet ![[Pasted image 20251003174247.png]]i tested it with my local laptop gpu 1660Ti GTX mobile version with 6GB and CPU is core i 7 gen9 from intel with 32GB ddr4 i tested the model and it worked with pytorch very fast and very efficient! the translation are very similar and this is enough for the task i want to build on these translated dataset! let’s do the math for how much this will cost on my laptop :)</p>
+<hr>
+</section>
+<section id="pytorch-pipeline-with-hf-inference-through-transformers" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-pipeline-with-hf-inference-through-transformers">Pytorch Pipeline with HF Inference through Transformers</h2>
+<p>i created the translation pipeline and tested it with these batch size with these settings float16 and batch sizes = [ 2,4,6,8,16] I found that even i have enough memory to load more batch the optimal batch size was 4 and this is becuase the ram and CPU power. i was able to process 100 examples in these results:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 0%">
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pytorch + float16</td>
+<td></td>
+<td>100</td>
+<td>8</td>
+<td>1660TI laptop GPU</td>
+<td>60s</td>
+<td>55.56 Days</td>
+</tr>
+<tr class="even">
+<td>Pytorch + float16</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>45s</td>
+<td>41.67 Days</td>
+</tr>
+<tr class="odd">
+<td>Pytorch + float16 + optimized version</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>35s</td>
+<td>32.41 Days</td>
+</tr>
+</tbody>
+</table>
+<p>optimized version here i mean</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">compile</span>(model, mode<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"max-autotune"</span>, fullgraph<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> model.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">eval</span>()</span></code></pre></div></div>
+<p>it’s a new feature in <a href="https://pytorch.org/get-started/pytorch-2-x/">pytorch 2</a> to accelerate the models speeds i tried multiple settings and also the different backends but the there is no huge difference convert to onnex? it’s a nightmare i did it before and the results didn’t worth the headache! I may be try it when i have time</p>
+</section>
+<section id="lets-do-quantization" class="level2">
+<h2 class="anchored" data-anchor-id="lets-do-quantization">Let’s Do Quantization</h2>
+<p>I Tried to use the <a href="https://docs.pytorch.org/ao/stable/serving.html">torchao</a> which enable performing quantization in more stable and easer ways i tried it alot with my GPU but due to cuda version it always throughs this error:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">1.</span> AssertionError: Float8 dynamic activation quantization is only supported on CUDA<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>=8.9 and MI300+</span></code></pre></div></div>
+<p>the library code is not straightforward and i don’t have time i have just 2 days to finish this before i return to my main work.</p>
+<p>I also faced some error because the model i am trying to use is an old and not optimzied one for these method it’s based on the <a href="https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-ar">OPUS-MT-en-ar</a> created with <a href="https://marian-nmt.github.io/">marianNMT</a> which is an efficient NMT implementation written in pure C++. The models have been converted to pyTorch using the transformers library by huggingface</p>
+</section>
+<section id="vllms-and-sglang-for-hf-translation-pipelie" class="level2">
+<h2 class="anchored" data-anchor-id="vllms-and-sglang-for-hf-translation-pipelie">VLLMs and SGLang for HF translation pipelie</h2>
+<p>i search for SGLang solution with the the model and i didn’t find any help i tried the VLLMs documentation also and found the following page <a href="https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code">bring_your_own_model</a> and <a href="https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope">this</a> the model speed was worth than normal HF tensors it was more 5 seconds. I think there is a better way to write the VLLm version better mine.</p>
+</section>
+<section id="more-search-and-ctranslate-magic" class="level2">
+<h2 class="anchored" data-anchor-id="more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</h2>
+<p>I want to give up , but let’s try a final search how to serve marian model and in an old forum answer i found what is called <a href="https://opennmt.net/CTranslate2/quickstart.html">Ctranslate</a> they say it’s faster than HF transformer for specific architecture by around 4-6x</p>
+<p>#defintion CTranslate2 is a C++ and Python library for efficient inference with Transformer models. The following model types are currently supported:</p>
+<ul>
+<li>Encoder-decoder models: Transformer base/big, M2M-100, NLLB, BART, mBART, Pegasus, T5, Whisper</li>
+<li>Decoder-only models: GPT-2, GPT-J, GPT-NeoX, OPT, BLOOM, MPT, Llama, Mistral, Gemma, CodeGen, GPTBigCode, Falcon, Qwen2</li>
+<li>Encoder-only models: BERT, DistilBERT, XLM-RoBERTa</li>
+</ul>
+<p>Compatible models should be first converted into an optimized model format. The library includes converters for multiple frameworks:</p>
+<ul>
+<li><a href="https://opennmt.net/CTranslate2/guides/opennmt_py.html">OpenNMT-py</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/opennmt_tf.html">OpenNMT-tf</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/fairseq.html">Fairseq</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/marian.html">Marian</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/opus_mt.html">OPUS-MT</a></li>
+<li><a href="https://opennmt.net/CTranslate2/guides/transformers.html">Transformers</a></li>
+</ul>
+<section id="key-features-of-ctranslate" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-of-ctranslate">Key features of Ctranslate</h3>
+<p><strong>Fast and efficient execution on CPU and GPU</strong><br>
+The execution&nbsp;<a href="https://github.com/OpenNMT/CTranslate2#benchmarks">is significantly faster and requires less resources</a>&nbsp;than general-purpose deep learning frameworks on supported models and tasks thanks to many advanced optimizations: layer fusion, padding removal, batch reordering, in-place operations, caching mechanism, etc.</p>
+<ul>
+<li><strong>Quantization and reduced precision</strong><br>
+The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ quantization (INT4).</li>
+<li><strong>Multiple CPU architectures support</strong><br>
+The project supports x86-64 and AArch64/ARM64 processors and integrates multiple backends that are optimized for these platforms:&nbsp;<a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html">Intel MKL</a>,&nbsp;<a href="https://github.com/oneapi-src/oneDNN">oneDNN</a>,&nbsp;<a href="https://www.openblas.net/">OpenBLAS</a>,&nbsp;<a href="https://github.com/google/ruy">Ruy</a>, and&nbsp;<a href="https://developer.apple.com/documentation/accelerate">Apple Accelerate</a>.</li>
+<li><strong>Automatic CPU detection and code dispatch</strong><br>
+One binary can include multiple backends (e.g.&nbsp;Intel MKL and oneDNN) and instruction set architectures (e.g.&nbsp;AVX, AVX2) that are automatically selected at runtime based on the CPU information.</li>
+<li><strong>Parallel and asynchronous execution</strong><br>
+Multiple batches can be processed in parallel and asynchronously using multiple GPUs or CPU cores.</li>
+<li><strong>Dynamic memory usage</strong><br>
+The memory usage changes dynamically depending on the request size while still meeting performance requirements thanks to caching allocators on both CPU and GPU.</li>
+<li><strong>Lightweight on disk</strong><br>
+Quantization can make the models 4 times smaller on disk with minimal accuracy loss.</li>
+<li><strong>Simple integration</strong><br>
+The project has few dependencies and exposes simple APIs in&nbsp;<a href="https://opennmt.net/CTranslate2/python/overview.html">Python</a>&nbsp;and C++ to cover most integration needs.</li>
+<li><strong>Configurable and interactive decoding</strong><br>
+<a href="https://opennmt.net/CTranslate2/decoding.html">Advanced decoding features</a>&nbsp;allow autocompleting a partial sequence and returning alternatives at a specific location in the sequence.</li>
+<li><strong>Support tensor parallelism for distributed inference</strong><br>
+Very large model can be split into multiple GPUs. Following this&nbsp;<a href="https://github.com/OpenNMT/CTranslate2/blob/master/docs/parallel.md#model-and-tensor-parallelism">documentation</a>&nbsp;to set up the required environment.</li>
+</ul>
+<p>Some of these features are difficult to achieve with standard deep learning frameworks and are the motivation for this project.</p>
+</section>
+<section id="lets-try-it" class="level3">
+<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it !</h3>
+<p>i used the following script to convert the HF version into Ctranslate expected one</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ct2-transformers-converter</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--model</span> NAMAA-Space/masrawy-english-to-egyptian-arabic-translator-v2.9 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--output_dir</span> ct2_model_masrawy</span></code></pre></div></div>
+<p>then i used the model with this version</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">translator <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ctranslate2.Translator(</span>
+<span id="cb4-2">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ct2_model_masrawy"</span>,</span>
+<span id="cb4-3">    device<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cuda"</span>,</span>
+<span id="cb4-4">    compute_type<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"float16"</span>,</span>
+<span id="cb4-5">)</span></code></pre></div></div>
+<p>it worked and was very fast much, much faster</p>
+<hr>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 1%">
+<col style="width: 21%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>100</td>
+<td>8</td>
+<td>1660TI laptop GPU</td>
+<td>11s</td>
+<td>10.19 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>100</td>
+<td>4</td>
+<td>1660TI laptop GPU</td>
+<td>16s</td>
+<td>12.04 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate</td>
+<td></td>
+<td>100</td>
+<td>6</td>
+<td>1660TI laptop GPU</td>
+<td>13s</td>
+<td>14.81 days</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>we moved from 32.4 Days into 10 Days!!!</p>
+</section>
+</section>
+<section id="getting-help-from-the-titan-rtx-24gb" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">getting help from The Titan RTX 24GB</h2>
+<p>One of my friends offered me an access to it’s Workstation which is dual gpu Titan RTX it’s an old gpu but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a></p>
+<p>I found that the optimal batch is 64 with after some tries. let’s use this and see the results i will also increase the size from 100 samples into 1000</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 0%">
+<col style="width: 14%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th></th>
+<th>Number of Examples</th>
+<th>Batch Size</th>
+<th>GPU setup</th>
+<th>Full time</th>
+<th>Days need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pytorch + float16 + optimized version</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>240s</td>
+<td>22.22 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + int8 <br></td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>7.89s</td>
+<td>0.73&nbsp;days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + int8 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>4.42s</td>
+<td>0.41 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + float16</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>6.46s</td>
+<td>0.60 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + float16 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>3.72</td>
+<td>0.34 days</td>
+</tr>
+<tr class="even">
+<td>Ctranslate + int8_float16</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Titan RTX</td>
+<td>6.81s</td>
+<td>0.63 days</td>
+</tr>
+<tr class="odd">
+<td>Ctranslate + int8_float16 + dual GPU</td>
+<td></td>
+<td>1000</td>
+<td>64</td>
+<td>Dual Titan RTX</td>
+<td>3.85s</td>
+<td>0.36 days</td>
+</tr>
+<tr class="even">
+<td>==we moved now from 22 days in single titan rtx into 0.60 days! ==</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="why-float16-is-faster-than-int8" class="level4">
+<h4 class="anchored" data-anchor-id="why-float16-is-faster-than-int8">Why float16 is faster than int8</h4>
+<p><strong>Float16 Version (faster!):</strong></p>
+<ul>
+<li>Dual GPU: <strong>269.2 docs/sec</strong></li>
+<li>Single GPU: 154.7 docs/sec</li>
+<li>Time for 1000 docs: 3.72 seconds</li>
+</ul>
+<p><strong>Int8 Version (slower):</strong></p>
+<ul>
+<li>Dual GPU: <strong>225.8 docs/sec</strong></li>
+<li>Single GPU: 126.7 docs/sec</li>
+<li>Time for 1000 docs: 4.43 seconds</li>
+</ul>
+<p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for the int8 and see which batch size will be now better!</p>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps!</h2>
+<p>This is just the start i will search more and invistage how to make this more faster because the 8 million are only 2GB and the next task is to translate 500GB :) every second will make a huge difference!</p>
+<ul>
+<li>use large batch size with int8</li>
+<li>use different GPU with modern architecture and better CPU</li>
+<li>deep dive into VLLm</li>
+<li>Try the onnex version for GPU not cpu</li>
+<li>try again with torchao</li>
+</ul>
+<p>Thanks for your time! here is the converted version on huggingface <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a> small models can save your life ^ ^</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>optimization</category>
+  <category>translation</category>
+  <category>ctranslate2</category>
+  <category>cost-optimization</category>
+  <guid>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</guid>
+  <pubDate>Thu, 02 Oct 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.png" medium="image" type="image/png" height="216" width="144"/>
+</item>
 <item>
   <title>Getting Back to RSS</title>
   <dc:creator>kareem </dc:creator>
@@ -1261,7 +1736,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/kcal.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>أفضل أنواع الكرياتين مونوهيدرات و بروتيانات للتضخيم</title>
+  <title>افضل انواع الكرياتين لبناء العضلات</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/protienai.html</link>
   <description><![CDATA[ 
@@ -2880,122 +3355,6 @@ Inputs are two sets of sentences from two different languages. For each sentence
  ]]></description>
   <guid>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</guid>
   <pubDate>Fri, 20 Oct 2023 21:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>havrard CS197 AI research experiences</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="table-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field.</label></li>
-</ul>
-</section>
-<section id="reviews" class="level2">
-<h2 class="anchored" data-anchor-id="reviews">Reviews</h2>
-<p>Lecture 1: Exciting Advances with AI Language Models <strong>Content</strong> : Interact with language models like GPT-3’s text completion and use Codex’s code generation abilities <strong>feedback</strong> : ⭐ (1/5)</p>
-<hr>
-<p>Lecture 2: The Zen of python <strong>Content</strong> : vscode,git,conad,linting and Debugging. <strong>feedback</strong>: <strong>feedback</strong> : ⭐ (1/5)</p>
-<hr>
-<p>Lecture 3: Reading AI Research papers <strong>Content</strong> :</p>
-<ol type="1">
-<li>Conduct a literature search to identify papers relevant to a topic of interest</li>
-<li>Difference between Reading Wide and Reading deep and how to balance between them</li>
-<li>How to use Google Scholar and paper with code <strong>feedback</strong> : ⭐⭐⭐⭐⭐ (5/5)</li>
-</ol>
-<hr>
-<p>Lecture 4: In-Tune with Jazz Hands <strong>Content</strong>:</p>
-<ol type="1">
-<li>quick intro into huggingface</li>
-<li>Tokenization</li>
-<li>Causal language modeling (CLM) <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
-</ol>
-<hr>
-<p>Lecture 5: Lightning McTorch <strong>Content</strong> :</p>
-<ol type="1">
-<li>Fine-tuning A vision Transformer</li>
-<li>Intro to pytorch lightning (Lightning)</li>
-<li>Data Loading</li>
-<li>How to Build a Neural net Module with lightning and how lightning modules work <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
-</ol>
-<hr>
-<p>Lecture 6 &amp; 7: Moonwalking with Pytorch <strong>Content</strong> :</p>
-<ol type="1">
-<li>Pytorch Exercises</li>
-<li>Tensors</li>
-<li>Autograd and neural networks <strong>feedback</strong> : ⭐ (1/5)</li>
-</ol>
-<hr>
-<p>Lecture 8 &amp; 9: Experiment Organization Spakrs Joy <strong>Content</strong> :</p>
-<ol type="1">
-<li>Weight and Biases</li>
-<li>Hyperparameter Search</li>
-<li>Hydra <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
-</ol>
-<hr>
-<p>Lecture 10 &amp; 11 : I Dreamed a Dream <strong>Content</strong></p>
-<ol type="1">
-<li>Identifying Gaps in A Research Paper
-<ol type="1">
-<li>CLIP and CheXzero</li>
-</ol></li>
-<li>Generating Ideas for Building a Research Paper</li>
-<li>Iterating on your research ideas <strong>feedback</strong> : ⭐⭐⭐⭐⭐ (5/5)</li>
-</ol>
-<hr>
-<p>Lecture 12 &amp; 13 : Today Was a Fairytale</p>
-<ol type="1">
-<li>how to deconstruct the elements of a research paper and their sequence</li>
-<li>Resulting template that you can use as a general example <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
-</ol>
-<hr>
-<p>Lecture 14 &amp; 15: Deep Learning on Cloud Nine <em>didn’t complete it</em> 🙃🙃🙃</p>
-<hr>
-<p>Lecture 16 &amp; 17:Make your dreams come tuned <strong>Content</strong></p>
-<ol type="1">
-<li>high level use of Stable Diffusion using a Dreambooth template</li>
-<li>Use AWS to accelerate the training of Stable Diffusion models with GPUs</li>
-<li>HF Accelerator <strong>feedback</strong> : ⭐⭐ (2/5)</li>
-</ol>
-<hr>
-<p>Lecture 18 : Research Productivity Power-Ups <strong>Content</strong></p>
-<ol type="1">
-<li>How update meetings and working sessions</li>
-<li>organizing your efforts on a project</li>
-<li>what is technical dept and examples on it <strong>feedback</strong> : ⭐⭐⭐⭐ (4/5)</li>
-</ol>
-<hr>
-<p>Lecture 19 :The AI Ninja <strong>Content</strong></p>
-<ol type="1">
-<li>How to make Steady Progress</li>
-<li>Some Research Skills</li>
-<li>Discussion Questions <strong>feedback</strong> : ⭐⭐ (2/5) I found that <a href="https://colah.github.io/notes/taste/">Colah’ blog</a> content about research is better in the context and offers a great details</li>
-</ol>
-<hr>
-<p>Lecture 20: Bejeweled ⭐⭐⭐⭐⭐(5/5)</p>
-<ol type="1">
-<li>how to make a slides to improve your research talk</li>
-<li>Assertion Evidence Approach <strong>feedback</strong> : ⭐⭐ (2/5) This is great related talk from MIT about this topic <a href="https://www.youtube.com/watch?v=Unzc731iCUY&amp;pp=ygUyaG93IHRvIG1ha2Ugc2xpZGVzaG93IGFuZCBwcmVzZW50YXRpb24gbWl0IGxlY3R1cmU%3D">How to speak</a> ⭐⭐⭐⭐⭐(5/5)</li>
-</ol>
-<hr>
-<p>Lecture 21 : Model Showdown <strong>Content</strong></p>
-<ol type="1">
-<li>Statistical Testing <strong>feedback</strong> : ⭐⭐ ⭐(3/5)</li>
-</ol>
-<hr>
-
-
-</section>
-
- ]]></description>
-  <guid>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</guid>
-  <pubDate>Mon, 17 Jul 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
