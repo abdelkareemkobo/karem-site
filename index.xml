@@ -30,13 +30,8 @@
 
 <section id="going-from-32000-to-0-cost-with-small-models" class="level2">
 <h2 class="anchored" data-anchor-id="going-from-32000-to-0-cost-with-small-models">Going from $32,000 to 0 cost with small models</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
-<figcaption>faster masrawy</figcaption>
-</figure>
-</div>
-<p>It’s friday and i have sometime to continue working on opensource tasks, i had an idea that requires a translate a dataset it’s not large 2GB it consist of some paragraph from English the average of words is around 400 token each row from the 8 million :) I get into the OpenAI models to calculate how much this will cost me to translate all these with gpt4.1 and gpt4.1-mini and the prices are the following : my total tokens =&gt;8,000,000 rows * 400 toknes = 3,200,000,000 which costs the following as input and output i will assume they are the same here for the ease of calculations i will use the normal APi not Batched API:</p>
+<p>It’s Friday and I have some time to continue working on open source tasks. I had an idea that requires translating a dataset. It’s not large - 2GB - and consists of some paragraphs from English. The average number of words is around 400 tokens per row from the 8 million rows :)</p>
+<p>I looked into the OpenAI models to calculate how much this would cost me to translate all these with GPT-4.1 and GPT-4.1-mini, and the prices are the following: my total tokens =&gt; 8,000,000 rows * 400 tokens = 3,200,000,000. For the following calculations, I will assume input and output tokens are the same for ease of calculation. I will use the normal API, not the Batched API:</p>
 <ul>
 <li>total input tokens =&gt; 3,200,000,000</li>
 <li>total output tokens =&gt; 3,200,000,000</li>
@@ -59,7 +54,7 @@
 <td>3,200 * 0.50</td>
 </tr>
 <tr class="even">
-<td>output outputs</td>
+<td>Output tokens</td>
 <td>3,200 * 8</td>
 <td>3,200 * 1.60</td>
 <td>3,200 * 1.50</td>
@@ -89,7 +84,7 @@
 <td>1600</td>
 </tr>
 <tr class="even">
-<td>output outputs</td>
+<td>Output tokens</td>
 <td>25600</td>
 <td>5120</td>
 <td>4800</td>
@@ -114,13 +109,26 @@
 </tr>
 </tbody>
 </table>
-<p>also this is insane i can afford only 1000 EGP or 50$ at max :)</p>
+<p>Also, this is insane - I can afford only 1000 EGP or $50 at max :)</p>
 </section>
-<section id="how-poor-i-am-very-gpu-poor" class="level2">
-<h2 class="anchored" data-anchor-id="how-poor-i-am-very-gpu-poor">How poor I am ? very GPU poor! 💻</h2>
-<p>I wish has a Local GPU to be able to test Opensource LLMs like Cohere 70B and such strong models and i will not care about time!</p>
-<p>I remeber there is an amazing work that is not even llm for translation created by <a href="https://www.linkedin.com/in/ahmedwasfy/">Ahmed Wasfy</a> from <a href="https://www.linkedin.com/company/namaa-community/posts/?feedView=all">NAMMA Community</a></p>
-<p>it’s a 240M Params small model traied to translate English into Egyptian It was trained on more than&nbsp;<em><strong>150,000</strong></em>&nbsp;rows with more than&nbsp;<em><strong>10 Million tokens</strong></em> for Arabic Language it’s competes with Closed LLMs like Gpt-4o and Claude-3-5-sonnet ![[Pasted image 20251003174247.png]]i tested it with my local laptop gpu 1660Ti GTX mobile version with 6GB and CPU is core i 7 gen9 from intel with 32GB ddr4 i tested the model and it worked with pytorch very fast and very efficient! the translation are very similar and this is enough for the task i want to build on these translated dataset! let’s do the math for how much this will cost on my laptop :)</p>
+<section id="how-poor-am-i-very-gpu-poor" class="level2">
+<h2 class="anchored" data-anchor-id="how-poor-am-i-very-gpu-poor">How poor am I? Very GPU poor! 💻</h2>
+<p>I wish I had a local GPU to be able to test open source LLMs like Cohere 70B and such strong models, and I would not care about time!</p>
+<p>I remember there is amazing work that is not even an LLM for translation, created by <a href="https://www.linkedin.com/in/ahmedwasfy/">Ahmed Wasfy</a> from <a href="https://www.linkedin.com/company/namaa-community/posts/?feedView=all">NAMMA Community</a></p>
+<p>It’s a 240M parameter small model trained to translate English into Egyptian. It was trained on more than <em><strong>150,000</strong></em> rows with more than <em><strong>10 Million tokens</strong></em> for Arabic language. It competes with closed LLMs like GPT-4o and Claude-3.5-Sonnet</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/masrawy.png" class="img-fluid figure-img"></p>
+<figcaption>masrawy results</figcaption>
+</figure>
+</div>
+<p>I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with PyTorch very fast and very efficiently! The translations are very similar and this is enough for the task I want to build on this translated dataset! Let’s do the math for how much this will cost on my laptop :)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
+<figcaption>faster masrawy</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="pytorch-pipeline-with-hf-inference-through-transformers" class="level2">
