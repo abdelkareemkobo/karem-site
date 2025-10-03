@@ -6,75 +6,79 @@ date: 2025-10-03
 draft: false
 featured: true
 categories:
-    - machine-learning
-    - optimization
-    - translation
-    - ctranslate2
-    - cost-optimization
+  - machine-learning
+  - optimization
+  - translation
+  - ctranslate2
+  - cost-optimization
 image: "images/bojji.png"
 ---
 
 ## Going from $32,000 to 0 cost with small models
 
-![faster masrawy](images/bojji.png)
+It's Friday and I have some time to continue working on open source tasks. I had
+an idea that requires translating a dataset. It's not large - 2GB - and consists
+of some paragraphs from English. The average number of words is around 400
+tokens per row from the 8 million rows :)
 
-It's friday and i have sometime to continue working on opensource tasks, i had
-an idea that requires a translate a dataset it's not large 2GB it consist of
-some paragraph from English the average of words is around 400 token each row
-from the 8 million :) I get into the OpenAI models to calculate how much this
-will cost me to translate all these with gpt4.1 and gpt4.1-mini and the prices
-are the following : my total tokens =>8,000,000 rows * 400 toknes =
-3,200,000,000 which costs the following as input and output i will assume they
-are the same here for the ease of calculations i will use the normal APi not
-Batched API:
+I looked into the OpenAI models to calculate how much this would cost me to
+translate all these with GPT-4.1 and GPT-4.1-mini, and the prices are the
+following: my total tokens => 8,000,000 rows * 400 tokens = 3,200,000,000. For
+the following calculations, I will assume input and output tokens are the same
+for ease of calculation. I will use the normal API, not the Batched API:
 
 - total input tokens => 3,200,000,000
 - total output tokens => 3,200,000,000
 
 **The calculation based on this date 2025-10-03**
 
-| Cost           | GPT4.1    | GPT4.1-mini  | GPT3.5 Turbo |
-| -------------- | --------- | ------------ | ------------ |
-| Input tokens   | 3,200 * 2 | 3,200 * 0.40 | 3,200 * 0.50 |
-| output outputs | 3,200 * 8 | 3,200 * 1.60 | 3,200 * 1.50 |
+| Cost          | GPT4.1    | GPT4.1-mini  | GPT3.5 Turbo |
+| ------------- | --------- | ------------ | ------------ |
+| Input tokens  | 3,200 * 2 | 3,200 * 0.40 | 3,200 * 0.50 |
+| Output tokens | 3,200 * 8 | 3,200 * 1.60 | 3,200 * 1.50 |
 
 | Cost                                                                          | GPT4.1    | GPT4.1-mini | GPT3.5 Turbo |
 | ----------------------------------------------------------------------------- | --------- | ----------- | ------------ |
 | Input tokens                                                                  | 6400      | 1280        | 1600         |
-| output outputs                                                                | 25600     | 5120        | 4800         |
+| Output tokens                                                                 | 25600     | 5120        | 4800         |
 | Total $ cost                                                                  | 32000     | 6400        | 6400         |
 | Total EGP cost                                                                | 1,527,680 | 305,536     | 305,536      |
 | it's interesting that the cost of gpt4.1 mini is the same as gpt3.5 Turbo ^ ^ |           |             |              |
 
-also this is insane i can afford only 1000 EGP or 50$ at max :)
+Also, this is insane - I can afford only 1000 EGP or $50 at max :)
 
-## How poor I am ? very GPU poor! 💻
+## How poor am I? Very GPU poor! 💻
 
-I wish has a Local GPU to be able to test Opensource LLMs like Cohere 70B and
-such strong models and i will not care about time!
+I wish I had a local GPU to be able to test open source LLMs like Cohere 70B and
+such strong models, and I would not care about time!
 
-I remeber there is an amazing work that is not even llm for translation created
-by [Ahmed Wasfy](https://www.linkedin.com/in/ahmedwasfy/) from
+I remember there is amazing work that is not even an LLM for translation,
+created by [Ahmed Wasfy](https://www.linkedin.com/in/ahmedwasfy/) from
 [NAMMA Community](https://www.linkedin.com/company/namaa-community/posts/?feedView=all)
 
-it's a 240M Params small model traied to translate English into Egyptian It was
-trained on more than _**150,000**_ rows with more than _**10 Million tokens**_
-for Arabic Language it's competes with Closed LLMs like Gpt-4o and
-Claude-3-5-sonnet ![[Pasted image 20251003174247.png]]i tested it with my local
-laptop gpu 1660Ti GTX mobile version with 6GB and CPU is core i 7 gen9 from
-intel with 32GB ddr4 i tested the model and it worked with pytorch very fast and
-very efficient! the translation are very similar and this is enough for the task
-i want to build on these translated dataset! let's do the math for how much this
-will cost on my laptop :)
+It's a 240M parameter small model trained to translate English into Egyptian. It
+was trained on more than _**150,000**_ rows with more than _**10 Million
+tokens**_ for Arabic language. It competes with closed LLMs like GPT-4o and
+Claude-3.5-Sonnet
+
+![masrawy results](images/masrawy.png)
+
+I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU
+is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with
+PyTorch very fast and very efficiently! The translations are very similar and
+this is enough for the task I want to build on this translated dataset! Let's do
+the math for how much this will cost on my laptop :)
+
+![faster masrawy](images/bojji.png)
 
 ---
 
-## Pytorch Pipeline with HF Inference through Transformers
+## PyTorch Pipeline with HF Inference through Transformers
 
-i created the translation pipeline and tested it with these batch size with
-these settings float16 and batch sizes = [ 2,4,6,8,16] I found that even i have
-enough memory to load more batch the optimal batch size was 4 and this is
-becuase the ram and CPU power. i was able to process 100 examples in these
+I created the translation pipeline and tested it with these batch sizes with
+these settings: float16 and batch sizes = [2,4,6,8,16]. I found that even though I have
+enough memory to load more batches, the optimal batch size was 4 and this is
+because of the RAM and CPU power. I was able to process 100 examples with these
 results:
 
 | Method                                |   | Number of Examples | Batch Size | GPU setup         | Full time | Days need  |
