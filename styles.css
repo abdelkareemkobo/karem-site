@@ -44,6 +44,175 @@ code{
     background-color: #444242;
 }
 
+/* Navbar Hire me button styling - Beautiful elegant green */
+.navbar a[href*="upwork.com"],
+.navbar-nav a[href*="upwork.com"],
+.navbar-right a[href*="upwork.com"],
+.nav-link[href*="upwork.com"],
+a[href*="upwork.com"] {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3) !important;
+    margin-left: 10px !important;
+}
+
+.navbar a[href*="upwork.com"]:hover,
+.navbar-nav a[href*="upwork.com"]:hover,
+.navbar-right a[href*="upwork.com"]:hover,
+.nav-link[href*="upwork.com"]:hover,
+a[href*="upwork.com"]:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar a[href*="upwork.com"]:active,
+.navbar-nav a[href*="upwork.com"]:active,
+.navbar-right a[href*="upwork.com"]:active,
+.nav-link[href*="upwork.com"]:active,
+a[href*="upwork.com"]:active {
+    transform: translateY(0) !important;
+}
+
+/* YouTube button styling - Soft comfortable red */
+.navbar a[href*="youtube.com"],
+.navbar-nav a[href*="youtube.com"],
+.navbar-right a[href*="youtube.com"],
+.nav-link[href*="youtube.com"],
+a[href*="youtube.com"] {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3) !important;
+    margin-left: 10px !important;
+}
+
+.navbar a[href*="youtube.com"]:hover,
+.navbar-nav a[href*="youtube.com"]:hover,
+.navbar-right a[href*="youtube.com"]:hover,
+.nav-link[href*="youtube.com"]:hover,
+a[href*="youtube.com"]:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar a[href*="youtube.com"]:active,
+.navbar-nav a[href*="youtube.com"]:active,
+.navbar-right a[href*="youtube.com"]:active,
+.nav-link[href*="youtube.com"]:active,
+a[href*="youtube.com"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Dark mode navbar button adjustments */
+.quarto-dark .navbar a[href*="upwork.com"],
+.quarto-dark .navbar-nav a[href*="upwork.com"],
+.quarto-dark .navbar-right a[href*="upwork.com"],
+.quarto-dark .nav-link[href*="upwork.com"],
+.quarto-dark a[href*="upwork.com"] {
+    background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%) !important;
+    box-shadow: 0 3px 10px rgba(20, 184, 166, 0.4) !important;
+}
+
+.quarto-dark .navbar a[href*="upwork.com"]:hover,
+.quarto-dark .navbar-nav a[href*="upwork.com"]:hover,
+.quarto-dark .navbar-right a[href*="upwork.com"]:hover,
+.quarto-dark .nav-link[href*="upwork.com"]:hover,
+.quarto-dark a[href*="upwork.com"]:hover {
+    background: linear-gradient(135deg, #0f766e 0%, #0d5d56 100%) !important;
+    box-shadow: 0 5px 15px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Dark mode YouTube button adjustments */
+.quarto-dark .navbar a[href*="youtube.com"],
+.quarto-dark .navbar-nav a[href*="youtube.com"],
+.quarto-dark .navbar-right a[href*="youtube.com"],
+.quarto-dark .nav-link[href*="youtube.com"],
+.quarto-dark a[href*="youtube.com"] {
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%) !important;
+    box-shadow: 0 3px 10px rgba(248, 113, 113, 0.4) !important;
+}
+
+.quarto-dark .navbar a[href*="youtube.com"]:hover,
+.quarto-dark .navbar-nav a[href*="youtube.com"]:hover,
+.quarto-dark .navbar-right a[href*="youtube.com"]:hover,
+.quarto-dark .nav-link[href*="youtube.com"]:hover,
+.quarto-dark a[href*="youtube.com"]:hover {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    box-shadow: 0 5px 15px rgba(248, 113, 113, 0.5) !important;
+}
+
+/* GPUVec button styling - Beautiful blue gradient (Header/Navbar only) */
+.navbar a[href*="gpuvec.com"],
+.navbar-nav a[href*="gpuvec.com"],
+.navbar-right a[href*="gpuvec.com"],
+.nav-link[href*="gpuvec.com"] {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+    margin-left: 10px !important;
+}
+
+.navbar a[href*="gpuvec.com"]:hover,
+.navbar-nav a[href*="gpuvec.com"]:hover,
+.navbar-right a[href*="gpuvec.com"]:hover,
+.nav-link[href*="gpuvec.com"]:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar a[href*="gpuvec.com"]:active,
+.navbar-nav a[href*="gpuvec.com"]:active,
+.navbar-right a[href*="gpuvec.com"]:active,
+.nav-link[href*="gpuvec.com"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Dark mode GPUVec button adjustments (Header/Navbar only) */
+.quarto-dark .navbar a[href*="gpuvec.com"],
+.quarto-dark .navbar-nav a[href*="gpuvec.com"],
+.quarto-dark .navbar-right a[href*="gpuvec.com"],
+.quarto-dark .nav-link[href*="gpuvec.com"] {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
+    box-shadow: 0 3px 10px rgba(96, 165, 250, 0.4) !important;
+}
+
+.quarto-dark .navbar a[href*="gpuvec.com"]:hover,
+.quarto-dark .navbar-nav a[href*="gpuvec.com"]:hover,
+.quarto-dark .navbar-right a[href*="gpuvec.com"]:hover,
+.quarto-dark .nav-link[href*="gpuvec.com"]:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.5) !important;
+}
+
 /* .sourceCode .at, code{   
     color:#d4d0ab;
     font-weight: normal;

@@ -1,6 +1,8 @@
 ---
 sidebar: false
-description: "A collection of technical blogs and talks on machine learning and data science."
+description: "Abdelkareem Elkhateb's personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi also arabic Natural Language Processing and Rust language."
+lang: en
+title: Kareemai Blog | Arabic NLP
 image: quarto.png
 toc: true
 listing:
@@ -20,15 +22,12 @@ format:
     anchor-sections: true
 ---
 
-# Kareemai - Digital Garden 🌱
+This is my Personal Space where i share some of my knowledge outside of my mind. 
 
-Hello, I’m **Abdelkareem Elkhateb**, an AI Engineer passionate about learning and developing new research ideas in LLMs, NLP, and information retrieval. 
-
-I am dedicated to applying this knowledge in real-world applications and advancing open-source Arabic AI projects.
-
-I am one of the maintainers of the NAMAA community, which accelerates AI applications for Arabic and Islamic culture.
+I am in a mission for finding connections between Research and Real Applications. 
 
 ****
+
 ::: {layout="[80,80]" .profile-header}
 
 ![تيمي](dev.svg){.profile-pic}
@@ -37,60 +36,80 @@ I am one of the maintainers of the NAMAA community, which accelerates AI applica
 
 :::
 
-This blog documents my journey in programming, deep learning, and AGI. 
+### Current Roles 
 
-Currently, I am focused on learning:
+- **Master Student**: My thesis focuses on Static Embedding Models for Arabic Language
 
-1. **Signal Processing**: Building speech processing and AI applications for human voice understanding.
+- **Full-time AI Engineer at xbites**: Building real estate AI agents with cutting-edge technologies in both Arabic and English
 
-2. **Generative AI**: Building generative models for business solutions and creative applications.
+- **Research Engineer at Hamza Salem Research Lab**: Graph analysis, Distributed ML and other cool stuff
 
-3. **Recommendation Systems**: Passionate about personalization—enjoy designing recommendation systems for projects of all sizes.
+- **NAMAA Community**: Maintainer, accelerating AI applications for Arabic and Islamic culture
 
-4. **Information Retrieval**: Working with embeddings and vector databases to improve search and knowledge discovery.
+### Current Goals!
 
-5. **Hypermedia Systems**: Developing small apps with htmx to accelerate AI pipelines, from data processing to observability.
+I have very limited time in this life, so i need to focus on what really matters. 
 
+**{ قُلْ هَلْ نُنَبِّئُكُمْ بِالأَخْسَرِينَ أَعْمَالا * الَّذِينَ ضَلَّ سَعْيُهُمْ فِي الْحَيَاةِ الدُّنْيَا وَهُمْ يَحْسَبُونَ أَنَّهُمْ يُحْسِنُونَ صُنْعًا }**
+
+
+
+
+### ![Academic Goals 2025](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
+
+- [ ] 📝 Publications 7/10 
+- [ ] 📖 Reads 962/1000
+- [ ] 🏆 Citations 43/100
+
+### 🤖 AI Goals 
+
+- [ ] 🏅 Create the best Arabic Embedding models (late and early)
+- [ ] 🧠 Smartest OCR system for Arabic and Historical 
+- [ ] 🖼️🤝 Multimodal AI for Arabic and Industry
+
+### 💻 Software Engineering Goals
+
+- [ ] 🦠 SEO_RAT 2/100 ⭐
+- [ ] 🧩 Marimo Widgets
+- [ ] 🤲 Contribute to 2 open source projects
+
+### 💼 Business Development Goals
+
+- [ ] 🚀 Launch GPUVec SaaS: GPU Compute Guide for AI
+- [ ] 🥗 Launch proteinai and helixGain: Arabic Supplemental Nutrition Analysis System
+
+
+## 🚀 Featured Projects
+
+![kareem mind](mind.svg){.profile-pic}
+
+- **[كم كالوري (Kam Calorie)](https://kamcalorie.com)** - A semantic search engine for healthcare
+- **[GPU Compute Guide](https://gpuvec.com)** - Find the best GPU rentals from top cloud providers
+- **[Zarra & Bojji](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)** - model2vec for Arabic NLP
+- **[Arabic Gliner](https://github.com/abdelkareemkobo/seo_rat)** - Named Entity Recognition for Arabic text
+- **[SEO Rat](https://github.com/abdelkareemkobo/seo_rat)** - SEO optimization tool for Jamstack websites
+
+
+## 📬 Stay Updated
+
+Subscribe to my newsletter for insights on Arabic AI, NLP research, and practical ML applications:
 
 <iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
-## My Trained/Fine-Tuned Models
+Subscribe via [<i class="bi bi-rss"></i> RSS](index.xml).
 
-1. **[Zarra & Bojji](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)**: model2vec for Arabic NLP with significant capabilities.
-
-2. **Arabic Gliner**:  Named Entity Recognition (NER) model designed for processing Arabic text with high accuracy and robustness
-
-## Applications
-
-1. [كم كالوري](https://kamcalorie.com): A semantic search engine for healthcare.
-2. [seo rat](https://github.com/abdelkareemkobo/seo_rat): An SEO optimization tool for GSC and Jamstack websites such as Astro and Quarto.
-3. [GPU Compute guide](https://gpuvec.com): Find the best GPU rentals from top cloud providers based on VRAM, price, CUDA cores, and more.
-
----
-
-## 🧠 My Mind
+## My Mind
 
 A curated collection of blog posts and short-form notes.
 
 ::: {#blog-listings}
 :::
 
-## 📬 Subscribe 
 
-Subscribe via [<i class="bi bi-rss"></i> RSS](index.xml).
 
-<iframe src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+## 📚 Research
 
-### My Compute 
-
-I primarily work on two devices:
-
-1. An old MSI laptop with a GTX 1660TI GPU.
-2. Occasional access to a dual Titan RTX 24GB setup.
-
-## My Papers 
-
-More coming soon. You can also visit my profiles:
+More papers coming soon. You can also visit my profiles:
 
 1. [Abdelkareem Google Scholar](https://scholar.google.com/citations?user=lF1wxvcAAAAJ&hl=en)
 2. [Abdelkareem Research Gate](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
