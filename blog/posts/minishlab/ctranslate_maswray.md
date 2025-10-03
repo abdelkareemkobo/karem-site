@@ -14,7 +14,7 @@ categories:
 image: "images/bojji.png"
 ---
 
-## Going from 44,000$ to 0 cost with small models
+## Going from $32,000 to 0 cost with small models
 
 ![faster masrawy](images/bojji.png)
 
