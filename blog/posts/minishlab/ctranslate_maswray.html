@@ -374,15 +374,15 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   <ul>
   <li><a href="#going-from-32000-to-0-cost-with-small-models" id="toc-going-from-32000-to-0-cost-with-small-models" class="nav-link active" data-scroll-target="#going-from-32000-to-0-cost-with-small-models">Going from $32,000 to 0 cost with small models</a></li>
   <li><a href="#how-poor-am-i-very-gpu-poor" id="toc-how-poor-am-i-very-gpu-poor" class="nav-link" data-scroll-target="#how-poor-am-i-very-gpu-poor">How poor am I? Very GPU poor! 💻</a></li>
-  <li><a href="#pytorch-pipeline-with-hf-inference-through-transformers" id="toc-pytorch-pipeline-with-hf-inference-through-transformers" class="nav-link" data-scroll-target="#pytorch-pipeline-with-hf-inference-through-transformers">Pytorch Pipeline with HF Inference through Transformers</a></li>
+  <li><a href="#pytorch-pipeline-with-hf-inference-through-transformers" id="toc-pytorch-pipeline-with-hf-inference-through-transformers" class="nav-link" data-scroll-target="#pytorch-pipeline-with-hf-inference-through-transformers">PyTorch Pipeline with HF Inference through Transformers</a></li>
   <li><a href="#lets-do-quantization" id="toc-lets-do-quantization" class="nav-link" data-scroll-target="#lets-do-quantization">Let’s Do Quantization</a></li>
-  <li><a href="#vllms-and-sglang-for-hf-translation-pipelie" id="toc-vllms-and-sglang-for-hf-translation-pipelie" class="nav-link" data-scroll-target="#vllms-and-sglang-for-hf-translation-pipelie">VLLMs and SGLang for HF translation pipelie</a></li>
+  <li><a href="#vllms-and-sglang-for-hf-translation-pipeline" id="toc-vllms-and-sglang-for-hf-translation-pipeline" class="nav-link" data-scroll-target="#vllms-and-sglang-for-hf-translation-pipeline">VLLMs and SGLang for HF translation pipeline</a></li>
   <li><a href="#more-search-and-ctranslate-magic" id="toc-more-search-and-ctranslate-magic" class="nav-link" data-scroll-target="#more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</a>
   <ul class="collapse">
   <li><a href="#key-features-of-ctranslate" id="toc-key-features-of-ctranslate" class="nav-link" data-scroll-target="#key-features-of-ctranslate">Key features of Ctranslate</a></li>
-  <li><a href="#lets-try-it" id="toc-lets-try-it" class="nav-link" data-scroll-target="#lets-try-it">Let’s try it !</a></li>
+  <li><a href="#lets-try-it" id="toc-lets-try-it" class="nav-link" data-scroll-target="#lets-try-it">Let’s try it!</a></li>
   </ul></li>
-  <li><a href="#getting-help-from-the-titan-rtx-24gb" id="toc-getting-help-from-the-titan-rtx-24gb" class="nav-link" data-scroll-target="#getting-help-from-the-titan-rtx-24gb">getting help from The Titan RTX 24GB</a></li>
+  <li><a href="#getting-help-from-the-titan-rtx-24gb" id="toc-getting-help-from-the-titan-rtx-24gb" class="nav-link" data-scroll-target="#getting-help-from-the-titan-rtx-24gb">Getting help from the Titan RTX 24GB</a></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps!</a></li>
   </ul>
 </nav>
@@ -538,8 +538,8 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <hr>
 </section>
 <section id="pytorch-pipeline-with-hf-inference-through-transformers" class="level2">
-<h2 class="anchored" data-anchor-id="pytorch-pipeline-with-hf-inference-through-transformers">Pytorch Pipeline with HF Inference through Transformers</h2>
-<p>i created the translation pipeline and tested it with these batch size with these settings float16 and batch sizes = [ 2,4,6,8,16] I found that even i have enough memory to load more batch the optimal batch size was 4 and this is becuase the ram and CPU power. i was able to process 100 examples in these results:</p>
+<h2 class="anchored" data-anchor-id="pytorch-pipeline-with-hf-inference-through-transformers">PyTorch Pipeline with HF Inference through Transformers</h2>
+<p>I created the translation pipeline and tested it with these batch sizes with these settings: float16 and batch sizes = [2,4,6,8,16]. I found that even though I have enough memory to load more batches, the optimal batch size was 4 and this is because of the RAM and CPU power. I was able to process 100 examples with these results:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 36%">
@@ -595,23 +595,23 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> torch.<span class="bu">compile</span>(model, mode<span class="op">=</span><span class="st">"max-autotune"</span>, fullgraph<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> model.<span class="bu">eval</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>it’s a new feature in <a href="https://pytorch.org/get-started/pytorch-2-x/">pytorch 2</a> to accelerate the models speeds i tried multiple settings and also the different backends but the there is no huge difference convert to onnex? it’s a nightmare i did it before and the results didn’t worth the headache! I may be try it when i have time</p>
+<p>It’s a new feature in <a href="https://pytorch.org/get-started/pytorch-2-x/">PyTorch 2</a> to accelerate the model speeds. I tried multiple settings and also the different backends but there is no huge difference. Convert to ONNX? It’s a nightmare. I did it before and the results didn’t worth the headache! I may try it when I have time.</p>
 </section>
 <section id="lets-do-quantization" class="level2">
 <h2 class="anchored" data-anchor-id="lets-do-quantization">Let’s Do Quantization</h2>
-<p>I Tried to use the <a href="https://docs.pytorch.org/ao/stable/serving.html">torchao</a> which enable performing quantization in more stable and easer ways i tried it alot with my GPU but due to cuda version it always throughs this error:</p>
+<p>I tried to use the <a href="https://docs.pytorch.org/ao/stable/serving.html">torchao</a> which enables performing quantization in more stable and easier ways. I tried it a lot with my GPU but due to CUDA version it always throws this error:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">1.</span> AssertionError: Float8 dynamic activation quantization is only supported on CUDA<span class="op">&gt;</span>=8.9 and MI300+</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>the library code is not straightforward and i don’t have time i have just 2 days to finish this before i return to my main work.</p>
-<p>I also faced some error because the model i am trying to use is an old and not optimzied one for these method it’s based on the <a href="https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-ar">OPUS-MT-en-ar</a> created with <a href="https://marian-nmt.github.io/">marianNMT</a> which is an efficient NMT implementation written in pure C++. The models have been converted to pyTorch using the transformers library by huggingface</p>
+<p>The library code is not straightforward and I don’t have time - I have just 2 days to finish this before I return to my main work.</p>
+<p>I also faced some errors because the model I am trying to use is an old and not optimized one for these methods. It’s based on the <a href="https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-ar">OPUS-MT-en-ar</a> created with <a href="https://marian-nmt.github.io/">marianNMT</a> which is an efficient NMT implementation written in pure C++. The models have been converted to PyTorch using the Transformers library by Hugging Face</p>
 </section>
-<section id="vllms-and-sglang-for-hf-translation-pipelie" class="level2">
-<h2 class="anchored" data-anchor-id="vllms-and-sglang-for-hf-translation-pipelie">VLLMs and SGLang for HF translation pipelie</h2>
-<p>i search for SGLang solution with the the model and i didn’t find any help i tried the VLLMs documentation also and found the following page <a href="https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code">bring_your_own_model</a> and <a href="https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope">this</a> the model speed was worth than normal HF tensors it was more 5 seconds. I think there is a better way to write the VLLm version better mine.</p>
+<section id="vllms-and-sglang-for-hf-translation-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="vllms-and-sglang-for-hf-translation-pipeline">VLLMs and SGLang for HF translation pipeline</h2>
+<p>I searched for SGLang solution with the model and I didn’t find any help. I tried the vLLM documentation also and found the following pages: <a href="https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code">bring_your_own_model</a> and <a href="https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope">this</a>. The model speed was worse than normal HF tensors - it was 5 seconds more. I think there is a better way to write the vLLM version better than mine.</p>
 </section>
 <section id="more-search-and-ctranslate-magic" class="level2">
 <h2 class="anchored" data-anchor-id="more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</h2>
-<p>I want to give up , but let’s try a final search how to serve marian model and in an old forum answer i found what is called <a href="https://opennmt.net/CTranslate2/quickstart.html">Ctranslate</a> they say it’s faster than HF transformer for specific architecture by around 4-6x</p>
-<p>#defintion CTranslate2 is a C++ and Python library for efficient inference with Transformer models. The following model types are currently supported:</p>
+<p>I wanted to give up, but let’s try a final search on how to serve Marian model. In an old forum answer I found what is called <a href="https://opennmt.net/CTranslate2/quickstart.html">CTranslate2</a>. They say it’s faster than HF Transformers for specific architectures by around 4-6x.</p>
+<p><strong>Definition:</strong> CTranslate2 is a C++ and Python library for efficient inference with Transformer models. The following model types are currently supported:</p>
 <ul>
 <li>Encoder-decoder models: Transformer base/big, M2M-100, NLLB, BART, mBART, Pegasus, T5, Whisper</li>
 <li>Decoder-only models: GPT-2, GPT-J, GPT-NeoX, OPT, BLOOM, MPT, Llama, Mistral, Gemma, CodeGen, GPTBigCode, Falcon, Qwen2</li>
@@ -653,8 +653,8 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <p>Some of these features are difficult to achieve with standard deep learning frameworks and are the motivation for this project.</p>
 </section>
 <section id="lets-try-it" class="level3">
-<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it !</h3>
-<p>i used the following script to convert the HF version into Ctranslate expected one</p>
+<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it!</h3>
+<p>I used the following script to convert the HF version into CTranslate2 expected format:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ct2-transformers-converter</span> <span class="at">--model</span> NAMAA-Space/masrawy-english-to-egyptian-arabic-translator-v2.9 <span class="at">--output_dir</span> ct2_model_masrawy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>then i used the model with this version</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>translator <span class="op">=</span> ctranslate2.Translator(</span>
@@ -662,7 +662,7 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cuda"</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    compute_type<span class="op">=</span><span class="st">"float16"</span>,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>it worked and was very fast much, much faster</p>
+<p>It worked and was very fast - much, much faster!</p>
 <hr>
 <table class="caption-top table">
 <colgroup>
@@ -724,22 +724,22 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 </tr>
 </tbody>
 </table>
-<p>we moved from 32.4 Days into 10 Days!!!</p>
+<p>We moved from 32.4 days to 10 days!!!</p>
 </section>
 </section>
 <section id="getting-help-from-the-titan-rtx-24gb" class="level2">
-<h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">getting help from The Titan RTX 24GB</h2>
-<p>One of my friends offered me an access to it’s Workstation which is dual gpu Titan RTX it’s an old gpu but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a></p>
-<p>I found that the optimal batch is 64 with after some tries. let’s use this and see the results i will also increase the size from 100 samples into 1000</p>
+<h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">Getting help from the Titan RTX 24GB</h2>
+<p>One of my friends offered me access to his workstation which has dual GPU Titan RTX. It’s an old GPU but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a>.</p>
+<p>I found that the optimal batch is 64 after some tries. Let’s use this and see the results. I will also increase the size from 100 samples to 1000.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 51%">
+<col style="width: 50%">
 <col style="width: 0%">
 <col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 11%">
 <col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 7%">
-<col style="width: 7%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -817,7 +817,7 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <td>0.36 days</td>
 </tr>
 <tr class="even">
-<td>==we moved now from 22 days in single titan rtx into 0.60 days! ==</td>
+<td>==We moved now from 22 days in single Titan RTX to 0.60 days!==</td>
 <td></td>
 <td></td>
 <td></td>
@@ -841,20 +841,20 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <li>Single GPU: 126.7 docs/sec</li>
 <li>Time for 1000 docs: 4.43 seconds</li>
 </ul>
-<p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for the int8 and see which batch size will be now better!</p>
+<p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for int8 and see which batch size will be better!</p>
 </section>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next steps!</h2>
-<p>This is just the start i will search more and invistage how to make this more faster because the 8 million are only 2GB and the next task is to translate 500GB :) every second will make a huge difference!</p>
+<p>This is just the start. I will search more and investigate how to make this faster because the 8 million rows are only 2GB and the next task is to translate 500GB :) Every second will make a huge difference!</p>
 <ul>
-<li>use large batch size with int8</li>
-<li>use different GPU with modern architecture and better CPU</li>
-<li>deep dive into VLLm</li>
-<li>Try the onnex version for GPU not cpu</li>
-<li>try again with torchao</li>
+<li>Use larger batch size with int8</li>
+<li>Use different GPU with modern architecture and better CPU</li>
+<li>Deep dive into vLLM</li>
+<li>Try the ONNX version for GPU, not CPU</li>
+<li>Try again with torchao</li>
 </ul>
-<p>Thanks for your time! here is the converted version on huggingface <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a> small models can save your life ^ ^</p>
+<p>Thanks for your time! Here is the converted version on Hugging Face: <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a>. Small models can save your life ^ ^</p>
 
 
 </section>
