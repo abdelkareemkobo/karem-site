@@ -76,10 +76,10 @@ the math for how much this will cost on my laptop :)
 ## PyTorch Pipeline with HF Inference through Transformers
 
 I created the translation pipeline and tested it with these batch sizes with
-these settings: float16 and batch sizes = [2,4,6,8,16]. I found that even though I have
-enough memory to load more batches, the optimal batch size was 4 and this is
-because of the RAM and CPU power. I was able to process 100 examples with these
-results:
+these settings: float16 and batch sizes = [2,4,6,8,16]. I found that even though
+I have enough memory to load more batches, the optimal batch size was 4 and this
+is because of the RAM and CPU power. I was able to process 100 examples with
+these results:
 
 | Method                                |   | Number of Examples | Batch Size | GPU setup         | Full time | Days need  |
 | ------------------------------------- | - | ------------------ | ---------- | ----------------- | --------- | ---------- |
