@@ -95,51 +95,51 @@ model = torch.compile(model, mode="max-autotune", fullgraph=True)
 model = model.eval()
 ```
 
-it's a new feature in [pytorch 2](https://pytorch.org/get-started/pytorch-2-x/)
-to accelerate the models speeds i tried multiple settings and also the different
-backends but the there is no huge difference convert to onnex? it's a nightmare
-i did it before and the results didn't worth the headache! I may be try it when
-i have time
+It's a new feature in [PyTorch 2](https://pytorch.org/get-started/pytorch-2-x/)
+to accelerate the model speeds. I tried multiple settings and also the different
+backends but there is no huge difference. Convert to ONNX? It's a nightmare. I
+did it before and the results didn't worth the headache! I may try it when I
+have time.
 
 ## Let's Do Quantization
 
-I Tried to use the [torchao](https://docs.pytorch.org/ao/stable/serving.html)
-which enable performing quantization in more stable and easer ways i tried it
-alot with my GPU but due to cuda version it always throughs this error:
+I tried to use the [torchao](https://docs.pytorch.org/ao/stable/serving.html)
+which enables performing quantization in more stable and easier ways. I tried it
+a lot with my GPU but due to CUDA version it always throws this error:
 
 ```bash
 1. AssertionError: Float8 dynamic activation quantization is only supported on CUDA>=8.9 and MI300+
 ```
 
-the library code is not straightforward and i don't have time i have just 2 days
-to finish this before i return to my main work.
+The library code is not straightforward and I don't have time - I have just 2
+days to finish this before I return to my main work.
 
-I also faced some error because the model i am trying to use is an old and not
-optimzied one for these method it's based on the
+I also faced some errors because the model I am trying to use is an old and not
+optimized one for these methods. It's based on the
 [OPUS-MT-en-ar](https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-ar)
 created with [marianNMT](https://marian-nmt.github.io/) which is an efficient
 NMT implementation written in pure C++. The models have been converted to
-pyTorch using the transformers library by huggingface
+PyTorch using the Transformers library by Hugging Face
 
-## VLLMs and SGLang for HF translation pipelie
+## VLLMs and SGLang for HF translation pipeline
 
-i search for SGLang solution with the the model and i didn't find any help i
-tried the VLLMs documentation also and found the following page
+I searched for SGLang solution with the model and I didn't find any help. I
+tried the vLLM documentation also and found the following pages:
 [bring_your_own_model](https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code)
 and
-[this](https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope)
-the model speed was worth than normal HF tensors it was more 5 seconds. I think
-there is a better way to write the VLLm version better mine.
+[this](https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope).
+The model speed was worse than normal HF tensors - it was 5 seconds more. I
+think there is a better way to write the vLLM version better than mine.
 
 ## More search and Ctranslate magic 🎩
 
-I want to give up , but let's try a final search how to serve marian model and
-in an old forum answer i found what is called
-[Ctranslate](https://opennmt.net/CTranslate2/quickstart.html) they say it's
-faster than HF transformer for specific architecture by around 4-6x
+I wanted to give up, but let's try a final search on how to serve Marian model.
+In an old forum answer I found what is called
+[CTranslate2](https://opennmt.net/CTranslate2/quickstart.html). They say it's
+faster than HF Transformers for specific architectures by around 4-6x.
 
-#defintion CTranslate2 is a C++ and Python library for efficient inference with
-Transformer models. The following model types are currently supported:
+**Definition:** CTranslate2 is a C++ and Python library for efficient inference
+with Transformer models. The following model types are currently supported:
 
 - Encoder-decoder models: Transformer base/big, M2M-100, NLLB, BART, mBART,
   Pegasus, T5, Whisper
@@ -206,10 +206,10 @@ in-place operations, caching mechanism, etc.
 Some of these features are difficult to achieve with standard deep learning
 frameworks and are the motivation for this project.
 
-### Let's try it !
+### Let's try it!
 
-i used the following script to convert the HF version into Ctranslate expected
-one
+I used the following script to convert the HF version into CTranslate2 expected
+format:
 
 ```bash
 ct2-transformers-converter --model NAMAA-Space/masrawy-english-to-egyptian-arabic-translator-v2.9 --output_dir ct2_model_masrawy
@@ -225,7 +225,7 @@ translator = ctranslate2.Translator(
 )
 ```
 
-it worked and was very fast much, much faster
+It worked and was very fast - much, much faster!
 
 ---
 
@@ -236,27 +236,27 @@ it worked and was very fast much, much faster
 | Ctranslate           |   | 100                | 6          | 1660TI laptop GPU | 13s       | 14.81 days |
 |                      |   |                    |            |                   |           |            |
 
-we moved from 32.4 Days into 10 Days!!!
+We moved from 32.4 days to 10 days!!!
 
-## getting help from The Titan RTX 24GB
+## Getting help from the Titan RTX 24GB
 
-One of my friends offered me an access to it's Workstation which is dual gpu
-Titan RTX it's an old gpu but it's far better than my little
-[kobo](https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html)
+One of my friends offered me access to his workstation which has dual GPU Titan
+RTX. It's an old GPU but it's far better than my little
+[kobo](https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html).
 
-I found that the optimal batch is 64 with after some tries. let's use this and
-see the results i will also increase the size from 100 samples into 1000
+I found that the optimal batch is 64 after some tries. Let's use this and see
+the results. I will also increase the size from 100 samples to 1000.
 
-| Method                                                             |   | Number of Examples | Batch Size | GPU setup      | Full time | Days need  |
-| ------------------------------------------------------------------ | - | ------------------ | ---------- | -------------- | --------- | ---------- |
-| Pytorch + float16 + optimized version                              |   | 1000               | 64         | Titan RTX      | 240s      | 22.22 days |
-| Ctranslate + int8 <br>                                             |   | 1000               | 64         | Titan RTX      | 7.89s     | 0.73 days  |
-| Ctranslate + int8 + dual GPU                                       |   | 1000               | 64         | Dual Titan RTX | 4.42s     | 0.41 days  |
-| Ctranslate + float16                                               |   | 1000               | 64         | Titan RTX      | 6.46s     | 0.60 days  |
-| Ctranslate + float16 + dual GPU                                    |   | 1000               | 64         | Dual Titan RTX | 3.72      | 0.34 days  |
-| Ctranslate + int8_float16                                          |   | 1000               | 64         | Titan RTX      | 6.81s     | 0.63 days  |
-| Ctranslate + int8_float16 + dual GPU                               |   | 1000               | 64         | Dual Titan RTX | 3.85s     | 0.36 days  |
-| ==we moved now from 22 days in single titan rtx into 0.60 days! == |   |                    |            |                |           |            |
+| Method                                                          |   | Number of Examples | Batch Size | GPU setup      | Full time | Days need  |
+| --------------------------------------------------------------- | - | ------------------ | ---------- | -------------- | --------- | ---------- |
+| Pytorch + float16 + optimized version                           |   | 1000               | 64         | Titan RTX      | 240s      | 22.22 days |
+| Ctranslate + int8 <br>                                          |   | 1000               | 64         | Titan RTX      | 7.89s     | 0.73 days  |
+| Ctranslate + int8 + dual GPU                                    |   | 1000               | 64         | Dual Titan RTX | 4.42s     | 0.41 days  |
+| Ctranslate + float16                                            |   | 1000               | 64         | Titan RTX      | 6.46s     | 0.60 days  |
+| Ctranslate + float16 + dual GPU                                 |   | 1000               | 64         | Dual Titan RTX | 3.72      | 0.34 days  |
+| Ctranslate + int8_float16                                       |   | 1000               | 64         | Titan RTX      | 6.81s     | 0.63 days  |
+| Ctranslate + int8_float16 + dual GPU                            |   | 1000               | 64         | Dual Titan RTX | 3.85s     | 0.36 days  |
+| ==We moved now from 22 days in single Titan RTX to 0.60 days!== |   |                    |            |                |           |            |
 
 #### Why float16 is faster than int8
 
@@ -273,21 +273,21 @@ see the results i will also increase the size from 100 samples into 1000
 - Time for 1000 docs: 4.43 seconds
 
 **Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)** **Lower precision
-≠ Always faster!** I need to increase the batch size for the int8 and see which
-batch size will be now better!
+≠ Always faster!** I need to increase the batch size for int8 and see which
+batch size will be better!
 
 ## Next steps!
 
-This is just the start i will search more and invistage how to make this more
-faster because the 8 million are only 2GB and the next task is to translate
-500GB :) every second will make a huge difference!
+This is just the start. I will search more and investigate how to make this
+faster because the 8 million rows are only 2GB and the next task is to translate
+500GB :) Every second will make a huge difference!
 
-- use large batch size with int8
-- use different GPU with modern architecture and better CPU
-- deep dive into VLLm
-- Try the onnex version for GPU not cpu
-- try again with torchao
+- Use larger batch size with int8
+- Use different GPU with modern architecture and better CPU
+- Deep dive into vLLM
+- Try the ONNX version for GPU, not CPU
+- Try again with torchao
 
-Thanks for your time! here is the converted version on huggingface
-[ctranslate_masrawy](https://huggingface.co/Abdelkareem/faster_masrawy) small
+Thanks for your time! Here is the converted version on Hugging Face:
+[ctranslate_masrawy](https://huggingface.co/Abdelkareem/faster_masrawy). Small
 models can save your life ^ ^

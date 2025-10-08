@@ -1,115 +1,219 @@
 ---
-sidebar: false
-description: "Abdelkareem Elkhateb's personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi also arabic Natural Language Processing and Rust language."
+pagetitle: "عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher & Arabic NLP Specialist"
+description: "Abdelkareem Elkhateb's personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
 lang: en
-title: Kareemai Blog | Arabic NLP
+sidebar: false
 image: quarto.png
-toc: true
-listing:
-  date-format: short
-  feed: true
-  filter-ui: true
-  type: grid
-  sort-ui: false
-  sort: "date desc"
-  categories: false
-  fields: [date, title, image]
-  id: blog-listings
-  contents: [blog_data/blogs.yml, blog/posts]
-aliases: ["blog/"]
+toc: false
+author: "Abdelkareem Elkhateb"
 format:
   html:
     anchor-sections: true
 ---
 
-This is my Personal Space where i share some of my knowledge outside of my mind. 
+::: {.hero-section}
 
-I am in a mission for finding connections between Research and Real Applications. 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdelkareem Elkhateb",
+  "alternateName": "عبد الكريم الخطيب",
+  "jobTitle": "AI Researcher & Arabic NLP Specialist",
+  "description": "AI Researcher specializing in Arabic Natural Language Processing, Machine Learning, and Edge Computing",
+  "url": "https://kareemai.com",
+  "image": "https://kareemai.com/kareem.png",
+  "sameAs": [
+    "https://github.com/abdelkareemkobo",
+    "https://youtube.com/@AbdelkareemElkhatib",
+    "https://www.upwork.com/freelancers/~016a9fea792423bb9a",
+    "https://gpuvec.com"
+  ],
+  "knowsAbout": ["Machine Learning", "Deep Learning", "Arabic NLP", "Edge Computing", "Web Development"],
+  "alumniOf": "Hamza Salem Lab",
+  "worksFor": "xbites"
+}
+</script>
 
-****
+<div class="hero-profile-image">
+![Abdelkareem Elkhateb - AI Researcher](kareem.png){.profile-avatar}
+</div>
 
-::: {layout="[80,80]" .profile-header}
+<div class="hero-name">
+<h1 class="main-title">
+<span class="arabic-name">عبد الكريم الخطيب</span>
+<span class="english-name">Abdelkareem Elkhateb</span>
+</h1>
+</div>
 
-![تيمي](dev.svg){.profile-pic}
+::: {.hero-bio}
+I spend my days teaching machines to understand Arabic — the language of the Quran, the language that shaped civilizations, the language that deserves to lead in AI, not follow.
 
->   اللغة ليست عِلمًا .. بل هي شيء فوق العلم  لغتنا في خطر داهم .. ونحن أيضًا
+Currently researching **efficient embedding models** that run on **edge devices** and **low-resource environments**, building **AI agents** at xbites, and pushing Arabic NLP forward at **Hamza Salem Lab**.
+:::
+
+::: {.hero-focus}
+My mission: bring Arabic AI to everyone — from powerful servers to your phone. Every small model I create, every optimization I make, is a step toward making Arabic AI accessible to all, regardless of their resources.
+:::
+
+::: {.arabic-quote}
+>   اللغة ليست عِلمًا .. بل هي شيء فوق العلم  
+>   لغتنا في خطر داهم .. ونحن أيضًا
+:::
 
 :::
 
-### Current Roles 
-
-- **Master Student**: My thesis focuses on Static Embedding Models for Arabic Language
-
-- **Full-time AI Engineer at xbites**: Building real estate AI agents with cutting-edge technologies in both Arabic and English
-
-- **Research Engineer at Hamza Salem Research Lab**: Graph analysis, Distributed ML and other cool stuff
-
-- **NAMAA Community**: Maintainer, accelerating AI applications for Arabic and Islamic culture
-
-### Current Goals!
-
-I have very limited time in this life, so i need to focus on what really matters. 
-
-**{ قُلْ هَلْ نُنَبِّئُكُمْ بِالأَخْسَرِينَ أَعْمَالا * الَّذِينَ ضَلَّ سَعْيُهُمْ فِي الْحَيَاةِ الدُّنْيَا وَهُمْ يَحْسَبُونَ أَنَّهُمْ يُحْسِنُونَ صُنْعًا }**
-
-
-
-
-### ![Academic Goals 2025](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
-
-- [ ] 📝 Publications 7/10 
-- [ ] 📖 Reads 962/1000
-- [ ] 🏆 Citations 43/100
-
-### 🤖 AI Goals 
-
-- [ ] 🏅 Create the best Arabic Embedding models (late and early)
-- [ ] 🧠 Smartest OCR system for Arabic and Historical 
-- [ ] 🖼️🤝 Multimodal AI for Arabic and Industry
-
-### 💻 Software Engineering Goals
-
-- [ ] 🦠 SEO_RAT 2/100 ⭐
-- [ ] 🧩 Marimo Widgets
-- [ ] 🤲 Contribute to 2 open source projects
-
-### 💼 Business Development Goals
-
-- [ ] 🚀 Launch GPUVec SaaS: GPU Compute Guide for AI
-- [ ] 🥗 Launch proteinai and helixGain: Arabic Supplemental Nutrition Analysis System
-
+---
 
 ## 🚀 Featured Projects
 
-![kareem mind](mind.svg){.profile-pic}
+::: {.projects-grid}
 
-- **[كم كالوري (Kam Calorie)](https://kamcalorie.com)** - A semantic search engine for healthcare
-- **[GPU Compute Guide](https://gpuvec.com)** - Find the best GPU rentals from top cloud providers
-- **[Zarra & Bojji](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)** - model2vec for Arabic NLP
-- **[Arabic Gliner](https://github.com/abdelkareemkobo/seo_rat)** - Named Entity Recognition for Arabic text
-- **[SEO Rat](https://github.com/abdelkareemkobo/seo_rat)** - SEO optimization tool for Jamstack websites
+::: {.project-card}
+### [🥗 كم كالوري](https://kamcalorie.com)
+**Kam Calorie**
 
+A semantic search engine for healthcare and nutrition analysis. Find detailed nutritional information using natural language queries.
 
-## 📬 Stay Updated
-
-Subscribe to my newsletter for insights on Arabic AI, NLP research, and practical ML applications:
-
-<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-
-Subscribe via [<i class="bi bi-rss"></i> RSS](index.xml).
-
-## My Mind
-
-A curated collection of blog posts and short-form notes.
-
-::: {#blog-listings}
+<div class="project-tags">
+<span class="tag">NLP</span>
+<span class="tag">Healthcare</span>
+<span class="tag">Arabic</span>
+</div>
 :::
 
+::: {.project-card}
+### [💻 GPU Compute Guide](https://gpuvec.com)
+**GPUVec**
 
+Find the best GPU rentals from top cloud providers. Compare prices, performance, and availability in real-time.
 
-## 📚 Research
+<div class="project-tags">
+<span class="tag">SaaS</span>
+<span class="tag">AI Infrastructure</span>
+<span class="tag">Cloud</span>
+</div>
+:::
 
-More papers coming soon. You can also visit my profiles:
+::: {.project-card}
+### [🤖 Zarra & Bojji](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)
+**Arabic Embeddings**
 
-1. [Abdelkareem Google Scholar](https://scholar.google.com/citations?user=lF1wxvcAAAAJ&hl=en)
-2. [Abdelkareem Research Gate](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
+model2vec implementation for Arabic NLP. Fast and efficient word embeddings for Arabic language processing.
+
+<div class="project-tags">
+<span class="tag">Arabic NLP</span>
+<span class="tag">Embeddings</span>
+<span class="tag">Research</span>
+</div>
+:::
+
+::: {.project-card}
+### [🔍 Arabic Gliner](https://github.com/abdelkareemkobo/arabic-gliner)
+**NER for Arabic**
+
+Named Entity Recognition system specifically designed for Arabic text with high accuracy and performance.
+
+<div class="project-tags">
+<span class="tag">NER</span>
+<span class="tag">Arabic</span>
+<span class="tag">Deep Learning</span>
+</div>
+:::
+
+::: {.project-card}
+### [🦠 SEO Rat](https://github.com/abdelkareemkobo/seo_rat)
+**SEO Optimizer**
+
+SEO optimization tool for Jamstack websites. Automated analysis and recommendations for better search rankings.
+
+<div class="project-tags">
+<span class="tag">SEO</span>
+<span class="tag">Jamstack</span>
+<span class="tag">Web Dev</span>
+</div>
+:::
+
+:::
+
+---
+
+## 🎯 Goals & Progress
+
+::: {.goals-container}
+
+::: {.goal-card .academic}
+### 📚 Research Goals 2025
+
+<div class="goal-item">
+<span class="goal-label">📝 Publications</span>
+<div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+<span class="goal-value">7/10</span>
+</div>
+
+<div class="goal-item">
+<span class="goal-label">📖 Papers Read</span>
+<div class="progress-bar"><div class="progress-fill" style="width: 96.2%"></div></div>
+<span class="goal-value">962/1000</span>
+</div>
+
+<div class="goal-item">
+<span class="goal-label">🏆 Citations</span>
+<div class="progress-bar"><div class="progress-fill" style="width: 43%"></div></div>
+<span class="goal-value">43/100</span>
+</div>
+
+<div class="research-links-compact">
+[<i class="bi bi-google"></i> Scholar](https://scholar.google.com/citations?user=lF1wxvcAAAAJ&hl=en) • [<i class="bi bi-mortarboard"></i> ResearchGate](https://www.researchgate.net/profile/Abdelkareem-Elkhateb)
+</div>
+:::
+
+::: {.goal-card .ai}
+### 🤖 AI Goals
+
+- 🏅 Create the best Arabic Embedding models (late and early)
+- 🧠 Smartest OCR system for Arabic and Historical
+- 🖼️ Multimodal AI for Arabic and Industry
+:::
+
+::: {.goal-card .engineering}
+### 💻 Software Engineering Goals
+
+<div class="goal-item">
+<span class="goal-label">🦠 SEO_RAT</span>
+<div class="progress-bar"><div class="progress-fill" style="width: 2%"></div></div>
+<span class="goal-value">2/100 ⭐</span>
+</div>
+
+- 🧩 Marimo Widgets
+- 🤲 Contribute to 2 open source projects
+:::
+
+::: {.goal-card .business}
+### 💼 Business Development Goals
+
+- 🚀 Launch GPUVec SaaS: GPU Compute Guide for AI
+- 🥗 Launch proteinai and helixGain: Arabic Supplemental Nutrition Analysis System
+:::
+
+:::
+
+---
+
+## 📬 Stay Connected
+
+::: {.newsletter-section}
+<div class="newsletter-content">
+### Subscribe for updates on Arabic AI & NLP research
+
+<div class="newsletter-embed">
+<iframe src="https://kareemnns.substack.com/embed" width="100%" height="320" style="border:1px solid var(--border-color); background:var(--bg-secondary); border-radius: 8px;" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div class="social-links">
+<a href="index.xml" class="social-link"><i class="bi bi-rss"></i> RSS</a>
+<a href="https://github.com/abdelkareemkobo" class="social-link"><i class="bi bi-github"></i> GitHub</a>
+<a href="https://twitter.com/AbdelkareemElk1" class="social-link"><i class="bi bi-twitter"></i> Twitter</a>
+</div>
+</div>
+:::

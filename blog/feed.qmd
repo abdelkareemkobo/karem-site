@@ -1,18 +1,23 @@
 ---
-title: Kareem's Blog
+pagetitle: "Blog | عبد الكريم الخطيب"
 sidebar: false
+toc: false
 listing:
+  type: default
   sort: "date desc"
   contents: 
    - "posts"
-  sort-ui: true
+  sort-ui: [date, title]
   filter-ui: true
   categories: true
   feed: true
+  fields: [image, date, title, description, categories]
+  date-format: "MMM D, YYYY"
+  max-description-length: 100
 ---
 
-<!-- :::{.callout-warning}
-# This page is supposed to be secret!
+::: {.blog-page-header}
+# 📮 Blog
 
-A listing of all my blog posts can be found [here](../index.qmd#blogs)
-::: -->
+Thoughts, experiments, and learnings on Arabic NLP, AI research, and building real-world systems.
+:::

@@ -8,7 +8,7 @@ execute:
   eval: false
 
 website:
-  title: "kareem's Blog"
+  title: "عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher & Arabic NLP Specialist"
   image: quarto.png
   page-footer:
     center:
@@ -30,43 +30,40 @@ website:
      creator: "@AbdelkareemElk1"
      card-style: summary
   site-url: "https://kareemai.com/"
-  description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language."
+  description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
   repo-url: https://github.com/abdelkareemkobo/karem-site
   # repo-actions: [edit]
   repo-branch: master
   navbar:
     title: false
     background: light
-    pinned: false
-    collapse: false
+    pinned: true
+    collapse: true
+    collapse-below: lg
     left:
-    # 🏠 📮  🍎 🎤 📚 💡🔥 💪 💵 ⏱️ 🐉 
-    - text: "👨🏽‍💻 Blog"
+    - text: "🏠 Home"
       href: index.qmd
-    - text: 📮 Blog
+    - text: "📮 Blog"
       href: blog/feed.qmd
-    # - text: 👨🏽‍💻 About
-    #   file: about.qmd
-    # - text: 🎨 Projects
-    #   file: oss/opensource.qmd
-    - text: TILs
+    - text: "💭 TILs"
       file: til/index.qmd
-    - text: Papers 
+    - text: "📚 Papers"
       file: papers.qmd
-    - text: Books
+    - text: "📖 Books"
       file: publish.qmd
     right:
       - text: "🎥 Videos"
         href: https://youtube.com/@AbdelkareemElkhatib
       - text: "💼 Hire Me"
         href: https://www.upwork.com/freelancers/~016a9fea792423bb9a
-      - text: "💻 Cloud Compute "
+      - text: "💻 GPUVec"
         href: https://gpuvec.com
-
       - icon: rss
         href: index.xml
+        aria-label: "Blog RSS Feed"
       - icon: rss
         href: til/index.xml
+        aria-label: "TILs RSS Feed"
 
   sidebar:
     - title: TILs
@@ -84,6 +81,6 @@ format:
     syntax-definitions: 
     - fomo.xml
     css: styles.css
-    # fontsize: 18px
+    fontsize: 18px
 
 
