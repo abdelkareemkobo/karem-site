@@ -1,0 +1,113 @@
+/* Custom CSS to override Bootstrap - Loads in header */
+/* Force CSS specificity to override Bootstrap */
+html body {
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif) !important;
+}
+
+/* Ensure custom styles override Bootstrap */
+.hero-section {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.profile-avatar {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.main-title {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+}
+
+.arabic-name {
+  display: block !important;
+  font-size: 1.8rem !important;
+  color: var(--accent-blue) !important;
+}
+
+.english-name {
+  display: block !important;
+  font-size: 1.5rem !important;
+  color: var(--text-primary) !important;
+}
+
+/* Project cards styling */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2rem !important;
+  margin: 2rem 0 !important;
+}
+
+.project-card {
+  background: var(--bg-secondary) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 6px var(--shadow) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.project-card:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Goals section styling */
+.goals-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin: 2rem 0 !important;
+}
+
+.goal-card {
+  background: var(--bg-secondary) !important;
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 2px 4px var(--shadow) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+  background: var(--border-color) !important;
+  border-radius: 10px !important;
+  height: 8px !important;
+  overflow: hidden !important;
+  margin: 0.5rem 0 !important;
+}
+
+.progress-fill {
+  background: var(--accent-blue) !important;
+  height: 100% !important;
+  transition: width 0.3s ease !important;
+}
+
+/* Newsletter section */
+.newsletter-section {
+  background: var(--bg-accent) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  margin: 2rem 0 !important;
+  text-align: center !important;
+}
+
+/* Social links */
+.social-links {
+  display: flex !important;
+  gap: 1rem !important;
+  justify-content: center !important;
+  margin-top: 1rem !important;
+}
+
+.social-link {
+  color: var(--text-secondary) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.social-link:hover {
+  color: var(--accent-blue) !important;
+}
