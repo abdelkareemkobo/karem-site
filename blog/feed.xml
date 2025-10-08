@@ -5,13 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>kareem&#39;s Blog</title>
+<title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <link>https://kareemai.com/blog/feed.html</link>
 <atom:link href="https://kareemai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-<description>Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web developement with Astrojs,fastapi aslo arabic Natural Language Processing and Rust language.</description>
+<description>Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.</description>
 <image>
 <url>https://kareemai.com/quarto.png</url>
-<title>kareem&#39;s Blog</title>
+<title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <link>https://kareemai.com/blog/feed.html</link>
 <height>86</height>
 <width>144</width>
